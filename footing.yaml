@@ -1,0 +1,6 @@
+_template: git@github.com:uniiverse/node-grpc-service-template.git
+_version: f27021ac1efced8cf060537710d1348f6a2986c8
+project_slug: reports
+skaffold_debugger_port: '9229'
+skaffold_grpc_port: '50888'
+skaffold_http_port: '8888'

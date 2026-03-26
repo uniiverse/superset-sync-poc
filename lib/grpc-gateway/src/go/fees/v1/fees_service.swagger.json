@@ -1,0 +1,515 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "fees/v1/fees_service.proto",
+    "version": "version not set"
+  },
+  "tags": [
+    {
+      "name": "FeesService"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/fees.v1.FeesService/Compute": {
+      "post": {
+        "operationId": "FeesService_Compute",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1ComputeResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1ComputeRequest"
+            }
+          }
+        ],
+        "tags": [
+          "FeesService"
+        ]
+      }
+    },
+    "/fees.v1.FeesService/Create": {
+      "post": {
+        "operationId": "FeesService_Create",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CreateResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CreateRequest"
+            }
+          }
+        ],
+        "tags": [
+          "FeesService"
+        ]
+      }
+    },
+    "/fees.v1.FeesService/Destroy": {
+      "post": {
+        "operationId": "FeesService_Destroy",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1DestroyResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1DestroyRequest"
+            }
+          }
+        ],
+        "tags": [
+          "FeesService"
+        ]
+      }
+    },
+    "/fees.v1.FeesService/Index": {
+      "post": {
+        "operationId": "FeesService_Index",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1IndexResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1IndexRequest"
+            }
+          }
+        ],
+        "tags": [
+          "FeesService"
+        ]
+      }
+    },
+    "/fees.v1.FeesService/Show": {
+      "post": {
+        "operationId": "FeesService_Show",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1ShowResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1ShowRequest"
+            }
+          }
+        ],
+        "tags": [
+          "FeesService"
+        ]
+      }
+    },
+    "/fees.v1.FeesService/Update": {
+      "post": {
+        "operationId": "FeesService_Update",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1UpdateResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1UpdateRequest"
+            }
+          }
+        ],
+        "tags": [
+          "FeesService"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    },
+    "v1ComputeRequest": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "params": {
+          "$ref": "#/definitions/v1Params"
+        }
+      }
+    },
+    "v1ComputeResponse": {
+      "type": "object",
+      "properties": {
+        "amount": {
+          "type": "string"
+        },
+        "fee": {
+          "type": "string"
+        }
+      }
+    },
+    "v1Condition": {
+      "type": "object",
+      "properties": {
+        "property": {
+          "type": "string"
+        },
+        "comparison": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "v1ConditionResponse": {
+      "type": "object",
+      "properties": {
+        "summary": {
+          "type": "string"
+        },
+        "property": {
+          "type": "string"
+        },
+        "comparison": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "v1CreateRequest": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "rules": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1RuleRequest"
+          }
+        }
+      }
+    },
+    "v1CreateResponse": {
+      "type": "object"
+    },
+    "v1DestroyRequest": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        }
+      }
+    },
+    "v1DestroyResponse": {
+      "type": "object"
+    },
+    "v1FeeResponse": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "rules": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1RuleResponse"
+          }
+        }
+      }
+    },
+    "v1Filter": {
+      "type": "object",
+      "properties": {
+        "field": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "v1IndexRequest": {
+      "type": "object",
+      "properties": {
+        "filters": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1Filter"
+          }
+        },
+        "page": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "perPage": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "v1IndexResponse": {
+      "type": "object",
+      "properties": {
+        "fees": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1FeeResponse"
+          }
+        },
+        "perPage": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "currentPage": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "totalRecords": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "totalPages": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "v1Params": {
+      "type": "object",
+      "properties": {
+        "price": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "capacity": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "timestamp": {
+          "type": "string"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        }
+      }
+    },
+    "v1RuleRequest": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "string"
+        },
+        "calculation": {
+          "type": "string"
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1Condition"
+          }
+        }
+      }
+    },
+    "v1RuleResponse": {
+      "type": "object",
+      "properties": {
+        "summary": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "string"
+        },
+        "calculation": {
+          "type": "string"
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1ConditionResponse"
+          }
+        }
+      }
+    },
+    "v1ShowRequest": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        }
+      }
+    },
+    "v1ShowResponse": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "rules": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1RuleResponse"
+          }
+        }
+      }
+    },
+    "v1UpdateRequest": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "rules": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1RuleRequest"
+          }
+        }
+      }
+    },
+    "v1UpdateResponse": {
+      "type": "object"
+    }
+  }
+}

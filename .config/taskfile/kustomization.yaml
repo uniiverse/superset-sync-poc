@@ -1,0 +1,11 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  expand:
+    cmds:
+      - kubectl slice --input-file=rendered.yaml --output-dir=resources
+      - kustomize init
+      - kustomize edit add resource resources/*.yaml
+    dir: dist

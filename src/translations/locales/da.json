@@ -1,0 +1,71 @@
+{
+  "account_dashboard.sales": "Salg",
+  "account_dashboard.check-ins_by": "Indtjekninger pr.",
+  "account_dashboard.counts": "Tællinger",
+  "account_dashboard.event_breakdown": "Gennemgang af begivenhed",
+  "account_dashboard.ticket_sales_trends_by": "Billetsalg-trends pr.",
+  "account_dashboard.net_sales_sources": "Kilder til nettosalg",
+  "account_dashboard.onsite_sales_by": "Salg på stedet pr.", 
+  "account_dashboard.promotions": "Promoveringer",
+
+  "boxoffice.checked_in": "Indtjekket",
+  "boxoffice.remaining_check-ins": "Resterende Indtjekninger",
+  "boxoffice.check-ins_by_event": "Indtjekninger pr. arrangement",
+  "boxoffice.onsite_sales_by_event": "Dørsalg efter arrangement",
+
+  "check-ins_by.tickets": "Billetter",
+  "check-ins_by.add-ons": "Add-ons",
+  "comparison_suffix.previous_day": "Forrige dag",
+
+  "sales_dashboard.gross_sales": "Bruttoomsætning",
+  "sales_dashboard.net_sales": "Nettosalg",
+  "sales_dashboard.net_sales_breakdown": "Fordeling af nettosalg",
+  "counts_dashboard.tickets": "Billetter",
+  "counts_dashboard.orders": "Bestillinger",
+  "counts_dashboard.add_ons": "Add-ons",
+  "counts_dashboard.paid_vs_free": "Betalt vs gratis",
+  "counts_dashboard.ticket_net_sales_by_event": "Nettoomsætning af billetter pr. event",
+  "comparison_suffix": "Forrige uge",
+
+  "trends.sales_by_ticket_type": "Salg per billettype",
+  "trends.average_ticket_price": "Gennemsnitlig billetpris",
+  "trends.average_order_price": "Gennemsnitlig ordrepris",
+  "trends.tickets_per_order": "Billetter pr. bestilling",
+  "trends.accumulated_tickets_by_type": "Akkumulerede billetter efter type",
+
+  "revenue_sources.card_brand": "Kortmærke",
+  "revenue_sources.online_vs_boxoffice": "Online vs billetindtægt",
+  "revenue_sources.online_sources": "Online-kilder",
+  "revenue_sources.boxoffice_sources": "Billetindtægtskilder",
+  "revenue_sources.referrals": "Henvisninger",
+  "revenue_sources.channel_partner": "Kanalpartner",
+  "revenue_sources.partner_reseller": "Videreforhandlingspartner",
+
+  "onsite_sales_by.tickets": "Billetter",
+  "onsite_sales_by.add-ons": "Add-ons",
+
+  "promotions.access_keys": "Adgangsnøgler",
+  "promotions.discount_codes": "Rabatkoder",
+
+  "tabs.account_dashboard.boxoffice": "Billetindtægt",
+  "tabs.account_dashboard.overview": "Oversigt",
+  "tabs.account_dashboard.trends": "trends",
+  "tabs.account_dashboard.sources": "Kilder",
+
+  "tabs.event_breakdown.by_event": "Efter begivenhed",
+  "tabs.event_breakdown.by_timeslot": "Efter tidsrum",
+  "tabs.event_breakdown.by_type": "Efter type",
+
+  "tabs.day_of_week": "Tid på ugen",
+  "tabs.day": "Dag",
+  "tabs.hour_of_day": "Tid på dagen",
+  "tabs.month": "Måned",
+  "tabs.teammate": "Holdkammerat",
+  "tabs.type": "Type",
+  "tabs.week": "Uge",
+  "tabs.year": "År",
+
+  "tabs.event": "Begivenhed",
+  "tabs.timeslot" : "Tidsrum",
+  "tabs.timeslot_and_type": "Tidsrum og type"
+}

@@ -1,0 +1,71 @@
+{
+  "account_dashboard.sales": "Ventas",
+  "account_dashboard.check-ins_by": "Registros de entrada por",
+  "account_dashboard.counts": "Recuentos",
+  "account_dashboard.event_breakdown": "Desglose del evento",
+  "account_dashboard.ticket_sales_trends_by": "Tendencias de venta de entradas por",
+  "account_dashboard.net_sales_sources": "Fuentes de ingresos netos",
+  "account_dashboard.onsite_sales_by": "Ventas in situ por", 
+  "account_dashboard.promotions": "Promociones",
+
+  "boxoffice.checked_in": "Registro de entrada",
+  "boxoffice.remaining_check-ins": "Registros de entrada restantes",
+  "boxoffice.check-ins_by_event": "Registros de entrada por evento",
+  "boxoffice.onsite_sales_by_event": "Ventas in situ por evento",
+
+  "check-ins_by.tickets": "Entradas",
+  "check-ins_by.add-ons": "Complementos",
+  "comparison_suffix.previous_day": "Día anterior",
+
+  "sales_dashboard.gross_sales": "Ventas brutas",
+  "sales_dashboard.net_sales": "Ventas netas",
+  "sales_dashboard.net_sales_breakdown": "Desglose de los ingresos netos",
+  "counts_dashboard.tickets": "Entradas",
+  "counts_dashboard.orders": "Pedidos",
+  "counts_dashboard.add_ons": "Complementos",
+  "counts_dashboard.paid_vs_free": "De pago vs. gratis",
+  "counts_dashboard.ticket_net_sales_by_event": "Ventas netas de entradas por evento",
+  "comparison_suffix": "Semana anterior",
+
+  "trends.sales_by_ticket_type": "Ventas por tipo de entrada",
+  "trends.average_ticket_price": "Precio medio de entrada",
+  "trends.average_order_price": "Precio medio de pedido",
+  "trends.tickets_per_order": "Entradas por pedido",
+  "trends.accumulated_tickets_by_type": "Tickets acumulados por tipo",
+
+  "revenue_sources.card_brand": "Marca de la tarjeta",
+  "revenue_sources.online_vs_boxoffice": "En línea vs. en taquilla",
+  "revenue_sources.online_sources": "Fuentes en línea",
+  "revenue_sources.boxoffice_sources": "Fuentes en taquilla",
+  "revenue_sources.referrals": "Referencias",
+  "revenue_sources.channel_partner": "Socio del canal",
+  "revenue_sources.partner_reseller": "Distribuidor del socio",
+
+  "onsite_sales_by.tickets": "Entradas",
+  "onsite_sales_by.add-ons": "Complementos",
+
+  "promotions.access_keys": "Claves de acceso",
+  "promotions.discount_codes": "Códigos de descuento",
+
+  "tabs.account_dashboard.boxoffice": "Taquilla",
+  "tabs.account_dashboard.overview": "Vista general",
+  "tabs.account_dashboard.trends": "Tendencias",
+  "tabs.account_dashboard.sources": "Fuentes",
+
+  "tabs.event_breakdown.by_event": "Po evento",
+  "tabs.event_breakdown.by_timeslot": "Por franja horaria",
+  "tabs.event_breakdown.by_type": "Por tipo",
+
+  "tabs.day_of_week": "Día de la semana",
+  "tabs.day": "Día",
+  "tabs.hour_of_day": "Parte del día",
+  "tabs.month": "Mes",
+  "tabs.teammate": "Compañero de equipo",
+  "tabs.type": "Tipo",
+  "tabs.week": "Semana",
+  "tabs.year": "Año",
+
+  "tabs.event": "Evento",
+  "tabs.timeslot" : "Franja horaria",
+  "tabs.timeslot_and_type": "Franja horaria y tipo"
+}

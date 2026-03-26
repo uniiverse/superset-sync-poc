@@ -1,0 +1,27 @@
+version: '3'
+
+includes:
+  kustomization: ./kustomization.yaml
+  utility: ./utility.yaml
+
+env:
+  SKAFFOLD_DEFAULT_REPO: us-east4-docker.pkg.dev/tm-uni-platform/platform-team
+
+tasks:
+  build:
+    - skaffold build
+        --profile=$BUILD_PROFILE
+        --default-repo=$SKAFFOLD_DEFAULT_REPO/{{.PROJECT_NAME}}
+        --tag=$RELEASE_TAG
+        --file-output=dist/built-images.json
+
+  render:
+    - task: utility:clean
+    - skaffold render
+        --profile=$BUILD_PROFILE
+        --default-repo=$SKAFFOLD_DEFAULT_REPO/{{.PROJECT_NAME}}
+        --digest-source=local
+        --build-artifacts=dist/built-images.json
+        --output=dist/rendered.yaml
+    - task: kustomization:expand
+    - rm dist/rendered.yaml

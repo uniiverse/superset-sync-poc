@@ -1,0 +1,70 @@
+apiVersion: skaffold/v4beta5
+kind: Config
+
+build:
+  local:
+    useBuildkit: true
+  platforms:
+    - linux/amd64
+  artifacts:
+    - image: reports
+      docker:
+        buildArgs:
+          IMAGE_TAG: "{{.IMAGE_TAG}}"
+        secrets:
+          - id: npmrc
+            src: ./.npmrc
+      sync:
+        infer:
+          - dist/app/src/**/*.js
+
+manifests:
+  kustomize:
+    buildArgs:
+      - --load-restrictor=LoadRestrictionsNone
+    paths:
+      - deploy
+
+profiles:
+  - name: dev
+    activation:
+      - command: dev
+    build:
+      platforms:
+        - linux/arm64
+      artifacts:
+        - image: reports
+          sync:
+            infer:
+              - dist/app/src/**/*.js
+              - src/**/*.ts
+    patches:
+      - op: add
+        path: /build/artifacts/0/docker
+        value:
+          target: DEVELOPMENT
+      - op: add
+        path: /manifests/kustomize/paths/-
+        value: overlays/dev
+    portForward:
+      - resourceType: service
+        resourceName: reports
+        namespace: default
+        port: 50051
+        localPort: 50888
+      - resourceType: service
+        resourceName: superset
+        namespace: default
+        port: 8088
+        localPort: 8088
+      - resourceType: service
+        resourceName: reports
+        namespace: default
+        port: 80
+        localPort: 8888
+      - resourceType: service
+        resourceName: reports
+        namespace: default
+        port: 9229
+        localPort: 9229
+  - name: ci

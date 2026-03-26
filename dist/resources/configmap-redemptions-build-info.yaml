@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+  VERSION: vmain
+kind: ConfigMap
+metadata:
+  labels:
+    app.kubernetes.io/name: reports
+  name: redemptions-build-info

@@ -1,0 +1,66 @@
+{
+  "account_dashboard.sales": "Πωλήσεις",
+  "account_dashboard.check-ins_by": "Check-ins ανά",
+  "account_dashboard.counts": "Καταμετρήσεις",
+  "account_dashboard.event_breakdown": "Ανάλυση εκδήλωσης",
+  "account_dashboard.ticket_sales_trends_by": "Τάσεις πώλησης εισιτηρίων κατά",
+  "account_dashboard.net_sales_sources": "Πηγές καθαρών πωλήσεων",
+  "account_dashboard.onsite_sales_by": "Επιτόπου πωλήσεις ανά ", 
+  "account_dashboard.promotions": "Προσφορές",
+
+  "boxoffice.checked_in": "Checked-in",
+  "boxoffice.remaining_check-ins": "Απομένουν check-in",
+  "boxoffice.check-ins_by_event": "Check-in ανά εκδήλωση",
+  "boxoffice.onsite_sales_by_event": "Πωλήσεις επιτόπου ανά εκδήλωση",
+
+  "check-ins_by.tickets": "Εισιτήρια",
+  "check-ins_by.add-ons": "Πρόσθετα",
+  "comparison_suffix.previous_day": "Προηγούμενη μέρα",
+
+  "sales_dashboard.gross_sales": "Μικτές πωλήσεις",
+  "sales_dashboard.net_sales": "Καθαρές πωλήσεις",
+  "sales_dashboard.net_sales_breakdown": "Ανάλυση καθαρών πωλήσεων",
+  "counts_dashboard.tickets": "Εισιτήρια",
+  "counts_dashboard.orders": "Παραγγελίες",
+  "counts_dashboard.add_ons": "Πρόσθετα",
+  "counts_dashboard.paid_vs_free": "Επί πληρωμή έναντι δωρεάν",
+  "counts_dashboard.ticket_net_sales_by_event": "Καθαρές πωλήσεις εισιτηρίων ανά συμβάν",
+  "comparison_suffix": "Προηγούμενη εβδομάδα",
+
+  "trends.sales_by_ticket_type": "Πωλήσεις κατά τύπο εισιτηρίου",
+  "trends.average_ticket_price": "Μέση Τιμή Εισιτηρίου",
+  "trends.average_order_price": "Μέση Τιμή Παραγγελίας",
+  "trends.tickets_per_order": "Εισιτήρια ανά παραγγελία",
+
+  "revenue_sources.card_brand": "Επωνυμία κάρτας",
+  "revenue_sources.online_vs_boxoffice": "Online έναντι εκδοτηρίων",
+  "revenue_sources.online_sources": "Πηγές online",
+  "revenue_sources.boxoffice_sources": "Πηγές εκδοτηρίων",
+  "revenue_sources.referrals": "Παραπομπές",
+  "revenue_sources.channel_partner": "Συνεργάτης καναλιού",
+  "revenue_sources.partner_reseller": "Συνεργαζόμενος μεταπωλητής",
+
+  "onsite_sales_by.tickets": "Εισιτήρια",
+  "onsite_sales_by.add-ons": "Πρόσθετα",
+
+  "promotions.access_keys": "Κλειδιά Ασφαλείας",
+  "promotions.discount_codes": "Εκπτωτικοί Κωδικοί",
+
+  "tabs.account_dashboard.boxoffice": "BoxOffice",
+  "tabs.account_dashboard.overview": "Επισκόπηση",
+  "tabs.account_dashboard.trends": "Τάσεις",
+  "tabs.account_dashboard.sources": "Πηγές",
+
+  "tabs.event_breakdown.by_event": "Κατά συμβάν",
+  "tabs.event_breakdown.by_timeslot": "Κατά χρονική υποδοχή",
+  "tabs.event_breakdown.by_type": "Κατά τύπο",
+
+  "tabs.day_of_week": "Ημέρα της εβδομάδας",
+  "tabs.day": "Ημέρα",
+  "tabs.hour_of_day": "Ώρα της ημέρας",
+  "tabs.month": "Μήνας",
+  "tabs.teammate": "Συμπαίκτης",
+  "tabs.type": "Τύπος",
+  "tabs.week": "Εβδομάδα",
+  "tabs.year": "Έτος"
+}

@@ -1,0 +1,158 @@
+networks:
+  universe:
+    name: universe
+    driver: bridge
+
+# x-superset-image: &superset-image apache/superset:${TAG:-latest-dev}
+# NOTE: align version with https://github.com/uniiverse/superset-manifest/blob/main/upstream/kustomization.yaml#L14
+x-superset-image: &superset-image apache/superset:2.1.1
+x-superset-depends-on: &superset-depends-on
+  - db
+  - redis
+x-superset-volumes: &superset-volumes
+  # /app/pythonpath_docker will be appended to the PYTHONPATH in the final container
+  - ./lib/superset/docker:/app/docker
+  - ./dashboards:/app/universe-dashboards
+  - ./tools:/app/universe-tools
+  - superset_home:/app/superset_home
+
+version: '3.7'
+name: "reports"
+
+services:
+  redis:
+    image: redis:7
+    container_name: superset_cache
+    restart: unless-stopped
+    volumes:
+      - redis:/data
+    networks:
+      - universe
+
+  db:
+    env_file: lib/superset/docker/.env-non-dev
+    image: postgres:14
+    container_name: superset_db
+    restart: unless-stopped
+    volumes:
+      - db_home:/var/lib/postgresql/data
+    networks:
+      - universe
+
+  superset:
+    env_file: lib/superset/docker/.env-non-dev
+    image: *superset-image
+    container_name: superset_app
+    command: ["/app/docker/docker-bootstrap.sh", "app-gunicorn"]
+    user: "root"
+    restart: unless-stopped
+    ports:
+      - 8088:8088
+    depends_on: *superset-depends-on
+    volumes: *superset-volumes
+    networks:
+      - universe
+
+  superset-init:
+    image: *superset-image
+    container_name: superset_init
+    command: ["/app/docker/docker-init.sh"]
+    env_file: lib/superset/docker/.env-non-dev
+    depends_on: *superset-depends-on
+    user: "root"
+    volumes: *superset-volumes
+    healthcheck:
+      disable: true
+    networks:
+      - universe
+
+  superset-worker:
+    image: *superset-image
+    container_name: superset_worker
+    command: ["/app/docker/docker-bootstrap.sh", "worker"]
+    env_file: lib/superset/docker/.env-non-dev
+    restart: unless-stopped
+    depends_on: *superset-depends-on
+    user: "root"
+    volumes: *superset-volumes
+    healthcheck:
+      test: ["CMD-SHELL", "celery inspect ping -A superset.tasks.celery_app:app -d celery@$$HOSTNAME"]
+    networks:
+      - universe
+
+  superset-worker-beat:
+    image: *superset-image
+    container_name: superset_worker_beat
+    command: ["/app/docker/docker-bootstrap.sh", "beat"]
+    env_file: lib/superset/docker/.env-non-dev
+    restart: unless-stopped
+    depends_on: *superset-depends-on
+    user: "root"
+    volumes: *superset-volumes
+    healthcheck:
+      disable: true
+    networks:
+      - universe
+
+  clickhouse:
+    build:
+      context: ./lib/clickhouse
+    container_name: clickhouse
+    environment:
+      - SAMPLE_DB_SCALE=1000000
+      - CLICKHOUSE_USER=clickhouse_operator
+      - CLICKHOUSE_PASSWORD=password
+    ports:
+      - 9000:9000
+    volumes:
+      - ./lib/clickhouse:/app
+    networks:
+      - universe
+
+  grpc-gateway:
+    build:
+      context: ./lib/grpc-gateway/src/go
+    environment:
+      - REPORTS_GRPC_ENDPOINT=reports:8080
+    container_name: grpc-gateway
+    ports:
+      - 8092:8092
+    networks:
+      - universe
+
+  reports:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+      target: DEVELOPMENT
+    environment:
+      - GRPC_SERVER_REFLECTION_PATH=./node_modules/@universe/api/descriptor_set.bin
+      - SUPERSET_URL=http://superset:8088
+      - SUPERSET_USERNAME=admin
+      - SUPERSET_PASSWORD=admin
+      - BUILD_TYPE=development
+      - LOG_LEVEL=debug
+    ports:
+      - 9001:8081
+      - 50052:8080
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    networks:
+      - universe
+
+volumes:
+  clickhouse:
+    external: false
+  reports:
+    external: false
+  dashboards:
+    external: false
+  tools:
+    external: false
+  superset_home:
+    external: false
+  db_home:
+    external: false
+  redis:
+    external: false

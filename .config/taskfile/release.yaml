@@ -1,0 +1,17 @@
+# https://taskfile.dev
+
+version: '3'
+
+includes:
+  skaffold: ./skaffold.yaml
+
+vars:
+  RELEASE_TAG: $(git rev-parse --abbrev-ref HEAD)
+
+tasks:
+  prepare:
+    - task: "{{.PROJECT_TYPE}}:build"
+    # This writes the currently building tag to the file VERSION.  Due to this file being used by automation
+    # it's critical that it does not include a newline.
+    - echo -n v{{.RELEASE_TAG}} > VERSION
+    - task: "{{.PROJECT_TYPE}}:render"

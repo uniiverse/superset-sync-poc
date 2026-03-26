@@ -1,0 +1,71 @@
+{
+  "account_dashboard.sales": "Försäljning",
+  "account_dashboard.check-ins_by": "Incheckningar per",
+  "account_dashboard.counts": "Antal",
+  "account_dashboard.event_breakdown": "Evenemangsanalys",
+  "account_dashboard.ticket_sales_trends_by": "Biljettförsäljning trendar efter",
+  "account_dashboard.net_sales_sources": "Källor för nettoförsäljning",
+  "account_dashboard.onsite_sales_by": "Försäljning på plats av", 
+  "account_dashboard.promotions": "Kampanjer",
+
+  "boxoffice.checked_in": "Incheckade",
+  "boxoffice.remaining_check-ins": "återstående incheckningar",
+  "boxoffice.check-ins_by_event": "Incheckningar per evenemang",
+  "boxoffice.onsite_sales_by_event": "Försäljning på plats av evenemang",
+
+  "check-ins_by.tickets": "Biljetter",
+  "check-ins_by.add-ons": "Tilläggsprodukter",
+  "comparison_suffix.previous_day": "Föregående dag",
+
+  "sales_dashboard.gross_sales": "Bruttoförsäljning",
+  "sales_dashboard.net_sales": "Nettoförsäljning",
+  "sales_dashboard.net_sales_breakdown": "Fördelning av nettoförsäljning",
+  "counts_dashboard.tickets": "Biljetter",
+  "counts_dashboard.orders": "Beställningar",
+  "counts_dashboard.add_ons": "Tilläggsprodukter",
+  "counts_dashboard.paid_vs_free": "Betald jämfört med gratis",
+  "counts_dashboard.ticket_net_sales_by_event": "Nettoförsäljning av biljetter per evenemang",
+  "comparison_suffix": "Föregående vecka",
+
+  "trends.sales_by_ticket_type": "Försäljning efter biljettyp",
+  "trends.average_ticket_price": "Genomsnittligt biljettpris",
+  "trends.average_order_price": "Genomsnittligt beställningspris",
+  "trends.tickets_per_order": "Biljetter per beställning",
+  "trends.accumulated_tickets_by_type": "Biljetter ackumulerade per typ",
+
+  "revenue_sources.card_brand": "Kortmärke",
+  "revenue_sources.online_vs_boxoffice": "Online jämfört med betalning på plats",
+  "revenue_sources.online_sources": "Onlineresurser",
+  "revenue_sources.boxoffice_sources": "Boxoffice-källor",
+  "revenue_sources.referrals": "Hänvisningar",
+  "revenue_sources.channel_partner": "Kanalpartner",
+  "revenue_sources.partner_reseller": "Återförsäljarpartner",
+
+  "onsite_sales_by.tickets": "Biljetter",
+  "onsite_sales_by.add-ons": "Tilläggsprodukter",
+
+  "promotions.access_keys": "Åtkomstnycklar",
+  "promotions.discount_codes": "Rabattkoder",
+
+  "tabs.account_dashboard.boxoffice": "BoxOffice",
+  "tabs.account_dashboard.overview": "Översikt",
+  "tabs.account_dashboard.trends": "Trender",
+  "tabs.account_dashboard.sources": "Källor",
+
+  "tabs.event_breakdown.by_event": "Efter evenemang",
+  "tabs.event_breakdown.by_timeslot": "Efter tid",
+  "tabs.event_breakdown.by_type": "Efter typ",
+
+  "tabs.day_of_week": "Dag i veckan",
+  "tabs.day": "Dag",
+  "tabs.hour_of_day": "Tid på dagen",
+  "tabs.month": "Månad",
+  "tabs.teammate": "Teammedlem",
+  "tabs.type": "Typ",
+  "tabs.week": "Vecka",
+  "tabs.year": "År",
+
+  "tabs.event": "Evenemang",
+  "tabs.timeslot" : "Tidslucka",
+  "tabs.timeslot_and_type": "Tidslucka och typ"
+}

@@ -1,0 +1,18 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  sync-credentials:
+    cmds:
+      - npx google-artifactregistry-auth .npmrc
+    status:
+      - npm info @universe/api
+    deps:
+      - configure-gcloud-npm
+
+  configure-gcloud-npm:
+    cmds:
+      - gcloud artifacts print-settings npm --project=tm-uni-platform --repository=js --location=us-east4 --scope=@universe > .npmrc
+    status:
+      - test -f .npmrc

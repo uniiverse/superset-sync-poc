@@ -5,7 +5,6 @@
 > This is a copy of the reports repo for testing purposes only.
 > This will never go live in production.
 >
-> **Original repo:** `/Users/priya.singh/code/reports/`
 
 ---
 

@@ -1,0 +1,49 @@
+slice_name: Daily sales by ticket type
+description: null
+certified_by: null
+certification_details: null
+viz_type: pivot_table_v2
+params:
+  adhoc_filters: []
+  aggregateFunction: Sum
+  colOrder: key_a_to_z
+  conditional_formatting: []
+  datasource: 30__table
+  date_format: '%Y-%m-%d %H:%M:%S'
+  extra_form_data: {}
+  granularity_sqla: purchase_time
+  groupbyColumns: []
+  groupbyRows:
+  - Date of purchase
+  - ticket_type
+  metrics:
+  - Net earnings
+  - Quantity sold
+  metricsLayout: COLUMNS
+  order_desc: true
+  rowOrder: key_a_to_z
+  rowTotals: false
+  row_limit: 50000
+  time_grain_sqla: P1D
+  time_range: No filter
+  valueFormat: SMART_NUMBER
+  viz_type: pivot_table_v2
+query_context: '{"datasource": {"id": 30, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "purchase_time", "filters": [], "extras":
+  {"time_grain_sqla": "P1D", "having": "", "having_druid": [], "where": ""}, "applied_time_extras":
+  {}, "columns": ["Date of purchase", "ticket_type"], "metrics": ["Net earnings",
+  "Quantity sold"], "orderby": [["Net earnings", false]], "annotation_layers": [],
+  "row_limit": 50000, "timeseries_limit": 0, "order_desc": true, "url_params": {},
+  "custom_params": {}, "custom_form_data": {}}], "form_data": {"viz_type": "pivot_table_v2",
+  "datasource": "30__table", "slice_id": 111, "granularity_sqla": "purchase_time",
+  "time_grain_sqla": "P1D", "time_range": "No filter", "groupbyColumns": [], "groupbyRows":
+  ["Date of purchase", "ticket_type"], "metrics": ["Net earnings", "Quantity sold"],
+  "metricsLayout": "COLUMNS", "adhoc_filters": [], "row_limit": 50000, "order_desc":
+  true, "aggregateFunction": "Sum", "rowTotals": false, "valueFormat": "SMART_NUMBER",
+  "date_format": "%Y-%m-%d %H:%M:%S", "rowOrder": "key_a_to_z", "colOrder": "key_a_to_z",
+  "conditional_formatting": [], "extra_form_data": {}, "force": false, "result_format":
+  "json", "result_type": "full"}, "result_format": "json", "result_type": "full"}'
+cache_timeout: null
+uuid: 4ab9d09b-3485-4407-a69e-0ae0b9189ae1
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc

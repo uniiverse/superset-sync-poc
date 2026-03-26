@@ -1,0 +1,185 @@
+.anticon svg {
+  /* Superset 4.x fix - hide the filter icons */
+  display: none;
+}
+
+.dashboard {
+  /* Superset 4.x fix - hide the filter icons */
+  margin-left: -32px;
+}
+
+@font-face {
+  font-family: "Circular Pro";
+  src:
+    url("https://www.universe.com/fonts/Circular-Pro-subsetted/lineto-circular-pro-book.eot") format("eot"),
+    url("https://www.universe.com/fonts/Circular-Pro-subsetted/lineto-circular-pro-book.woff2") format("woff2"),
+    url("https://www.universe.com/fonts/Circular-Pro-subsetted/lineto-circular-pro-book.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Graphik";
+    src: 
+    url("https://www.universe.com/fonts/Graphik/Graphik-Regular-Web.eot") format("eot"),
+    url("https://www.universe.com/fonts/Graphik/Graphik-Regular-Web.woff2") format("woff2"),
+    url("https://www.universe.com/fonts/Graphik/Graphik-Regular-Web.woff") format("woff");
+}
+
+.dashboard-content {
+  background-color: white;
+  margin-top: -34px;
+}
+
+.grid-container {
+  margin-left: 5px !important;
+}
+
+.anchor-link-container {
+  display: none;
+  pointer-events: none;
+}
+
+/*-------Counts/sales header-------*/
+.dashboard-component-header {
+  font-family: 'Graphik', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 32px !important;
+  margin-left: -16px !important;
+  line-height: 38px !important;
+}
+
+.dashboard-component-divider {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+/*------Tabs--------*/
+.ant-tabs-nav-wrap {
+  border-bottom: 1px solid #E2E5E7;
+}
+
+.ant-tabs-nav-list {
+  margin-left: -16px;
+}
+
+.ant-tabs-tab {
+  color: #1C232B;
+}
+
+.ant-tabs-tab-btn {
+   font-weight: 400 !important;
+   line-height: 20px !important;
+   font-family: 'Graphik', sans-serif !important;
+   font-size: 14px !important;
+}
+
+.ant-tabs-tab:hover {
+  color: #3A66E5 !important
+}
+
+.ant-tabs-tab-btn:hover {
+   color: #3A66E5 !important;
+}
+
+.ant-tabs-tab-btn.active {
+  color: #3A66E5 !important;
+}
+
+.ant-tabs-tab-active {
+  color: #3A66E5 !important;
+}
+
+.ant-tabs-ink-bar-animated {
+  background-color: #3A66E5 !important;
+}
+
+
+/*----Charts-------*/
+.chart-slice {
+  border: 1px solid #E2E5E7;
+  padding: 16px; 
+  border-radius: 6px;
+  margin-left: 0px;
+  overflow: auto !important;
+}
+
+.dot {
+  background-color: #1C232B !important;
+}
+
+.dashboard-component-chart-holder {
+  padding: 0px !important;
+}
+
+.big_number canvas {
+  margin-top: 50px !important;
+}
+
+.pie canvas {
+  margin-top: 0px !important;
+}
+
+.echarts_timeseries_line canvas {
+  margin-top: 0px !important;
+}
+
+.dashboard-chart-id-137 tr:first-child th {
+  color: #6F7881 !important;
+  text-transform: capitalize;
+}
+
+tr:first-child th.pvtAxisLabel {
+  color: transparent;
+}
+
+.pivot_table_v_2 thead th {
+  font-size: 14px !important;
+  font-weight: bold !important;
+}
+
+/*----Adds a scroller when required and adjust the height of the table to show all the content----*/
+.pivot_table_v_2 {
+  overflow: auto !important;
+  height: auto !important;
+}
+
+
+/*----Promotions- To adjust serach box from cutting off---*/
+.dt-global-filter {
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  padding-right: 10px !important;
+  text-align: end !important;
+}
+
+.text-container {
+  height: auto !important;
+}
+
+.header-title {
+  font-weight: 700 !important;
+  color: #000000 !important;
+  font-family: 'Graphik', sans-serif !important;
+  line-height: 24px !important;
+  font-size: 16px !important;
+  margin-bottom: 24px;
+}
+
+.header-line {
+  font-size: 32px !important;
+  color: #1C232B !important;
+  font-weight: 500 !important;
+  line-height: 38px !important;
+  font-family: 'Circular Pro', sans-serif !important;
+}
+
+.subheader-line {
+  font-size: 14px !important;
+  color: #6F7881 !important;
+  line-height: 20px !important;
+  font-family: 'Graphik', sans-serif !important;
+  font-weight: 400;
+  margin-top: -20px !important;
+}

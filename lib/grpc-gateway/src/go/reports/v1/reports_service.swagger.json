@@ -1,0 +1,223 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "reports/v1/reports_service.proto",
+    "version": "version not set"
+  },
+  "tags": [
+    {
+      "name": "ReportsService"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/reports.v1.ReportsService/CreateGuestToken": {
+      "post": {
+        "operationId": "ReportsService_CreateGuestToken",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CreateGuestTokenResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CreateGuestTokenRequest"
+            }
+          }
+        ],
+        "tags": [
+          "ReportsService"
+        ]
+      }
+    },
+    "/reports.v1.ReportsService/GetDashboard": {
+      "post": {
+        "operationId": "ReportsService_GetDashboard",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1GetDashboardResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1GetDashboardRequest"
+            }
+          }
+        ],
+        "tags": [
+          "ReportsService"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    },
+    "v1CreateGuestTokenRequest": {
+      "type": "object",
+      "properties": {
+        "dashboardId": {
+          "type": "string"
+        },
+        "locale": {
+          "type": "string"
+        },
+        "filter": {
+          "$ref": "#/definitions/v1Filter"
+        }
+      }
+    },
+    "v1CreateGuestTokenResponse": {
+      "type": "object",
+      "properties": {
+        "token": {
+          "type": "string"
+        }
+      }
+    },
+    "v1Filter": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string"
+        },
+        "eventIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "exceptEventIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "minPurchaseDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "maxPurchaseDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "minAttendanceDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "maxAttendanceDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "exactAttendanceStartTimeSecondsOfDay": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "exactAttendanceEndTimeSecondsOfDay": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "minAttendanceStartTimeSecondsOfDay": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "maxAttendanceStartTimeSecondsOfDay": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "ticketType": {
+          "$ref": "#/definitions/v1TicketTypeFilter"
+        }
+      }
+    },
+    "v1GetDashboardRequest": {
+      "type": "object",
+      "properties": {
+        "dashboardId": {
+          "type": "string"
+        },
+        "locale": {
+          "type": "string"
+        }
+      }
+    },
+    "v1GetDashboardResponse": {
+      "type": "object",
+      "properties": {
+        "dashboardEmbeddableId": {
+          "type": "string"
+        }
+      }
+    },
+    "v1TicketTypeFilter": {
+      "type": "string",
+      "enum": [
+        "TICKET_TYPE_FILTER_UNSPECIFIED",
+        "TICKET_TYPE_FILTER_TICKETS",
+        "TICKET_TYPE_FILTER_ADD_ONS"
+      ],
+      "default": "TICKET_TYPE_FILTER_UNSPECIFIED",
+      "description": "*\nPossible ticket type filters.\n\n - TICKET_TYPE_FILTER_UNSPECIFIED: Tickets and add-ons.\n - TICKET_TYPE_FILTER_TICKETS: Tickets-only.\n - TICKET_TYPE_FILTER_ADD_ONS: Add-ons-only."
+    }
+  }
+}

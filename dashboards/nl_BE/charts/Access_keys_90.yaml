@@ -1,0 +1,71 @@
+slice_name: Access keys
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SIMPLE
+    filterOptionName: filter_24mb09fq22r_hxi9gvx6tm5
+    isExtra: false
+    isNew: false
+    operator: IS NOT NULL
+    operatorId: IS_NOT_NULL
+    sqlExpression: null
+    subject: access_key
+  all_columns: []
+  color_pn: true
+  column_config:
+    Quantity sold:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',.2f'
+  conditional_formatting: []
+  datasource: 30__table
+  extra_form_data: {}
+  granularity_sqla: purchase_time
+  groupby:
+  - access_key
+  include_search: true
+  metrics:
+  - Quantity sold
+  order_by_cols: []
+  order_desc: true
+  page_length: 0
+  percent_metrics: []
+  query_mode: aggregate
+  row_limit: 50000
+  server_page_length: 10
+  show_cell_bars: true
+  slice_id: 90
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  viz_type: table
+query_context: '{"datasource": {"id": 30, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "purchase_time", "filters": [{"col":
+  "access_key", "op": "IS NOT NULL"}, {"col": "event_id", "op": "IN", "val": ["5f52594003b45b0041296475"]}],
+  "extras": {"time_grain_sqla": "P1D", "having": "", "having_druid": [], "where":
+  ""}, "applied_time_extras": {}, "columns": ["access_key"], "metrics": ["Quantity
+  sold"], "orderby": [["Quantity sold", false]], "annotation_layers": [], "row_limit":
+  50000, "timeseries_limit": 0, "order_desc": true, "url_params": {}, "custom_params":
+  {}, "custom_form_data": {}, "post_processing": []}], "form_data": {"viz_type": "table",
+  "datasource": "30__table", "slice_id": 90, "granularity_sqla": "purchase_time",
+  "time_grain_sqla": "P1D", "time_range": "No filter", "query_mode": "aggregate",
+  "groupby": ["access_key"], "metrics": ["Quantity sold"], "all_columns": [], "percent_metrics":
+  [], "adhoc_filters": [{"clause": "WHERE", "comparator": null, "expressionType":
+  "SIMPLE", "filterOptionName": "filter_24mb09fq22r_hxi9gvx6tm5", "isExtra": false,
+  "isNew": false, "operator": "IS NOT NULL", "operatorId": "IS_NOT_NULL", "sqlExpression":
+  null, "subject": "access_key"}, {"clause": "WHERE", "expressionType": "SIMPLE",
+  "comparator": ["5f52594003b45b0041296475"], "operator": "IN", "subject": "event_id",
+  "isExtra": true, "filterOptionName": "082b847f9619382ed5c1a49a58f3612e"}], "order_by_cols":
+  [], "row_limit": 50000, "server_page_length": 10, "order_desc": true, "table_timestamp_format":
+  "smart_date", "page_length": 0, "include_search": true, "show_cell_bars": true,
+  "color_pn": true, "column_config": {"Quantity sold": {"d3NumberFormat": ",d", "d3SmallNumberFormat":
+  ",.2f"}}, "conditional_formatting": [], "extra_form_data": {}, "force": false, "result_format":
+  "json", "result_type": "full"}, "result_format": "json", "result_type": "full"}'
+cache_timeout: null
+uuid: 8bd4d7c7-f03f-49b9-937c-011f1aae71dc
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc

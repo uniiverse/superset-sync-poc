@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reports
+spec:
+  template:
+    spec:
+      containers:
+      - name: api
+        ports:
+        - name: grpc
+          containerPort: 8080
+        - name: http
+          containerPort: 8081
+        - name: node-debug
+          containerPort: 9229

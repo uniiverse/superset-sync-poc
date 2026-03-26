@@ -1,0 +1,39 @@
+slice_name: Total check ins (onsite)
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 30__table
+  viz_type: big_number_total
+  slice_id: 164
+  granularity_sqla: purchase_time
+  time_range: No filter
+  metric: Quantity sold
+  adhoc_filters:
+  - clause: WHERE
+    comparator: '0'
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_7woc0eqfyxd_3livwejq14b
+    isExtra: false
+    isNew: false
+    operator: '>'
+    operatorId: GREATER_THAN
+    sqlExpression: null
+    subject: redemption_balance
+  header_font_size: 0.4
+  subheader_font_size: 0.15
+  y_axis_format: SMART_NUMBER
+  time_format: smart_date
+  extra_form_data: {}
+  dashboards:
+  - 44
+query_context: '{"datasource":{"id":30,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"purchase_time","filters":[{"col":"redemption_balance","op":">","val":"0"}],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":["Quantity
+  sold"],"annotation_layers":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"30__table","viz_type":"big_number_total","slice_id":164,"granularity_sqla":"purchase_time","time_range":"No
+  filter","metric":"Quantity sold","adhoc_filters":[{"clause":"WHERE","comparator":"0","datasourceWarning":false,"expressionType":"SIMPLE","filterOptionName":"filter_7woc0eqfyxd_3livwejq14b","isExtra":false,"isNew":false,"operator":">","operatorId":"GREATER_THAN","sqlExpression":null,"subject":"redemption_balance"}],"header_font_size":0.4,"subheader_font_size":0.15,"y_axis_format":"SMART_NUMBER","time_format":"smart_date","extra_form_data":{},"dashboards":[44],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 8a8e1d78-5a72-4d21-9ee2-de1a8f299f10
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc

@@ -1,0 +1,71 @@
+{
+  "account_dashboard.sales": "Myynti",
+  "account_dashboard.check-ins_by": "Sisäänkirjautumiset perusteella",
+  "account_dashboard.counts": "Määrät",
+  "account_dashboard.event_breakdown": "Tapahtuman erittely",
+  "account_dashboard.ticket_sales_trends_by": "Lippujen myyntitrendit perusteella",
+  "account_dashboard.net_sales_sources": "Nettomyynnin lähteet",
+  "account_dashboard.onsite_sales_by": "Paikan päällinen myynti perusteella", 
+  "account_dashboard.promotions": "Markkinointi",
+
+  "boxoffice.checked_in": "Sisäänkirjautunut",
+  "boxoffice.remaining_check-ins": "Jäljellä olevat sisäänkirjautumiset",
+  "boxoffice.check-ins_by_event": "Sisäänkirjautumiset tapahtuman perusteella",
+  "boxoffice.onsite_sales_by_event": "Paikan päällinen myynti tapahtuman perusteella",
+
+  "check-ins_by.tickets": "Liput",
+  "check-ins_by.add-ons": "Lisäosat",
+  "comparison_suffix.previous_day": "Edellinen päivä",
+
+  "sales_dashboard.gross_sales": "Bruttomyynti",
+  "sales_dashboard.net_sales": "Nettomyynti",
+  "sales_dashboard.net_sales_breakdown": "Nettomyynnin erittely",
+  "counts_dashboard.tickets": "Liput",
+  "counts_dashboard.orders": "Tilaukset",
+  "counts_dashboard.add_ons": "Lisäosat",
+  "counts_dashboard.paid_vs_free": "Maksullinen vs. ilmainen",
+  "counts_dashboard.ticket_net_sales_by_event": "Lippujen nettomyynti tapahtuman perusteella",
+  "comparison_suffix": "Edellinen viikko",
+
+  "trends.sales_by_ticket_type": "Myynti lipputyyin perusteella",
+  "trends.average_ticket_price": "Keskimääräinen lippuhinta",
+  "trends.average_order_price": "Keskimääräinen tilaushinta",
+  "trends.tickets_per_order": "Lippuja tilausta kohden",
+  "trends.accumulated_tickets_by_type": "Kertyneet liput tyypin mukaan",
+
+  "revenue_sources.card_brand": "Kortin merkki",
+  "revenue_sources.online_vs_boxoffice": "Verkko vs. lippumyymälä",
+  "revenue_sources.online_sources": "Verkkolähteet",
+  "revenue_sources.boxoffice_sources": "Lippumyymälälähteet",
+  "revenue_sources.referrals": "Viitteet",
+  "revenue_sources.channel_partner": "Kanavakumppani",
+  "revenue_sources.partner_reseller": "Uudelleenmyyjäkumppani",
+
+  "onsite_sales_by.tickets": "Liput",
+  "onsite_sales_by.add-ons": "Lisäosat",
+
+  "promotions.access_keys": "Pääsyavaimet",
+  "promotions.discount_codes": "Alennuskoodit",
+
+  "tabs.account_dashboard.boxoffice": "Lippumyymälä",
+  "tabs.account_dashboard.overview": "Yleiskatsaus",
+  "tabs.account_dashboard.trends": "Trendit",
+  "tabs.account_dashboard.sources": "Lähteet",
+
+  "tabs.event_breakdown.by_event": "Tapahtuman mukaan",
+  "tabs.event_breakdown.by_timeslot": "Ajankohdan mukaan",
+  "tabs.event_breakdown.by_type": "Tyypin mukaan",
+
+  "tabs.day_of_week": "Viikonpäivä",
+  "tabs.day": "Päivä",
+  "tabs.hour_of_day": "Tunti",
+  "tabs.month": "Kuukausi",
+  "tabs.teammate": "Tiimin jäsen",
+  "tabs.type": "Tyyppi",
+  "tabs.week": "Viikko",
+  "tabs.year": "Vuosi",
+
+  "tabs.event": "Tapahtuma",
+  "tabs.timeslot" : "Ajankohta",
+  "tabs.timeslot_and_type": "Ajankohta ja tyyppi"
+}

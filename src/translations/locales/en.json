@@ -1,0 +1,71 @@
+{
+  "account_dashboard.sales": "Sales",
+  "account_dashboard.check-ins_by": "Check-ins by",
+  "account_dashboard.counts": "Counts",
+  "account_dashboard.event_breakdown": "Event breakdown",
+  "account_dashboard.ticket_sales_trends_by": "Ticket sales trends by",
+  "account_dashboard.net_sales_sources": "Net sales sources",
+  "account_dashboard.onsite_sales_by": "Onsite sales by", 
+  "account_dashboard.promotions": "Promotions",
+
+  "boxoffice.checked_in": "Checked-in",
+  "boxoffice.remaining_check-ins": "Remaining check-ins",
+  "boxoffice.check-ins_by_event": "Check-ins by event",
+  "boxoffice.onsite_sales_by_event": "Onsite sales by event",
+
+  "check-ins_by.tickets": "Tickets",
+  "check-ins_by.add-ons": "Add-ons",
+  "comparison_suffix.previous_day": "Previous day",
+
+  "sales_dashboard.gross_sales": "Gross sales",
+  "sales_dashboard.net_sales": "Net sales",
+  "sales_dashboard.net_sales_breakdown": "Net sales breakdown",
+  "counts_dashboard.tickets": "Tickets",
+  "counts_dashboard.orders": "Orders",
+  "counts_dashboard.add_ons": "Add-ons",
+  "counts_dashboard.paid_vs_free": "Paid vs free",
+  "counts_dashboard.ticket_net_sales_by_event": "Ticket net sales by event",
+  "comparison_suffix": "Previous week",
+
+  "trends.sales_by_ticket_type": "Sales by ticket type",
+  "trends.average_ticket_price": "Average ticket price",
+  "trends.average_order_price": "Average order price",
+  "trends.tickets_per_order": "Tickets per order",
+  "trends.accumulated_tickets_by_type": "Accumulated tickets by type",
+
+  "revenue_sources.card_brand": "Card brand",
+  "revenue_sources.online_vs_boxoffice": "Online vs boxoffice",
+  "revenue_sources.online_sources": "Online sources",
+  "revenue_sources.boxoffice_sources": "Boxoffice sources",
+  "revenue_sources.referrals": "Referrals",
+  "revenue_sources.channel_partner": "Channel partner",
+  "revenue_sources.partner_reseller": "Partner reseller",
+
+  "onsite_sales_by.tickets": "Tickets",
+  "onsite_sales_by.add-ons": "Add-ons",
+
+  "promotions.access_keys": "Access keys",
+  "promotions.discount_codes": "Discount codes",
+
+  "tabs.account_dashboard.boxoffice": "Boxoffice",
+  "tabs.account_dashboard.overview": "Overview",
+  "tabs.account_dashboard.trends": "Trends",
+  "tabs.account_dashboard.sources": "Sources",
+
+  "tabs.event_breakdown.by_event": "By event",
+  "tabs.event_breakdown.by_timeslot": "By timeslot",
+  "tabs.event_breakdown.by_type": "By type",
+
+  "tabs.day_of_week": "Day of week",
+  "tabs.day": "Day",
+  "tabs.hour_of_day": "Hour of day",
+  "tabs.month": "Month",
+  "tabs.teammate": "Teammate",
+  "tabs.type": "Type",
+  "tabs.week": "Week",
+  "tabs.year": "Year",
+
+  "tabs.event": "Event",
+  "tabs.timeslot" : "Timeslot",
+  "tabs.timeslot_and_type": "Timeslot and type"
+}

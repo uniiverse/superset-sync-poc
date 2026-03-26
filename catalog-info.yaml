@@ -1,0 +1,20 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: reports
+  description: Node Service
+  annotations:
+    github.com/project-slug: uniiverse/reports
+  links:
+    - url: https://argocd.universe.engineer/applications/argocd/staging-reports?view=tree&resource=
+      title: "Staging: ArgoCD"
+      icon: dashboard
+    - url: https://argocd.universe.engineer/applications/argocd/production-reports?view=tree&resource=
+      title: "Production: ArgoCD"
+      icon: dashboard
+spec:
+  type: service
+  owner: core
+  lifecycle: production
+  providesApis:
+    - reports-v1

@@ -1,0 +1,32 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../deploy
+  - namespace.yaml
+  # TODO: Get on skaffold dev.
+  # - git@github.com:uniiverse/superset-manifest/dist
+
+patches:
+  - path: patches/deployment.yaml
+  - path: patches/service.yaml
+
+configMapGenerator:
+  - name: reports-env
+    literals:
+      - LOG_LEVEL=debug
+      - BUILD_TYPE=dev
+
+# configMapGenerator:
+#   - name: reports-env
+#     literals:
+#       - PORT=9001
+#       - SUPERSET_URL=https://superset.data-us-east4.clusters.production.universe.engineer
+#       - SUPERSET_USERNAME=Universe
+#       - LOG_LEVEL=debug
+
+# # TODO: Cut this over to using the non-admin account and change the password.
+# secretGenerator:
+#   - name: reports
+#     literals:
+#       - SUPERSET_PASSWORD=UniverseDashboard2023!

@@ -1,0 +1,66 @@
+slice_name: Referrals
+description: null
+certified_by: null
+certification_details: null
+viz_type: pie
+params:
+  datasource: 30__table
+  viz_type: pie
+  slice_id: 144
+  granularity_sqla: purchase_time
+  time_range: No filter
+  groupby:
+  - referral
+  metric: Net earnings
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_51k59tv0yf9_9x7cmpwyhhb
+    isExtra: false
+    isNew: false
+    operator: IS NOT NULL
+    operatorId: IS_NOT_NULL
+    sqlExpression: null
+    subject: referral
+  row_limit: 50000
+  sort_by_metric: true
+  color_scheme: supersetColors
+  show_labels_threshold: '0'
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  legendMargin: null
+  label_type: key
+  number_format: ',.2f'
+  date_format: smart_date
+  show_labels: true
+  labels_outside: true
+  label_line: false
+  show_total: false
+  outerRadius: 70
+  donut: false
+  innerRadius: 30
+  extra_form_data: {}
+  dashboards:
+  - 17
+  - 14
+  - 21
+  - 20
+  - 24
+  - 25
+  - 19
+  - 22
+  - 18
+  - 26
+query_context: '{"datasource":{"id":30,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"purchase_time","filters":[{"col":"referral","op":"IS NOT
+  NULL"}],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":["referral"],"metrics":["Net
+  earnings"],"orderby":[["Net earnings",false]],"annotation_layers":[],"row_limit":50000,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"30__table","viz_type":"pie","slice_id":144,"granularity_sqla":"purchase_time","time_range":"No
+  filter","groupby":["referral"],"metric":"Net earnings","adhoc_filters":[{"clause":"WHERE","comparator":null,"datasourceWarning":false,"expressionType":"SIMPLE","filterOptionName":"filter_51k59tv0yf9_9x7cmpwyhhb","isExtra":false,"isNew":false,"operator":"IS
+  NOT NULL","operatorId":"IS_NOT_NULL","sqlExpression":null,"subject":"referral"}],"row_limit":50000,"sort_by_metric":true,"color_scheme":"supersetColors","show_labels_threshold":"0","show_legend":true,"legendType":"scroll","legendOrientation":"top","legendMargin":null,"label_type":"key","number_format":",.2f","date_format":"smart_date","show_labels":true,"labels_outside":true,"label_line":false,"show_total":false,"outerRadius":70,"donut":false,"innerRadius":30,"extra_form_data":{},"dashboards":[17,14,21,20,24,25,19,22,18,26],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 4bdf7915-8fb3-490f-888a-27e6dca9c385
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc

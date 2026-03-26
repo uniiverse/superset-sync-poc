@@ -1,0 +1,19 @@
+# > docker-compose up
+
+networks:
+  universe:
+    name: universe
+    driver: bridge
+
+version: '3.7'
+name: "grpc-clickhouse"
+
+services:
+  grpc-gateway:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    ports:
+      - 8082:8082
+    networks:
+      - universe

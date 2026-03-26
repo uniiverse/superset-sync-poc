@@ -1,0 +1,24 @@
+# TODO: Remove me once web, boxoffice, etc are on skaffold / k8s
+# Add to Dockerfile:
+# ADD sample-db/* /docker-entrypoint-initdb.d/
+# > docker-compose up
+
+networks:
+  universe:
+    name: universe
+    driver: bridge
+
+version: '3.7'
+name: "clickhouse"
+
+services:
+  clickhouse:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    ports:
+      - 9000:9000
+    volumes:
+      - ./:/app
+    networks:
+      - universe

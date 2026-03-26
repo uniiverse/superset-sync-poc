@@ -1,0 +1,71 @@
+{
+  "account_dashboard.sales": "Ventes",
+  "account_dashboard.check-ins_by": "Enregistrements par",
+  "account_dashboard.counts": "Nombres",
+  "account_dashboard.event_breakdown": "Répartition de l'événement",
+  "account_dashboard.ticket_sales_trends_by": "Tendances des ventes de billets par",
+  "account_dashboard.net_sales_sources": "Sources de ventes nettes",
+  "account_dashboard.onsite_sales_by": "Ventes sur place par", 
+  "account_dashboard.promotions": "Promotions",
+
+  "boxoffice.checked_in": "Enregistré",
+  "boxoffice.remaining_check-ins": "Enregistrements restants",
+  "boxoffice.check-ins_by_event": "Entrées par événement ",
+  "boxoffice.onsite_sales_by_event": "Ventes sur place par événement",
+
+  "check-ins_by.tickets": "Billets",
+  "check-ins_by.add-ons": "Articles supplémentaires",
+  "comparison_suffix.previous_day": "Jour précédent",
+
+  "sales_dashboard.gross_sales": "Ventes brutes",
+  "sales_dashboard.net_sales": "Ventes nettes",
+  "sales_dashboard.net_sales_breakdown": "Répartition des ventes nettes",
+  "counts_dashboard.tickets": "Billets",
+  "counts_dashboard.orders": "Commandes",
+  "counts_dashboard.add_ons": "Articles supplémentaires",
+  "counts_dashboard.paid_vs_free": "Payants et gratuits",
+  "counts_dashboard.ticket_net_sales_by_event": "Ventes nettes de billets par événement",
+  "comparison_suffix": "Semaine précédente",
+
+  "trends.sales_by_ticket_type": "Ventes par type de billet",
+  "trends.average_ticket_price": "Prix moyen d'un billet",
+  "trends.average_order_price": "Prix moyen d'une commande",
+  "trends.tickets_per_order": "Billets par commande",
+  "trends.accumulated_tickets_by_type": "Tickets accumulés par type",
+
+  "revenue_sources.card_brand": "Marque de la carte",
+  "revenue_sources.online_vs_boxoffice": "En ligne et au guichet",
+  "revenue_sources.online_sources": "Sources en ligne",
+  "revenue_sources.boxoffice_sources": "Sources au guichet",
+  "revenue_sources.referrals": "Parrainages",
+  "revenue_sources.channel_partner": "Partenaire intermédiaire",
+  "revenue_sources.partner_reseller": "Revendeur partenaire",
+
+  "onsite_sales_by.tickets": "Billets",
+  "onsite_sales_by.add-ons": "Articles supplémentaires",
+
+  "promotions.access_keys": "Clés d'accès",
+  "promotions.discount_codes": "Codes de réduction",
+
+  "tabs.account_dashboard.boxoffice": "BoxOffice",
+  "tabs.account_dashboard.overview": "Vue d'ensemble",
+  "tabs.account_dashboard.trends": "Tendances",
+  "tabs.account_dashboard.sources": "Sources",
+
+  "tabs.event_breakdown.by_event": "Par événement",
+  "tabs.event_breakdown.by_timeslot": "Par créneau horaire",
+  "tabs.event_breakdown.by_type": "Par type",
+
+  "tabs.day_of_week": "Jour de la semaine",
+  "tabs.day": "Jour",
+  "tabs.hour_of_day": "Heure de la journée",
+  "tabs.month": "Mois",
+  "tabs.teammate": "Coéquipier",
+  "tabs.type": "Type",
+  "tabs.week": "Semaine",
+  "tabs.year": "Année",
+
+  "tabs.event": "Événement",
+  "tabs.timeslot" : "Créneau horaire",
+  "tabs.timeslot_and_type": "Créneau et type"
+}

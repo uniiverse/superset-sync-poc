@@ -1,0 +1,14 @@
+{
+  "testPathIgnorePatterns": ["node_modules/", "deploy/"],
+  "moduleNameMapper": {
+    "^(\\.{1,2}/.*)\\.js$": "$1"
+  },
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "testTimeout": 15000,
+  "reporters": ["default"],
+  "collectCoverage": true,
+  "coverageDirectory": "dist/coverage",
+  "coverageReporters": ["lcov", "text"],
+  "coveragePathIgnorePatterns": ["node_modules/", "test/"]
+}

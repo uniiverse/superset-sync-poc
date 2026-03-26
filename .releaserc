@@ -1,0 +1,23 @@
+{
+  "branches": [
+    "main"
+  ],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    ["@semantic-release/exec", {
+      "prepareCmd": "RELEASE_TAG=${nextRelease.version} task prepare"
+    }],
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    ["@semantic-release/git", {
+      "assets": ["CHANGELOG.md", "dist/**", "VERSION", "README.md"],
+      "message": "chore(release): ${nextRelease.version} Changelog and generated assets [skip ci]"
+    }],
+    [
+      "@semantic-release/github",
+      {
+        "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
+      }
+    ]
+  ]
+}

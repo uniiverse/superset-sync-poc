@@ -1,0 +1,15 @@
+# DO NOT EDIT
+#
+# This file is maintained automatically by your platform team.
+# Manual edits will be overwritten.
+
+version: '3'
+
+tasks:
+  scan:
+    cmds:
+      - checkov --directory=. --config-file=.config/checkov.yaml
+
+  sbom:
+    cmds:
+      - syft packages {{.ARTIFACT_ID}} --output cyclonedx-json --file dist/sbom.cyclonedx.json

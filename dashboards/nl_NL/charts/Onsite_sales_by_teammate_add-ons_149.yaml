@@ -1,0 +1,79 @@
+slice_name: Onsite sales by teammate (add-ons)
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 29__table
+  viz_type: table
+  slice_id: 149
+  granularity_sqla: purchase_time
+  time_grain_sqla: P1D
+  time_range: No filter
+  query_mode: aggregate
+  groupby:
+  - expressionType: SQL
+    label: Device
+    sqlExpression: purchase_device_id
+  metrics:
+  - Net earnings
+  - Quantity sold
+  all_columns: []
+  percent_metrics: []
+  adhoc_filters:
+  - clause: WHERE
+    comparator:
+    - ios_cash
+    - ios_free
+    - ios_manual_cc_entry
+    - ios_square_reader
+    - ios_stripe_terminal_wisepad3
+    - android_stripe_terminal_wisepad3
+    - ios_stripe_tap
+    - ios_stripe_terminal_m2reader
+    - android_stripe_terminal_m2reader
+    - ios_stripe_terminal_chipper2x
+    - android_stripe_terminal_chipper2x
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_j0j57zritpd_gwls8r368kw
+    isExtra: false
+    isNew: false
+    operator: IN
+    operatorId: IN
+    sqlExpression: null
+    subject: payment_type_details
+  - clause: WHERE
+    comparator: AddOnRate
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_q8dcmh2m38_ucb71ob2br
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: ticket_category
+  order_by_cols: []
+  row_limit: 50000
+  server_page_length: 10
+  order_desc: true
+  show_totals: true
+  table_timestamp_format: smart_date
+  show_cell_bars: true
+  color_pn: true
+  extra_form_data: {}
+  dashboards:
+  - 17
+  - 29
+query_context: '{"datasource":{"id":29,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"purchase_time","filters":[{"col":"payment_type_details","op":"IN","val":["ios_cash","ios_free","ios_manual_cc_entry","ios_square_reader","ios_stripe_terminal_wisepad3","android_stripe_terminal_wisepad3","ios_stripe_tap","ios_stripe_terminal_m2reader","android_stripe_terminal_m2reader","ios_stripe_terminal_chipper2x","android_stripe_terminal_chipper2x"]},{"col":"ticket_category","op":"==","val":"AddOnRate"}],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":[{"expressionType":"SQL","label":"Device","sqlExpression":"purchase_device_id"}],"metrics":["Net
+  earnings","Quantity sold"],"orderby":[["Net earnings",false]],"annotation_layers":[],"row_limit":50000,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[]},{"time_range":"No
+  filter","granularity":"purchase_time","filters":[{"col":"payment_type_details","op":"IN","val":["ios_cash","ios_free","ios_manual_cc_entry","ios_square_reader","ios_stripe_terminal_wisepad3","android_stripe_terminal_wisepad3","ios_stripe_tap","ios_stripe_terminal_m2reader","android_stripe_terminal_m2reader","ios_stripe_terminal_chipper2x","android_stripe_terminal_chipper2x"]},{"col":"ticket_category","op":"==","val":"AddOnRate"}],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":["Net
+  earnings","Quantity sold"],"annotation_layers":[],"row_limit":0,"row_offset":0,"series_limit":0,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[]}],"form_data":{"datasource":"29__table","viz_type":"table","slice_id":149,"granularity_sqla":"purchase_time","time_grain_sqla":"P1D","time_range":"No
+  filter","query_mode":"aggregate","groupby":[{"expressionType":"SQL","label":"Device","sqlExpression":"purchase_device_id"}],"metrics":["Net
+  earnings","Quantity sold"],"all_columns":[],"percent_metrics":[],"adhoc_filters":[{"clause":"WHERE","comparator":["ios_cash","ios_free","ios_manual_cc_entry","ios_square_reader","ios_stripe_terminal_wisepad3","android_stripe_terminal_wisepad3","ios_stripe_tap","ios_stripe_terminal_m2reader","android_stripe_terminal_m2reader","ios_stripe_terminal_chipper2x","android_stripe_terminal_chipper2x"],"datasourceWarning":false,"expressionType":"SIMPLE","filterOptionName":"filter_j0j57zritpd_gwls8r368kw","isExtra":false,"isNew":false,"operator":"IN","operatorId":"IN","sqlExpression":null,"subject":"payment_type_details"},{"clause":"WHERE","comparator":"AddOnRate","datasourceWarning":false,"expressionType":"SIMPLE","filterOptionName":"filter_q8dcmh2m38_ucb71ob2br","isExtra":false,"isNew":false,"operator":"==","operatorId":"EQUALS","sqlExpression":null,"subject":"ticket_category"}],"order_by_cols":[],"row_limit":50000,"server_page_length":10,"order_desc":true,"show_totals":true,"table_timestamp_format":"smart_date","show_cell_bars":true,"color_pn":true,"extra_form_data":{},"dashboards":[17,29],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: e0a52eaa-c7ab-467a-b696-bb318be475be
+version: 1.0.0
+dataset_uuid: 4dffd900-a2d4-45ad-a8c1-4b68d34b9447

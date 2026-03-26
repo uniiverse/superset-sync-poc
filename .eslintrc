@@ -1,0 +1,51 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier", "jest", "import"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "no-console": 1,
+    "prettier/prettier": 2,
+
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
+
+    "import/newline-after-import": ["error", { "count": 1 }],
+    "import/order": [
+      "error",
+      {   
+        "newlines-between": "always",
+        "groups": [
+          "external",
+          "builtin",
+          "internal",
+          "sibling",
+          "parent",
+          "index",
+          "type",
+          "object"
+        ],
+        "pathGroups": [
+          { 
+            "pattern": "src/**", 
+            "group": "internal" 
+          }
+       ], 
+      "pathGroupsExcludedImportTypes": 
+         ["internal"], 
+         "alphabetize": { 
+            "order": "asc", 
+            "caseInsensitive": true 
+         }
+      }
+    ]
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest/globals": true
+  }
+}

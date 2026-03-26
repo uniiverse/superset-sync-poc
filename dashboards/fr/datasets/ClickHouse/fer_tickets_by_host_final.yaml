@@ -1,0 +1,812 @@
+table_name: fer_tickets_by_host_final
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: highlander
+sql: ''
+params: null
+template_params: null
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: 71056aab-904c-4cb1-85d3-12837cad45bc
+metrics:
+- metric_name: Ticket sales
+  verbose_name: Ticket sales
+  metric_type: null
+  expression: "roundBankers(SUM(if(\r\n        ((ticket_category IS NULL\r\n     \
+    \   OR ticket_category IN ('Rate',\r\n                               'FreeRate',\r\
+    \n                               'pwycRate',\r\n                             \
+    \  'PassRate'))),\r\n        price - voided_price,\r\n        0\r\n    )),2)"
+  description: null
+  d3format: $,.2f
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Cash sales
+  verbose_name: Cash sales
+  metric_type: null
+  expression: "roundBankers(\n    SUM(\n        IF(\n            payment_type = 'offline',\n\
+    \            price - voided_price,\n            0\n        )\n    ), 2\n)"
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Add-on quantity sold
+  verbose_name: Add-on quantity sold
+  metric_type: null
+  expression: SUM(if(ticket_category = 'AddOnRate' AND ticket_status IN ('paid', 'ended',
+    'closed'), 1, 0))
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Total discounts
+  verbose_name: Total discounts
+  metric_type: null
+  expression: roundBankers(SUM(if(discount_code NOT IN ('comp','other','TRANSFER'),
+    discount - voided_discount, 0)),2)
+  description: null
+  d3format: $,.2f
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Additional fees
+  verbose_name: Additional fees
+  metric_type: null
+  expression: roundBankers(SUM(if(order_status NOT IN ('cancelled'), fees_total -
+    voided_fees_total, 0)),2)
+  description: null
+  d3format: $,.2f
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Collected taxes
+  verbose_name: Collected taxes
+  metric_type: null
+  expression: roundBankers(SUM(if(order_status NOT IN ('cancelled'), taxes_total -
+    voided_taxes_total, 0)),2)
+  description: null
+  d3format: $,.2f
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Ticket count (WIP)
+  verbose_name: Ticket count
+  metric_type: null
+  expression: roundBankers(SUM(if(ticket_status IN ('paid', 'ended', 'closed'), 1,
+    0)),2)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Add-on sales
+  verbose_name: Add-on sales
+  metric_type: null
+  expression: roundBankers(SUM(if(ticket_category IN ('AddOnRate'), price - voided_price,
+    0)),2)
+  description: null
+  d3format: $,.2f
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Net of tax
+  verbose_name: Net of tax
+  metric_type: null
+  expression: roundBankers(SUM(net_earnings - (taxes_total - voided_taxes_total)),2)
+  description: null
+  d3format: $,.2f
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Service charge, included in price
+  verbose_name: Service charge, included in price
+  metric_type: null
+  expression: roundBankers(SUM(commission_included-voided_commission_included),2)
+  description: null
+  d3format: $,.2f
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Tax on Universe service fee
+  verbose_name: Tax on Universe service fee
+  metric_type: null
+  expression: roundBankers(SUM(vat_included-voided_vat_included),2)
+  description: null
+  d3format: $,.2f
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Redeemed access keys
+  verbose_name: Redeemed access keys
+  metric_type: null
+  expression: countIf(access_key IS NOT NULL)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Average ticket price
+  verbose_name: Average ticket price
+  metric_type: null
+  expression: roundBankers(SUM(price-voided_price) / COUNT(DISTINCT(id)),2)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Average order price
+  verbose_name: Average order price
+  metric_type: null
+  expression: roundBankers(SUM(net_earnings)/ COUNT(DISTINCT(order_id)),2)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Quantity sold
+  verbose_name: Quantity sold
+  metric_type: null
+  expression: countIf(ticket_status IN ('paid','ended','closed','partially_paid'))
+  description: null
+  d3format: ',d'
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Average quantity
+  verbose_name: Average quantity
+  metric_type: null
+  expression: COUNT(DISTINCT(id)) / COUNT(DISTINCT(order_id))
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Gross sales
+  verbose_name: Gross sales
+  metric_type: null
+  expression: roundBankers(SUM(price+taxes_total+fees_total),2)
+  description: null
+  d3format: $,.2f
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Net earnings
+  verbose_name: Net earnings
+  metric_type: null
+  expression: roundBankers(SUM(net_earnings),2)
+  description: null
+  d3format: $,.2f
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Gross price
+  verbose_name: Gross price
+  metric_type: null
+  expression: roundBankers(SUM(price),2)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: null
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Orders
+  verbose_name: Orders
+  metric_type: null
+  expression: COUNT(DISTINCT(order_id))
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+columns:
+- column_name: Online vs onsite sales
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: null
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: 'CASE WHEN payment_type_details LIKE ''ios_%'' OR payment_type_details
+    LIKE ''android_%'' THEN ''Boxoffice app''
+
+    ELSE ''Online''
+
+    END'
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: Remaining check-ins
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: null
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: 'CASE WHEN redemption_balance IS NULL OR redemption_balance = 0 THEN
+    1
+
+    ELSE 0
+
+    END'
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: Paid or free
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: null
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: "CASE WHEN net_earnings = 0 THEN 'Free'\n  ELSE 'Paid'\nEND"
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: Day of week created
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: null
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: formatDateTime(purchase_time, '%u')
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: Hour of day created
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: null
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: formatDateTime(purchase_time, '%H')
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: Date of purchase
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: null
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: formatDateTime(purchase_time, '%Y-%m-%d')
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: Monday of week created
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: null
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: toDate(toMonday(purchase_time))
+  description: null
+  python_date_format: ''
+  extra:
+    warning_markdown: null
+- column_name: access_key
+  verbose_name: Access key
+  is_dttm: false
+  is_active: null
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: discount_code
+  verbose_name: Discount code
+  is_dttm: false
+  is_active: null
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: ticket_type
+  verbose_name: Ticket type
+  is_dttm: false
+  is_active: null
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: voided_taxes_total
+  verbose_name: null
+  is_dttm: null
+  is_active: null
+  type: NULLABLE(FLOAT32)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: voided_vat_included
+  verbose_name: null
+  is_dttm: null
+  is_active: null
+  type: NULLABLE(FLOAT32)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: voided_fees_total
+  verbose_name: null
+  is_dttm: null
+  is_active: null
+  type: NULLABLE(FLOAT32)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: voided_commission_included
+  verbose_name: null
+  is_dttm: null
+  is_active: null
+  type: NULLABLE(FLOAT32)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: taxes_total
+  verbose_name: null
+  is_dttm: null
+  is_active: null
+  type: NULLABLE(FLOAT32)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: vat_included
+  verbose_name: null
+  is_dttm: null
+  is_active: null
+  type: NULLABLE(FLOAT32)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: fees_total
+  verbose_name: null
+  is_dttm: null
+  is_active: null
+  type: NULLABLE(FLOAT32)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: net_earnings
+  verbose_name: null
+  is_dttm: null
+  is_active: null
+  type: NULLABLE(FLOAT32)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: commission_included
+  verbose_name: null
+  is_dttm: null
+  is_active: null
+  type: NULLABLE(FLOAT32)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: voided_discount
+  verbose_name: null
+  is_dttm: null
+  is_active: null
+  type: NULLABLE(FLOAT32)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: voided_price
+  verbose_name: null
+  is_dttm: null
+  is_active: null
+  type: NULLABLE(FLOAT32)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: discount
+  verbose_name: null
+  is_dttm: null
+  is_active: null
+  type: NULLABLE(FLOAT32)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: price
+  verbose_name: null
+  is_dttm: null
+  is_active: null
+  type: NULLABLE(FLOAT32)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: redemption_balance
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NULLABLE(INT32)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: timeslot_start_time
+  verbose_name: null
+  is_dttm: true
+  is_active: null
+  type: NULLABLE(DATETIME)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: timeslot_end_time
+  verbose_name: null
+  is_dttm: true
+  is_active: null
+  type: NULLABLE(DATETIME)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: purchase_time
+  verbose_name: null
+  is_dttm: true
+  is_active: null
+  type: NULLABLE(DATETIME)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: last_scanner_device_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: channel_partner_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: channel_partner_reseller
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: payment_type_details
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: purchase_device_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: card_brand
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: ticket_category
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: payment_processor
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: ticket_status
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: order_status
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: payment_type
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: order_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: event_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: timeslot_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: host_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: referral
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: currency
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+version: 1.0.0
+database_uuid: 2bcd6f44-64a1-46f9-ab11-f6572aded45f

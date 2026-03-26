@@ -1,0 +1,8 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  clean:
+    - rm -fR dist/rendered.yaml dist/**/*.yaml dist/kustomization.yaml
+    - mkdir -p dist/resources

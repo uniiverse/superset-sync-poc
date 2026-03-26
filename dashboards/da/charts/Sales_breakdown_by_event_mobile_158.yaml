@@ -1,0 +1,46 @@
+slice_name: Sales breakdown by event (mobile)
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 29__table
+  viz_type: table
+  slice_id: 108
+  granularity_sqla: purchase_time
+  time_grain_sqla: P1D
+  time_range: No filter
+  query_mode: aggregate
+  groupby:
+  - event_name
+  metrics:
+  - Net earnings
+  - Quantity sold
+  all_columns: []
+  percent_metrics: []
+  adhoc_filters: []
+  order_by_cols: []
+  row_limit: 50000
+  server_page_length: 10
+  order_desc: true
+  table_timestamp_format: smart_date
+  show_cell_bars: true
+  color_pn: true
+  column_config:
+    Net earnings:
+      d3NumberFormat: ',.2f'
+    Quantity sold:
+      d3NumberFormat: ',d'
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards: []
+query_context: '{"datasource":{"id":29,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"purchase_time","filters":[],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":["event_name"],"metrics":["Net
+  earnings","Quantity sold"],"orderby":[["Net earnings",false]],"annotation_layers":[],"row_limit":50000,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[]}],"form_data":{"datasource":"29__table","viz_type":"table","slice_id":108,"granularity_sqla":"purchase_time","time_grain_sqla":"P1D","time_range":"No
+  filter","query_mode":"aggregate","groupby":["event_name"],"metrics":["Net earnings","Quantity
+  sold"],"all_columns":[],"percent_metrics":[],"adhoc_filters":[],"order_by_cols":[],"row_limit":50000,"server_page_length":10,"order_desc":true,"table_timestamp_format":"smart_date","show_cell_bars":true,"color_pn":true,"column_config":{"Net
+  earnings":{"d3NumberFormat":",.2f"},"Quantity sold":{"d3NumberFormat":",d"}},"conditional_formatting":[],"extra_form_data":{},"dashboards":[],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 97a1ddc1-9c1d-41f7-8eb3-841d84553b88
+version: 1.0.0
+dataset_uuid: 4dffd900-a2d4-45ad-a8c1-4b68d34b9447

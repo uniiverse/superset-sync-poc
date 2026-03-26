@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/name: reports
+  name: reports
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: reports
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: reports
+    spec:
+      containers:
+        - envFrom:
+            - configMapRef:
+                name: reports-env
+                optional: true
+            - secretRef:
+                name: reports-env
+                optional: true
+          image: us-east4-docker.pkg.dev/tm-uni-platform/platform-team/reports/reports:1.4.2@sha256:6f39bb20d747d797e3260c03be3f40cecf0ddcecf56ce6970a92a705b1314165
+          livenessProbe:
+            httpGet:
+              path: /healthz/ready
+              port: http
+            initialDelaySeconds: 10
+          name: api
+          ports:
+            - containerPort: 8080
+              name: grpc
+            - containerPort: 8081
+              name: http
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 5
+          resources:
+            requests:
+              cpu: 500m
+              memory: 256Mi

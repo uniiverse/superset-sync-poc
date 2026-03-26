@@ -1,0 +1,50 @@
+slice_name: Average order price
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 30__table
+  viz_type: big_number_total
+  slice_id: 130
+  granularity_sqla: purchase_time
+  time_range: No filter
+  metric: Average order price
+  adhoc_filters:
+  - clause: WHERE
+    comparator:
+    - paid
+    - ended
+    - closed
+    expressionType: SIMPLE
+    filterOptionName: filter_zmhdp3ttzw_qxzrruoe49g
+    isExtra: false
+    isNew: false
+    operator: IN
+    operatorId: IN
+    sqlExpression: null
+    subject: ticket_status
+  header_font_size: 0.4
+  subheader_font_size: 0.15
+  y_axis_format: ',.2f'
+  time_format: smart_date
+  extra_form_data: {}
+  dashboards:
+  - 14
+  - 17
+  - 21
+  - 20
+  - 24
+  - 25
+  - 19
+  - 22
+  - 18
+  - 26
+query_context: '{"datasource":{"id":30,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"purchase_time","filters":[{"col":"ticket_status","op":"IN","val":["paid","ended","closed"]}],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":["Average
+  order price"],"annotation_layers":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"30__table","viz_type":"big_number_total","slice_id":130,"granularity_sqla":"purchase_time","time_range":"No
+  filter","metric":"Average order price","adhoc_filters":[{"clause":"WHERE","comparator":["paid","ended","closed"],"expressionType":"SIMPLE","filterOptionName":"filter_zmhdp3ttzw_qxzrruoe49g","isExtra":false,"isNew":false,"operator":"IN","operatorId":"IN","sqlExpression":null,"subject":"ticket_status"}],"header_font_size":0.4,"subheader_font_size":0.15,"y_axis_format":",.2f","time_format":"smart_date","extra_form_data":{},"dashboards":[14,17,21,20,24,25,19,22,18,26],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: cee8a74c-5fa4-488d-9033-00ee20d1e7d1
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc

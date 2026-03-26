@@ -1,0 +1,8 @@
+directory:
+  - dist/
+
+framework:
+  - kubernetes
+
+skip-check:
+  - CKV_K8S_21 # Namespaces are determined at deployment time

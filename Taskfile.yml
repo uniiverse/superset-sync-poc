@@ -1,0 +1,66 @@
+# https://taskfile.dev
+
+version: '3'
+
+includes:
+  skaffold: .config/taskfile/skaffold.yaml
+  release:  .config/taskfile/release.yaml
+  security: .config/taskfile/security.yaml
+  npm:      .config/taskfile/npm.yaml
+
+vars:
+  PROJECT_NAME: reports
+  PROJECT_TYPE: skaffold
+  CONTAINER_BUILD_ARTIFACT: dist/built-images.json
+env:
+  SKAFFOLD_DEFAULT_REPO: us-east4-docker.pkg.dev/tm-uni-platform/platform-team
+
+tasks:
+  dev-rebuild:
+    cmds:
+      - docker compose up --force-recreate --build
+      # TODO: Get on skaffold eventually.
+      # - kubectl config use-context kind-kind # NOTE: Remove when using remote cluster envs.
+      # - skaffold dev --default-repo=$SKAFFOLD_DEFAULT_REPO/{{.PROJECT_NAME}} --cache-artifacts
+    deps:
+      - npm:sync-credentials
+
+  dev:
+    deps: [npm:sync-credentials]
+    cmds:
+      - docker compose up
+      # TODO: Get on skaffold eventually.
+      # - kubectl config use-context kind-kind # NOTE: Remove when using remote cluster envs.
+      # - skaffold dev --default-repo=$SKAFFOLD_DEFAULT_REPO/{{.PROJECT_NAME}} --cache-artifacts
+  
+  prepare:
+    - task: release:prepare
+
+  build-npm:
+    deps: [npm:sync-credentials]
+    cmds:
+      - npm run build
+
+  build-image:
+    deps: ["build-npm", "{{.PROJECT_TYPE}}:build"]
+
+  build:
+    - task: build-image
+
+  render:
+    - task: "{{.PROJECT_TYPE}}:render"
+
+  sync-credentials:
+    - task: npm:sync-credentials
+
+  deploy:
+    cmds:
+      - skaffold deploy --build-artifacts={{.CONTAINER_BUILD_ARTIFACT}} --kube-context=tesseract
+
+  test:
+    cmds:
+      - npm run test
+
+  load-test:
+    cmds:
+      - k6 run test/performance/*.js

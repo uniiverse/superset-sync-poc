@@ -1,0 +1,394 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "inventory/v1/inventory_service.proto",
+    "version": "version not set"
+  },
+  "tags": [
+    {
+      "name": "InventoryService"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/inventory.v1.InventoryService/Date": {
+      "post": {
+        "summary": "Return all timeslots for a specific date",
+        "operationId": "InventoryService_Date",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1InventoryServiceDateResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1InventoryServiceDateRequest"
+            }
+          }
+        ],
+        "tags": [
+          "InventoryService"
+        ]
+      }
+    },
+    "/inventory.v1.InventoryService/Month": {
+      "post": {
+        "summary": "Return the capacities for a specific listing, along with day-aggregated counts",
+        "operationId": "InventoryService_Month",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1InventoryServiceMonthResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "description": "Returns a map of date strings to indicate inventory",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1InventoryServiceMonthRequest"
+            }
+          }
+        ],
+        "tags": [
+          "InventoryService"
+        ]
+      }
+    },
+    "/inventory.v1.InventoryService/Timeslot": {
+      "post": {
+        "summary": "Return capacities for each applicable inventory type of a single event(timeslot)",
+        "operationId": "InventoryService_Timeslot",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1InventoryServiceTimeslotResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1InventoryServiceTimeslotRequest"
+            }
+          }
+        ],
+        "tags": [
+          "InventoryService"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    },
+    "v1CalendarSlot": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "duration": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "title": "*\nRepresents a timeslot that resolves with a Calendar"
+    },
+    "v1DateState": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/v1DateStatus",
+          "title": "Whether this date has availability, is sold out, or excluded"
+        },
+        "countTimeslots": {
+          "type": "integer",
+          "format": "int32",
+          "title": "how many available timeslots on this day TODO:(schedulingsForListing.hasOccurenceOn(date))"
+        },
+        "countSold": {
+          "type": "integer",
+          "format": "int32",
+          "title": "total count of sold across all timeslots for this date"
+        },
+        "countInventory": {
+          "type": "integer",
+          "format": "int32",
+          "title": "total count of available inventory count for this date"
+        }
+      },
+      "title": "*\nDescribes the state of particular calendar day for a month listing"
+    },
+    "v1DateStatus": {
+      "type": "string",
+      "enum": [
+        "DATE_STATUS_UNSPECIFIED",
+        "DATE_STATUS_AVAILABLE",
+        "DATE_STATUS_SOLD_OUT",
+        "DATE_STATUS_EXCLUDED"
+      ],
+      "default": "DATE_STATUS_UNSPECIFIED",
+      "description": "- DATE_STATUS_UNSPECIFIED: First value represents the default\n - DATE_STATUS_AVAILABLE: Tickets available for sale\n - DATE_STATUS_SOLD_OUT: All timeslots sold out for date\n - DATE_STATUS_EXCLUDED: All timeslots for this date excluded by calendar",
+      "title": "*\nPossible date status values"
+    },
+    "v1Filter": {
+      "type": "object",
+      "properties": {
+        "inventoryTypeId": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "integer",
+          "format": "int32",
+          "title": "group size"
+        },
+        "timeOfDayStart": {
+          "type": "integer",
+          "format": "int32",
+          "title": "0-1440 (minute in day)"
+        },
+        "timeOfDayEnd": {
+          "type": "integer",
+          "format": "int32",
+          "title": "0-1440 (ex. 0-720 would be before 12noon)"
+        }
+      },
+      "title": "*\nCalendar-level filtering Object used for FBQ, and others"
+    },
+    "v1InventoryServiceDateRequest": {
+      "type": "object",
+      "properties": {
+        "listingId": {
+          "type": "string"
+        },
+        "start": {
+          "type": "string",
+          "format": "date-time",
+          "title": "start of date to return, timestamp for timezone purposes (24h starting from here)"
+        },
+        "end": {
+          "type": "string",
+          "format": "date-time",
+          "title": "end of date to return (optional, can query multiple days if needed)"
+        },
+        "scheduleFilter": {
+          "$ref": "#/definitions/v1Filter",
+          "title": "filtering conditions, (optional, if FBQ enabled)"
+        }
+      }
+    },
+    "v1InventoryServiceDateResponse": {
+      "type": "object",
+      "properties": {
+        "events": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1Timeslot"
+          },
+          "title": "can be any of varied scope: Listing(global listing capacity), Listing(customized capacity), inventory types, etc"
+        }
+      },
+      "title": "Array of all schedule objects that slot on a single date"
+    },
+    "v1InventoryServiceMonthRequest": {
+      "type": "object",
+      "properties": {
+        "listingId": {
+          "type": "string",
+          "title": "The listing we are requesting the capacities for"
+        },
+        "start": {
+          "type": "string",
+          "format": "date-time",
+          "title": "Date to start capacities calculation"
+        },
+        "end": {
+          "type": "string",
+          "format": "date-time",
+          "title": "Date to end capacities calculation (optional, will load until end of start month otherwise)"
+        },
+        "scheduleFilter": {
+          "$ref": "#/definitions/v1Filter",
+          "title": "filtering conditions, (optional, if FBQ enabled)"
+        }
+      },
+      "description": "Returns a map of date strings to indicate inventory",
+      "title": "*\nThis request can satisfy the following data load scenarios:\n- Get first month with available inventory; Do not set a start/end timestamp\n- Get capacities for specific month; Set the start stamp to your desired month\n- Get capacities for a range; start/end stamp of deisred months needed (ex. calendar loading ahead)"
+    },
+    "v1InventoryServiceMonthResponse": {
+      "type": "object",
+      "properties": {
+        "dates": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/v1DateState"
+          },
+          "title": "map of calendar days to its basic inventory data"
+        }
+      }
+    },
+    "v1InventoryServiceTimeslotRequest": {
+      "type": "object",
+      "properties": {
+        "listingId": {
+          "type": "string"
+        },
+        "slot": {
+          "$ref": "#/definitions/v1CalendarSlot",
+          "title": "string calendar_id = 3; // could need this to define which calendar we are referring to?"
+        }
+      },
+      "title": "*\nRequest the applicable inventory types for a specific timeslot \nreturns array of applicable inventory types with available capacities"
+    },
+    "v1InventoryServiceTimeslotResponse": {
+      "type": "object",
+      "properties": {
+        "inventoryTypes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1InventoryType"
+          },
+          "title": "Array of inventory type schedules for this timeslot"
+        }
+      }
+    },
+    "v1InventoryType": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "calendarId": {
+          "type": "string"
+        },
+        "soldOut": {
+          "type": "boolean"
+        },
+        "countSold": {
+          "type": "integer",
+          "format": "int32",
+          "title": "total count sold for this inventory type"
+        },
+        "countInventory": {
+          "type": "integer",
+          "format": "int32",
+          "title": "total count available for this inventory type"
+        },
+        "priority": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "maxTickets": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "minTickets": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "v1Timeslot": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "calendarId": {
+          "type": "string"
+        },
+        "slot": {
+          "$ref": "#/definitions/v1CalendarSlot"
+        },
+        "soldOut": {
+          "type": "boolean"
+        },
+        "countSold": {
+          "type": "integer",
+          "format": "int32",
+          "title": "total count sold for this timeslot"
+        },
+        "countInventory": {
+          "type": "integer",
+          "format": "int32",
+          "title": "total count available for this timeslot"
+        },
+        "priority": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "account_dashboard.sales": "Verkoop",
+  "account_dashboard.check-ins_by": "Check-ins per",
+  "account_dashboard.counts": "Aantallen",
+  "account_dashboard.event_breakdown": "Evenementenoverzicht",
+  "account_dashboard.ticket_sales_trends_by": "Ticketverkooptrends per",
+  "account_dashboard.net_sales_sources": "Bronnen nettoverkoop",
+  "account_dashboard.onsite_sales_by": "Verkoop op locatie per", 
+  "account_dashboard.promotions": "Promoties",
+
+  "boxoffice.checked_in": "Ingecheckt",
+  "boxoffice.remaining_check-ins": "resterende check-ins",
+  "boxoffice.check-ins_by_event": "Check-ins per evenement",
+  "boxoffice.onsite_sales_by_event": "deurverkoop per evenement",
+
+  "check-ins_by.tickets": "Tickets",
+  "check-ins_by.add-ons": "Add-ons",
+  "comparison_suffix.previous_day": "Vorige dag",
+
+  "sales_dashboard.gross_sales": "Brutoverkoop",
+  "sales_dashboard.net_sales": "Nettoverkoop",
+  "sales_dashboard.net_sales_breakdown": "Uitsplitsing nettoverkoop",
+  "counts_dashboard.tickets": "Tickets",
+  "counts_dashboard.orders": "Bestellingen",
+  "counts_dashboard.add_ons": "Add-ons",
+  "counts_dashboard.paid_vs_free": "Betaald versus gratis",
+  "counts_dashboard.ticket_net_sales_by_event": "Nettoverkoop tickets per evenement",
+  "comparison_suffix": "Vorige week",
+
+  "trends.sales_by_ticket_type": "Verkoop per type ticket",
+  "trends.average_ticket_price": "Gemiddelde ticketprijs",
+  "trends.average_order_price": "Gemiddelde prijs per bestelling",
+  "trends.tickets_per_order": "Tickets per bestelling",
+
+  "revenue_sources.card_brand": "Merk van creditcard",
+  "revenue_sources.online_vs_boxoffice": "Online versus kassaverkoop",
+  "revenue_sources.online_sources": "Online bronnen",
+  "revenue_sources.boxoffice_sources": "Kassabronnen",
+  "revenue_sources.referrals": "Verwijzingen",
+  "revenue_sources.channel_partner": "Partnerkanaal",
+  "revenue_sources.partner_reseller": "Doorverkooppartner",
+
+  "onsite_sales_by.tickets": "Tickets",
+  "onsite_sales_by.add-ons": "Add-ons",
+
+  "promotions.access_keys": "Toegangscodes",
+  "promotions.discount_codes": "Kortingscodes",
+
+  "tabs.account_dashboard.boxoffice": "BoxOffice",
+  "tabs.account_dashboard.overview": "Overzicht",
+  "tabs.account_dashboard.trends": "Trends",
+  "tabs.account_dashboard.sources": "Bronnen",
+
+  "tabs.event_breakdown.by_event": "Per evenement",
+  "tabs.event_breakdown.by_timeslot": "Per tijdsslot",
+  "tabs.event_breakdown.by_type": "Per type",
+
+  "tabs.day_of_week": "Dag van de week",
+  "tabs.day": "Dag",
+  "tabs.hour_of_day": "Uur van de dag",
+  "tabs.month": "Maand",
+  "tabs.teammate": "Teamgenoot",
+  "tabs.type": "Type",
+  "tabs.week": "Week",
+  "tabs.year": "Jaar"
+}

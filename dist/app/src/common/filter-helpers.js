@@ -1,0 +1,101 @@
+import ReportsTypesModule from "@universe/api/reports/v1/reports_types.js";
+import { ServerError, Status } from "nice-grpc";
+import Config from "../config/index.js";
+import log from "../config/logging.js";
+function convertTimestampToSeconds(timestamp) {
+    return timestamp.getTime() / 1000;
+}
+export function validateAndBuildClause(request) {
+    var filter = request.filter;
+    var validatedFilters = [];
+    if (!filter) {
+        throw new ServerError(Status.INVALID_ARGUMENT, "Filters missing.");
+    }
+    // NOTE: Since reports dev data differs from dev mongo DB data, override these params.
+    if (Config.BUILD_TYPE == "dev") {
+        filter.userId = Config.DEV_USER_ID;
+        filter.currency = "USD"; // There are three users in dev clickhouse, "us_0"/"USD", "us_1"/"CAD" and "us_2"/"EUR".
+    }
+    if (!filter.userId) {
+        throw new ServerError(Status.INVALID_ARGUMENT, "Host ID missing.");
+    }
+    var hostIdClause = "host_id='".concat(encodeURIComponent(filter.userId), "'");
+    validatedFilters.push(hostIdClause);
+    // TODO: validate that it is in supported currency; it's ok for now as it is checked at the UI layer
+    if (!filter.currency) {
+    // TODO: Re-enable this once the client is reliably sending up currency.
+    // throw new ServerError(Status.INVALID_ARGUMENT, "Currency missing.");
+    } else {
+        var currency = encodeURIComponent(filter.currency.toLocaleUpperCase());
+        var currencyClause = "currency='".concat(currency, "'");
+        validatedFilters.push(currencyClause);
+    }
+    var ticketType;
+    if (filter.ticketType && (ReportsTypesModule === null || ReportsTypesModule === void 0 ? void 0 : ReportsTypesModule.TicketTypeFilter)) {
+        switch(filter.ticketType){
+            case ReportsTypesModule.TicketTypeFilter.TICKET_TYPE_FILTER_ADD_ONS:
+                ticketType = "ticket_category='AddOnRate'";
+                validatedFilters.push(ticketType);
+                break;
+            case ReportsTypesModule.TicketTypeFilter.TICKET_TYPE_FILTER_TICKETS:
+                ticketType = "ticket_category!='AddOnRate'";
+                validatedFilters.push(ticketType);
+                break;
+        }
+    }
+    if (filter.eventIds && filter.eventIds.length > 0) {
+        var eventIds = filter.eventIds.map(function(x) {
+            return encodeURIComponent(x);
+        }).join("','");
+        var eventIdsClause = "event_id IN ('".concat(eventIds, "')");
+        validatedFilters.push(eventIdsClause);
+    }
+    if (filter.exceptEventIds && filter.exceptEventIds.length > 0) {
+        var eventIds1 = filter.exceptEventIds.map(function(x) {
+            return encodeURIComponent(x);
+        }).join("','");
+        var eventIdsClause1 = "event_id NOT IN ('".concat(eventIds1, "')");
+        validatedFilters.push(eventIdsClause1);
+    }
+    // Date of Purchase
+    if (filter.minPurchaseDate && filter.maxPurchaseDate) {
+        if (filter.minPurchaseDate >= filter.maxPurchaseDate) {
+            throw new ServerError(Status.INVALID_ARGUMENT, "minPurchaseDate is greater than maxPurchaseDate.");
+        }
+        // TODO: Might be more efficient now to use date comparisons vs toUnixTimestamp in queries.
+        var minDOP = encodeURIComponent(convertTimestampToSeconds(filter.minPurchaseDate));
+        var maxDOP = encodeURIComponent(convertTimestampToSeconds(filter.maxPurchaseDate));
+        var minAndMaxDOPClause = "toUnixTimestamp(purchase_time) >= ".concat(minDOP, " AND toUnixTimestamp(purchase_time) <= ").concat(maxDOP);
+        validatedFilters.push(minAndMaxDOPClause);
+    }
+    // Date of Attendance
+    if (filter.minAttendanceDate && filter.maxAttendanceDate) {
+        if (filter.minAttendanceDate >= filter.maxAttendanceDate) {
+            throw new ServerError(Status.INVALID_ARGUMENT, "minAttendanceDate is greater than maxAttendanceDate.");
+        }
+        var minDOA = encodeURIComponent(convertTimestampToSeconds(filter.minAttendanceDate));
+        var maxDOA = encodeURIComponent(convertTimestampToSeconds(filter.maxAttendanceDate));
+        var minAndMaxDOAClause = "toUnixTimestamp(timeslot_end_time) >= ".concat(minDOA, " AND toUnixTimestamp(timeslot_start_time) <= ").concat(maxDOA);
+        validatedFilters.push(minAndMaxDOAClause);
+    }
+    // For example: Any timeslots between 4:30PM and 6:30PM
+    if (filter.minAttendanceStartTimeSecondsOfDay && filter.maxAttendanceStartTimeSecondsOfDay) {
+        if (filter.minAttendanceStartTimeSecondsOfDay >= filter.maxAttendanceStartTimeSecondsOfDay) {
+            throw new ServerError(Status.INVALID_ARGUMENT, "minAttendanceStartTimeSecondsOfDay is greater than maxAttendanceStartTimeSecondsOfDay.");
+        }
+        var minAndMaxAttendanceTimeOfDayClause = "(toUnixTimestamp(timeslot_start_time) % 86400) >= ".concat(filter.minAttendanceStartTimeSecondsOfDay, "\n      AND (toUnixTimestamp(timeslot_start_time) % 86400) <= ").concat(filter.maxAttendanceStartTimeSecondsOfDay);
+        validatedFilters.push(minAndMaxAttendanceTimeOfDayClause);
+    }
+    // For example: Specific timeslot starting at 1pm and ending at 1:05pm
+    // this filter would override attendance_start_time_seconds_of_day filter
+    if (filter.exactAttendanceStartTimeSecondsOfDay && filter.exactAttendanceEndTimeSecondsOfDay) {
+        if (filter.exactAttendanceStartTimeSecondsOfDay >= filter.exactAttendanceEndTimeSecondsOfDay) {
+            throw new ServerError(Status.INVALID_ARGUMENT, "exactAttendanceStartTimeSecondsOfDay is greater than exactAttendanceEndTimeSecondsOfDay.");
+        }
+        var exactStartAndEndTimeInSecondsClause = "(toUnixTimestamp(timeslot_start_time) % 86400) = ".concat(filter.exactAttendanceStartTimeSecondsOfDay, "\n      AND (toUnixTimestamp(timeslot_end_time) % 86400) = ").concat(filter.exactAttendanceEndTimeSecondsOfDay);
+        validatedFilters.push(exactStartAndEndTimeInSecondsClause);
+    }
+    var clause = validatedFilters.join(" AND ");
+    log.debug(clause);
+    return "(".concat(clause, ")");
+}
