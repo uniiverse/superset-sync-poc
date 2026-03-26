@@ -29,14 +29,29 @@ jobs:
           SUPERSET_PASSWORD: ${{ secrets.SUPERSET_PASSWORD }}
         run: |
           echo "🔐 Authenticating with Superset..."
-          TOKEN=$(curl -s "${SUPERSET_URL}/api/v1/security/login" \
+          echo "Testing connection to: ${SUPERSET_URL}"
+
+          RESPONSE=$(curl -s -w "\n%{http_code}" "${SUPERSET_URL}/api/v1/security/login" \
             -X POST \
             -H "Content-Type: application/json" \
-            -d "{\"username\":\"${SUPERSET_USERNAME}\",\"password\":\"${SUPERSET_PASSWORD}\",\"provider\":\"db\",\"refresh\":true}" \
-            | jq -r '.access_token')
+            -d "{\"username\":\"${SUPERSET_USERNAME}\",\"password\":\"${SUPERSET_PASSWORD}\",\"provider\":\"db\",\"refresh\":true}")
+
+          HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
+          BODY=$(echo "$RESPONSE" | sed '$d')
+
+          echo "HTTP Status: $HTTP_CODE"
+
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "❌ Authentication failed with status $HTTP_CODE"
+            echo "Response: $BODY"
+            exit 1
+          fi
+
+          TOKEN=$(echo "$BODY" | jq -r '.access_token')
 
           if [ -z "$TOKEN" ] || [ "$TOKEN" = "null" ]; then
-            echo "❌ Authentication failed"
+            echo "❌ Authentication failed - no token in response"
+            echo "Response: $BODY"
             exit 1
           fi
 
