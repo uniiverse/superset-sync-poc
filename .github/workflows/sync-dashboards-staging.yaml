@@ -26,6 +26,11 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
 
+      - name: Setup Google Artifact Registry
+        run: |
+          gcloud artifacts print-settings npm --project=tm-uni-platform --repository=js --location=us-east4 --scope=@universe > .npmrc
+          npx -y google-artifactregistry-auth --repo-config .npmrc --credential-config .npmrc
+
       - name: Install dependencies
         run: npm ci
 
