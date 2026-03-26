@@ -1,0 +1,1819 @@
+dashboard_title: Account Dashboard (es)
+description: null
+css: "@font-face {\n    font-family: \"Graphik\";\n    src: \n    url(\"https://www.universe.com/fonts/Graphik/Graphik-Regular-Web.eot\"\
+  ) format(\"eot\"),\n    url(\"https://www.universe.com/fonts/Graphik/Graphik-Regular-Web.woff2\"\
+  ) format(\"woff2\"),\n    url(\"https://www.universe.com/fonts/Graphik/Graphik-Regular-Web.woff\"\
+  ) format(\"woff\");\n}\n\n.dashboard-content {\n  background-color: white;\n  margin-top:\
+  \ -34px;\n}\n\n.grid-container {\n  margin-left: 5px !important;\n  margin-right:\
+  \ 5px !important;\n}\n\n.anchor-link-container {\n  display: none;\n  pointer-events:\
+  \ none;\n}\n\n/*-------Counts/sales header-------*/\n.dashboard-component-header\
+  \ {\n  font-family: 'Graphik', sans-serif !important;\n  font-weight: 500 !important;\n\
+  \  font-size: 32px !important;\n  margin-left: -16px !important;\n  line-height:\
+  \ 38px !important;\n}\n\n.dashboard-component-divider {\n  padding-left: 0px !important;\n\
+  \  padding-right: 0px !important;\n  padding-top: 0px !important;\n  padding-bottom:\
+  \ 0px !important;\n}\n\n/*------Tabs--------*/\n.ant-tabs-nav-wrap {\n  border-bottom:\
+  \ 1px solid #E2E5E7;\n}\n\n.ant-tabs-nav-list {\n  margin-left: -16px;\n}\n\n.ant-tabs-tab\
+  \ {\n  color: #1C232B;\n}\n\n.ant-tabs-tab-btn {\n   font-weight: 400 !important;\n\
+  \   line-height: 20px !important;\n   font-family: 'Graphik', sans-serif !important;\n\
+  \   font-size: 14px !important;\n}\n\n.ant-tabs-tab:hover {\n  color: #3A66E5 !important\n\
+  }\n\n.ant-tabs-tab-btn:hover {\n   color: #3A66E5 !important;\n}\n\n.ant-tabs-tab-btn.active\
+  \ {\n  color: #3A66E5 !important;\n}\n\n.ant-tabs-tab-active {\n  color: #3A66E5\
+  \ !important;\n}\n\n.ant-tabs-ink-bar-animated {\n  background-color: #3A66E5 !important;\n\
+  }\n\n/*----Charts-------*/\n\n.chart-slice {\n  border: 1px solid #E2E5E7;\n  padding:\
+  \ 16px; \n  border-radius: 6px;\n  margin-left: 0px;\n  overflow: auto !important;\n\
+  }\n\n.dot {\n  background-color: #1C232B !important;\n}\n\n.dashboard-component-chart-holder\
+  \ {\n  padding: 0px !important;\n}\n\n/*Used for all the graphs (line graphs) and\
+  \ for table charts too. */\n.slice_container canvas {\n  margin: 0px !important;\n\
+  }\n\n.big_number canvas {\n  margin-top: 50px !important;\n}\n\n.pie canvas {\n\
+  \  margin-top: 0px !important;\n}\n\n.echarts_timeseries_line canvas {\n  margin-top:\
+  \ 0px !important;\n}\n\n.dashboard-chart-id-137 tr:first-child th {\n  color: #6F7881\
+  \ !important;\n  text-transform: capitalize;\n}\n\ntr:first-child th.pvtAxisLabel\
+  \ {\n  color: transparent;\n}\n\n.pivot_table_v_2 thead th {\n  font-size: 14px\
+  \ !important;\n  font-weight: bold !important;\n}\n\n/*----Adds a scroller when\
+  \ required and adjust the height of the table\nto show all the content----*/\n.pivot_table_v_2\
+  \ {\n  overflow: auto !important;\n  height: auto !important;\n}\n\n\n/*----Promotions-\
+  \ To adjust serach box from cutting off---*/\n.dt-global-filter {\n  width: 100%\
+  \ !important;\n  min-width: 100% !important;\n  max-width: 100% !important;\n  padding-right:\
+  \ 10px !important;\n  text-align: end !important;\n}\n\n.text-container {\n  height:\
+  \ auto !important;\n}\n\n.header-title {\n  font-weight: 700 !important;\n  color:\
+  \ #000000 !important;\n  font-family: 'Graphik', sans-serif !important;\n  line-height:\
+  \ 24px !important;\n  font-size: 16px !important;\n  margin-bottom: 24px;\n}\n\n\
+  .header-line {\n  font-size: 32px !important;\n  color: #1C232B !important;\n  font-weight:\
+  \ 500 !important;\n  line-height: 38px !important;\n  font-family: 'Circular Pro',\
+  \ sans-serif !important;\n}\n\n.subheader-line {\n  font-size: 14px !important;\n\
+  \  color: #6F7881 !important;\n  line-height: 20px !important;\n  font-family: 'Graphik',\
+  \ sans-serif !important;\n  font-weight: 400;\n  margin-top: -20px !important;\n\
+  }"
+slug: null
+certified_by: null
+certification_details: null
+published: false
+uuid: 7650b2f5-6213-46c9-9f9a-a94f9e0a3841
+position:
+  CHART--UB7fpsi21R:
+    children: []
+    id: CHART--UB7fpsi21R
+    meta:
+      chartId: 98
+      height: 49
+      sliceName: Online tickets
+      sliceNameOverride: "Fuentes en l\xEDnea"
+      uuid: bb9acf27-16c0-4f44-a45b-4687aaf76e41
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    - ROW-zmiwKrJ2Q
+    type: CHART
+  CHART-27PQofg3Jo:
+    children: []
+    id: CHART-27PQofg3Jo
+    meta:
+      chartId: 87
+      height: 50
+      sliceName: Check-ins by teammate (ticket types)
+      sliceNameOverride: "Compa\xF1ero de equipo"
+      uuid: 0906167f-2c17-4903-b3b2-0d8c6241d582
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - ROW-QhPMRKxPK
+    type: CHART
+  CHART-4Sgr5AEZD8:
+    children: []
+    id: CHART-4Sgr5AEZD8
+    meta:
+      chartId: 102
+      height: 50
+      sliceName: Onsite sales by teammate
+      sliceNameOverride: "Compa\xF1ero de equipo"
+      uuid: 66818934-0224-44e6-bc2a-000b83e0616c
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - ROW-3ZBdT3EBO
+    type: CHART
+  CHART-59hP19aa6De:
+    children: []
+    id: CHART-59hP19aa6De
+    meta:
+      chartId: 106
+      height: 43
+      sliceName: Paid vs free
+      sliceNameOverride: De pago vs. gratis
+      uuid: b9ab9e80-d638-4e05-8497-2049c6a0e76b
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-uJRVqr6qW
+    type: CHART
+  CHART-6F_7m30VhsH:
+    children: []
+    id: CHART-6F_7m30VhsH
+    meta:
+      chartId: 77
+      height: 50
+      sliceName: By day of week
+      sliceNameOverride: "\u3164"
+      uuid: 2bba7461-7d55-4727-a257-03b28468b4da
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    - TAB-6Pcv0lpwW
+    - ROW-zBDCKXis9
+    type: CHART
+  CHART-9lJQtEN4EnR:
+    children: []
+    id: CHART-9lJQtEN4EnR
+    meta:
+      chartId: 78
+      height: 50
+      sliceName: By hour of day
+      sliceNameOverride: "\u3164"
+      uuid: 934da0e2-3b33-4421-925b-aac32b27511d
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    - TAB-D2lrKZVV_1
+    - ROW-3JpJsI8Iy
+    type: CHART
+  CHART-BC8uGO9UEgn:
+    children: []
+    id: CHART-BC8uGO9UEgn
+    meta:
+      chartId: 105
+      height: 43
+      sliceName: Orders
+      sliceNameOverride: Pedidos
+      uuid: 7f2c5cb7-e1f5-4634-b278-623f6e97670b
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-uJRVqr6qW
+    type: CHART
+  CHART-CTX3gsNvJZ:
+    children: []
+    id: CHART-CTX3gsNvJZ
+    meta:
+      chartId: 68
+      height: 50
+      sliceName: Access keys
+      sliceNameOverride: Claves de acceso
+      uuid: 8bd4d7c7-f03f-49b9-937c-011f1aae71dc
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    - ROW-Ci3-HAcmKv
+    type: CHART
+  CHART-CpYiBrh9Kr5:
+    children: []
+    id: CHART-CpYiBrh9Kr5
+    meta:
+      chartId: 126
+      height: 43
+      sliceName: Tickets
+      sliceNameOverride: Entradas
+      uuid: c999506c-5ad3-4e0c-826f-d97487d81b06
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-uJRVqr6qW
+    type: CHART
+  CHART-E9Q09YM-AfY:
+    children: []
+    id: CHART-E9Q09YM-AfY
+    meta:
+      chartId: 94
+      height: 50
+      sliceName: Discount codes
+      sliceNameOverride: "C\xF3digos de descuento"
+      uuid: 5453bc1d-1561-498c-baa6-5161dc442649
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    - ROW-Ci3-HAcmKv
+    type: CHART
+  CHART-HmZikVhf_yW:
+    children: []
+    id: CHART-HmZikVhf_yW
+    meta:
+      chartId: 109
+      height: 62
+      sliceName: Sales breakdown by event
+      sliceNameOverride: "\u3164"
+      uuid: df4a2889-7583-44a7-beab-660daeba370b
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - TABS-g8e_-q61ZY
+    - TAB-1_GpS1XeQd
+    - ROW-T-lHET3wt
+    type: CHART
+  CHART-KbCChP3cAb:
+    children: []
+    id: CHART-KbCChP3cAb
+    meta:
+      chartId: 115
+      height: 45
+      sliceName: Sales by channel partner
+      sliceNameOverride: Socio del canal
+      uuid: c019b342-f975-439d-b474-e45c1c6ddc78
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    - ROW-Oh9SpZsEx
+    type: CHART
+  CHART-KhaBchMklE:
+    children: []
+    id: CHART-KhaBchMklE
+    meta:
+      chartId: 72
+      height: 26
+      sliceName: Average order price
+      sliceNameOverride: Precio medio de pedido
+      uuid: cee8a74c-5fa4-488d-9033-00ee20d1e7d1
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - ROW-goi7Ss5FU
+    type: CHART
+  CHART-Lz2wBdIznmu:
+    children: []
+    id: CHART-Lz2wBdIznmu
+    meta:
+      chartId: 123
+      height: 59
+      sliceName: Ticket net sales by event
+      sliceNameOverride: Ventas netas de entradas por evento
+      uuid: c31380c2-8992-43fb-8e8c-02ef9ddebb9e
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-6AMcSfb_J
+    type: CHART
+  CHART-M8zh67jYr5:
+    children: []
+    id: CHART-M8zh67jYr5
+    meta:
+      chartId: 99
+      height: 49
+      sliceName: Online vs boxoffice
+      sliceNameOverride: "En l\xEDnea vs. en taquilla"
+      uuid: 852050ae-8423-4da6-add5-32c12aa63110
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    - ROW-zmiwKrJ2Q
+    type: CHART
+  CHART-NwLlEHuXU6b:
+    children: []
+    id: CHART-NwLlEHuXU6b
+    meta:
+      chartId: 80
+      height: 50
+      sliceName: By week
+      sliceNameOverride: "\u3164"
+      uuid: d0d34eb7-57ec-4082-92ea-f2a90c3a2a23
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    - TAB-08YV04rKt
+    - ROW-JU8TphOjS
+    type: CHART
+  CHART-PfDw36VCnQ:
+    children: []
+    id: CHART-PfDw36VCnQ
+    meta:
+      chartId: 73
+      height: 26
+      sliceName: Average ticket price
+      sliceNameOverride: Precio medio de entrada
+      uuid: 047c86e3-ed3f-4e8c-a8f0-ca6562cee0ab
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - ROW-goi7Ss5FU
+    - COLUMN-rjSzwMxIbt
+    type: CHART
+  CHART-Pveu7K4NiJ:
+    children: []
+    id: CHART-Pveu7K4NiJ
+    meta:
+      chartId: 114
+      height: 50
+      sliceName: Sales breakdown by timeslot (PV2)
+      sliceNameOverride: "\u3164"
+      uuid: 08839db0-a616-4283-a268-57b6e1aaae9b
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - TABS-g8e_-q61ZY
+    - TAB-EAYuMFcwI
+    - ROW-PpvZvxqBQ
+    type: CHART
+  CHART-Rprytx3OIc:
+    children: []
+    id: CHART-Rprytx3OIc
+    meta:
+      chartId: 112
+      height: 51
+      sliceName: 'Sales breakdown by ticket (pv2) '
+      sliceNameOverride: "\u3164"
+      uuid: 20affb99-3d95-4e36-aecb-2a7ccccd8429
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - TABS-g8e_-q61ZY
+    - TAB-6UZ33TvLu
+    - ROW-sA6sC4ODb
+    type: CHART
+  CHART-TQRLo7Qdv6:
+    children: []
+    id: CHART-TQRLo7Qdv6
+    meta:
+      chartId: 79
+      height: 50
+      sliceName: By month
+      sliceNameOverride: "\u3164"
+      uuid: 0f36d0f8-9278-48ec-ba97-e54e03f87180
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    - TAB-K6TShjEGk
+    - ROW-1X6rIKMMC
+    type: CHART
+  CHART-Tw-5DoiqZu:
+    children: []
+    id: CHART-Tw-5DoiqZu
+    meta:
+      chartId: 104
+      height: 50
+      sliceName: Onsite sales by ticket type
+      sliceNameOverride: Tipo
+      uuid: b9c821cc-a7a2-4062-9ded-321c79a03246
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - ROW-3ZBdT3EBO
+    type: CHART
+  CHART-V_39UbGWAG:
+    children: []
+    id: CHART-V_39UbGWAG
+    meta:
+      chartId: 96
+      height: 43
+      sliceName: Gross sales
+      sliceNameOverride: Ventas brutas
+      uuid: 185d7b31-4c67-481c-9feb-de384defa065
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-X1kJyH675
+    type: CHART
+  CHART-XGXY36hFZ2w:
+    children: []
+    id: CHART-XGXY36hFZ2w
+    meta:
+      chartId: 74
+      height: 23
+      sliceName: Average tickets per order
+      sliceNameOverride: Entradas por pedido
+      uuid: 5d8779c0-b0da-4f51-ac13-c236b6a9bd02
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - ROW-goi7Ss5FU
+    - COLUMN-rjSzwMxIbt
+    type: CHART
+  CHART-ZyLzD9nHwT:
+    children: []
+    id: CHART-ZyLzD9nHwT
+    meta:
+      chartId: 101
+      height: 61
+      sliceName: Onsite sales by event
+      sliceNameOverride: Ventas in situ por evento
+      uuid: 5312f974-c0b8-41f0-b8bb-a5f35ff6e182
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - ROW-BG9HnG9XJ
+    type: CHART
+  CHART-_A2p1aPyTR:
+    children: []
+    id: CHART-_A2p1aPyTR
+    meta:
+      chartId: 108
+      height: 50
+      sliceName: Remaining check-ins
+      sliceNameOverride: Registros de entrada restantes
+      uuid: ba0bc76f-1564-4851-93cd-71ca103aabe0
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - ROW-FldETQM4xH
+    type: CHART
+  CHART-_JrH4JfJcb:
+    children: []
+    id: CHART-_JrH4JfJcb
+    meta:
+      chartId: 70
+      height: 43
+      sliceName: Add-ons
+      sliceNameOverride: Complementos
+      uuid: ee9db37d-92b4-4d40-8b59-a9b9947d95f7
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-uJRVqr6qW
+    type: CHART
+  CHART-dYE7ZDcs4T:
+    children: []
+    id: CHART-dYE7ZDcs4T
+    meta:
+      chartId: 117
+      height: 45
+      sliceName: Sales by partner reseller
+      sliceNameOverride: Distribuidor del socio
+      uuid: 1eba56c0-4b2c-416c-96b2-9e46a4f9a1b0
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    - ROW-Oh9SpZsEx
+    type: CHART
+  CHART-eJW0faTr2B:
+    children: []
+    id: CHART-eJW0faTr2B
+    meta:
+      chartId: 82
+      height: 49
+      sliceName: Card brand
+      sliceNameOverride: Marca de la tarjeta
+      uuid: 6cd1f365-8b30-4df8-be50-c943c43c3916
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    - ROW-zmiwKrJ2Q
+    type: CHART
+  CHART-ePsgj2S19i:
+    children: []
+    id: CHART-ePsgj2S19i
+    meta:
+      chartId: 97
+      height: 43
+      sliceName: Net sales
+      sliceNameOverride: Ventas netas
+      uuid: 05c776c0-299c-4b4c-98aa-e4546f5b5a5b
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-X1kJyH675
+    type: CHART
+  CHART-egfVdxLard:
+    children: []
+    id: CHART-egfVdxLard
+    meta:
+      chartId: 85
+      height: 64
+      sliceName: Check-ins by event pivot
+      sliceNameOverride: "\u3164"
+      uuid: 8df034f4-4895-4a30-a5e7-40bd65f2a602
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - TABS-uk-JX9g9RD
+    - TAB-OGpQi9SEUk
+    - ROW-5XLhaW2s4B
+    type: CHART
+  CHART-fVhQfahfq7:
+    children: []
+    id: CHART-fVhQfahfq7
+    meta:
+      chartId: 127
+      height: 50
+      sliceName: Total check-ins
+      sliceNameOverride: Registro de entrada
+      uuid: cf645f7d-0d14-4ee5-beef-7c78d14181de
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - ROW-FldETQM4xH
+    type: CHART
+  CHART-g7UBHfCWi8:
+    children: []
+    id: CHART-g7UBHfCWi8
+    meta:
+      chartId: 89
+      height: 64
+      sliceName: Check-ins by time and ticket type pivot
+      sliceNameOverride: "\u3164"
+      uuid: cf8d395d-5295-42af-8108-cb9d6818a541
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - TABS-uk-JX9g9RD
+    - TAB-WzCxVSZWB
+    - ROW-GEog_dl0r3
+    type: CHART
+  CHART-lnVh2-Raj4:
+    children: []
+    id: CHART-lnVh2-Raj4
+    meta:
+      chartId: 132
+      height: 43
+      sliceName: net sales breakdown pivot
+      sliceNameOverride: Desglose de los ingresos netos
+      uuid: 5a116d08-1153-4a71-89cc-f2b97128dda1
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-X1kJyH675
+    type: CHART
+  CHART-m9842nVCm5:
+    children: []
+    id: CHART-m9842nVCm5
+    meta:
+      chartId: 75
+      height: 49
+      sliceName: Boxoffice
+      sliceNameOverride: Fuentes en taquilla
+      uuid: d748d78c-cf30-4dcc-a690-8b2997b7f2bc
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    - ROW-zmiwKrJ2Q
+    type: CHART
+  CHART-myfvXEd363:
+    children: []
+    id: CHART-myfvXEd363
+    meta:
+      chartId: 81
+      height: 50
+      sliceName: By year
+      sliceNameOverride: "\u3164"
+      uuid: ee869f31-f8ba-4a78-add3-222ee33f9f5d
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    - TAB-Nek7tDD2o
+    - ROW-txVQfTCbP
+    type: CHART
+  CHART-n_4KKam7F3:
+    children: []
+    id: CHART-n_4KKam7F3
+    meta:
+      chartId: 107
+      height: 45
+      sliceName: Referrals
+      sliceNameOverride: Referencias
+      uuid: 4bdf7915-8fb3-490f-888a-27e6dca9c385
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    - ROW-Oh9SpZsEx
+    type: CHART
+  CHART-o8ghALJdxz:
+    children: []
+    id: CHART-o8ghALJdxz
+    meta:
+      chartId: 76
+      height: 50
+      sliceName: By day
+      sliceNameOverride: "\u3164"
+      uuid: 1c14ee2f-61aa-4f2a-b265-557c674da21d
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    - TAB-pRKoKqJjA
+    - ROW-_nXw0Y5JL
+    type: CHART
+  CHART-t70_D4XSe4:
+    children: []
+    id: CHART-t70_D4XSe4
+    meta:
+      chartId: 84
+      height: 67
+      sliceName: Check-ins by event
+      sliceNameOverride: Registros de entrada por evento
+      uuid: b864bde7-003a-497a-b961-51103548ba12
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - ROW-YRp38jF3J
+    type: CHART
+  CHART-vT1y8gGvDG:
+    children: []
+    id: CHART-vT1y8gGvDG
+    meta:
+      chartId: 88
+      height: 50
+      sliceName: Check-ins by ticket type
+      sliceNameOverride: Tipo
+      uuid: b1637091-03f0-4d19-b554-5802890acff0
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - ROW-QhPMRKxPK
+    type: CHART
+  CHART-vcVbP7vCP_:
+    children: []
+    id: CHART-vcVbP7vCP_
+    meta:
+      chartId: 90
+      height: 64
+      sliceName: Check-ins by timeslot pivot
+      sliceNameOverride: "\u3164"
+      uuid: 3bb72c7a-89f9-47ef-b14c-c3e30e6141f4
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - TABS-uk-JX9g9RD
+    - TAB-9a8p5MRDz
+    - ROW-nl6cVB6dSV
+    type: CHART
+  CHART-wROwU7SvkCO:
+    children: []
+    id: CHART-wROwU7SvkCO
+    meta:
+      chartId: 118
+      height: 51
+      sliceName: Sales by ticket type
+      sliceNameOverride: Ventas por tipo de entrada
+      uuid: 10aaef54-0650-426b-9ebd-e3ba3b5412d9
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - ROW-goi7Ss5FU
+    - COLUMN-I03QI44Pm2
+    type: CHART
+  COLUMN-I03QI44Pm2:
+    children:
+    - CHART-wROwU7SvkCO
+    id: COLUMN-I03QI44Pm2
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 8
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - ROW-goi7Ss5FU
+    type: COLUMN
+  COLUMN-rjSzwMxIbt:
+    children:
+    - CHART-PfDw36VCnQ
+    - CHART-XGXY36hFZ2w
+    id: COLUMN-rjSzwMxIbt
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - ROW-goi7Ss5FU
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  DIVIDER-QB8YOIGXtH:
+    children: []
+    id: DIVIDER-QB8YOIGXtH
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: DIVIDER
+  DIVIDER-kxL4XXQNzG:
+    children: []
+    id: DIVIDER-kxL4XXQNzG
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: DIVIDER
+  GRID_ID:
+    children:
+    - TABS-Rt9jZ4P1G1
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER-Gd_qzMkH4V:
+    children: []
+    id: HEADER-Gd_qzMkH4V
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      headerSize: MEDIUM_HEADER
+      text: Fuentes de ingresos netos
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    type: HEADER
+  HEADER-HDrBLSO9XQ:
+    children: []
+    id: HEADER-HDrBLSO9XQ
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      headerSize: SMALL_HEADER
+      text: Desglose del evento
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: HEADER
+  HEADER-HLx3TGLlEd:
+    children: []
+    id: HEADER-HLx3TGLlEd
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      headerSize: SMALL_HEADER
+      text: Recuentos
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: HEADER
+  HEADER-INP8UcKSqm:
+    children: []
+    id: HEADER-INP8UcKSqm
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      headerSize: SMALL_HEADER
+      text: Ventas
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: HEADER
+  HEADER-T_VqiiAxUt:
+    children: []
+    id: HEADER-T_VqiiAxUt
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      headerSize: MEDIUM_HEADER
+      text: Ventas in situ por
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    type: HEADER
+  HEADER-awudonm6OM:
+    children: []
+    id: HEADER-awudonm6OM
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      headerSize: MEDIUM_HEADER
+      text: Registros de entrada por
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    type: HEADER
+  HEADER-hBY_j-ErXw:
+    children: []
+    id: HEADER-hBY_j-ErXw
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      headerSize: MEDIUM_HEADER
+      text: Promociones
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    type: HEADER
+  HEADER-i9mc1XUF-S:
+    children: []
+    id: HEADER-i9mc1XUF-S
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      headerSize: SMALL_HEADER
+      text: Tendencias de venta de entradas por
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    type: HEADER
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Account Dashboard (template)
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-1X6rIKMMC:
+    children:
+    - CHART-TQRLo7Qdv6
+    id: ROW-1X6rIKMMC
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    - TAB-K6TShjEGk
+    type: ROW
+  ROW-3JpJsI8Iy:
+    children:
+    - CHART-9lJQtEN4EnR
+    id: ROW-3JpJsI8Iy
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    - TAB-D2lrKZVV_1
+    type: ROW
+  ROW-3ZBdT3EBO:
+    children:
+    - CHART-Tw-5DoiqZu
+    - CHART-4Sgr5AEZD8
+    id: ROW-3ZBdT3EBO
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    type: ROW
+  ROW-5XLhaW2s4B:
+    children:
+    - CHART-egfVdxLard
+    id: ROW-5XLhaW2s4B
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - TABS-uk-JX9g9RD
+    - TAB-OGpQi9SEUk
+    type: ROW
+  ROW-6AMcSfb_J:
+    children:
+    - CHART-Lz2wBdIznmu
+    id: ROW-6AMcSfb_J
+    meta:
+      background: BACKGROUND_WHITE
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: ROW
+  ROW-BG9HnG9XJ:
+    children:
+    - CHART-ZyLzD9nHwT
+    id: ROW-BG9HnG9XJ
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    type: ROW
+  ROW-Ci3-HAcmKv:
+    children:
+    - CHART-CTX3gsNvJZ
+    - CHART-E9Q09YM-AfY
+    id: ROW-Ci3-HAcmKv
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    type: ROW
+  ROW-FldETQM4xH:
+    children:
+    - CHART-fVhQfahfq7
+    - CHART-_A2p1aPyTR
+    id: ROW-FldETQM4xH
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    type: ROW
+  ROW-GEog_dl0r3:
+    children:
+    - CHART-g7UBHfCWi8
+    id: ROW-GEog_dl0r3
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - TABS-uk-JX9g9RD
+    - TAB-WzCxVSZWB
+    type: ROW
+  ROW-JU8TphOjS:
+    children:
+    - CHART-NwLlEHuXU6b
+    id: ROW-JU8TphOjS
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    - TAB-08YV04rKt
+    type: ROW
+  ROW-Oh9SpZsEx:
+    children:
+    - CHART-n_4KKam7F3
+    - CHART-KbCChP3cAb
+    - CHART-dYE7ZDcs4T
+    id: ROW-Oh9SpZsEx
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    type: ROW
+  ROW-PpvZvxqBQ:
+    children:
+    - CHART-Pveu7K4NiJ
+    id: ROW-PpvZvxqBQ
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - TABS-g8e_-q61ZY
+    - TAB-EAYuMFcwI
+    type: ROW
+  ROW-QhPMRKxPK:
+    children:
+    - CHART-vT1y8gGvDG
+    - CHART-27PQofg3Jo
+    id: ROW-QhPMRKxPK
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    type: ROW
+  ROW-T-lHET3wt:
+    children:
+    - CHART-HmZikVhf_yW
+    id: ROW-T-lHET3wt
+    meta:
+      background: BACKGROUND_WHITE
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - TABS-g8e_-q61ZY
+    - TAB-1_GpS1XeQd
+    type: ROW
+  ROW-X1kJyH675:
+    children:
+    - CHART-V_39UbGWAG
+    - CHART-ePsgj2S19i
+    - CHART-lnVh2-Raj4
+    id: ROW-X1kJyH675
+    meta:
+      background: BACKGROUND_WHITE
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: ROW
+  ROW-YRp38jF3J:
+    children:
+    - CHART-t70_D4XSe4
+    id: ROW-YRp38jF3J
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    type: ROW
+  ROW-_nXw0Y5JL:
+    children:
+    - CHART-o8ghALJdxz
+    id: ROW-_nXw0Y5JL
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    - TAB-pRKoKqJjA
+    type: ROW
+  ROW-goi7Ss5FU:
+    children:
+    - COLUMN-I03QI44Pm2
+    - COLUMN-rjSzwMxIbt
+    - CHART-KhaBchMklE
+    id: ROW-goi7Ss5FU
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    type: ROW
+  ROW-nl6cVB6dSV:
+    children:
+    - CHART-vcVbP7vCP_
+    id: ROW-nl6cVB6dSV
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - TABS-uk-JX9g9RD
+    - TAB-9a8p5MRDz
+    type: ROW
+  ROW-sA6sC4ODb:
+    children:
+    - CHART-Rprytx3OIc
+    id: ROW-sA6sC4ODb
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - TABS-g8e_-q61ZY
+    - TAB-6UZ33TvLu
+    type: ROW
+  ROW-txVQfTCbP:
+    children:
+    - CHART-myfvXEd363
+    id: ROW-txVQfTCbP
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    - TAB-Nek7tDD2o
+    type: ROW
+  ROW-uJRVqr6qW:
+    children:
+    - CHART-CpYiBrh9Kr5
+    - CHART-BC8uGO9UEgn
+    - CHART-_JrH4JfJcb
+    - CHART-59hP19aa6De
+    id: ROW-uJRVqr6qW
+    meta:
+      background: BACKGROUND_WHITE
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: ROW
+  ROW-zBDCKXis9:
+    children:
+    - CHART-6F_7m30VhsH
+    id: ROW-zBDCKXis9
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    - TAB-6Pcv0lpwW
+    type: ROW
+  ROW-zmiwKrJ2Q:
+    children:
+    - CHART-eJW0faTr2B
+    - CHART-M8zh67jYr5
+    - CHART--UB7fpsi21R
+    - CHART-m9842nVCm5
+    id: ROW-zmiwKrJ2Q
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    type: ROW
+  TAB--ReVxOixrQ:
+    children:
+    - HEADER-INP8UcKSqm
+    - ROW-X1kJyH675
+    - DIVIDER-QB8YOIGXtH
+    - HEADER-HLx3TGLlEd
+    - ROW-uJRVqr6qW
+    - DIVIDER-kxL4XXQNzG
+    - ROW-6AMcSfb_J
+    - HEADER-HDrBLSO9XQ
+    - TABS-g8e_-q61ZY
+    id: TAB--ReVxOixrQ
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Vista general
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    type: TAB
+  TAB-08YV04rKt:
+    children:
+    - ROW-JU8TphOjS
+    id: TAB-08YV04rKt
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Semana
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    type: TAB
+  TAB-1_GpS1XeQd:
+    children:
+    - ROW-T-lHET3wt
+    id: TAB-1_GpS1XeQd
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Po evento
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - TABS-g8e_-q61ZY
+    type: TAB
+  TAB-5UfH_kEi0:
+    children:
+    - ROW-FldETQM4xH
+    - ROW-YRp38jF3J
+    - ROW-BG9HnG9XJ
+    - HEADER-awudonm6OM
+    - TABS-uk-JX9g9RD
+    - ROW-QhPMRKxPK
+    - HEADER-T_VqiiAxUt
+    - ROW-3ZBdT3EBO
+    id: TAB-5UfH_kEi0
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Taquilla
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    type: TAB
+  TAB-6Pcv0lpwW:
+    children:
+    - ROW-zBDCKXis9
+    id: TAB-6Pcv0lpwW
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: "D\xEDa de la semana"
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    type: TAB
+  TAB-6UZ33TvLu:
+    children:
+    - ROW-sA6sC4ODb
+    id: TAB-6UZ33TvLu
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Por tipo
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - TABS-g8e_-q61ZY
+    type: TAB
+  TAB-7ggp_GDR6:
+    children:
+    - HEADER-i9mc1XUF-S
+    - TABS-Pm2hu7FR5B
+    - ROW-goi7Ss5FU
+    id: TAB-7ggp_GDR6
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Tendencias
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    type: TAB
+  TAB-9a8p5MRDz:
+    children:
+    - ROW-nl6cVB6dSV
+    id: TAB-9a8p5MRDz
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Franja horaria
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - TABS-uk-JX9g9RD
+    type: TAB
+  TAB-D2lrKZVV_1:
+    children:
+    - ROW-3JpJsI8Iy
+    id: TAB-D2lrKZVV_1
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: "Parte del d\xEDa"
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    type: TAB
+  TAB-EAYuMFcwI:
+    children:
+    - ROW-PpvZvxqBQ
+    id: TAB-EAYuMFcwI
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Por franja horaria
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - TABS-g8e_-q61ZY
+    type: TAB
+  TAB-K6TShjEGk:
+    children:
+    - ROW-1X6rIKMMC
+    id: TAB-K6TShjEGk
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Mes
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    type: TAB
+  TAB-Nek7tDD2o:
+    children:
+    - ROW-txVQfTCbP
+    id: TAB-Nek7tDD2o
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: "A\xF1o"
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    type: TAB
+  TAB-OGpQi9SEUk:
+    children:
+    - ROW-5XLhaW2s4B
+    id: TAB-OGpQi9SEUk
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Evento
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - TABS-uk-JX9g9RD
+    type: TAB
+  TAB-WzCxVSZWB:
+    children:
+    - ROW-GEog_dl0r3
+    id: TAB-WzCxVSZWB
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Franja horaria y tipo
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - TABS-uk-JX9g9RD
+    type: TAB
+  TAB-oGiGHiGx5:
+    children:
+    - HEADER-Gd_qzMkH4V
+    - ROW-zmiwKrJ2Q
+    - ROW-Oh9SpZsEx
+    - HEADER-hBY_j-ErXw
+    - ROW-Ci3-HAcmKv
+    id: TAB-oGiGHiGx5
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Fuentes
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    type: TAB
+  TAB-pRKoKqJjA:
+    children:
+    - ROW-_nXw0Y5JL
+    id: TAB-pRKoKqJjA
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: "D\xEDa"
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    type: TAB
+  TABS-Pm2hu7FR5B:
+    children:
+    - TAB-D2lrKZVV_1
+    - TAB-6Pcv0lpwW
+    - TAB-pRKoKqJjA
+    - TAB-08YV04rKt
+    - TAB-K6TShjEGk
+    - TAB-Nek7tDD2o
+    id: TABS-Pm2hu7FR5B
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    type: TABS
+  TABS-Rt9jZ4P1G1:
+    children:
+    - TAB--ReVxOixrQ
+    - TAB-7ggp_GDR6
+    - TAB-oGiGHiGx5
+    - TAB-5UfH_kEi0
+    id: TABS-Rt9jZ4P1G1
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: TABS
+  TABS-g8e_-q61ZY:
+    children:
+    - TAB-1_GpS1XeQd
+    - TAB-EAYuMFcwI
+    - TAB-6UZ33TvLu
+    id: TABS-g8e_-q61ZY
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: TABS
+  TABS-uk-JX9g9RD:
+    children:
+    - TAB-OGpQi9SEUk
+    - TAB-9a8p5MRDz
+    - TAB-WzCxVSZWB
+    id: TABS-uk-JX9g9RD
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    type: TABS
+metadata:
+  timed_refresh_immune_slices: []
+  expanded_slices: {}
+  refresh_frequency: 300
+  color_scheme: ''
+  label_colors: {}
+  chart_configuration: {}
+  stagger_refresh: true
+  native_filter_configuration: []
+  cross_filters_enabled: false
+  shared_label_colors:
+    Paid: '#1FA8C9'
+    Free: '#454E7C'
+    21 Savage: '#1FA8C9'
+    42 Dugg: '#454E7C'
+    50 Cent: '#5AC189'
+    A Boogie Wit Da Hoodie: '#FF7F44'
+    A Happy Dad Halloween: '#666666'
+    Austin Millz: '#E04355'
+    Bebeshito: '#FCC700'
+    Becky G: '#A868B7'
+    Big Boogie: '#3CCCCB'
+    BossMan Dlow Album Release Party - Rolling Loud LIV ON SUNDAY: '#A38F79'
+    Boston Richey: '#8FD3E4'
+    Cat Dealers & Bhaskar: '#A1A6BD'
+    Cedric Gervais: '#ACE1C4'
+    Cedric Gervais - SH!TSHOW: '#FEC0A1'
+    DJ Diesel: '#B2B2B2'
+    DJ Don Hot: '#EFA1AA'
+    DJ Khaled: '#FDE380'
+    DJ Khaled Basel Edition: '#D3B3DA'
+    DJ Pauly D & Vavo Spring Break: '#9EE5E5'
+    DJ Pauly D Spring Break: '#D1C6BC'
+    DJ Stevie J & Don P: '#1FA8C9'
+    DJ TAO & Special Guest Peipper: '#454E7C'
+    DJ Tao & Special Guest Peipper: '#5AC189'
+    DaBaby: '#FF7F44'
+    DaBaby New Years Week: '#666666'
+    David Guetta: '#E04355'
+    Diplo - Basel Edition: '#FCC700'
+    Diplo New Years Week: '#A868B7'
+    Dustin Lynch: '#3CCCCB'
+    FRIDAY, February 28th: '#A38F79'
+    FRIDAY, May 16th: '#8FD3E4'
+    Fabolous: '#A1A6BD'
+    FloyyMenor: '#ACE1C4'
+    French Montana: '#FEC0A1'
+    Friday, March 28th - Miami Music Week: '#B2B2B2'
+    GRYFFIN New Years Week: '#EFA1AA'
+    Green Velvet: '#FDE380'
+    Gryffin: '#D3B3DA'
+    Gucci Mane: '#9EE5E5'
+    Gunna: '#D1C6BC'
+    HADES66: '#1FA8C9'
+    Ice Spice: '#454E7C'
+    Jason Derulo: '#5AC189'
+    John Summit Basel Edition: '#FF7F44'
+    Kapo: '#666666'
+    Kaskade: '#E04355'
+    Kevin Hart Gran Coramino Official Afterparty: '#FCC700'
+    LIV ON SUNDAY: '#A868B7'
+    LIV ON SUNDAY - Race Week: '#3CCCCB'
+    LIV ON SUNDAY October 27th: '#A38F79'
+    'LIV ON Sunday Presents: Lil Baby': '#8FD3E4'
+    'LIV Presents:  Armin Van Buuren': '#A1A6BD'
+    'LIV Presents:  Kaytranada & Rampa': '#ACE1C4'
+    "LIV Presents:  Ti\xEBsto": '#FEC0A1'
+    'LIV Presents: ALOK': '#B2B2B2'
+    'LIV Presents: ARTBAT': '#EFA1AA'
+    'LIV Presents: Acraze': '#FDE380'
+    'LIV Presents: Afrojack': '#D3B3DA'
+    'LIV Presents: Alan Walker': '#9EE5E5'
+    'LIV Presents: Alesso': '#D1C6BC'
+    'LIV Presents: Alex Sensation': '#1FA8C9'
+    'LIV Presents: Anitta & Pedro Sampaio': '#454E7C'
+    'LIV Presents: Anuel': '#5AC189'
+    'LIV Presents: Anuel AA': '#FF7F44'
+    'LIV Presents: Audien': '#666666'
+    'LIV Presents: Bad Bunny Official Tour After Party: Night 1': '#E04355'
+    'LIV Presents: Bad Bunny Official Tour After Party: Night 2': '#FCC700'
+    'LIV Presents: Bizarrap': '#A868B7'
+    'LIV Presents: Black Coffee': '#3CCCCB'
+    'LIV Presents: Bryson Tiller': '#A38F79'
+    'LIV Presents: Cash Cash': '#8FD3E4'
+    'LIV Presents: Cedric Gervais': '#A1A6BD'
+    'LIV Presents: Chantel Jeffries': '#ACE1C4'
+    'LIV Presents: Chesca & Mariah Angeliq': '#FEC0A1'
+    'LIV Presents: DJ ADONI': '#B2B2B2'
+    'LIV Presents: DJ Khaled': '#EFA1AA'
+    'LIV Presents: DJ Pauly D': '#FDE380'
+    'LIV Presents: DJ Snake': '#D3B3DA'
+    'LIV Presents: Damian Lazarus': '#9EE5E5'
+    'LIV Presents: David Guetta': '#D1C6BC'
+    'LIV Presents: De La Ghetto': '#1FA8C9'
+    'LIV Presents: Diddy & Friends': '#454E7C'
+    'LIV Presents: Don Diablo': '#5AC189'
+    'LIV Presents: EXODUS': '#FF7F44'
+    'LIV Presents: Emilia': '#666666'
+    'LIV Presents: Fabolous': '#E04355'
+    'LIV Presents: Fat Joe': '#FCC700'
+    'LIV Presents: Frank Walker': '#A868B7'
+    'LIV Presents: French Montana': '#3CCCCB'
+    'LIV Presents: Galantis': '#A38F79'
+    'LIV Presents: Green Velvet': '#8FD3E4'
+    'LIV Presents: Guaynna': '#A1A6BD'
+    'LIV Presents: Gucci Mane': '#ACE1C4'
+    'LIV Presents: Gunna': '#FEC0A1'
+    'LIV Presents: Ivy Queen': '#B2B2B2'
+    'LIV Presents: James Kennedy': '#EFA1AA'
+    'LIV Presents: Jeezy': '#FDE380'
+    'LIV Presents: Joel Corry': '#D3B3DA'
+    'LIV Presents: John Summit': '#9EE5E5'
+    'LIV Presents: Latto': '#D1C6BC'
+    'LIV Presents: Lost Frequencies': '#1FA8C9'
+    'LIV Presents: Loud Luxury': '#454E7C'
+    'LIV Presents: Luar La L': '#5AC189'
+    'LIV Presents: Marshmello': '#FF7F44'
+    'LIV Presents: Matzo Ball': '#666666'
+    'LIV Presents: NGHTMRE': '#E04355'
+    'LIV Presents: Offset': '#FCC700'
+    'LIV Presents: Oliver Heldens': '#A868B7'
+    'LIV Presents: Omar Courtz': '#3CCCCB'
+    'LIV Presents: Peso Pluma': '#A38F79'
+    'LIV Presents: Rick Ross': '#8FD3E4'
+    'LIV Presents: Roddy Ricch': '#A1A6BD'
+    'LIV Presents: SOFI TUKKER': '#ACE1C4'
+    'LIV Presents: Soulja Boy': '#FEC0A1'
+    'LIV Presents: Steve Aoki': '#B2B2B2'
+    'LIV Presents: Sunnery James & Ryan Marciano': '#EFA1AA'
+    'LIV Presents: T.I.': '#FDE380'
+    'LIV Presents: Tiesto': '#D3B3DA'
+    "LIV Presents: Ti\xEBsto": '#9EE5E5'
+    'LIV Presents: TroyBoi': '#D1C6BC'
+    'LIV Presents: Two Friends': '#1FA8C9'
+    'LIV Presents: Ty Dolla $ign': '#454E7C'
+    'LIV Presents: Tyga': '#5AC189'
+    'LIV Presents: Young Chimi': '#FF7F44'
+    'LIV Presents: Zedd': '#666666'
+    'LIV on Sunday Presents: 2 Chainz': '#E04355'
+    'LIV on Sunday Presents: 50 Cent': '#FCC700'
+    'LIV on Sunday Presents: Brent Faiyaz': '#A868B7'
+    'LIV on Sunday Presents: Diddy & Friends': '#3CCCCB'
+    'LIV on Sunday Presents: Quavo': '#A38F79'
+    'LIV presents: Afrojack': '#8FD3E4'
+    'LIV presents: Moneybagg Yo': '#A1A6BD'
+    Lil Baby Official Rolling Loud Afterparty: '#ACE1C4'
+    Lil Wayne Basel Closing Party: '#FEC0A1'
+    'Liv Presents: Nicky Romero': '#B2B2B2'
+    Loe Shimmy & DJ Stevie J Birthday Celebration: '#EFA1AA'
+    Loud Luxury: '#FDE380'
+    Loud Luxury New Years Week: '#D3B3DA'
+    Loud Luxury Spring Break: '#9EE5E5'
+    Loud Luxury Spring Break 2025: '#D1C6BC'
+    MK: '#1FA8C9'
+    Mariah The Scientist: '#454E7C'
+    Matzoball x Disco Dreidel Celebration: '#5AC189'
+    Mentirosa Thursday: '#FF7F44'
+    Metro Boomin Official Rolling Loud Afterparty: '#666666'
+    Myles O'Neal & Purple: '#E04355'
+    NYE 2025 - Central Cee: '#FCC700'
+    Ne-Yo: '#A868B7'
+    OFFSET: '#3CCCCB'
+    Oliver Heldens: '#A38F79'
+    Omar Courtz: '#8FD3E4'
+    Quavo: '#A1A6BD'
+    Rae Sremmurd: '#ACE1C4'
+    Rick Ross: '#FEC0A1'
+    SATURDAY, February 22nd: '#B2B2B2'
+    SATURDAY, May 10th: '#EFA1AA'
+    Saturday, March 29th - Miami Music Week: '#FDE380'
+    Saturday, May 3rd - Race Week: '#D3B3DA'
+    Saturday, October 12th: '#9EE5E5'
+    Sexyy Red & GloRilla: '#D1C6BC'
+    Sofi Tukker: '#1FA8C9'
+    Steve Aoki: '#454E7C'
+    TWINSICK & Xandra: '#5AC189'
+    The Kid Laroi: '#FF7F44'
+    Thursday, December 19th: '#666666'
+    Thursday, March 27th - Miami Music Week: '#E04355'
+    Thursday, November 7th: '#FCC700'
+    Thursday, October 10th: '#A868B7'
+    "Ti\xEBsto": '#3CCCCB'
+    Trey Songz: '#A38F79'
+    Two Friends: '#8FD3E4'
+    Two Friends Spring Break: '#A1A6BD'
+    Ty Dolla $ign: '#ACE1C4'
+    Xandra: '#FEC0A1'
+    YEAT Rolling Loud Pre-Party: '#B2B2B2'
+    Yandel Album Release Party: '#EFA1AA'
+    Young Miami: '#FDE380'
+    Young Miko: '#D3B3DA'
+    Yung Miami: '#9EE5E5'
+    Net earnings: '#1FA8C9'
+    Quantity sold: '#454E7C'
+    ticketmaster: '#454E7C'
+    google-paid: '#454E7C'
+    social: '#5AC189'
+    universe_waitlist: '#FF7F44'
+    meta-paid: '#666666'
+    universe-discover: '#FF7F44'
+    Email: '#FCC700'
+    popup: '#A868B7'
+    uniiverse-milkyway/ticket_emailer-ticket_cancelled_email: '#3CCCCB'
+    LEDDisplayLobby: '#A38F79'
+    metapaid: '#8FD3E4'
+    uniiverse-milkyway/ticket_emailer-order_confirmation_email: '#FF7F44'
+    email: '#ACE1C4'
+    universe_abandonment: '#666666'
+    guapas: '#B2B2B2'
+    Elharrar: '#EFA1AA'
+    VGP: '#FDE380'
+    Uriel: '#D3B3DA'
+    DJMagWkndRecapEmail: '#9EE5E5'
+    TMPromoted: '#D1C6BC'
+    popup?ref=social: '#1FA8C9'
+    raco: '#454E7C'
+    uniiverse-milkyway/transactional_emailer-reset_password_instructions: '#8FD3E4'
+    SebastianMunoz: '#FF7F44'
+    uniiverse-milkyway/transactional_emailer-confirmation_instructions: '#1FA8C9'
+    stagingTest: '#E04355'
+    Online: '#1FA8C9'
+    visa: '#1FA8C9'
+    mastercard: '#454E7C'
+    amex: '#5AC189'
+    discover: '#FF7F44'
+    diners: '#666666'
+    unionpay: '#E04355'
+    card: '#1FA8C9'
+    google_pay: '#5AC189'
+    apple_pay: '#454E7C'
+    FRIDAY, April 4th: '#A38F79'
+    FRIDAY, March 14th: '#A1A6BD'
+    FRIDAY, March 7th: '#ACE1C4'
+    LIV ON SUNDAY - Miami Music Week: '#A1A6BD'
+    uniiverse-milkyway_v2/ticket_emailer-order_confirmation_email: '#5AC189'
+  color_scheme_domain: []
+version: 1.0.0
