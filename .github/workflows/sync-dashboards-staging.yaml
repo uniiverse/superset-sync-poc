@@ -34,23 +34,13 @@ jobs:
           echo "SUPERSET_URL is set: ${SUPERSET_URL:+yes}"
           echo "Connecting to: ${SUPERSET_URL}/api/v1/security/login"
 
-          RESPONSE=$(curl -v -w "\n%{http_code}" "${SUPERSET_URL}/api/v1/security/login" \
+          RESPONSE=$(curl -s -w "\n%{http_code}" "${SUPERSET_URL}/api/v1/security/login" \
             -X POST \
             -H "Content-Type: application/json" \
-            -d "{\"username\":\"${SUPERSET_USERNAME}\",\"password\":\"${SUPERSET_PASSWORD}\",\"provider\":\"db\",\"refresh\":true}" \
-            2>&1)
+            -d "{\"username\":\"${SUPERSET_USERNAME}\",\"password\":\"${SUPERSET_PASSWORD}\",\"provider\":\"db\",\"refresh\":true}")
 
-          CURL_EXIT=$?
-
-          if [ $CURL_EXIT -ne 0 ]; then
-            echo "❌ Curl failed with exit code: $CURL_EXIT"
-            echo "Error details:"
-            echo "$RESPONSE"
-            exit 1
-          fi
-
-          HTTP_CODE=$(echo "$RESPONSE" | grep -oP '(?<=HTTP/)\d+' | tail -1)
-          BODY=$(echo "$RESPONSE" | sed -n '/^{/,/^}/p')
+          HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
+          BODY=$(echo "$RESPONSE" | sed '$d')
 
           echo "HTTP Status: $HTTP_CODE"
 
