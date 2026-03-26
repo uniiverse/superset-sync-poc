@@ -6,51 +6,85 @@ on:
     - cron: '0 */6 * * *'
   workflow_dispatch: # Allows manual trigger from GitHub UI
 
-env:
-  NODE_VERSION: '20.11.0'
-
 jobs:
   sync-dashboards:
-    runs-on: universe-runners
+    runs-on: ubuntu-latest
     permissions:
       contents: write
       pull-requests: write
-      id-token: write
 
     steps:
-      - name: Generate application token
-        id: app-token
-        uses: actions/create-github-app-token@v1
-        with:
-          app-id: ${{ vars.ARC_RELEASE_APP_ID }}
-          private-key: ${{ secrets.ARC_RELEASE_PRIVATE_KEY }}
-          owner: uniiverse
-
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          token: ${{ steps.app-token.outputs.token }}
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
-
-      - name: Setup Google Artifact Registry
-        run: |
-          gcloud artifacts print-settings npm --project=tm-uni-platform --repository=js --location=us-east4 --scope=@universe > .npmrc
-          npx -y google-artifactregistry-auth --repo-config .npmrc --credential-config .npmrc
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y curl jq unzip
 
       - name: Export dashboards from Superset
         env:
           SUPERSET_URL: ${{ secrets.SUPERSET_URL }}
           SUPERSET_USERNAME: ${{ secrets.SUPERSET_USERNAME }}
           SUPERSET_PASSWORD: ${{ secrets.SUPERSET_PASSWORD }}
-        run: npm run export
+        run: |
+          echo "🔐 Authenticating with Superset..."
+          TOKEN=$(curl -s "${SUPERSET_URL}/api/v1/security/login" \
+            -X POST \
+            -H "Content-Type: application/json" \
+            -d "{\"username\":\"${SUPERSET_USERNAME}\",\"password\":\"${SUPERSET_PASSWORD}\",\"provider\":\"db\",\"refresh\":true}" \
+            | jq -r '.access_token')
+
+          if [ -z "$TOKEN" ] || [ "$TOKEN" = "null" ]; then
+            echo "❌ Authentication failed"
+            exit 1
+          fi
+
+          echo "✅ Authenticated successfully"
+          echo ""
+
+          echo "📥 Exporting dashboards from ${SUPERSET_URL}..."
+          mkdir -p tmp
+
+          # Export all assets as ZIP
+          curl -s "${SUPERSET_URL}/api/v1/assets/export/" \
+            -H "Authorization: Bearer $TOKEN" \
+            --output tmp/dashboards.zip
+
+          if [ ! -f tmp/dashboards.zip ]; then
+            echo "❌ Export failed"
+            exit 1
+          fi
+
+          echo "✅ Downloaded dashboards.zip"
+          echo ""
+
+          echo "📦 Extracting dashboards..."
+          mkdir -p dashboards
+          unzip -o tmp/dashboards.zip -d tmp/extracted > /dev/null 2>&1
+
+          # Find the assets directory (it has a timestamp in the name)
+          ASSETS_DIR=$(find tmp/extracted -type d -name "assets_export_*" | head -1)
+
+          if [ -z "$ASSETS_DIR" ]; then
+            echo "❌ Could not find assets in ZIP"
+            exit 1
+          fi
+
+          # Copy dashboards
+          if [ -d "$ASSETS_DIR/dashboards" ]; then
+            cp -r "$ASSETS_DIR/dashboards/"* dashboards/ 2>/dev/null || true
+            DASHBOARD_COUNT=$(ls -1 dashboards 2>/dev/null | wc -l | xargs)
+            echo "✅ Extracted $DASHBOARD_COUNT dashboard files"
+          else
+            echo "⚠️  No dashboards found in export"
+          fi
+
+          # Cleanup
+          rm -rf tmp
+
+          echo ""
+          echo "🎉 Export complete!"
 
       - name: Check for changes
         id: check_changes
@@ -107,4 +141,3 @@ jobs:
           echo "- **Superset URL:** ${{ secrets.SUPERSET_URL }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Changes detected:** ${{ steps.check_changes.outputs.has_changes }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Run time:** $(date -u)" >> $GITHUB_STEP_SUMMARY
-
