@@ -1,0 +1,46 @@
+slice_name: 'Sales by ticket type '
+description: null
+certified_by: null
+certification_details: null
+viz_type: pie
+params:
+  adhoc_filters: []
+  color_scheme: supersetColors
+  datasource: 235__table
+  date_format: smart_date
+  extra_form_data: {}
+  groupby:
+  - ticket_type
+  innerRadius: 30
+  label_type: key_percent
+  labels_outside: true
+  legendOrientation: top
+  legendType: scroll
+  metric: Net earnings
+  number_format: $,.2f
+  outerRadius: 70
+  row_limit: 50000
+  show_labels: true
+  show_labels_threshold: '0'
+  sort_by_metric: true
+  time_range: No filter
+  viz_type: pie
+  annotation_layers: []
+query_context: '{"datasource": {"id": 235, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "filters": [], "extras": {"having": "", "having_druid":
+  [], "where": ""}, "applied_time_extras": {}, "columns": ["ticket_type"], "metrics":
+  ["Net earnings"], "orderby": [["Net earnings", false]], "annotation_layers": [],
+  "row_limit": 50000, "timeseries_limit": 0, "order_desc": true, "url_params": {},
+  "custom_params": {}, "custom_form_data": {}}], "form_data": {"viz_type": "pie",
+  "datasource": "235__table", "slice_id": 127, "time_range": "No filter", "groupby":
+  ["ticket_type"], "metric": "Net earnings", "adhoc_filters": [], "row_limit": 50000,
+  "sort_by_metric": true, "color_scheme": "supersetColors", "show_labels_threshold":
+  "0", "legendType": "scroll", "legendOrientation": "top", "label_type": "key_percent",
+  "number_format": "$,.2f", "date_format": "smart_date", "show_labels": true, "labels_outside":
+  true, "outerRadius": 70, "innerRadius": 30, "extra_form_data": {}, "force": false,
+  "result_format": "json", "result_type": "full"}, "result_format": "json", "result_type":
+  "full"}'
+cache_timeout: null
+uuid: 20f6b6d0-a9eb-4b4e-a60c-4be9dbdfafb7
+version: 1.0.0
+dataset_uuid: 83819143-8f22-47c4-a7ad-052e6a0c3c4a

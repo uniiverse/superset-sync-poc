@@ -1,0 +1,72 @@
+slice_name: Ticket sold timeline
+description: null
+certified_by: null
+certification_details: null
+viz_type: echarts_timeseries_line
+params:
+  adhoc_filters: []
+  annotation_layers: []
+  color_scheme: supersetColors
+  comparison_type: values
+  datasource: 236__table
+  extra_form_data: {}
+  forecastInterval: 0.8
+  forecastPeriods: 10
+  granularity_sqla: purchase_time
+  groupby:
+  - event_name
+  legendMargin: 360
+  legendOrientation: right
+  legendType: scroll
+  logAxis: false
+  markerSize: 6
+  metrics:
+  - Quantity sold
+  minorSplitLine: false
+  only_total: true
+  order_desc: true
+  rich_tooltip: true
+  row_limit: 50000
+  show_legend: true
+  slice_id: 138
+  time_grain_sqla: P1D
+  time_range: No filter
+  tooltipTimeFormat: smart_date
+  truncateYAxis: false
+  viz_type: echarts_timeseries_line
+  x_axis_time_format: smart_date
+  x_axis_title_margin: 30
+  y_axis_bounds:
+  - null
+  - null
+  y_axis_format: SMART_NUMBER
+  y_axis_title: ''
+  y_axis_title_margin: 50
+  y_axis_title_position: Left
+query_context: '{"datasource": {"id": 236, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "purchase_time", "filters": [], "extras":
+  {"time_grain_sqla": "P1D", "having": "", "having_druid": [], "where": ""}, "applied_time_extras":
+  {}, "columns": ["event_name"], "metrics": ["Quantity sold"], "orderby": [["Quantity
+  sold", false]], "annotation_layers": [], "row_limit": 50000, "series_columns": ["event_name"],
+  "timeseries_limit": 0, "order_desc": true, "url_params": {}, "custom_params": {},
+  "custom_form_data": {}, "is_timeseries": true, "time_offsets": [], "post_processing":
+  [{"operation": "pivot", "options": {"index": ["__timestamp"], "columns": ["event_name"],
+  "aggregates": {"Quantity sold": {"operator": "mean"}}, "drop_missing_columns": false,
+  "flatten_columns": false, "reset_index": false}}, {"operation": "rename", "options":
+  {"columns": {"Quantity sold": null}, "level": 0, "inplace": true}}, {"operation":
+  "flatten"}]}], "form_data": {"viz_type": "echarts_timeseries_line", "datasource":
+  "236__table", "slice_id": 138, "granularity_sqla": "purchase_time", "time_grain_sqla":
+  "P1D", "time_range": "No filter", "metrics": ["Quantity sold"], "groupby": ["event_name"],
+  "adhoc_filters": [], "order_desc": true, "row_limit": 50000, "comparison_type":
+  "values", "annotation_layers": [], "forecastPeriods": 10, "forecastInterval": 0.8,
+  "x_axis_title_margin": 30, "y_axis_title": "", "y_axis_title_margin": 50, "y_axis_title_position":
+  "Left", "color_scheme": "supersetColors", "only_total": true, "markerSize": 6, "show_legend":
+  true, "legendType": "scroll", "legendOrientation": "right", "legendMargin": 360,
+  "x_axis_time_format": "smart_date", "rich_tooltip": true, "tooltipTimeFormat": "smart_date",
+  "y_axis_format": "SMART_NUMBER", "logAxis": false, "minorSplitLine": false, "truncateYAxis":
+  false, "y_axis_bounds": [null, null], "extra_form_data": {}, "force": false, "result_format":
+  "json", "result_type": "full"}, "result_format": "json", "result_type": "full"}'
+cache_timeout: null
+uuid: d9062040-0ea9-48d1-8f0b-2bb2604ffb69
+version: 1.0.0
+dataset_uuid: 4dffd900-a2d4-45ad-a8c1-4b68d34b9447

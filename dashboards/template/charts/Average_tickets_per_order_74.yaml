@@ -1,0 +1,52 @@
+slice_name: Average tickets per order
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator:
+    - paid
+    - ended
+    - closed
+    expressionType: SIMPLE
+    filterOptionName: filter_49aje7393el_bkv4mie1nnf
+    isExtra: false
+    isNew: false
+    operator: IN
+    operatorId: IN
+    sqlExpression: null
+    subject: ticket_status
+  datasource: 233__table
+  extra_form_data: {}
+  granularity_sqla: purchase_time
+  header_font_size: 0.4
+  metric: Average quantity
+  slice_id: 93
+  subheader_font_size: 0.15
+  time_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  viz_type: big_number_total
+  y_axis_format: SMART_NUMBER
+  annotation_layers: []
+query_context: '{"datasource": {"id": 233, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "purchase_time", "filters": [{"col":
+  "ticket_status", "op": "IN", "val": ["paid", "ended", "closed"]}], "extras": {"time_grain_sqla":
+  "P1D", "having": "", "having_druid": [], "where": ""}, "applied_time_extras": {},
+  "columns": [], "metrics": ["Average quantity"], "annotation_layers": [], "timeseries_limit":
+  0, "order_desc": true, "url_params": {}, "custom_params": {}, "custom_form_data":
+  {}}], "form_data": {"viz_type": "big_number_total", "datasource": "233__table",
+  "slice_id": 93, "granularity_sqla": "purchase_time", "time_grain_sqla": "P1D", "time_range":
+  "No filter", "metric": "Average quantity", "adhoc_filters": [{"clause": "WHERE",
+  "comparator": ["paid", "ended", "closed"], "expressionType": "SIMPLE", "filterOptionName":
+  "filter_49aje7393el_bkv4mie1nnf", "isExtra": false, "isNew": false, "operator":
+  "IN", "operatorId": "IN", "sqlExpression": null, "subject": "ticket_status"}], "header_font_size":
+  0.4, "subheader_font_size": 0.15, "y_axis_format": "SMART_NUMBER", "time_format":
+  "smart_date", "extra_form_data": {}, "force": false, "result_format": "json", "result_type":
+  "full"}, "result_format": "json", "result_type": "full"}'
+cache_timeout: null
+uuid: 5d8779c0-b0da-4f51-ac13-c236b6a9bd02
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc

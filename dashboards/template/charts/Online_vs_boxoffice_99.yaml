@@ -1,0 +1,61 @@
+slice_name: Online vs boxoffice
+description: null
+certified_by: null
+certification_details: null
+viz_type: pie
+params:
+  datasource: 233__table
+  viz_type: pie
+  slice_id: 105
+  granularity_sqla: purchase_time
+  time_range: No filter
+  groupby:
+  - Online vs onsite sales
+  metric: Net earnings
+  adhoc_filters: []
+  row_limit: 5000
+  sort_by_metric: true
+  color_scheme: supersetColors
+  show_labels_threshold: '0'
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  label_type: key
+  number_format: ',.2f'
+  date_format: smart_date
+  show_labels: true
+  labels_outside: true
+  outerRadius: 70
+  innerRadius: 30
+  extra_form_data: {}
+  dashboards:
+  - 17
+  - 14
+  - 21
+  - 20
+  - 24
+  - 25
+  - 19
+  - 22
+  - 18
+  - 26
+  annotation_layers: []
+query_context: '{"datasource": {"id": 233, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "purchase_time", "filters": [], "extras":
+  {"having": "", "where": ""}, "applied_time_extras": {}, "columns": ["Online vs onsite
+  sales"], "metrics": ["Net earnings"], "orderby": [["Net earnings", false]], "annotation_layers":
+  [], "row_limit": 5000, "series_limit": 0, "order_desc": true, "url_params": {},
+  "custom_params": {}, "custom_form_data": {}}], "form_data": {"datasource": "233__table",
+  "viz_type": "pie", "slice_id": 105, "granularity_sqla": "purchase_time", "time_range":
+  "No filter", "groupby": ["Online vs onsite sales"], "metric": "Net earnings", "adhoc_filters":
+  [], "row_limit": 5000, "sort_by_metric": true, "color_scheme": "supersetColors",
+  "show_labels_threshold": "0", "show_legend": true, "legendType": "scroll", "legendOrientation":
+  "top", "label_type": "key", "number_format": ",.2f", "date_format": "smart_date",
+  "show_labels": true, "labels_outside": true, "outerRadius": 70, "innerRadius": 30,
+  "extra_form_data": {}, "dashboards": [17, 14, 21, 20, 24, 25, 19, 22, 18, 26], "force":
+  false, "result_format": "json", "result_type": "full"}, "result_format": "json",
+  "result_type": "full"}'
+cache_timeout: null
+uuid: 852050ae-8423-4da6-add5-32c12aa63110
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc

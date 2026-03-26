@@ -1,0 +1,89 @@
+slice_name: By day of week
+description: null
+certified_by: null
+certification_details: null
+viz_type: echarts_timeseries_bar
+params:
+  datasource: 233__table
+  viz_type: echarts_timeseries_bar
+  slice_id: 95
+  metrics:
+  - Net earnings
+  - Quantity sold
+  adhoc_filters:
+  - clause: WHERE
+    subject: purchase_time
+    operator: TEMPORAL_RANGE
+    comparator: No filter
+    expressionType: SIMPLE
+  groupby: []
+  row_limit: 10000
+  order_desc: true
+  color_scheme: supersetColors
+  show_legend: true
+  rich_tooltip: true
+  order_bars: true
+  y_axis_format: ',d'
+  y_axis_bounds:
+  - null
+  - null
+  x_axis_title_margin: auto
+  xAxisLabelRotation: 0
+  extra_form_data: {}
+  dashboards:
+  - 35
+  - 39
+  - 24
+  - 25
+  - 27
+  - 17
+  - 29
+  - 19
+  - 26
+  - 21
+  - 30
+  - 34
+  - 20
+  - 36
+  - 42
+  - 37
+  - 31
+  - 38
+  - 33
+  - 40
+  - 32
+  - 41
+  - 43
+  - 14
+  - 18
+  - 22
+  annotation_layers: []
+  contributionMode: null
+  zoomable: false
+  markerEnabled: false
+  truncateYAxis: true
+  comparison_type: values
+  x_axis: Day of week created
+  stack: null
+query_context: '{"datasource": {"id": 233, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "purchase_time", "filters": [], "extras":
+  {"having": "", "where": ""}, "applied_time_extras": {}, "columns": ["Day of week
+  created"], "metrics": ["Net earnings", "Quantity sold"], "annotation_layers": [],
+  "row_limit": 10000, "series_limit": 0, "order_desc": true, "url_params": {}, "custom_params":
+  {}, "custom_form_data": {}}], "form_data": "{\"datasource\": \"233__table\", \"viz_type\":
+  \"echarts_timeseries_bar\", \"slice_id\": 95, \"metrics\": [\"Net earnings\", \"Quantity
+  sold\"], \"adhoc_filters\": [{\"clause\": \"WHERE\", \"subject\": \"purchase_time\",
+  \"operator\": \"TEMPORAL_RANGE\", \"comparator\": \"No filter\", \"expressionType\":
+  \"SIMPLE\"}], \"groupby\": [], \"row_limit\": 10000, \"order_desc\": true, \"color_scheme\":
+  \"supersetColors\", \"show_legend\": true, \"rich_tooltip\": true, \"order_bars\":
+  true, \"y_axis_format\": \",d\", \"y_axis_bounds\": [null, null], \"x_axis_title_margin\":
+  \"auto\", \"xAxisLabelRotation\": 0, \"extra_form_data\": {}, \"dashboards\": [35,
+  39, 24, 25, 27, 17, 29, 19, 26, 21, 30, 34, 20, 36, 42, 37, 31, 38, 33, 40, 32,
+  41, 43, 14, 18, 22], \"annotation_layers\": [], \"contributionMode\": null, \"zoomable\":
+  false, \"markerEnabled\": false, \"truncateYAxis\": true, \"comparison_type\": \"values\",
+  \"x_axis\": \"Day of week created\", \"stack\": null}", "result_format": "json",
+  "result_type": "full"}'
+cache_timeout: null
+uuid: 2bba7461-7d55-4727-a257-03b28468b4da
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc

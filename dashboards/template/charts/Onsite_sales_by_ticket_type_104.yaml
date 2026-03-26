@@ -1,0 +1,115 @@
+slice_name: Onsite sales by ticket type
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 236__table
+  viz_type: table
+  slice_id: 142
+  granularity_sqla: purchase_time
+  time_grain_sqla: P1D
+  time_range: No filter
+  query_mode: aggregate
+  groupby:
+  - ticket_type
+  metrics:
+  - Net earnings
+  - Quantity sold
+  all_columns: []
+  percent_metrics: []
+  adhoc_filters:
+  - expressionType: SIMPLE
+    subject: net_earnings
+    operator: '>'
+    operatorId: GREATER_THAN
+    comparator: '0'
+    clause: WHERE
+    sqlExpression: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_njvwfjxbqht_rb4g31lk2d
+  - expressionType: SQL
+    sqlExpression: ' payment_type_details LIKE ''ios_%'' OR payment_type_details LIKE
+      ''android_%'''
+    clause: WHERE
+    subject: null
+    operator: null
+    comparator: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_u0gd23czo9_zwtjz4r84y
+  order_by_cols: []
+  row_limit: 50000
+  server_page_length: 10
+  order_desc: true
+  show_totals: true
+  table_timestamp_format: smart_date
+  show_cell_bars: true
+  color_pn: true
+  extra_form_data: {}
+  dashboards:
+  - 35
+  - 39
+  - 24
+  - 25
+  - 27
+  - 17
+  - 29
+  - 19
+  - 26
+  - 21
+  - 30
+  - 34
+  - 20
+  - 36
+  - 42
+  - 37
+  - 31
+  - 38
+  - 33
+  - 40
+  - 32
+  - 41
+  - 43
+  - 14
+  - 18
+  - 22
+  annotation_layers: []
+query_context: '{"datasource": {"id": 236, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "purchase_time", "filters": [{"col":
+  "net_earnings", "op": ">", "val": "0"}], "extras": {"time_grain_sqla": "P1D", "having":
+  "", "where": "( payment_type_details LIKE ''ios_%'' OR payment_type_details LIKE
+  ''android_%'')"}, "applied_time_extras": {}, "columns": ["ticket_type"], "metrics":
+  ["Net earnings", "Quantity sold"], "orderby": [["Net earnings", false]], "annotation_layers":
+  [], "row_limit": 50000, "series_limit": 0, "order_desc": true, "url_params": {},
+  "custom_params": {}, "custom_form_data": {}, "post_processing": []}, {"time_range":
+  "No filter", "granularity": "purchase_time", "filters": [{"col": "net_earnings",
+  "op": ">", "val": "0"}], "extras": {"time_grain_sqla": "P1D", "having": "", "where":
+  "( payment_type_details LIKE ''ios_%'' OR payment_type_details LIKE ''android_%'')"},
+  "applied_time_extras": {}, "columns": [], "metrics": ["Net earnings", "Quantity
+  sold"], "annotation_layers": [], "row_limit": 0, "row_offset": 0, "series_limit":
+  0, "url_params": {}, "custom_params": {}, "custom_form_data": {}, "post_processing":
+  []}], "form_data": {"datasource": "236__table", "viz_type": "table", "slice_id":
+  142, "granularity_sqla": "purchase_time", "time_grain_sqla": "P1D", "time_range":
+  "No filter", "query_mode": "aggregate", "groupby": ["ticket_type"], "metrics": ["Net
+  earnings", "Quantity sold"], "all_columns": [], "percent_metrics": [], "adhoc_filters":
+  [{"expressionType": "SIMPLE", "subject": "net_earnings", "operator": ">", "operatorId":
+  "GREATER_THAN", "comparator": "0", "clause": "WHERE", "sqlExpression": null, "isExtra":
+  false, "isNew": false, "datasourceWarning": false, "filterOptionName": "filter_njvwfjxbqht_rb4g31lk2d"},
+  {"expressionType": "SQL", "sqlExpression": " payment_type_details LIKE ''ios_%''
+  OR payment_type_details LIKE ''android_%''", "clause": "WHERE", "subject": null,
+  "operator": null, "comparator": null, "isExtra": false, "isNew": false, "datasourceWarning":
+  false, "filterOptionName": "filter_u0gd23czo9_zwtjz4r84y"}], "order_by_cols": [],
+  "row_limit": 50000, "server_page_length": 10, "order_desc": true, "show_totals":
+  true, "table_timestamp_format": "smart_date", "show_cell_bars": true, "color_pn":
+  true, "extra_form_data": {}, "dashboards": [35, 39, 24, 25, 27, 17, 29, 19, 26,
+  21, 30, 34, 20, 36, 42, 37, 31, 38, 33, 40, 32, 41, 43, 14, 18, 22], "force": false,
+  "result_format": "json", "result_type": "full"}, "result_format": "json", "result_type":
+  "full"}'
+cache_timeout: null
+uuid: b9c821cc-a7a2-4062-9ded-321c79a03246
+version: 1.0.0
+dataset_uuid: 4dffd900-a2d4-45ad-a8c1-4b68d34b9447

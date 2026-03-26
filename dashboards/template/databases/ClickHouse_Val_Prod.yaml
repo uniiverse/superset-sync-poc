@@ -1,0 +1,13 @@
+database_name: ClickHouse Val (Prod)
+sqlalchemy_uri: clickhousedb+connect://clickhouse_operator:XXXXXXXXXX@clickhouse-data-platform-val.data-platform.svc.cluster.local:8123/host_dashboards
+cache_timeout: null
+expose_in_sqllab: true
+allow_run_async: false
+allow_ctas: false
+allow_cvas: false
+allow_dml: false
+allow_csv_upload: false
+extra:
+  allows_virtual_table_explore: true
+uuid: ee31ebb2-b5c6-4e65-ab78-dba64b33ca63
+version: 1.0.0

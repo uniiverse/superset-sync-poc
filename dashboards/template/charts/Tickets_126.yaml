@@ -1,0 +1,70 @@
+slice_name: Tickets
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number
+params:
+  datasource: 233__table
+  viz_type: big_number
+  slice_id: 117
+  granularity_sqla: purchase_time
+  time_grain_sqla: P1W
+  time_range: No filter
+  metric: Quantity sold
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    datasourceWarning: false
+    expressionType: SQL
+    filterOptionName: filter_1flht28dhi8_tzok4vwe0eb
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: ticket_category IS NULL OR ticket_category IN ('Rate', 'FreeRate',
+      'pwycRate', 'PassRate')
+    subject: null
+  compare_lag: 1
+  compare_suffix: Previous week
+  show_trend_line: true
+  start_y_axis_at_zero: true
+  color_picker:
+    a: 1
+    b: 135
+    g: 122
+    r: 0
+  header_font_size: 0.4
+  subheader_font_size: 0.125
+  y_axis_format: ',d'
+  time_format: smart_date
+  rolling_type: cumsum
+  extra_form_data: {}
+  dashboards:
+  - 17
+  - 14
+  annotation_layers: []
+query_context: '{"datasource": {"id": 233, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "purchase_time", "filters": [], "extras":
+  {"time_grain_sqla": "P1W", "having": "", "where": "(ticket_category IS NULL OR ticket_category
+  IN (''Rate'', ''FreeRate'', ''pwycRate'', ''PassRate''))"}, "applied_time_extras":
+  {}, "columns": [], "metrics": ["Quantity sold"], "annotation_layers": [], "series_limit":
+  0, "order_desc": true, "url_params": {}, "custom_params": {}, "custom_form_data":
+  {}, "is_timeseries": true, "post_processing": [{"operation": "pivot", "options":
+  {"index": ["__timestamp"], "columns": [], "aggregates": {"Quantity sold": {"operator":
+  "mean"}}, "drop_missing_columns": true}}, {"operation": "cum", "options": {"operator":
+  "sum", "columns": {"Quantity sold": "Quantity sold"}}}, {"operation": "flatten"}]}],
+  "form_data": {"datasource": "233__table", "viz_type": "big_number", "slice_id":
+  117, "granularity_sqla": "purchase_time", "time_grain_sqla": "P1W", "time_range":
+  "No filter", "metric": "Quantity sold", "adhoc_filters": [{"clause": "WHERE", "comparator":
+  null, "datasourceWarning": false, "expressionType": "SQL", "filterOptionName": "filter_1flht28dhi8_tzok4vwe0eb",
+  "isExtra": false, "isNew": false, "operator": null, "sqlExpression": "ticket_category
+  IS NULL OR ticket_category IN (''Rate'', ''FreeRate'', ''pwycRate'', ''PassRate'')",
+  "subject": null}], "compare_lag": 1, "compare_suffix": "Previous week", "show_trend_line":
+  true, "start_y_axis_at_zero": true, "color_picker": {"a": 1, "b": 135, "g": 122,
+  "r": 0}, "header_font_size": 0.4, "subheader_font_size": 0.125, "y_axis_format":
+  ",d", "time_format": "smart_date", "rolling_type": "cumsum", "extra_form_data":
+  {}, "dashboards": [17, 14], "force": false, "result_format": "json", "result_type":
+  "full"}, "result_format": "json", "result_type": "full"}'
+cache_timeout: null
+uuid: c999506c-5ad3-4e0c-826f-d97487d81b06
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc
