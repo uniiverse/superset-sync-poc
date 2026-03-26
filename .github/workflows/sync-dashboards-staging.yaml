@@ -78,7 +78,6 @@ jobs:
           echo ""
 
           echo "📦 Extracting all assets..."
-          mkdir -p dashboards charts datasets databases
           unzip -o tmp/dashboards.zip -d tmp/extracted > /dev/null 2>&1
 
           # Find the assets directory (it has a timestamp in the name)
@@ -89,41 +88,21 @@ jobs:
             exit 1
           fi
 
-          # Copy dashboards
-          if [ -d "$ASSETS_DIR/dashboards" ]; then
-            cp -r "$ASSETS_DIR/dashboards/"* dashboards/ 2>/dev/null || true
-            DASHBOARD_COUNT=$(ls -1 dashboards 2>/dev/null | wc -l | xargs)
-            echo "✅ Extracted $DASHBOARD_COUNT dashboard files"
-          else
-            echo "⚠️  No dashboards found in export"
-          fi
+          # Copy entire assets export to dashboards/template/
+          mkdir -p dashboards/template
+          cp -r "$ASSETS_DIR/"* dashboards/template/ 2>/dev/null || true
 
-          # Copy charts
-          if [ -d "$ASSETS_DIR/charts" ]; then
-            cp -r "$ASSETS_DIR/charts/"* charts/ 2>/dev/null || true
-            CHART_COUNT=$(ls -1 charts 2>/dev/null | wc -l | xargs)
-            echo "✅ Extracted $CHART_COUNT chart files"
-          else
-            echo "⚠️  No charts found in export"
-          fi
+          # Count extracted files
+          DASHBOARD_COUNT=$(find dashboards/template/dashboards -type f 2>/dev/null | wc -l | xargs)
+          CHART_COUNT=$(find dashboards/template/charts -type f 2>/dev/null | wc -l | xargs)
+          DATASET_COUNT=$(find dashboards/template/datasets -type f 2>/dev/null | wc -l | xargs)
+          DATABASE_COUNT=$(find dashboards/template/databases -type f 2>/dev/null | wc -l | xargs)
 
-          # Copy datasets
-          if [ -d "$ASSETS_DIR/datasets" ]; then
-            cp -r "$ASSETS_DIR/datasets/"* datasets/ 2>/dev/null || true
-            DATASET_COUNT=$(ls -1 datasets 2>/dev/null | wc -l | xargs)
-            echo "✅ Extracted $DATASET_COUNT dataset files"
-          else
-            echo "⚠️  No datasets found in export"
-          fi
-
-          # Copy databases
-          if [ -d "$ASSETS_DIR/databases" ]; then
-            cp -r "$ASSETS_DIR/databases/"* databases/ 2>/dev/null || true
-            DATABASE_COUNT=$(ls -1 databases 2>/dev/null | wc -l | xargs)
-            echo "✅ Extracted $DATABASE_COUNT database files"
-          else
-            echo "⚠️  No databases found in export"
-          fi
+          echo "✅ Extracted to dashboards/template/"
+          echo "   - Dashboards: $DASHBOARD_COUNT"
+          echo "   - Charts: $CHART_COUNT"
+          echo "   - Datasets: $DATASET_COUNT"
+          echo "   - Databases: $DATABASE_COUNT"
 
           # Cleanup
           rm -rf tmp
@@ -134,7 +113,7 @@ jobs:
       - name: Check for changes
         id: check_changes
         run: |
-          git add dashboards/ charts/ datasets/ databases/
+          git add dashboards/
           if git diff --staged --quiet; then
             echo "has_changes=false" >> $GITHUB_OUTPUT
             echo "No changes detected"
@@ -169,7 +148,7 @@ jobs:
             - 💾 Databases
 
             ### Changes
-            Dashboards exported from: `${{ secrets.SUPERSET_URL }}`
+            Assets exported from: `${{ secrets.SUPERSET_URL }}`
 
             ### Review Checklist
             - [ ] Verify dashboard YAML changes look correct
