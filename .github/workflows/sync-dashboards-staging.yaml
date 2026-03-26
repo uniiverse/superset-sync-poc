@@ -77,8 +77,8 @@ jobs:
           echo "✅ Downloaded dashboards.zip"
           echo ""
 
-          echo "📦 Extracting dashboards..."
-          mkdir -p dashboards
+          echo "📦 Extracting all assets..."
+          mkdir -p dashboards charts datasets databases
           unzip -o tmp/dashboards.zip -d tmp/extracted > /dev/null 2>&1
 
           # Find the assets directory (it has a timestamp in the name)
@@ -98,6 +98,33 @@ jobs:
             echo "⚠️  No dashboards found in export"
           fi
 
+          # Copy charts
+          if [ -d "$ASSETS_DIR/charts" ]; then
+            cp -r "$ASSETS_DIR/charts/"* charts/ 2>/dev/null || true
+            CHART_COUNT=$(ls -1 charts 2>/dev/null | wc -l | xargs)
+            echo "✅ Extracted $CHART_COUNT chart files"
+          else
+            echo "⚠️  No charts found in export"
+          fi
+
+          # Copy datasets
+          if [ -d "$ASSETS_DIR/datasets" ]; then
+            cp -r "$ASSETS_DIR/datasets/"* datasets/ 2>/dev/null || true
+            DATASET_COUNT=$(ls -1 datasets 2>/dev/null | wc -l | xargs)
+            echo "✅ Extracted $DATASET_COUNT dataset files"
+          else
+            echo "⚠️  No datasets found in export"
+          fi
+
+          # Copy databases
+          if [ -d "$ASSETS_DIR/databases" ]; then
+            cp -r "$ASSETS_DIR/databases/"* databases/ 2>/dev/null || true
+            DATABASE_COUNT=$(ls -1 databases 2>/dev/null | wc -l | xargs)
+            echo "✅ Extracted $DATABASE_COUNT database files"
+          else
+            echo "⚠️  No databases found in export"
+          fi
+
           # Cleanup
           rm -rf tmp
 
@@ -107,13 +134,13 @@ jobs:
       - name: Check for changes
         id: check_changes
         run: |
-          git add dashboards/
+          git add dashboards/ charts/ datasets/ databases/
           if git diff --staged --quiet; then
             echo "has_changes=false" >> $GITHUB_OUTPUT
-            echo "No dashboard changes detected"
+            echo "No changes detected"
           else
             echo "has_changes=true" >> $GITHUB_OUTPUT
-            echo "Dashboard changes detected"
+            echo "Changes detected in Superset assets"
             git diff --staged --stat
           fi
 
@@ -122,17 +149,24 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: |
-            chore: sync dashboards from staging Superset
+            chore: sync all Superset assets from staging
 
             Auto-sync from staging Superset instance.
-            Dashboards exported and committed automatically.
+            Includes: dashboards, charts, datasets, databases.
+            Exported and committed automatically.
           branch: automated/sync-dashboards-${{ github.run_number }}
           delete-branch: true
-          title: '[Staging] Sync dashboards from Superset'
+          title: '[Staging] Sync Superset assets (dashboards, charts, datasets, databases)'
           body: |
-            ## 🤖 Automated Dashboard Sync from Staging
+            ## 🤖 Automated Superset Asset Sync from Staging
 
-            This PR contains dashboard updates detected in the staging Superset instance.
+            This PR contains updates to Superset assets detected in the staging instance.
+
+            **Synced assets:**
+            - 📊 Dashboards
+            - 📈 Charts
+            - 🗄️ Datasets
+            - 💾 Databases
 
             ### Changes
             Dashboards exported from: `${{ secrets.SUPERSET_URL }}`
