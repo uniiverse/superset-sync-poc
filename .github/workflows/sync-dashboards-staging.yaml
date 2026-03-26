@@ -91,3 +91,4 @@ jobs:
           echo "- **Superset URL:** ${{ secrets.SUPERSET_URL }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Changes detected:** ${{ steps.check_changes.outputs.has_changes }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Run time:** $(date -u)" >> $GITHUB_STEP_SUMMARY
+
