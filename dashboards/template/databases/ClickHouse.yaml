@@ -1,5 +1,5 @@
 database_name: ClickHouse
-sqlalchemy_uri: clickhousedb+connect://clickhouse_operator:XXXXXXXXXX@{{{[clickhouse_url]}}}
+sqlalchemy_uri: clickhousedb+connect://clickhouse_operator:XXXXXXXXXX@clickhouse-data-platform.data-platform/highlander
 cache_timeout: null
 expose_in_sqllab: true
 allow_run_async: false

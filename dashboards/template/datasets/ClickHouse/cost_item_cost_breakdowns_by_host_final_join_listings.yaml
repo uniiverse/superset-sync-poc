@@ -4,6 +4,7 @@ description: null
 default_endpoint: null
 offset: 0
 cache_timeout: null
+catalog: null
 schema: highlander
 sql: "SELECT *\n  FROM cost_item_cost_breakdowns_by_host_final\n  LEFT JOIN listings_final\
   \ l\n  ON listing_id = l.id"
@@ -12,6 +13,8 @@ template_params: null
 filter_select_enabled: false
 fetch_values_predicate: null
 extra: null
+normalize_columns: true
+always_filter_main_dttm: false
 uuid: 725441e5-b3fd-4939-a5ee-0f6a38cc93ec
 metrics:
 - metric_name: Quantity sold
@@ -20,6 +23,7 @@ metrics:
   expression: countIf(state IN ('paid', 'ended', 'closed'))
   description: null
   d3format: null
+  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -29,6 +33,7 @@ metrics:
   expression: SUM(net_earnings)
   description: null
   d3format: null
+  currency: null
   extra:
     warning_markdown: ''
   warning_text: null

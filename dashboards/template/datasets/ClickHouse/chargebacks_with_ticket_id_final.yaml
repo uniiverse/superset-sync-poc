@@ -4,6 +4,7 @@ description: null
 default_endpoint: null
 offset: 0
 cache_timeout: null
+catalog: null
 schema: highlander
 sql: ''
 params: null
@@ -11,6 +12,8 @@ template_params: null
 filter_select_enabled: false
 fetch_values_predicate: null
 extra: null
+normalize_columns: true
+always_filter_main_dttm: false
 uuid: 0c82ccb8-161a-4991-b3f1-2a18d2d298ab
 metrics:
 - metric_name: count
@@ -19,6 +22,7 @@ metrics:
   expression: COUNT(*)
   description: null
   d3format: null
+  currency: null
   extra:
     warning_markdown: ''
   warning_text: null

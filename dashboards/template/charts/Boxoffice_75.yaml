@@ -1,0 +1,79 @@
+slice_name: Boxoffice
+description: null
+certified_by: null
+certification_details: null
+viz_type: pie
+params:
+  datasource: 233__table
+  viz_type: pie
+  slice_id: 94
+  granularity_sqla: purchase_time
+  time_range: No filter
+  groupby:
+  - payment_type_details
+  metric: Net earnings
+  adhoc_filters:
+  - expressionType: SQL
+    sqlExpression: ' payment_type_details LIKE ''ios_%'' OR payment_type_details LIKE
+      ''android_%'''
+    clause: WHERE
+    subject: null
+    operator: null
+    comparator: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_gv9qod3z6v9_8ntf08pryk
+  row_limit: 50000
+  sort_by_metric: true
+  color_scheme: supersetColors
+  show_labels_threshold: 1
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  label_type: key
+  number_format: ',.2f'
+  date_format: smart_date
+  show_labels: true
+  labels_outside: true
+  outerRadius: 70
+  innerRadius: 30
+  extra_form_data: {}
+  dashboards:
+  - 17
+  - 14
+  - 27
+  - 21
+  - 29
+  - 20
+  - 24
+  - 25
+  - 19
+  - 22
+  - 18
+  - 26
+  annotation_layers: []
+query_context: '{"datasource": {"id": 233, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "purchase_time", "filters": [], "extras":
+  {"having": "", "where": "( payment_type_details LIKE ''ios_%'' OR payment_type_details
+  LIKE ''android_%'')"}, "applied_time_extras": {}, "columns": ["payment_type_details"],
+  "metrics": ["Net earnings"], "orderby": [["Net earnings", false]], "annotation_layers":
+  [], "row_limit": 50000, "series_limit": 0, "order_desc": true, "url_params": {},
+  "custom_params": {}, "custom_form_data": {}}], "form_data": {"datasource": "233__table",
+  "viz_type": "pie", "slice_id": 94, "granularity_sqla": "purchase_time", "time_range":
+  "No filter", "groupby": ["payment_type_details"], "metric": "Net earnings", "adhoc_filters":
+  [{"expressionType": "SQL", "sqlExpression": " payment_type_details LIKE ''ios_%''
+  OR payment_type_details LIKE ''android_%''", "clause": "WHERE", "subject": null,
+  "operator": null, "comparator": null, "isExtra": false, "isNew": false, "datasourceWarning":
+  false, "filterOptionName": "filter_gv9qod3z6v9_8ntf08pryk"}], "row_limit": 50000,
+  "sort_by_metric": true, "color_scheme": "supersetColors", "show_labels_threshold":
+  1, "show_legend": true, "legendType": "scroll", "legendOrientation": "top", "label_type":
+  "key", "number_format": ",.2f", "date_format": "smart_date", "show_labels": true,
+  "labels_outside": true, "outerRadius": 70, "innerRadius": 30, "extra_form_data":
+  {}, "dashboards": [17, 14, 27, 21, 29, 20, 24, 25, 19, 22, 18, 26], "force": false,
+  "result_format": "json", "result_type": "full"}, "result_format": "json", "result_type":
+  "full"}'
+cache_timeout: null
+uuid: d748d78c-cf30-4dcc-a690-8b2997b7f2bc
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc

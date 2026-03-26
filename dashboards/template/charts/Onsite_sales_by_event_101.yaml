@@ -1,0 +1,122 @@
+slice_name: Onsite sales by event
+description: null
+certified_by: null
+certification_details: null
+viz_type: echarts_timeseries_line
+params:
+  datasource: 236__table
+  viz_type: echarts_timeseries_line
+  slice_id: 141
+  granularity_sqla: purchase_time
+  time_grain_sqla: P1D
+  time_range: No filter
+  metrics:
+  - Net earnings
+  groupby:
+  - event_name
+  adhoc_filters:
+  - expressionType: SQL
+    sqlExpression: ' payment_type_details LIKE ''ios_%'' OR payment_type_details LIKE
+      ''android_%'''
+    clause: WHERE
+    subject: null
+    operator: null
+    comparator: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_3rfgxq86ps4_nudzogrgnj
+  order_desc: true
+  row_limit: 50000
+  truncate_metric: true
+  show_empty_columns: true
+  comparison_type: values
+  annotation_layers: []
+  forecastPeriods: 10
+  forecastInterval: 0.8
+  x_axis_title_margin: 15
+  y_axis_title: ''
+  y_axis_title_margin: 15
+  y_axis_title_position: Left
+  color_scheme: supersetColors
+  seriesType: line
+  only_total: true
+  opacity: 0.2
+  markerSize: 6
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  legendMargin: ''
+  x_axis_time_format: smart_date
+  rich_tooltip: true
+  tooltipSortByMetric: true
+  tooltipTimeFormat: smart_date
+  y_axis_format: ',.2f'
+  logAxis: false
+  minorSplitLine: false
+  truncateYAxis: false
+  y_axis_bounds:
+  - null
+  - null
+  extra_form_data: {}
+  dashboards:
+  - 35
+  - 39
+  - 24
+  - 25
+  - 27
+  - 17
+  - 29
+  - 19
+  - 26
+  - 21
+  - 30
+  - 34
+  - 20
+  - 36
+  - 42
+  - 37
+  - 31
+  - 38
+  - 33
+  - 40
+  - 32
+  - 41
+  - 43
+  - 14
+  - 18
+  - 22
+query_context: '{"datasource": {"id": 236, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "purchase_time", "filters": [], "extras":
+  {"time_grain_sqla": "P1D", "having": "", "where": "( payment_type_details LIKE ''ios_%''
+  OR payment_type_details LIKE ''android_%'')"}, "applied_time_extras": {}, "columns":
+  ["event_name"], "metrics": ["Net earnings"], "orderby": [["Net earnings", false]],
+  "annotation_layers": [], "row_limit": 50000, "series_columns": ["event_name"], "series_limit":
+  0, "order_desc": true, "url_params": {}, "custom_params": {}, "custom_form_data":
+  {}, "is_timeseries": true, "time_offsets": [], "post_processing": [{"operation":
+  "pivot", "options": {"index": ["__timestamp"], "columns": ["event_name"], "aggregates":
+  {"Net earnings": {"operator": "mean"}}, "drop_missing_columns": false}}, {"operation":
+  "rename", "options": {"columns": {"Net earnings": null}, "level": 0, "inplace":
+  true}}, {"operation": "flatten"}]}], "form_data": {"datasource": "236__table", "viz_type":
+  "echarts_timeseries_line", "slice_id": 141, "granularity_sqla": "purchase_time",
+  "time_grain_sqla": "P1D", "time_range": "No filter", "metrics": ["Net earnings"],
+  "groupby": ["event_name"], "adhoc_filters": [{"expressionType": "SQL", "sqlExpression":
+  " payment_type_details LIKE ''ios_%'' OR payment_type_details LIKE ''android_%''",
+  "clause": "WHERE", "subject": null, "operator": null, "comparator": null, "isExtra":
+  false, "isNew": false, "datasourceWarning": false, "filterOptionName": "filter_3rfgxq86ps4_nudzogrgnj"}],
+  "order_desc": true, "row_limit": 50000, "truncate_metric": true, "show_empty_columns":
+  true, "comparison_type": "values", "annotation_layers": [], "forecastPeriods": 10,
+  "forecastInterval": 0.8, "x_axis_title_margin": 15, "y_axis_title": "", "y_axis_title_margin":
+  15, "y_axis_title_position": "Left", "color_scheme": "supersetColors", "seriesType":
+  "line", "only_total": true, "opacity": 0.2, "markerSize": 6, "show_legend": true,
+  "legendType": "scroll", "legendOrientation": "top", "legendMargin": "", "x_axis_time_format":
+  "smart_date", "rich_tooltip": true, "tooltipSortByMetric": true, "tooltipTimeFormat":
+  "smart_date", "y_axis_format": ",.2f", "logAxis": false, "minorSplitLine": false,
+  "truncateYAxis": false, "y_axis_bounds": [null, null], "extra_form_data": {}, "dashboards":
+  [35, 39, 24, 25, 27, 17, 29, 19, 26, 21, 30, 34, 20, 36, 42, 37, 31, 38, 33, 40,
+  32, 41, 43, 14, 18, 22], "force": false, "result_format": "json", "result_type":
+  "full"}, "result_format": "json", "result_type": "full"}'
+cache_timeout: null
+uuid: 5312f974-c0b8-41f0-b8bb-a5f35ff6e182
+version: 1.0.0
+dataset_uuid: 4dffd900-a2d4-45ad-a8c1-4b68d34b9447

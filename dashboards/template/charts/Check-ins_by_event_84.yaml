@@ -1,0 +1,96 @@
+slice_name: Check-ins by event
+description: null
+certified_by: null
+certification_details: null
+viz_type: echarts_timeseries_line
+params:
+  datasource: 236__table
+  viz_type: echarts_timeseries_line
+  slice_id: 150
+  granularity_sqla: timeslot_start_time
+  time_grain_sqla: P1D
+  time_range: No filter
+  metrics:
+  - Quantity sold
+  groupby:
+  - event_name
+  adhoc_filters:
+  - expressionType: SIMPLE
+    subject: redemption_balance
+    operator: '>'
+    operatorId: GREATER_THAN
+    comparator: '0'
+    clause: WHERE
+    sqlExpression: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_aq2cstcbioq_p8wb5eknp4
+  order_desc: true
+  row_limit: 50000
+  truncate_metric: true
+  show_empty_columns: true
+  comparison_type: values
+  annotation_layers: []
+  forecastPeriods: 10
+  forecastInterval: 0.8
+  x_axis_title_margin: 30
+  y_axis_title: ''
+  y_axis_title_margin: 50
+  y_axis_title_position: Left
+  color_scheme: supersetColors
+  seriesType: line
+  only_total: true
+  opacity: 0.2
+  markerSize: 6
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  legendMargin: ''
+  x_axis_time_format: smart_date
+  rich_tooltip: true
+  tooltipSortByMetric: true
+  tooltipTimeFormat: smart_date
+  y_axis_format: ',d'
+  logAxis: false
+  minorSplitLine: false
+  truncateYAxis: false
+  y_axis_bounds:
+  - null
+  - null
+  extra_form_data: {}
+  dashboards:
+  - 17
+  - 29
+query_context: '{"datasource": {"id": 236, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "timeslot_start_time", "filters": [{"col":
+  "redemption_balance", "op": ">", "val": "0"}], "extras": {"time_grain_sqla": "P1D",
+  "having": "", "where": ""}, "applied_time_extras": {}, "columns": ["event_name"],
+  "metrics": ["Quantity sold"], "orderby": [["Quantity sold", false]], "annotation_layers":
+  [], "row_limit": 50000, "series_columns": ["event_name"], "series_limit": 0, "order_desc":
+  true, "url_params": {}, "custom_params": {}, "custom_form_data": {}, "is_timeseries":
+  true, "time_offsets": [], "post_processing": [{"operation": "pivot", "options":
+  {"index": ["__timestamp"], "columns": ["event_name"], "aggregates": {"Quantity sold":
+  {"operator": "mean"}}, "drop_missing_columns": false}}, {"operation": "rename",
+  "options": {"columns": {"Quantity sold": null}, "level": 0, "inplace": true}}, {"operation":
+  "flatten"}]}], "form_data": {"datasource": "236__table", "viz_type": "echarts_timeseries_line",
+  "slice_id": 150, "granularity_sqla": "timeslot_start_time", "time_grain_sqla": "P1D",
+  "time_range": "No filter", "metrics": ["Quantity sold"], "groupby": ["event_name"],
+  "adhoc_filters": [{"expressionType": "SIMPLE", "subject": "redemption_balance",
+  "operator": ">", "operatorId": "GREATER_THAN", "comparator": "0", "clause": "WHERE",
+  "sqlExpression": null, "isExtra": false, "isNew": false, "datasourceWarning": false,
+  "filterOptionName": "filter_aq2cstcbioq_p8wb5eknp4"}], "order_desc": true, "row_limit":
+  50000, "truncate_metric": true, "show_empty_columns": true, "comparison_type": "values",
+  "annotation_layers": [], "forecastPeriods": 10, "forecastInterval": 0.8, "x_axis_title_margin":
+  30, "y_axis_title": "", "y_axis_title_margin": 50, "y_axis_title_position": "Left",
+  "color_scheme": "supersetColors", "seriesType": "line", "only_total": true, "opacity":
+  0.2, "markerSize": 6, "show_legend": true, "legendType": "scroll", "legendOrientation":
+  "top", "legendMargin": "", "x_axis_time_format": "smart_date", "rich_tooltip": true,
+  "tooltipSortByMetric": true, "tooltipTimeFormat": "smart_date", "y_axis_format":
+  ",d", "logAxis": false, "minorSplitLine": false, "truncateYAxis": false, "y_axis_bounds":
+  [null, null], "extra_form_data": {}, "dashboards": [17, 29], "force": false, "result_format":
+  "json", "result_type": "full"}, "result_format": "json", "result_type": "full"}'
+cache_timeout: null
+uuid: b864bde7-003a-497a-b961-51103548ba12
+version: 1.0.0
+dataset_uuid: 4dffd900-a2d4-45ad-a8c1-4b68d34b9447

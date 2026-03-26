@@ -1,0 +1,50 @@
+slice_name: ticket report
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 233__table
+  viz_type: table
+  granularity_sqla: purchase_time
+  time_grain_sqla: P1D
+  time_range: No filter
+  query_mode: aggregate
+  groupby:
+  - id
+  - Date of purchase
+  - timeslot_start_time
+  metrics:
+  - Net earnings
+  all_columns: []
+  percent_metrics: []
+  adhoc_filters: []
+  order_by_cols: []
+  row_limit: 1000
+  server_page_length: 10
+  order_desc: true
+  table_timestamp_format: smart_date
+  show_cell_bars: true
+  color_pn: true
+  extra_form_data: {}
+  dashboards:
+  - 17
+  annotation_layers: []
+query_context: '{"datasource": {"id": 233, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "purchase_time", "filters": [], "extras":
+  {"time_grain_sqla": "P1D", "having": "", "where": ""}, "applied_time_extras": {},
+  "columns": ["id", "Date of purchase", "timeslot_start_time"], "metrics": ["Net earnings"],
+  "orderby": [["Net earnings", false]], "annotation_layers": [], "row_limit": 1000,
+  "series_limit": 0, "order_desc": true, "url_params": {}, "custom_params": {}, "custom_form_data":
+  {}, "post_processing": []}], "form_data": {"datasource": "233__table", "viz_type":
+  "table", "granularity_sqla": "purchase_time", "time_grain_sqla": "P1D", "time_range":
+  "No filter", "query_mode": "aggregate", "groupby": ["id", "Date of purchase", "timeslot_start_time"],
+  "metrics": ["Net earnings"], "all_columns": [], "percent_metrics": [], "adhoc_filters":
+  [], "order_by_cols": [], "row_limit": 1000, "server_page_length": 10, "order_desc":
+  true, "table_timestamp_format": "smart_date", "show_cell_bars": true, "color_pn":
+  true, "extra_form_data": {}, "dashboards": [17], "force": false, "result_format":
+  "json", "result_type": "full"}, "result_format": "json", "result_type": "full"}'
+cache_timeout: null
+uuid: 00c3720a-2655-4894-b774-461f9bf91943
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc

@@ -1,0 +1,55 @@
+slice_name: Sales breakdown by timeslot
+description: null
+certified_by: null
+certification_details: null
+viz_type: pivot_table_v2
+params:
+  datasource: 236__table
+  viz_type: pivot_table_v2
+  slice_id: 110
+  time_grain_sqla: P1D
+  metrics:
+  - Net earnings
+  - Quantity sold
+  adhoc_filters:
+  - clause: WHERE
+    subject: purchase_time
+    operator: TEMPORAL_RANGE
+    comparator: No filter
+    expressionType: SIMPLE
+  groupbyRows:
+  - Event Date
+  - 'Start time '
+  - event_name
+  groupbyColumns: []
+  series_limit: 50000
+  order_desc: true
+  aggregateFunction: Sum
+  valueFormat: SMART_NUMBER
+  date_format: '%d-%m-%Y %H:%M:%S'
+  extra_form_data: {}
+  dashboards: []
+  annotation_layers: []
+  colTotals: true
+  colSubTotals: true
+  rowOrder: value_z_to_a
+query_context: '{"datasource": {"id": 236, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "purchase_time", "filters": [], "extras":
+  {"time_grain_sqla": "P1D", "having": "", "where": ""}, "applied_time_extras": {},
+  "columns": ["Event Date", "Start time ", "event_name"], "metrics": ["Net earnings",
+  "Quantity sold"], "annotation_layers": [], "row_limit": 50000, "series_limit": 0,
+  "order_desc": true, "url_params": {}, "custom_params": {}, "custom_form_data": {}}],
+  "form_data": "{\"datasource\": \"236__table\", \"viz_type\": \"pivot_table_v2\",
+  \"slice_id\": 110, \"time_grain_sqla\": \"P1D\", \"metrics\": [\"Net earnings\",
+  \"Quantity sold\"], \"adhoc_filters\": [{\"clause\": \"WHERE\", \"subject\": \"purchase_time\",
+  \"operator\": \"TEMPORAL_RANGE\", \"comparator\": \"No filter\", \"expressionType\":
+  \"SIMPLE\"}], \"groupbyRows\": [\"Event Date\", \"Start time \", \"event_name\"],
+  \"groupbyColumns\": [], \"series_limit\": 50000, \"order_desc\": true, \"aggregateFunction\":
+  \"Sum\", \"valueFormat\": \"SMART_NUMBER\", \"date_format\": \"%d-%m-%Y %H:%M:%S\",
+  \"extra_form_data\": {}, \"dashboards\": [], \"annotation_layers\": [], \"colTotals\":
+  true, \"colSubTotals\": true, \"rowOrder\": \"value_z_to_a\"}", "result_format":
+  "json", "result_type": "full"}'
+cache_timeout: null
+uuid: 904426b0-75cd-40a8-9f95-e08563140e60
+version: 1.0.0
+dataset_uuid: 4dffd900-a2d4-45ad-a8c1-4b68d34b9447

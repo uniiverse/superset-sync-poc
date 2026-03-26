@@ -1,0 +1,49 @@
+slice_name: Discounts
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number
+params:
+  adhoc_filters: []
+  color_picker:
+    a: 1
+    b: 135
+    g: 122
+    r: 0
+  datasource: 233__table
+  extra_form_data: {}
+  granularity_sqla: purchase_time
+  header_font_size: 0.4
+  metric: Total discounts
+  rolling_type: cumsum
+  show_trend_line: false
+  slice_id: 101
+  start_y_axis_at_zero: true
+  subheader_font_size: 0.15
+  time_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  viz_type: big_number
+  y_axis_format: $,.2f
+  annotation_layers: []
+query_context: '{"datasource": {"id": 233, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "purchase_time", "filters": [], "extras":
+  {"time_grain_sqla": "P1D", "having": "", "having_druid": [], "where": ""}, "applied_time_extras":
+  {}, "columns": [], "metrics": ["Total discounts"], "annotation_layers": [], "timeseries_limit":
+  0, "order_desc": true, "url_params": {}, "custom_params": {}, "custom_form_data":
+  {}, "is_timeseries": true, "post_processing": [{"operation": "pivot", "options":
+  {"index": ["__timestamp"], "columns": [], "aggregates": {"Total discounts": {"operator":
+  "mean"}}, "drop_missing_columns": false, "flatten_columns": false, "reset_index":
+  false}}, {"operation": "cum", "options": {"operator": "sum", "columns": {"Total
+  discounts": "Total discounts"}}}, null, {"operation": "flatten"}]}], "form_data":
+  {"viz_type": "big_number", "datasource": "233__table", "slice_id": 101, "granularity_sqla":
+  "purchase_time", "time_grain_sqla": "P1D", "time_range": "No filter", "metric":
+  "Total discounts", "adhoc_filters": [], "show_trend_line": false, "start_y_axis_at_zero":
+  true, "color_picker": {"a": 1, "b": 135, "g": 122, "r": 0}, "header_font_size":
+  0.4, "subheader_font_size": 0.15, "y_axis_format": "$,.2f", "time_format": "smart_date",
+  "rolling_type": "cumsum", "extra_form_data": {}, "force": false, "result_format":
+  "json", "result_type": "full"}, "result_format": "json", "result_type": "full"}'
+cache_timeout: null
+uuid: ac3aada2-217c-4f66-9099-d991270a7feb
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc

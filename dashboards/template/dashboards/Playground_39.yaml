@@ -1,0 +1,99 @@
+dashboard_title: Playground
+description: null
+css: ''
+slug: null
+certified_by: ''
+certification_details: ''
+published: false
+uuid: f911bbbe-bcf1-4b66-ac16-1941d80ce047
+position:
+  CHART-J6f7339z1AiHyTJDo9334:
+    children: []
+    id: CHART-J6f7339z1AiHyTJDo9334
+    meta:
+      chartId: 77
+      height: 50
+      sliceName: By day of week
+      uuid: 2bba7461-7d55-4727-a257-03b28468b4da
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-RRlmaaztKpt1WrQuhL1_o
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-RRlmaaztKpt1WrQuhL1_o
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Playground
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-RRlmaaztKpt1WrQuhL1_o:
+    children:
+    - CHART-J6f7339z1AiHyTJDo9334
+    id: ROW-RRlmaaztKpt1WrQuhL1_o
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  chart_configuration:
+    '77':
+      id: 77
+      crossFilters:
+        scope: global
+        chartsInScope: []
+  global_chart_configuration:
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    chartsInScope:
+    - 77
+  color_scheme: ''
+  refresh_frequency: 0
+  color_scheme_domain: []
+  expanded_slices: {}
+  label_colors: {}
+  shared_label_colors: []
+  timed_refresh_immune_slices: []
+  cross_filters_enabled: true
+  native_filter_configuration:
+  - id: NATIVE_FILTER-dzlRqOyjaGdGUWwdYXfJH
+    controlValues:
+      enableEmptyFilter: false
+    name: Time range
+    filterType: filter_time
+    targets:
+    - {}
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    type: NATIVE_FILTER
+    description: ''
+    chartsInScope:
+    - 77
+    tabsInScope: []
+  map_label_colors:
+    Net earnings: '#1FA8C9'
+    Quantity sold: '#454E7C'
+version: 1.0.0

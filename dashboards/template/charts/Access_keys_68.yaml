@@ -1,0 +1,105 @@
+slice_name: Access keys
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 233__table
+  viz_type: table
+  slice_id: 68
+  query_mode: aggregate
+  groupby:
+  - access_key
+  temporal_columns_lookup:
+    timeslot_start_time: true
+    timeslot_end_time: true
+    purchase_time: true
+  metrics:
+  - Quantity sold
+  all_columns: []
+  percent_metrics: []
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_24mb09fq22r_hxi9gvx6tm5
+    isExtra: false
+    isNew: false
+    operator: IS NOT NULL
+    operatorId: IS_NOT_NULL
+    sqlExpression: null
+    subject: access_key
+  - clause: WHERE
+    comparator: No filter
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_2ydgvpon9sp_ac0b4yor9fv
+    isExtra: false
+    isNew: false
+    operator: TEMPORAL_RANGE
+    sqlExpression: null
+    subject: purchase_time
+  - clause: WHERE
+    comparator: ''
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_c1fasn9eoom_d1as74k15vj
+    isExtra: false
+    isNew: false
+    operator: '!='
+    operatorId: NOT_EQUALS
+    sqlExpression: null
+    subject: access_key
+  order_by_cols: []
+  row_limit: 50000
+  order_desc: true
+  table_timestamp_format: smart_date
+  page_length: 0
+  include_search: true
+  allow_render_html: true
+  column_config:
+    Quantity sold:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',.2f'
+  show_cell_bars: true
+  color_pn: true
+  comparison_color_scheme: Green
+  conditional_formatting: []
+  comparison_type: values
+  extra_form_data: {}
+  dashboards:
+  - 25
+  - 8
+  - 26
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 38
+  - 21
+  - 23
+  - 22
+  - 16
+  - 17
+  - 27
+  - 28
+  - 19
+  - 6
+  - 7
+  - 20
+  - 14
+  - 15
+  - 40
+query_context: '{"datasource":{"id":233,"type":"table"},"force":false,"queries":[{"filters":[{"col":"access_key","op":"IS
+  NOT NULL"},{"col":"purchase_time","op":"TEMPORAL_RANGE","val":"No filter"},{"col":"access_key","op":"!=","val":""}],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":["access_key"],"metrics":["Quantity
+  sold"],"orderby":[["Quantity sold",false]],"annotation_layers":[],"row_limit":50000,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[],"time_offsets":[]}],"form_data":{"datasource":"233__table","viz_type":"table","slice_id":68,"query_mode":"aggregate","groupby":["access_key"],"temporal_columns_lookup":{"timeslot_start_time":true,"timeslot_end_time":true,"purchase_time":true},"metrics":["Quantity
+  sold"],"all_columns":[],"percent_metrics":[],"adhoc_filters":[{"clause":"WHERE","comparator":null,"datasourceWarning":false,"expressionType":"SIMPLE","filterOptionName":"filter_24mb09fq22r_hxi9gvx6tm5","isExtra":false,"isNew":false,"operator":"IS
+  NOT NULL","operatorId":"IS_NOT_NULL","sqlExpression":null,"subject":"access_key"},{"clause":"WHERE","comparator":"No
+  filter","datasourceWarning":false,"expressionType":"SIMPLE","filterOptionName":"filter_2ydgvpon9sp_ac0b4yor9fv","isExtra":false,"isNew":false,"operator":"TEMPORAL_RANGE","sqlExpression":null,"subject":"purchase_time"},{"clause":"WHERE","comparator":"","datasourceWarning":false,"expressionType":"SIMPLE","filterOptionName":"filter_c1fasn9eoom_d1as74k15vj","isExtra":false,"isNew":false,"operator":"!=","operatorId":"NOT_EQUALS","sqlExpression":null,"subject":"access_key"}],"order_by_cols":[],"row_limit":50000,"order_desc":true,"table_timestamp_format":"smart_date","page_length":0,"include_search":true,"allow_render_html":true,"column_config":{"Quantity
+  sold":{"d3NumberFormat":",d","d3SmallNumberFormat":",.2f"}},"show_cell_bars":true,"color_pn":true,"comparison_color_scheme":"Green","conditional_formatting":[],"comparison_type":"values","extra_form_data":{},"dashboards":[25,8,26,9,10,11,12,13,38,21,23,22,16,17,27,28,19,6,7,20,14,15,40],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 8bd4d7c7-f03f-49b9-937c-011f1aae71dc
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc

@@ -1,0 +1,115 @@
+slice_name: Discount codes
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 233__table
+  viz_type: table
+  slice_id: 100
+  granularity_sqla: purchase_time
+  time_grain_sqla: P1D
+  time_range: No filter
+  query_mode: aggregate
+  groupby:
+  - discount_code
+  metrics:
+  - Quantity sold
+  all_columns: []
+  percent_metrics: []
+  adhoc_filters:
+  - expressionType: SIMPLE
+    subject: discount_code
+    operator: IS NOT NULL
+    operatorId: IS_NOT_NULL
+    comparator: null
+    clause: WHERE
+    sqlExpression: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_s5kw5rfc57_zy7iy3qg1d
+  - expressionType: SIMPLE
+    subject: discount
+    operator: <
+    operatorId: LESS_THAN
+    comparator: '0'
+    clause: WHERE
+    sqlExpression: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_d3dc8nce9sa_hua1wep66re
+  order_by_cols: []
+  server_pagination: false
+  row_limit: 10000
+  server_page_length: 10
+  include_time: false
+  order_desc: true
+  table_timestamp_format: smart_date
+  page_length: 0
+  include_search: true
+  show_cell_bars: true
+  color_pn: true
+  column_config:
+    Quantity sold:
+      d3NumberFormat: ',d'
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards:
+  - 35
+  - 39
+  - 25
+  - 24
+  - 17
+  - 26
+  - 29
+  - 19
+  - 21
+  - 30
+  - 34
+  - 20
+  - 36
+  - 42
+  - 37
+  - 31
+  - 38
+  - 33
+  - 32
+  - 40
+  - 41
+  - 43
+  - 27
+  - 14
+  - 18
+  - 22
+  annotation_layers: []
+query_context: '{"datasource": {"id": 233, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "purchase_time", "filters": [{"col":
+  "discount_code", "op": "IS NOT NULL"}, {"col": "discount", "op": "<", "val": "0"}],
+  "extras": {"time_grain_sqla": "P1D", "having": "", "where": ""}, "applied_time_extras":
+  {}, "columns": ["discount_code"], "metrics": ["Quantity sold"], "orderby": [["Quantity
+  sold", false]], "annotation_layers": [], "row_limit": 10000, "series_limit": 0,
+  "order_desc": true, "url_params": {}, "custom_params": {}, "custom_form_data": {},
+  "post_processing": []}], "form_data": {"datasource": "233__table", "viz_type": "table",
+  "slice_id": 100, "granularity_sqla": "purchase_time", "time_grain_sqla": "P1D",
+  "time_range": "No filter", "query_mode": "aggregate", "groupby": ["discount_code"],
+  "metrics": ["Quantity sold"], "all_columns": [], "percent_metrics": [], "adhoc_filters":
+  [{"expressionType": "SIMPLE", "subject": "discount_code", "operator": "IS NOT NULL",
+  "operatorId": "IS_NOT_NULL", "comparator": null, "clause": "WHERE", "sqlExpression":
+  null, "isExtra": false, "isNew": false, "datasourceWarning": false, "filterOptionName":
+  "filter_s5kw5rfc57_zy7iy3qg1d"}, {"expressionType": "SIMPLE", "subject": "discount",
+  "operator": "<", "operatorId": "LESS_THAN", "comparator": "0", "clause": "WHERE",
+  "sqlExpression": null, "isExtra": false, "isNew": false, "datasourceWarning": false,
+  "filterOptionName": "filter_d3dc8nce9sa_hua1wep66re"}], "order_by_cols": [], "server_pagination":
+  false, "row_limit": 10000, "server_page_length": 10, "include_time": false, "order_desc":
+  true, "table_timestamp_format": "smart_date", "page_length": 0, "include_search":
+  true, "show_cell_bars": true, "color_pn": true, "column_config": {"Quantity sold":
+  {"d3NumberFormat": ",d"}}, "conditional_formatting": [], "extra_form_data": {},
+  "dashboards": [35, 39, 25, 24, 17, 26, 29, 19, 21, 30, 34, 20, 36, 42, 37, 31, 38,
+  33, 32, 40, 41, 43, 27, 14, 18, 22], "force": false, "result_format": "json", "result_type":
+  "full"}, "result_format": "json", "result_type": "full"}'
+cache_timeout: null
+uuid: 5453bc1d-1561-498c-baa6-5161dc442649
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc

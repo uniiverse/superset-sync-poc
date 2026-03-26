@@ -1,0 +1,62 @@
+slice_name: Paid vs free
+description: null
+certified_by: null
+certification_details: null
+viz_type: pie
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SIMPLE
+    filterOptionName: filter_ch70ie7jnz4_9plvhj0op7c
+    isExtra: false
+    isNew: false
+    operator: IS NOT NULL
+    operatorId: IS_NOT_NULL
+    sqlExpression: null
+    subject: Paid or free
+  color_scheme: supersetColors
+  datasource: 233__table
+  date_format: smart_date
+  extra_form_data: {}
+  granularity_sqla: purchase_time
+  groupby:
+  - Paid or free
+  innerRadius: 30
+  label_type: key
+  labels_outside: true
+  legendOrientation: top
+  legendType: scroll
+  metric: Quantity sold
+  number_format: ',d'
+  outerRadius: 70
+  row_limit: 50000
+  show_labels: true
+  show_labels_threshold: '0'
+  slice_id: 107
+  sort_by_metric: true
+  time_range: No filter
+  viz_type: pie
+  annotation_layers: []
+query_context: '{"datasource": {"id": 233, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "purchase_time", "filters": [{"col":
+  "Paid or free", "op": "IS NOT NULL"}], "extras": {"having": "", "having_druid":
+  [], "where": ""}, "applied_time_extras": {}, "columns": ["Paid or free"], "metrics":
+  ["Quantity sold"], "orderby": [["Quantity sold", false]], "annotation_layers": [],
+  "row_limit": 50000, "timeseries_limit": 0, "order_desc": true, "url_params": {},
+  "custom_params": {}, "custom_form_data": {}}], "form_data": {"viz_type": "pie",
+  "datasource": "233__table", "slice_id": 107, "granularity_sqla": "purchase_time",
+  "time_range": "No filter", "groupby": ["Paid or free"], "metric": "Quantity sold",
+  "adhoc_filters": [{"clause": "WHERE", "comparator": null, "expressionType": "SIMPLE",
+  "filterOptionName": "filter_ch70ie7jnz4_9plvhj0op7c", "isExtra": false, "isNew":
+  false, "operator": "IS NOT NULL", "operatorId": "IS_NOT_NULL", "sqlExpression":
+  null, "subject": "Paid or free"}], "row_limit": 50000, "sort_by_metric": true, "color_scheme":
+  "supersetColors", "show_labels_threshold": "0", "legendType": "scroll", "legendOrientation":
+  "top", "label_type": "key", "number_format": ",d", "date_format": "smart_date",
+  "show_labels": true, "labels_outside": true, "outerRadius": 70, "innerRadius": 30,
+  "extra_form_data": {}, "force": false, "result_format": "json", "result_type": "full"},
+  "result_format": "json", "result_type": "full"}'
+cache_timeout: null
+uuid: b9ab9e80-d638-4e05-8497-2049c6a0e76b
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc

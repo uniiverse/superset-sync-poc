@@ -1,0 +1,80 @@
+slice_name: Orders
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number
+params:
+  datasource: 238__table
+  viz_type: big_number
+  slice_id: 105
+  x_axis: purchase_time
+  time_grain_sqla: P1W
+  metric:
+    aggregate: null
+    column: null
+    datasourceWarning: false
+    expressionType: SQL
+    hasCustomLabel: false
+    label: COUNT(*)
+    optionName: metric_6t4sdxwyakr_i9cxlru8s59
+    sqlExpression: COUNT(*)
+  adhoc_filters:
+  - expressionType: SIMPLE
+    subject: purchase_time
+    operator: TEMPORAL_RANGE
+    comparator: No filter
+    clause: WHERE
+    sqlExpression: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_7107w20chzv_93l9rbq7eaj
+  compare_lag: 1
+  compare_suffix: Previous week
+  show_trend_line: true
+  start_y_axis_at_zero: false
+  color_picker:
+    a: 1
+    b: 135
+    g: 122
+    r: 0
+  header_font_size: 0.4
+  subheader_font_size: 0.125
+  y_axis_format: ',d'
+  time_format: smart_date
+  rolling_type: cumsum
+  rolling_periods: ''
+  min_periods: ''
+  extra_form_data: {}
+  dashboards:
+  - 25
+  - 8
+  - 26
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 38
+  - 21
+  - 23
+  - 22
+  - 16
+  - 17
+  - 27
+  - 28
+  - 19
+  - 6
+  - 7
+  - 20
+  - 14
+  - 15
+  - 40
+query_context: '{"datasource":{"id":238,"type":"table"},"force":false,"queries":[{"filters":[{"col":"purchase_time","op":"TEMPORAL_RANGE","val":"No
+  filter"}],"extras":{"time_grain_sqla":"P1W","having":"","where":""},"applied_time_extras":{},"columns":[{"timeGrain":"P1W","columnType":"BASE_AXIS","sqlExpression":"purchase_time","label":"purchase_time","expressionType":"SQL"}],"metrics":[{"aggregate":null,"column":null,"datasourceWarning":false,"expressionType":"SQL","hasCustomLabel":false,"label":"COUNT(*)","optionName":"metric_6t4sdxwyakr_i9cxlru8s59","sqlExpression":"COUNT(*)"}],"annotation_layers":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[{"operation":"pivot","options":{"index":["purchase_time"],"columns":[],"aggregates":{"COUNT(*)":{"operator":"mean"}},"drop_missing_columns":true}},{"operation":"cum","options":{"operator":"sum","columns":{"COUNT(*)":"COUNT(*)"}}},{"operation":"flatten"}]}],"form_data":{"datasource":"238__table","viz_type":"big_number","slice_id":105,"x_axis":"purchase_time","time_grain_sqla":"P1W","metric":{"aggregate":null,"column":null,"datasourceWarning":false,"expressionType":"SQL","hasCustomLabel":false,"label":"COUNT(*)","optionName":"metric_6t4sdxwyakr_i9cxlru8s59","sqlExpression":"COUNT(*)"},"adhoc_filters":[{"expressionType":"SIMPLE","subject":"purchase_time","operator":"TEMPORAL_RANGE","comparator":"No
+  filter","clause":"WHERE","sqlExpression":null,"isExtra":false,"isNew":false,"datasourceWarning":false,"filterOptionName":"filter_7107w20chzv_93l9rbq7eaj"}],"compare_lag":1,"compare_suffix":"Previous
+  week","show_trend_line":true,"start_y_axis_at_zero":false,"color_picker":{"a":1,"b":135,"g":122,"r":0},"header_font_size":0.4,"subheader_font_size":0.125,"y_axis_format":",d","time_format":"smart_date","rolling_type":"cumsum","rolling_periods":"","min_periods":"","extra_form_data":{},"dashboards":[25,8,26,9,10,11,12,13,38,21,23,22,16,17,27,28,19,6,7,20,14,15,40],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 7f2c5cb7-e1f5-4634-b278-623f6e97670b
+version: 1.0.0
+dataset_uuid: 3c7fc78e-74d3-4402-b8ef-741a74bdb4f4
