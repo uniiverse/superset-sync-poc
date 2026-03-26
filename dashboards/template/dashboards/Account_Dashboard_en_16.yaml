@@ -876,7 +876,7 @@ position:
     meta:
       background: BACKGROUND_TRANSPARENT
       headerSize: SMALL_HEADER
-      text: Sales
+      text: Sales Change
     parents:
     - ROOT_ID
     - GRID_ID
@@ -3037,6 +3037,8 @@ metadata:
     - 127
     - 132
   map_label_colors:
+    Paid: '#1FA8C9'
+    Free: '#454E7C'
     Lolaika - Inventory Switching Testing: '#1FA8C9'
     Test Event Creation: '#454E7C'
     Lolaika - All Locked: '#5AC189'
@@ -3054,7 +3056,5 @@ metadata:
     Past dates with available tickets, but all future dates with locked rates: '#B2B2B2'
     Some Locked Rates but others Sold out: '#EFA1AA'
     Test event waitlist, tt no ts, skip addons: '#FDE380'
-    Paid: '#1FA8C9'
-    Free: '#454E7C'
   default_filters: '{}'
 version: 1.0.0
