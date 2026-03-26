@@ -17,10 +17,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install dependencies
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.11.0'
+          cache: 'npm'
+
+      - name: Install bash dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y curl jq unzip
+
+      - name: Install npm dependencies
+        run: npm ci
 
       - name: Export dashboards from Superset
         env:
@@ -109,6 +118,12 @@ jobs:
 
           echo ""
           echo "🎉 Export complete!"
+
+      - name: Render localized dashboards
+        run: |
+          echo "🌐 Rendering localized dashboards..."
+          npm run render-dashboards
+          echo "✅ Rendered all language versions"
 
       - name: Check for changes
         id: check_changes
