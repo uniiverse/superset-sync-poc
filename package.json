@@ -17,7 +17,7 @@
     "release-dashboards": "cross-env LOG_LEVEL=debug SUPERSET_URL=https://dashboards.data-us-east4.production.universe.engineer SUPERSET_USERNAME=platform+superset@universe.com tsx tools/release-dashboards.ts",
     "release-dashboards-dev": "cross-env LOG_LEVEL=debug CLICKHOUSE_PASSWORD=password SUPERSET_URL=http://localhost:8088 SUPERSET_USERNAME=admin SUPERSET_PASSWORD=admin tsx tools/release-dashboards.ts",
     "release-dashboards-staging": "cross-env LOG_LEVEL=debug SUPERSET_URL=https://dashboards.staging.universe.com SUPERSET_USERNAME=universe SUPERSET_PASSWORD=changeme tsx tools/release-dashboards.ts",
-    "export": "cross-env LOG_LEVEL=debug SUPERSET_URL=https://dashboards.data-us-east4.production.universe.engineer SUPERSET_USERNAME=platform+superset@universe.com tsx tools/export-assets.ts",
+    "export": "cross-env LOG_LEVEL=debug tsx tools/export-assets.ts",
     "export-dev": "cross-env LOG_LEVEL=debug SUPERSET_URL=http://localhost:8088 SUPERSET_USERNAME=admin SUPERSET_PASSWORD=admin tsx tools/export-assets.ts"
   },
   "author": "",
