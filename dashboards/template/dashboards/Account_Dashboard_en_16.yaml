@@ -876,7 +876,7 @@ position:
     meta:
       background: BACKGROUND_TRANSPARENT
       headerSize: SMALL_HEADER
-      text: Sales Change
+      text: Sales
     parents:
     - ROOT_ID
     - GRID_ID
