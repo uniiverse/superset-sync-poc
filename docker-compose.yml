@@ -5,7 +5,7 @@ networks:
 
 # x-superset-image: &superset-image apache/superset:${TAG:-latest-dev}
 # NOTE: align version with https://github.com/uniiverse/superset-manifest/blob/main/upstream/kustomization.yaml#L14
-x-superset-image: &superset-image apache/superset:2.1.1
+x-superset-image: &superset-image superset-custom:6.0.0
 x-superset-depends-on: &superset-depends-on
   - db
   - redis
@@ -104,6 +104,7 @@ services:
       - CLICKHOUSE_PASSWORD=password
     ports:
       - 9000:9000
+      - 8123:8123
     volumes:
       - ./lib/clickhouse:/app
     networks:
