@@ -4,7 +4,6 @@ description: null
 default_endpoint: null
 offset: 0
 cache_timeout: null
-catalog: null
 schema: highlander
 sql: "SELECT\n  order_id,\n  event_id,\n  host_id,\n  currency,\n  timeslot_start_time,\n\
   \  timeslot_end_time,\n  ticket_category,\n  min(toDateTime(purchase_time)) AS purchase_time\n\
@@ -16,8 +15,6 @@ template_params: null
 filter_select_enabled: true
 fetch_values_predicate: null
 extra: null
-normalize_columns: false
-always_filter_main_dttm: false
 uuid: 3c7fc78e-74d3-4402-b8ef-741a74bdb4f4
 metrics:
 - metric_name: count
@@ -26,7 +23,6 @@ metrics:
   expression: COUNT(*)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null

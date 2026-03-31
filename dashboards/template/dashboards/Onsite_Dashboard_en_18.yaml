@@ -43,9 +43,6 @@ css: "@font-face {\n    font-family: \"Graphik\";\n    src:\n    url(\"https://w
   \ !important;\n  font-family: 'Graphik', sans-serif !important;\n  font-weight:\
   \ 400;\n  margin-top: -20px !important;\n}"
 slug: null
-certified_by: null
-certification_details: null
-published: false
 uuid: 6c40f6fc-87ea-4ec4-a834-f416aa042350
 position:
   CHART-2DUZocsAFp:
