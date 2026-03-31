@@ -4,7 +4,6 @@ description: null
 default_endpoint: null
 offset: 0
 cache_timeout: null
-catalog: null
 schema: highlander
 sql: ''
 params: null
@@ -12,8 +11,6 @@ template_params: null
 filter_select_enabled: false
 fetch_values_predicate: null
 extra: null
-normalize_columns: true
-always_filter_main_dttm: false
 uuid: d4d25135-2aae-4c6c-8b48-405d27589816
 metrics:
 - metric_name: Total redeemed access keys
@@ -22,7 +19,6 @@ metrics:
   expression: countIf(access_key_redeemed IS NOT NULL)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -32,7 +28,6 @@ metrics:
   expression: COUNT(DISTINCT(id)) / COUNT(DISTINCT(ticket_id))
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -42,7 +37,6 @@ metrics:
   expression: SUM(net_earnings - (base_taxes_total - base_voided_taxes_total))
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -52,7 +46,6 @@ metrics:
   expression: SUM(base_commission_included-base_voided_commission_included)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -62,7 +55,6 @@ metrics:
   expression: SUM(base_vat_included-base_voided_vat_included)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -72,7 +64,6 @@ metrics:
   expression: countIf(state IN ('paid', 'ended', 'closed'))
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -82,7 +73,6 @@ metrics:
   expression: SUM(base_price-base_voided_price) / COUNT(DISTINCT(ticket_id))
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -92,7 +82,6 @@ metrics:
   expression: SUM(base_price+base_taxes_total+base_fees_total)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -102,7 +91,6 @@ metrics:
   expression: SUM(base_fees_total-base_voided_fees_total)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -112,7 +100,6 @@ metrics:
   expression: SUM(base_taxes_total-base_voided_taxes_total)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -122,7 +109,6 @@ metrics:
   expression: SUM(base_discount-base_voided_discount)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -132,7 +118,6 @@ metrics:
   expression: SUM(base_price-base_voided_price)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -142,7 +127,6 @@ metrics:
   expression: SUM(net_earnings)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -152,7 +136,6 @@ metrics:
   expression: COUNT(DISTINCT(ticket_id))
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
