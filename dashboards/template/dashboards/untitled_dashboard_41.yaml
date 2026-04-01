@@ -2,9 +2,6 @@ dashboard_title: '[ untitled dashboard ]'
 description: null
 css: null
 slug: null
-certified_by: null
-certification_details: null
-published: false
 uuid: e17be263-ce8f-4fe3-9d75-15f33e7f0b80
 position:
   DASHBOARD_VERSION_KEY: v2
