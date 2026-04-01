@@ -45,9 +45,6 @@ css: "@font-face {\n    font-family: \"Graphik\";\n    src: \n    url(\"https://
   \ sans-serif !important;\n  font-weight: 400;\n  margin-top: -20px !important;\n\
   }"
 slug: null
-certified_by: ''
-certification_details: ''
-published: false
 uuid: c51eb182-132f-4804-905c-05f08d79fdfa
 position:
   CHART--UB7fpsi21R:
@@ -876,7 +873,7 @@ position:
     meta:
       background: BACKGROUND_TRANSPARENT
       headerSize: SMALL_HEADER
-      text: Sales Change
+      text: Sales
     parents:
     - ROOT_ID
     - GRID_ID
