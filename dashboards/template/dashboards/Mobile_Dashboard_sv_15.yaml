@@ -49,9 +49,6 @@ css: "@font-face {\n    font-family: \"Graphik\";\n    src: \n    url(\"https://
   \ {\n  visibility: hidden !important;\n}\n\n.dashboard-chart-id-163 .header-title\
   \ {\n  visibility: hidden !important;\n}"
 slug: null
-certified_by: null
-certification_details: null
-published: false
 uuid: 010f056e-9de2-487a-8162-d9ea3db4df96
 position:
   CHART--UB7fpsi21R:

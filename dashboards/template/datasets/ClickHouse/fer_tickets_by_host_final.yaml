@@ -4,7 +4,6 @@ description: null
 default_endpoint: null
 offset: 0
 cache_timeout: null
-catalog: null
 schema: highlander
 sql: ''
 params: null
@@ -12,8 +11,6 @@ template_params: null
 filter_select_enabled: false
 fetch_values_predicate: null
 extra: null
-normalize_columns: true
-always_filter_main_dttm: false
 uuid: 71056aab-904c-4cb1-85d3-12837cad45bc
 metrics:
 - metric_name: Ticket sales
@@ -25,7 +22,6 @@ metrics:
     \  'PassRate'))),\r\n        price - voided_price,\r\n        0\r\n    )),2)"
   description: null
   d3format: $,.2f
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -36,7 +32,6 @@ metrics:
     \            price - voided_price,\n            0\n        )\n    ), 2\n)"
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -47,7 +42,6 @@ metrics:
     'closed'), 1, 0))
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -58,7 +52,6 @@ metrics:
     discount - voided_discount, 0)),2)
   description: null
   d3format: $,.2f
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -69,7 +62,6 @@ metrics:
     voided_fees_total, 0)),2)
   description: null
   d3format: $,.2f
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -80,7 +72,6 @@ metrics:
     voided_taxes_total, 0)),2)
   description: null
   d3format: $,.2f
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -91,7 +82,6 @@ metrics:
     0)),2)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -102,7 +92,6 @@ metrics:
     0)),2)
   description: null
   d3format: $,.2f
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -112,7 +101,6 @@ metrics:
   expression: roundBankers(SUM(net_earnings - (taxes_total - voided_taxes_total)),2)
   description: null
   d3format: $,.2f
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -122,7 +110,6 @@ metrics:
   expression: roundBankers(SUM(commission_included-voided_commission_included),2)
   description: null
   d3format: $,.2f
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -132,7 +119,6 @@ metrics:
   expression: roundBankers(SUM(vat_included-voided_vat_included),2)
   description: null
   d3format: $,.2f
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -142,7 +128,6 @@ metrics:
   expression: countIf(access_key IS NOT NULL)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -152,7 +137,6 @@ metrics:
   expression: roundBankers(SUM(price-voided_price) / COUNT(DISTINCT(id)),2)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -162,7 +146,6 @@ metrics:
   expression: roundBankers(SUM(net_earnings)/ COUNT(DISTINCT(order_id)),2)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -172,7 +155,6 @@ metrics:
   expression: countIf(ticket_status IN ('paid','ended','closed','partially_paid'))
   description: null
   d3format: ',d'
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -182,7 +164,6 @@ metrics:
   expression: COUNT(DISTINCT(id)) / COUNT(DISTINCT(order_id))
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -192,7 +173,6 @@ metrics:
   expression: roundBankers(SUM(price+taxes_total+fees_total),2)
   description: null
   d3format: $,.2f
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -202,7 +182,6 @@ metrics:
   expression: roundBankers(SUM(net_earnings),2)
   description: null
   d3format: $,.2f
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -212,7 +191,6 @@ metrics:
   expression: roundBankers(SUM(price),2)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -222,7 +200,6 @@ metrics:
   expression: COUNT(*)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -232,7 +209,6 @@ metrics:
   expression: COUNT(DISTINCT(order_id))
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
