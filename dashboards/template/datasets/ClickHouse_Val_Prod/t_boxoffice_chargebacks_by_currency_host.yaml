@@ -4,7 +4,6 @@ description: null
 default_endpoint: null
 offset: 0
 cache_timeout: null
-catalog: null
 schema: host_dashboards
 sql: null
 params: null
@@ -12,8 +11,6 @@ template_params: null
 filter_select_enabled: true
 fetch_values_predicate: null
 extra: null
-normalize_columns: false
-always_filter_main_dttm: false
 uuid: 9bfc1577-c154-4af7-a1af-ed011a840d22
 metrics:
 - metric_name: count
@@ -22,7 +19,6 @@ metrics:
   expression: COUNT(*)
   description: null
   d3format: null
-  currency: null
   extra: null
   warning_text: null
 columns:
