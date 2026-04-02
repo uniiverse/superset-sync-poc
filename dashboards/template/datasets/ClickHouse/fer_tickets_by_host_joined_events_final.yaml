@@ -4,7 +4,6 @@ description: null
 default_endpoint: null
 offset: 0
 cache_timeout: null
-catalog: null
 schema: highlander
 sql: ''
 params: null
@@ -12,8 +11,6 @@ template_params: null
 filter_select_enabled: false
 fetch_values_predicate: null
 extra: null
-normalize_columns: true
-always_filter_main_dttm: false
 uuid: 4dffd900-a2d4-45ad-a8c1-4b68d34b9447
 metrics:
 - metric_name: Quantity sold
@@ -22,7 +19,6 @@ metrics:
   expression: countIf(ticket_status IN ('paid','ended','closed','partially_paid'))
   description: null
   d3format: ',d'
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -32,7 +28,6 @@ metrics:
   expression: roundBankers(SUM(net_earnings),2)
   description: null
   d3format: ',.2f'
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -42,7 +37,6 @@ metrics:
   expression: COUNT(*)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null

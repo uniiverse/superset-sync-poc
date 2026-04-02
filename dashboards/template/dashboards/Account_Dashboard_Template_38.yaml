@@ -50,9 +50,6 @@ css: ".anticon svg {\n  /* Superset 4.x fix - hide the filter icons */\n  displa
   \ sans-serif !important;\n  font-weight: 400;\n  margin-top: -20px !important;\n\
   }"
 slug: null
-certified_by: null
-certification_details: null
-published: false
 uuid: de968652-37a0-4849-a7ef-ae888a1ac3b5
 position:
   CHART--UB7fpsi21R:
