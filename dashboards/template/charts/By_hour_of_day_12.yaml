@@ -1,0 +1,69 @@
+slice_name: By hour of day
+description: null
+certified_by: null
+certification_details: null
+viz_type: dist_bar
+params:
+  datasource: 30__table
+  viz_type: dist_bar
+  slice_id: 96
+  granularity_sqla: purchase_time
+  time_range: No filter
+  metrics:
+  - Net earnings
+  - Quantity sold
+  adhoc_filters: []
+  groupby:
+  - Hour of day created
+  columns: []
+  row_limit: 50000
+  order_desc: true
+  contribution: false
+  color_scheme: supersetColors
+  show_legend: true
+  show_bar_value: false
+  rich_tooltip: true
+  order_bars: true
+  y_axis_format: ',d'
+  y_axis_bounds:
+  - null
+  - null
+  bottom_margin: auto
+  x_ticks_layout: auto
+  extra_form_data: {}
+  dashboards:
+  - 35
+  - 39
+  - 24
+  - 25
+  - 27
+  - 17
+  - 29
+  - 19
+  - 26
+  - 21
+  - 30
+  - 34
+  - 20
+  - 36
+  - 42
+  - 37
+  - 31
+  - 38
+  - 33
+  - 40
+  - 32
+  - 41
+  - 43
+  - 14
+  - 18
+  - 22
+query_context: '{"datasource":{"id":30,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"purchase_time","filters":[],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":["Hour
+  of day created"],"metrics":["Net earnings","Quantity sold"],"annotation_layers":[],"row_limit":50000,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"30__table","viz_type":"dist_bar","slice_id":96,"granularity_sqla":"purchase_time","time_range":"No
+  filter","metrics":["Net earnings","Quantity sold"],"adhoc_filters":[],"groupby":["Hour
+  of day created"],"columns":[],"row_limit":50000,"order_desc":true,"contribution":false,"color_scheme":"supersetColors","show_legend":true,"show_bar_value":false,"rich_tooltip":true,"order_bars":true,"y_axis_format":",d","y_axis_bounds":[null,null],"bottom_margin":"auto","x_ticks_layout":"auto","extra_form_data":{},"dashboards":[35,39,24,25,27,17,29,19,26,21,30,34,20,36,42,37,31,38,33,40,32,41,43,14,18,22],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 934da0e2-3b33-4421-925b-aac32b27511d
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc
