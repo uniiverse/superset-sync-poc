@@ -1,0 +1,61 @@
+slice_name: Sales by partner reseller
+description: null
+certified_by: null
+certification_details: null
+viz_type: pie
+params:
+  datasource: 28__table
+  viz_type: pie
+  slice_id: 127
+  granularity_sqla: purchase_time
+  time_range: No filter
+  groupby:
+  - channel_partner_reseller
+  metric: Net earnings
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SIMPLE
+    filterOptionName: filter_ji9jlyxku7_y3sbhnp82p
+    isExtra: false
+    isNew: false
+    operator: IS NOT NULL
+    operatorId: IS_NOT_NULL
+    sqlExpression: null
+    subject: channel_partner_reseller
+  row_limit: 50000
+  sort_by_metric: true
+  color_scheme: supersetColors
+  show_labels_threshold: '0'
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  label_type: key
+  number_format: ',.2f'
+  date_format: smart_date
+  show_labels: true
+  labels_outside: true
+  outerRadius: 70
+  innerRadius: 30
+  extra_form_data: {}
+  dashboards:
+  - 14
+  - 17
+  - 21
+  - 20
+  - 24
+  - 25
+  - 19
+  - 22
+  - 18
+  - 26
+query_context: '{"datasource":{"id":28,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"purchase_time","filters":[{"col":"channel_partner_reseller","op":"IS
+  NOT NULL"}],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":["channel_partner_reseller"],"metrics":["Net
+  earnings"],"orderby":[["Net earnings",false]],"annotation_layers":[],"row_limit":50000,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"28__table","viz_type":"pie","slice_id":127,"granularity_sqla":"purchase_time","time_range":"No
+  filter","groupby":["channel_partner_reseller"],"metric":"Net earnings","adhoc_filters":[{"clause":"WHERE","comparator":null,"expressionType":"SIMPLE","filterOptionName":"filter_ji9jlyxku7_y3sbhnp82p","isExtra":false,"isNew":false,"operator":"IS
+  NOT NULL","operatorId":"IS_NOT_NULL","sqlExpression":null,"subject":"channel_partner_reseller"}],"row_limit":50000,"sort_by_metric":true,"color_scheme":"supersetColors","show_labels_threshold":"0","show_legend":true,"legendType":"scroll","legendOrientation":"top","label_type":"key","number_format":",.2f","date_format":"smart_date","show_labels":true,"labels_outside":true,"outerRadius":70,"innerRadius":30,"extra_form_data":{},"dashboards":[14,17,21,20,24,25,19,22,18,26],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 1eba56c0-4b2c-416c-96b2-9e46a4f9a1b0
+version: 1.0.0
+dataset_uuid: 83819143-8f22-47c4-a7ad-052e6a0c3c4a
