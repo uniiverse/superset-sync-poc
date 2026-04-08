@@ -1,0 +1,63 @@
+slice_name: Additional fees
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator:
+    - cancelled
+    expressionType: SIMPLE
+    filterOptionName: filter_0ea9v54k5cmh_au6puv2w16
+    isExtra: false
+    isNew: false
+    operator: NOT IN
+    operatorId: NOT_IN
+    sqlExpression: null
+    subject: order_status
+  color_picker:
+    a: 1
+    b: 135
+    g: 122
+    r: 0
+  datasource: 30__table
+  extra_form_data: {}
+  granularity_sqla: purchase_time
+  header_font_size: 0.4
+  metric: Additional fees
+  rolling_type: cumsum
+  show_trend_line: false
+  slice_id: 91
+  start_y_axis_at_zero: true
+  subheader_font_size: 0.15
+  time_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  viz_type: big_number
+  y_axis_format: $,.2f
+query_context: '{"datasource": {"id": 30, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "purchase_time", "filters": [{"col":
+  "order_status", "op": "NOT IN", "val": ["cancelled"]}], "extras": {"time_grain_sqla":
+  "P1D", "having": "", "having_druid": [], "where": ""}, "applied_time_extras": {},
+  "columns": [], "metrics": ["Additional fees"], "annotation_layers": [], "timeseries_limit":
+  0, "order_desc": true, "url_params": {}, "custom_params": {}, "custom_form_data":
+  {}, "is_timeseries": true, "post_processing": [{"operation": "pivot", "options":
+  {"index": ["__timestamp"], "columns": [], "aggregates": {"Additional fees": {"operator":
+  "mean"}}, "drop_missing_columns": false, "flatten_columns": false, "reset_index":
+  false}}, {"operation": "cum", "options": {"operator": "sum", "columns": {"Additional
+  fees": "Additional fees"}}}, null, {"operation": "flatten"}]}], "form_data": {"viz_type":
+  "big_number", "datasource": "30__table", "slice_id": 91, "granularity_sqla": "purchase_time",
+  "time_grain_sqla": "P1D", "time_range": "No filter", "metric": "Additional fees",
+  "adhoc_filters": [{"expressionType": "SIMPLE", "subject": "order_status", "operator":
+  "NOT IN", "operatorId": "NOT_IN", "comparator": ["cancelled"], "clause": "WHERE",
+  "sqlExpression": null, "isExtra": false, "isNew": false, "filterOptionName": "filter_0ea9v54k5cmh_au6puv2w16"}],
+  "show_trend_line": false, "start_y_axis_at_zero": true, "color_picker": {"a": 1,
+  "b": 135, "g": 122, "r": 0}, "header_font_size": 0.4, "subheader_font_size": 0.15,
+  "y_axis_format": "$,.2f", "time_format": "smart_date", "rolling_type": "cumsum",
+  "extra_form_data": {}, "force": false, "result_format": "json", "result_type": "full"},
+  "result_format": "json", "result_type": "full"}'
+cache_timeout: null
+uuid: f9561f09-439c-4e92-80cc-a620887bc4c4
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc
