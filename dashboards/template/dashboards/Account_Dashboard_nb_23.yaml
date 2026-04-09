@@ -1,0 +1,1651 @@
+dashboard_title: Account Dashboard (nb)
+description: null
+css: "@font-face {\n    font-family: \"Graphik\";\n    src: \n    url(\"https://www.universe.com/fonts/Graphik/Graphik-Regular-Web.eot\"\
+  ) format(\"eot\"),\n    url(\"https://www.universe.com/fonts/Graphik/Graphik-Regular-Web.woff2\"\
+  ) format(\"woff2\"),\n    url(\"https://www.universe.com/fonts/Graphik/Graphik-Regular-Web.woff\"\
+  ) format(\"woff\");\n}\n\n.dashboard-content {\n  background-color: white;\n  margin-top:\
+  \ -34px;\n}\n\n.grid-container {\n  margin-left: 5px !important;\n  margin-right:\
+  \ 5px !important;\n}\n\n.anchor-link-container {\n  display: none;\n  pointer-events:\
+  \ none;\n}\n\n/*-------Counts/sales header-------*/\n.dashboard-component-header\
+  \ {\n  font-family: 'Graphik', sans-serif !important;\n  font-weight: 500 !important;\n\
+  \  font-size: 32px !important;\n  margin-left: -16px !important;\n  line-height:\
+  \ 38px !important;\n}\n\n.dashboard-component-divider {\n  padding-left: 0px !important;\n\
+  \  padding-right: 0px !important;\n  padding-top: 0px !important;\n  padding-bottom:\
+  \ 0px !important;\n}\n\n/*------Tabs--------*/\n.ant-tabs-nav-wrap {\n  border-bottom:\
+  \ 1px solid #E2E5E7;\n}\n\n.ant-tabs-nav-list {\n  margin-left: -16px;\n}\n\n.ant-tabs-tab\
+  \ {\n  color: #1C232B;\n}\n\n.ant-tabs-tab-btn {\n   font-weight: 400 !important;\n\
+  \   line-height: 20px !important;\n   font-family: 'Graphik', sans-serif !important;\n\
+  \   font-size: 14px !important;\n}\n\n.ant-tabs-tab:hover {\n  color: #3A66E5 !important\n\
+  }\n\n.ant-tabs-tab-btn:hover {\n   color: #3A66E5 !important;\n}\n\n.ant-tabs-tab-btn.active\
+  \ {\n  color: #3A66E5 !important;\n}\n\n.ant-tabs-tab-active {\n  color: #3A66E5\
+  \ !important;\n}\n\n.ant-tabs-ink-bar-animated {\n  background-color: #3A66E5 !important;\n\
+  }\n\n/*----Charts-------*/\n\n.chart-slice {\n  border: 1px solid #E2E5E7;\n  padding:\
+  \ 16px; \n  border-radius: 6px;\n  margin-left: 0px;\n  overflow: auto !important;\n\
+  }\n\n.dot {\n  background-color: #1C232B !important;\n}\n\n.dashboard-component-chart-holder\
+  \ {\n  padding: 0px !important;\n}\n\n/*Used for all the graphs (line graphs) and\
+  \ for table charts too. */\n.slice_container canvas {\n  margin: 0px !important;\n\
+  }\n\n.big_number canvas {\n  margin-top: 50px !important;\n}\n\n.pie canvas {\n\
+  \  margin-top: 0px !important;\n}\n\n.echarts_timeseries_line canvas {\n  margin-top:\
+  \ 0px !important;\n}\n\n.dashboard-chart-id-137 tr:first-child th {\n  color: #6F7881\
+  \ !important;\n  text-transform: capitalize;\n}\n\ntr:first-child th.pvtAxisLabel\
+  \ {\n  color: transparent;\n}\n\n.pivot_table_v_2 thead th {\n  font-size: 14px\
+  \ !important;\n  font-weight: bold !important;\n}\n\n/*----Adds a scroller when\
+  \ required and adjust the height of the table\nto show all the content----*/\n.pivot_table_v_2\
+  \ {\n  overflow: auto !important;\n  height: auto !important;\n}\n\n\n/*----Promotions-\
+  \ To adjust serach box from cutting off---*/\n.dt-global-filter {\n  width: 100%\
+  \ !important;\n  min-width: 100% !important;\n  max-width: 100% !important;\n  padding-right:\
+  \ 10px !important;\n  text-align: end !important;\n}\n\n.text-container {\n  height:\
+  \ auto !important;\n}\n\n.header-title {\n  font-weight: 700 !important;\n  color:\
+  \ #000000 !important;\n  font-family: 'Graphik', sans-serif !important;\n  line-height:\
+  \ 24px !important;\n  font-size: 16px !important;\n  margin-bottom: 24px;\n}\n\n\
+  .header-line {\n  font-size: 32px !important;\n  color: #1C232B !important;\n  font-weight:\
+  \ 500 !important;\n  line-height: 38px !important;\n  font-family: 'Circular Pro',\
+  \ sans-serif !important;\n}\n\n.subheader-line {\n  font-size: 14px !important;\n\
+  \  color: #6F7881 !important;\n  line-height: 20px !important;\n  font-family: 'Graphik',\
+  \ sans-serif !important;\n  font-weight: 400;\n  margin-top: -20px !important;\n\
+  }"
+slug: null
+uuid: 309dbd10-cdff-4651-8999-194ebd5c596d
+position:
+  CHART--UB7fpsi21R:
+    children: []
+    id: CHART--UB7fpsi21R
+    meta:
+      chartId: 33
+      height: 49
+      sliceName: Online tickets
+      sliceNameOverride: "Kilder p\xE5 nett"
+      uuid: bb9acf27-16c0-4f44-a45b-4687aaf76e41
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    - ROW-zmiwKrJ2Q
+    type: CHART
+  CHART-27PQofg3Jo:
+    children: []
+    id: CHART-27PQofg3Jo
+    meta:
+      chartId: 21
+      height: 50
+      sliceName: Check-ins by teammate (ticket types)
+      sliceNameOverride: Lagkamerat
+      uuid: 0906167f-2c17-4903-b3b2-0d8c6241d582
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - ROW-QhPMRKxPK
+    type: CHART
+  CHART-4Sgr5AEZD8:
+    children: []
+    id: CHART-4Sgr5AEZD8
+    meta:
+      chartId: 37
+      height: 50
+      sliceName: Onsite sales by teammate
+      sliceNameOverride: Lagkamerat
+      uuid: 66818934-0224-44e6-bc2a-000b83e0616c
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - ROW-3ZBdT3EBO
+    type: CHART
+  CHART-59hP19aa6De:
+    children: []
+    id: CHART-59hP19aa6De
+    meta:
+      chartId: 44
+      height: 43
+      sliceName: Paid vs free
+      sliceNameOverride: Betalt kontra gratis
+      uuid: b9ab9e80-d638-4e05-8497-2049c6a0e76b
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-uJRVqr6qW
+    type: CHART
+  CHART-6F_7m30VhsH:
+    children: []
+    id: CHART-6F_7m30VhsH
+    meta:
+      chartId: 11
+      height: 50
+      sliceName: By day of week
+      sliceNameOverride: "\u3164"
+      uuid: 2bba7461-7d55-4727-a257-03b28468b4da
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    - TAB-6Pcv0lpwW
+    - ROW-zBDCKXis9
+    type: CHART
+  CHART-9lJQtEN4EnR:
+    children: []
+    id: CHART-9lJQtEN4EnR
+    meta:
+      chartId: 12
+      height: 50
+      sliceName: By hour of day
+      sliceNameOverride: "\u3164"
+      uuid: 934da0e2-3b33-4421-925b-aac32b27511d
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    - TAB-D2lrKZVV_1
+    - ROW-3JpJsI8Iy
+    type: CHART
+  CHART-BC8uGO9UEgn:
+    children: []
+    id: CHART-BC8uGO9UEgn
+    meta:
+      chartId: 40
+      height: 43
+      sliceName: Orders
+      sliceNameOverride: Ordrer
+      uuid: 7f2c5cb7-e1f5-4634-b278-623f6e97670b
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-uJRVqr6qW
+    type: CHART
+  CHART-CTX3gsNvJZ:
+    children: []
+    id: CHART-CTX3gsNvJZ
+    meta:
+      chartId: 1
+      height: 50
+      sliceName: Access keys
+      sliceNameOverride: "Tilgangsn\xF8kler"
+      uuid: 8bd4d7c7-f03f-49b9-937c-011f1aae71dc
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    - ROW-Ci3-HAcmKv
+    type: CHART
+  CHART-CpYiBrh9Kr5:
+    children: []
+    id: CHART-CpYiBrh9Kr5
+    meta:
+      chartId: 64
+      height: 43
+      sliceName: Tickets
+      sliceNameOverride: Billetter
+      uuid: c999506c-5ad3-4e0c-826f-d97487d81b06
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-uJRVqr6qW
+    type: CHART
+  CHART-E9Q09YM-AfY:
+    children: []
+    id: CHART-E9Q09YM-AfY
+    meta:
+      chartId: 29
+      height: 50
+      sliceName: Discount codes
+      sliceNameOverride: Rabattkoder
+      uuid: 5453bc1d-1561-498c-baa6-5161dc442649
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    - ROW-Ci3-HAcmKv
+    type: CHART
+  CHART-Fu-DBIu45c_:
+    children: []
+    id: CHART-Fu-DBIu45c_
+    meta:
+      chartId: 2
+      height: 51
+      sliceName: Accumulated tickets by type
+      sliceNameOverride: Akkumulerte billetter etter type
+      uuid: 878bf138-6377-403f-9535-725385afb1be
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - ROW-32n6dR34H20
+    type: CHART
+  CHART-HmZikVhf_yW:
+    children: []
+    id: CHART-HmZikVhf_yW
+    meta:
+      chartId: 47
+      height: 62
+      sliceName: Sales breakdown by event
+      sliceNameOverride: "\u3164"
+      uuid: df4a2889-7583-44a7-beab-660daeba370b
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - TABS-g8e_-q61ZY
+    - TAB-1_GpS1XeQd
+    - ROW-T-lHET3wt
+    type: CHART
+  CHART-KbCChP3cAb:
+    children: []
+    id: CHART-KbCChP3cAb
+    meta:
+      chartId: 53
+      height: 45
+      sliceName: Sales by channel partner
+      sliceNameOverride: Kanalpartner
+      uuid: c019b342-f975-439d-b474-e45c1c6ddc78
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    - ROW-Oh9SpZsEx
+    type: CHART
+  CHART-KhaBchMklE:
+    children: []
+    id: CHART-KhaBchMklE
+    meta:
+      chartId: 6
+      height: 26
+      sliceName: Average order price
+      sliceNameOverride: Gjennomsnittlig ordrepris
+      uuid: cee8a74c-5fa4-488d-9033-00ee20d1e7d1
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - ROW-goi7Ss5FU
+    type: CHART
+  CHART-Lz2wBdIznmu:
+    children: []
+    id: CHART-Lz2wBdIznmu
+    meta:
+      chartId: 61
+      height: 59
+      sliceName: Ticket net sales by event
+      sliceNameOverride: Nettosalg av billetter etter arrangement
+      uuid: c31380c2-8992-43fb-8e8c-02ef9ddebb9e
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-6AMcSfb_J
+    type: CHART
+  CHART-M8zh67jYr5:
+    children: []
+    id: CHART-M8zh67jYr5
+    meta:
+      chartId: 34
+      height: 49
+      sliceName: Online vs boxoffice
+      sliceNameOverride: "P\xE5 nett kontra billettluke"
+      uuid: 852050ae-8423-4da6-add5-32c12aa63110
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    - ROW-zmiwKrJ2Q
+    type: CHART
+  CHART-NwLlEHuXU6b:
+    children: []
+    id: CHART-NwLlEHuXU6b
+    meta:
+      chartId: 14
+      height: 50
+      sliceName: By week
+      sliceNameOverride: "\u3164"
+      uuid: d0d34eb7-57ec-4082-92ea-f2a90c3a2a23
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    - TAB-08YV04rKt
+    - ROW-JU8TphOjS
+    type: CHART
+  CHART-PfDw36VCnQ:
+    children: []
+    id: CHART-PfDw36VCnQ
+    meta:
+      chartId: 7
+      height: 26
+      sliceName: Average ticket price
+      sliceNameOverride: Gjennomsnittlig billettpris
+      uuid: 047c86e3-ed3f-4e8c-a8f0-ca6562cee0ab
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - ROW-goi7Ss5FU
+    - COLUMN-rjSzwMxIbt
+    type: CHART
+  CHART-Pveu7K4NiJ:
+    children: []
+    id: CHART-Pveu7K4NiJ
+    meta:
+      chartId: 52
+      height: 50
+      sliceName: Sales breakdown by timeslot (PV2)
+      sliceNameOverride: "\u3164"
+      uuid: 08839db0-a616-4283-a268-57b6e1aaae9b
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - TABS-g8e_-q61ZY
+    - TAB-EAYuMFcwI
+    - ROW-PpvZvxqBQ
+    type: CHART
+  CHART-Rprytx3OIc:
+    children: []
+    id: CHART-Rprytx3OIc
+    meta:
+      chartId: 50
+      height: 51
+      sliceName: 'Sales breakdown by ticket (pv2) '
+      sliceNameOverride: "\u3164"
+      uuid: 20affb99-3d95-4e36-aecb-2a7ccccd8429
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - TABS-g8e_-q61ZY
+    - TAB-6UZ33TvLu
+    - ROW-sA6sC4ODb
+    type: CHART
+  CHART-TQRLo7Qdv6:
+    children: []
+    id: CHART-TQRLo7Qdv6
+    meta:
+      chartId: 13
+      height: 50
+      sliceName: By month
+      sliceNameOverride: "\u3164"
+      uuid: 0f36d0f8-9278-48ec-ba97-e54e03f87180
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    - TAB-K6TShjEGk
+    - ROW-1X6rIKMMC
+    type: CHART
+  CHART-Tw-5DoiqZu:
+    children: []
+    id: CHART-Tw-5DoiqZu
+    meta:
+      chartId: 39
+      height: 50
+      sliceName: Onsite sales by ticket type
+      sliceNameOverride: Type
+      uuid: b9c821cc-a7a2-4062-9ded-321c79a03246
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - ROW-3ZBdT3EBO
+    type: CHART
+  CHART-V_39UbGWAG:
+    children: []
+    id: CHART-V_39UbGWAG
+    meta:
+      chartId: 31
+      height: 43
+      sliceName: Gross sales
+      sliceNameOverride: Brutto salg
+      uuid: 185d7b31-4c67-481c-9feb-de384defa065
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-X1kJyH675
+    type: CHART
+  CHART-XGXY36hFZ2w:
+    children: []
+    id: CHART-XGXY36hFZ2w
+    meta:
+      chartId: 8
+      height: 23
+      sliceName: Average tickets per order
+      sliceNameOverride: Billetter per ordre
+      uuid: 5d8779c0-b0da-4f51-ac13-c236b6a9bd02
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - ROW-goi7Ss5FU
+    - COLUMN-rjSzwMxIbt
+    type: CHART
+  CHART-ZyLzD9nHwT:
+    children: []
+    id: CHART-ZyLzD9nHwT
+    meta:
+      chartId: 36
+      height: 61
+      sliceName: Onsite sales by event
+      sliceNameOverride: "Salg p\xE5 stedet etter arrangement"
+      uuid: 5312f974-c0b8-41f0-b8bb-a5f35ff6e182
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - ROW-BG9HnG9XJ
+    type: CHART
+  CHART-_A2p1aPyTR:
+    children: []
+    id: CHART-_A2p1aPyTR
+    meta:
+      chartId: 46
+      height: 50
+      sliceName: Remaining check-ins
+      sliceNameOverride: "Gjenst\xE5ende innsjekkinger"
+      uuid: ba0bc76f-1564-4851-93cd-71ca103aabe0
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - ROW-FldETQM4xH
+    type: CHART
+  CHART-_JrH4JfJcb:
+    children: []
+    id: CHART-_JrH4JfJcb
+    meta:
+      chartId: 4
+      height: 43
+      sliceName: Add-ons
+      sliceNameOverride: Tillegg
+      uuid: ee9db37d-92b4-4d40-8b59-a9b9947d95f7
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-uJRVqr6qW
+    type: CHART
+  CHART-dYE7ZDcs4T:
+    children: []
+    id: CHART-dYE7ZDcs4T
+    meta:
+      chartId: 55
+      height: 45
+      sliceName: Sales by partner reseller
+      sliceNameOverride: Partnerforhandler
+      uuid: 1eba56c0-4b2c-416c-96b2-9e46a4f9a1b0
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    - ROW-Oh9SpZsEx
+    type: CHART
+  CHART-eJW0faTr2B:
+    children: []
+    id: CHART-eJW0faTr2B
+    meta:
+      chartId: 16
+      height: 49
+      sliceName: Card brand
+      sliceNameOverride: Kortmerke
+      uuid: 6cd1f365-8b30-4df8-be50-c943c43c3916
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    - ROW-zmiwKrJ2Q
+    type: CHART
+  CHART-ePsgj2S19i:
+    children: []
+    id: CHART-ePsgj2S19i
+    meta:
+      chartId: 32
+      height: 43
+      sliceName: Net sales
+      sliceNameOverride: Nettosalg
+      uuid: 05c776c0-299c-4b4c-98aa-e4546f5b5a5b
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-X1kJyH675
+    type: CHART
+  CHART-egfVdxLard:
+    children: []
+    id: CHART-egfVdxLard
+    meta:
+      chartId: 19
+      height: 64
+      sliceName: Check-ins by event pivot
+      sliceNameOverride: "\u200E"
+      uuid: 8df034f4-4895-4a30-a5e7-40bd65f2a602
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - TABS-uk-JX9g9RD
+    - TAB-OGpQi9SEUk
+    - ROW-5XLhaW2s4B
+    type: CHART
+  CHART-fVhQfahfq7:
+    children: []
+    id: CHART-fVhQfahfq7
+    meta:
+      chartId: 65
+      height: 50
+      sliceName: Total check-ins
+      sliceNameOverride: Innsjekket
+      uuid: cf645f7d-0d14-4ee5-beef-7c78d14181de
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - ROW-FldETQM4xH
+    type: CHART
+  CHART-g7UBHfCWi8:
+    children: []
+    id: CHART-g7UBHfCWi8
+    meta:
+      chartId: 24
+      height: 64
+      sliceName: Check-ins by time and ticket type pivot
+      sliceNameOverride: "\u200E"
+      uuid: cf8d395d-5295-42af-8108-cb9d6818a541
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - TABS-uk-JX9g9RD
+    - TAB-WzCxVSZWB
+    - ROW-GEog_dl0r3
+    type: CHART
+  CHART-lnVh2-Raj4:
+    children: []
+    id: CHART-lnVh2-Raj4
+    meta:
+      chartId: 70
+      height: 43
+      sliceName: net sales breakdown pivot
+      sliceNameOverride: Oppdeling av nettosalg
+      uuid: 5a116d08-1153-4a71-89cc-f2b97128dda1
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-X1kJyH675
+    type: CHART
+  CHART-m9842nVCm5:
+    children: []
+    id: CHART-m9842nVCm5
+    meta:
+      chartId: 9
+      height: 49
+      sliceName: Boxoffice
+      sliceNameOverride: Billettlukekilder
+      uuid: d748d78c-cf30-4dcc-a690-8b2997b7f2bc
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    - ROW-zmiwKrJ2Q
+    type: CHART
+  CHART-myfvXEd363:
+    children: []
+    id: CHART-myfvXEd363
+    meta:
+      chartId: 15
+      height: 50
+      sliceName: By year
+      sliceNameOverride: "\u3164"
+      uuid: ee869f31-f8ba-4a78-add3-222ee33f9f5d
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    - TAB-Nek7tDD2o
+    - ROW-txVQfTCbP
+    type: CHART
+  CHART-n_4KKam7F3:
+    children: []
+    id: CHART-n_4KKam7F3
+    meta:
+      chartId: 45
+      height: 45
+      sliceName: Referrals
+      sliceNameOverride: Henvisninger
+      uuid: 4bdf7915-8fb3-490f-888a-27e6dca9c385
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    - ROW-Oh9SpZsEx
+    type: CHART
+  CHART-o8ghALJdxz:
+    children: []
+    id: CHART-o8ghALJdxz
+    meta:
+      chartId: 10
+      height: 50
+      sliceName: By day
+      sliceNameOverride: "\u3164"
+      uuid: 1c14ee2f-61aa-4f2a-b265-557c674da21d
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    - TAB-pRKoKqJjA
+    - ROW-_nXw0Y5JL
+    type: CHART
+  CHART-t70_D4XSe4:
+    children: []
+    id: CHART-t70_D4XSe4
+    meta:
+      chartId: 18
+      height: 67
+      sliceName: Check-ins by event
+      sliceNameOverride: Innsjekkinger etter arrangement
+      uuid: b864bde7-003a-497a-b961-51103548ba12
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - ROW-YRp38jF3J
+    type: CHART
+  CHART-vT1y8gGvDG:
+    children: []
+    id: CHART-vT1y8gGvDG
+    meta:
+      chartId: 22
+      height: 50
+      sliceName: Check-ins by ticket type
+      sliceNameOverride: Type
+      uuid: b1637091-03f0-4d19-b554-5802890acff0
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - ROW-QhPMRKxPK
+    type: CHART
+  CHART-vcVbP7vCP_:
+    children: []
+    id: CHART-vcVbP7vCP_
+    meta:
+      chartId: 25
+      height: 64
+      sliceName: Check-ins by timeslot pivot
+      sliceNameOverride: "\u200E"
+      uuid: 3bb72c7a-89f9-47ef-b14c-c3e30e6141f4
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - TABS-uk-JX9g9RD
+    - TAB-9a8p5MRDz
+    - ROW-nl6cVB6dSV
+    type: CHART
+  CHART-wROwU7SvkCO:
+    children: []
+    id: CHART-wROwU7SvkCO
+    meta:
+      chartId: 56
+      height: 51
+      sliceName: Sales by ticket type
+      sliceNameOverride: Salg etter billettype
+      uuid: 10aaef54-0650-426b-9ebd-e3ba3b5412d9
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - ROW-goi7Ss5FU
+    - COLUMN-I03QI44Pm2
+    type: CHART
+  COLUMN-I03QI44Pm2:
+    children:
+    - CHART-wROwU7SvkCO
+    id: COLUMN-I03QI44Pm2
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 8
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - ROW-goi7Ss5FU
+    type: COLUMN
+  COLUMN-rjSzwMxIbt:
+    children:
+    - CHART-PfDw36VCnQ
+    - CHART-XGXY36hFZ2w
+    id: COLUMN-rjSzwMxIbt
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - ROW-goi7Ss5FU
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  DIVIDER-QB8YOIGXtH:
+    children: []
+    id: DIVIDER-QB8YOIGXtH
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: DIVIDER
+  DIVIDER-kxL4XXQNzG:
+    children: []
+    id: DIVIDER-kxL4XXQNzG
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: DIVIDER
+  GRID_ID:
+    children:
+    - TABS-Rt9jZ4P1G1
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER-Gd_qzMkH4V:
+    children: []
+    id: HEADER-Gd_qzMkH4V
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      headerSize: MEDIUM_HEADER
+      text: Kilder for netto salg
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    type: HEADER
+  HEADER-HDrBLSO9XQ:
+    children: []
+    id: HEADER-HDrBLSO9XQ
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      headerSize: SMALL_HEADER
+      text: Oppsummering av nettoinntekter og antall solgte billetter for hvert arrangement
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: HEADER
+  HEADER-HLx3TGLlEd:
+    children: []
+    id: HEADER-HLx3TGLlEd
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      headerSize: SMALL_HEADER
+      text: Tellinger
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: HEADER
+  HEADER-INP8UcKSqm:
+    children: []
+    id: HEADER-INP8UcKSqm
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      headerSize: SMALL_HEADER
+      text: Salg
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: HEADER
+  HEADER-T_VqiiAxUt:
+    children: []
+    id: HEADER-T_VqiiAxUt
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      headerSize: MEDIUM_HEADER
+      text: "Salg p\xE5 stedet etter"
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    type: HEADER
+  HEADER-awudonm6OM:
+    children: []
+    id: HEADER-awudonm6OM
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      headerSize: MEDIUM_HEADER
+      text: Innsjekkinger etter
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    type: HEADER
+  HEADER-hBY_j-ErXw:
+    children: []
+    id: HEADER-hBY_j-ErXw
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      headerSize: MEDIUM_HEADER
+      text: Kampanjer
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    type: HEADER
+  HEADER-i9mc1XUF-S:
+    children: []
+    id: HEADER-i9mc1XUF-S
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      headerSize: SMALL_HEADER
+      text: Trender for billettsalg etter
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    type: HEADER
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Account Dashboard (template)
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-1X6rIKMMC:
+    children:
+    - CHART-TQRLo7Qdv6
+    id: ROW-1X6rIKMMC
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    - TAB-K6TShjEGk
+    type: ROW
+  ROW-32n6dR34H20:
+    children:
+    - CHART-Fu-DBIu45c_
+    id: ROW-32n6dR34H20
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    type: ROW
+  ROW-3JpJsI8Iy:
+    children:
+    - CHART-9lJQtEN4EnR
+    id: ROW-3JpJsI8Iy
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    - TAB-D2lrKZVV_1
+    type: ROW
+  ROW-3ZBdT3EBO:
+    children:
+    - CHART-Tw-5DoiqZu
+    - CHART-4Sgr5AEZD8
+    id: ROW-3ZBdT3EBO
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    type: ROW
+  ROW-5XLhaW2s4B:
+    children:
+    - CHART-egfVdxLard
+    id: ROW-5XLhaW2s4B
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - TABS-uk-JX9g9RD
+    - TAB-OGpQi9SEUk
+    type: ROW
+  ROW-6AMcSfb_J:
+    children:
+    - CHART-Lz2wBdIznmu
+    id: ROW-6AMcSfb_J
+    meta:
+      background: BACKGROUND_WHITE
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: ROW
+  ROW-BG9HnG9XJ:
+    children:
+    - CHART-ZyLzD9nHwT
+    id: ROW-BG9HnG9XJ
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    type: ROW
+  ROW-Ci3-HAcmKv:
+    children:
+    - CHART-CTX3gsNvJZ
+    - CHART-E9Q09YM-AfY
+    id: ROW-Ci3-HAcmKv
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    type: ROW
+  ROW-FldETQM4xH:
+    children:
+    - CHART-fVhQfahfq7
+    - CHART-_A2p1aPyTR
+    id: ROW-FldETQM4xH
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    type: ROW
+  ROW-GEog_dl0r3:
+    children:
+    - CHART-g7UBHfCWi8
+    id: ROW-GEog_dl0r3
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - TABS-uk-JX9g9RD
+    - TAB-WzCxVSZWB
+    type: ROW
+  ROW-JU8TphOjS:
+    children:
+    - CHART-NwLlEHuXU6b
+    id: ROW-JU8TphOjS
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    - TAB-08YV04rKt
+    type: ROW
+  ROW-Oh9SpZsEx:
+    children:
+    - CHART-n_4KKam7F3
+    - CHART-KbCChP3cAb
+    - CHART-dYE7ZDcs4T
+    id: ROW-Oh9SpZsEx
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    type: ROW
+  ROW-PpvZvxqBQ:
+    children:
+    - CHART-Pveu7K4NiJ
+    id: ROW-PpvZvxqBQ
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - TABS-g8e_-q61ZY
+    - TAB-EAYuMFcwI
+    type: ROW
+  ROW-QhPMRKxPK:
+    children:
+    - CHART-vT1y8gGvDG
+    - CHART-27PQofg3Jo
+    id: ROW-QhPMRKxPK
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    type: ROW
+  ROW-T-lHET3wt:
+    children:
+    - CHART-HmZikVhf_yW
+    id: ROW-T-lHET3wt
+    meta:
+      background: BACKGROUND_WHITE
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - TABS-g8e_-q61ZY
+    - TAB-1_GpS1XeQd
+    type: ROW
+  ROW-X1kJyH675:
+    children:
+    - CHART-V_39UbGWAG
+    - CHART-ePsgj2S19i
+    - CHART-lnVh2-Raj4
+    id: ROW-X1kJyH675
+    meta:
+      background: BACKGROUND_WHITE
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: ROW
+  ROW-YRp38jF3J:
+    children:
+    - CHART-t70_D4XSe4
+    id: ROW-YRp38jF3J
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    type: ROW
+  ROW-_nXw0Y5JL:
+    children:
+    - CHART-o8ghALJdxz
+    id: ROW-_nXw0Y5JL
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    - TAB-pRKoKqJjA
+    type: ROW
+  ROW-goi7Ss5FU:
+    children:
+    - COLUMN-I03QI44Pm2
+    - COLUMN-rjSzwMxIbt
+    - CHART-KhaBchMklE
+    id: ROW-goi7Ss5FU
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    type: ROW
+  ROW-nl6cVB6dSV:
+    children:
+    - CHART-vcVbP7vCP_
+    id: ROW-nl6cVB6dSV
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - TABS-uk-JX9g9RD
+    - TAB-9a8p5MRDz
+    type: ROW
+  ROW-sA6sC4ODb:
+    children:
+    - CHART-Rprytx3OIc
+    id: ROW-sA6sC4ODb
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - TABS-g8e_-q61ZY
+    - TAB-6UZ33TvLu
+    type: ROW
+  ROW-txVQfTCbP:
+    children:
+    - CHART-myfvXEd363
+    id: ROW-txVQfTCbP
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    - TAB-Nek7tDD2o
+    type: ROW
+  ROW-uJRVqr6qW:
+    children:
+    - CHART-CpYiBrh9Kr5
+    - CHART-BC8uGO9UEgn
+    - CHART-_JrH4JfJcb
+    - CHART-59hP19aa6De
+    id: ROW-uJRVqr6qW
+    meta:
+      background: BACKGROUND_WHITE
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: ROW
+  ROW-zBDCKXis9:
+    children:
+    - CHART-6F_7m30VhsH
+    id: ROW-zBDCKXis9
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    - TAB-6Pcv0lpwW
+    type: ROW
+  ROW-zmiwKrJ2Q:
+    children:
+    - CHART-eJW0faTr2B
+    - CHART-M8zh67jYr5
+    - CHART--UB7fpsi21R
+    - CHART-m9842nVCm5
+    id: ROW-zmiwKrJ2Q
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    type: ROW
+  TAB--ReVxOixrQ:
+    children:
+    - HEADER-INP8UcKSqm
+    - ROW-X1kJyH675
+    - DIVIDER-QB8YOIGXtH
+    - HEADER-HLx3TGLlEd
+    - ROW-uJRVqr6qW
+    - DIVIDER-kxL4XXQNzG
+    - ROW-6AMcSfb_J
+    - HEADER-HDrBLSO9XQ
+    - TABS-g8e_-q61ZY
+    id: TAB--ReVxOixrQ
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Overview
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    type: TAB
+  TAB-08YV04rKt:
+    children:
+    - ROW-JU8TphOjS
+    id: TAB-08YV04rKt
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Uke
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    type: TAB
+  TAB-1_GpS1XeQd:
+    children:
+    - ROW-T-lHET3wt
+    id: TAB-1_GpS1XeQd
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Etter hendelse
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - TABS-g8e_-q61ZY
+    type: TAB
+  TAB-5UfH_kEi0:
+    children:
+    - ROW-FldETQM4xH
+    - ROW-YRp38jF3J
+    - ROW-BG9HnG9XJ
+    - HEADER-awudonm6OM
+    - TABS-uk-JX9g9RD
+    - ROW-QhPMRKxPK
+    - HEADER-T_VqiiAxUt
+    - ROW-3ZBdT3EBO
+    id: TAB-5UfH_kEi0
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Billettluke
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    type: TAB
+  TAB-6Pcv0lpwW:
+    children:
+    - ROW-zBDCKXis9
+    id: TAB-6Pcv0lpwW
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Dag i uken
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    type: TAB
+  TAB-6UZ33TvLu:
+    children:
+    - ROW-sA6sC4ODb
+    id: TAB-6UZ33TvLu
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Etter type
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - TABS-g8e_-q61ZY
+    type: TAB
+  TAB-7ggp_GDR6:
+    children:
+    - HEADER-i9mc1XUF-S
+    - TABS-Pm2hu7FR5B
+    - ROW-goi7Ss5FU
+    - ROW-32n6dR34H20
+    id: TAB-7ggp_GDR6
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Trender
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    type: TAB
+  TAB-9a8p5MRDz:
+    children:
+    - ROW-nl6cVB6dSV
+    id: TAB-9a8p5MRDz
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Tidsvindu
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - TABS-uk-JX9g9RD
+    type: TAB
+  TAB-D2lrKZVV_1:
+    children:
+    - ROW-3JpJsI8Iy
+    id: TAB-D2lrKZVV_1
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: "Time p\xE5 d\xF8gnet"
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    type: TAB
+  TAB-EAYuMFcwI:
+    children:
+    - ROW-PpvZvxqBQ
+    id: TAB-EAYuMFcwI
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Etter timespor
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - TABS-g8e_-q61ZY
+    type: TAB
+  TAB-K6TShjEGk:
+    children:
+    - ROW-1X6rIKMMC
+    id: TAB-K6TShjEGk
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: "M\xE5ned"
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    type: TAB
+  TAB-Nek7tDD2o:
+    children:
+    - ROW-txVQfTCbP
+    id: TAB-Nek7tDD2o
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: "\xC5r"
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    type: TAB
+  TAB-OGpQi9SEUk:
+    children:
+    - ROW-5XLhaW2s4B
+    id: TAB-OGpQi9SEUk
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Arrangement
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - TABS-uk-JX9g9RD
+    type: TAB
+  TAB-WzCxVSZWB:
+    children:
+    - ROW-GEog_dl0r3
+    id: TAB-WzCxVSZWB
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Tidsvindu og type
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - TABS-uk-JX9g9RD
+    type: TAB
+  TAB-oGiGHiGx5:
+    children:
+    - HEADER-Gd_qzMkH4V
+    - ROW-zmiwKrJ2Q
+    - ROW-Oh9SpZsEx
+    - HEADER-hBY_j-ErXw
+    - ROW-Ci3-HAcmKv
+    id: TAB-oGiGHiGx5
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Kilder
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    type: TAB
+  TAB-pRKoKqJjA:
+    children:
+    - ROW-_nXw0Y5JL
+    id: TAB-pRKoKqJjA
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Dag
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - TABS-Pm2hu7FR5B
+    type: TAB
+  TABS-Pm2hu7FR5B:
+    children:
+    - TAB-D2lrKZVV_1
+    - TAB-6Pcv0lpwW
+    - TAB-pRKoKqJjA
+    - TAB-08YV04rKt
+    - TAB-K6TShjEGk
+    - TAB-Nek7tDD2o
+    id: TABS-Pm2hu7FR5B
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    type: TABS
+  TABS-Rt9jZ4P1G1:
+    children:
+    - TAB--ReVxOixrQ
+    - TAB-7ggp_GDR6
+    - TAB-oGiGHiGx5
+    - TAB-5UfH_kEi0
+    id: TABS-Rt9jZ4P1G1
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: TABS
+  TABS-g8e_-q61ZY:
+    children:
+    - TAB-1_GpS1XeQd
+    - TAB-EAYuMFcwI
+    - TAB-6UZ33TvLu
+    id: TABS-g8e_-q61ZY
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: TABS
+  TABS-uk-JX9g9RD:
+    children:
+    - TAB-OGpQi9SEUk
+    - TAB-9a8p5MRDz
+    - TAB-WzCxVSZWB
+    id: TABS-uk-JX9g9RD
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    type: TABS
+metadata:
+  timed_refresh_immune_slices: []
+  expanded_slices: {}
+  refresh_frequency: 300
+  color_scheme: ''
+  label_colors: {}
+  show_native_filters: true
+  default_filters: '{}'
+  chart_configuration: {}
+  stagger_refresh: true
+  native_filter_configuration: []
+  cross_filters_enabled: false
+  shared_label_colors:
+    +1 Alcoholic Drink or Non-Alcoholic Drink: '#1FA8C9'
+    +2 Alcoholic or Non-Alcoholic Drinks: '#454E7C'
+    +3 Alcoholic or Non-Alcoholic Drinks: '#5AC189'
+    8pm-12am Open Bar | Pre-sale | NYE 2024: '#FF7F44'
+    8pm-12am Tito's Open Bar | Pre-sale | NYE 2025: '#666666'
+    9pm-12am Tito's Open Bar | NYE 2025: '#E04355'
+    Christmas Light Up Necklace: '#FCC700'
+    Christmas Necklace: '#A868B7'
+    Cocktails: '#3CCCCB'
+    Dancing, Prancing, Getting Blitzen | + 3  Alcoholic or Non-Alcoholic Drinks + Entry: '#A38F79'
+    Dancing, Prancing, Getting Blitzen | + 3 Drinks + Entry: '#8FD3E4'
+    Double Date 4 Pack (4 GA + Hat or Necklace): '#A1A6BD'
+    Group | I'm on the Naughty List | +2 Drinks + Entry: '#ACE1C4'
+    I'm on the Naughty List | + 2  Alcoholic or Non-Alcoholic Drinks  + Entry: '#FEC0A1'
+    I'm on the Naughty List | + 2 Drinks + Entry: '#B2B2B2'
+    I'm on the Nice List |  +1  Alcoholic or Non-Alcoholic Drink  + Entry: '#EFA1AA'
+    I'm on the Nice List | +1 Drink + Entry: '#FDE380'
+    "IT\u2019S TIIIIIIIIIIIME!!!!!! Sneak Peek Weekend | + 1 Alcoholic or Non-Alcoholic Drink of Choice + Entry": '#D3B3DA'
+    Jingle Shot: '#9EE5E5'
+    Kiss FM Winner | Entry: '#D1C6BC'
+    Merry Mischief | General Admission: '#1FA8C9'
+    Not So Silent Night | + 90 Minute Reserved Seating for 4 + Cocktails: '#454E7C'
+    Santa Hat: '#5AC189'
+    Ultimate Christmas Party | + 2  Alcoholic or Non-Alcoholic Drinks  + Jingle Shot + Santa Hat + Light Up Necklace + Entry: '#FF7F44'
+    Ultimate Christmas | + 2 Drinks + Jingle Shot + Christmas Bulb Necklace + Entry: '#666666'
+    Net earnings: '#1FA8C9'
+    Quantity sold: '#454E7C'
+  color_scheme_domain: []
+version: 1.0.0
