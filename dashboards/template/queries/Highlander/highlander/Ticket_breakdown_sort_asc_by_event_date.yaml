@@ -1,0 +1,18 @@
+schema: highlander
+label: Ticket breakdown sort asc by event date
+description: null
+sql: "SELECT \"l.title\" AS \"l.title\",\r\n       \"e.start_date\" AS \"e.start_date\"\
+  ,\r\n       formatDateTime(toDateTime(e.start_stamp), '%I:%M %p') AS \"Timeslot\"\
+  ,\r\n       \"c.name\" AS \"c.name\",\r\n       countIf(c.state IN ('paid', 'ended',\
+  \ 'closed', 'partially_paid')) AS \"countIf(c.state IN ('paid', 'ended', 'closed',\
+  \ 'partially_paid'))\",\r\n       Sum(c.net_earnings) AS \"Sum(c.net_earnings)\"\
+  \r\nFROM\r\n  (Select *\r\n   FROM cost_item_cost_breakdowns_final c\r\n   LEFT\
+  \ JOIN listings_final l ON c.listing_id = l.id\r\n   LEFT JOIN events_final e ON\
+  \ c.event_id = e.id\r\n   LEFT JOIN access_key_redemptions_with_access_key_final\
+  \ a ON c.id = a.cost_item_id\r\n   LEFT JOIN users_final u ON c.host_id = u.id)\
+  \ AS virtual_table\r\nGROUP BY \"l.title\",\r\n         \"e.start_date\",\r\n  \
+  \       formatDateTime(toDateTime(e.start_stamp), '%I:%M %p'),\r\n         \"c.name\"\
+  \r\nORDER BY \"e.start_date\" ASC\r\nLIMIT 100;"
+uuid: 041141bf-bdab-4a30-94bd-ff3d1c64b250
+version: 1.0.0
+database_uuid: e3d17d8c-32d1-412f-b206-86332bd4a2fa
