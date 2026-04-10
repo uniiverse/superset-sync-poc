@@ -1,0 +1,11 @@
+schema: highlander
+label: Paid tickets
+description: null
+sql: "SELECT *\r\nFROM\r\n  (Select *\r\n   FROM cost_item_cost_breakdowns_final c\r\
+  \n   LEFT JOIN listings_final l ON c.listing_id = l.id\r\n   LEFT JOIN events_final\
+  \ e ON c.event_id = e.id\r\n   LEFT JOIN access_key_redemptions_with_access_key_final\
+  \ a ON c.id = a.cost_item_id) AS virtual_table\r\nWHERE c.state IN ('paid','ended','closed','partially_paid')\r\
+  \nLIMIT 50000;"
+uuid: c3f780de-7c7d-41a3-a096-da42af2a6621
+version: 1.0.0
+database_uuid: e3d17d8c-32d1-412f-b206-86332bd4a2fa
