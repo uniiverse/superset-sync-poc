@@ -4,7 +4,6 @@ description: null
 default_endpoint: null
 offset: 0
 cache_timeout: null
-catalog: null
 schema: highlander
 sql: ''
 params: null
@@ -12,8 +11,6 @@ template_params: null
 filter_select_enabled: false
 fetch_values_predicate: null
 extra: null
-normalize_columns: true
-always_filter_main_dttm: false
 uuid: 71056aab-904c-4cb1-85d3-12837cad45bc
 metrics:
 - metric_name: Ticket sales
@@ -25,7 +22,6 @@ metrics:
     \  'PassRate'))),\r\n        price - voided_price,\r\n        0\r\n    )),2)"
   description: null
   d3format: $,.2f
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -36,7 +32,6 @@ metrics:
     \            price - voided_price,\n            0\n        )\n    ), 2\n)"
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -47,7 +42,6 @@ metrics:
     'closed'), 1, 0))
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -58,7 +52,6 @@ metrics:
     discount - voided_discount, 0)),2)
   description: null
   d3format: $,.2f
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -69,7 +62,6 @@ metrics:
     voided_fees_total, 0)),2)
   description: null
   d3format: $,.2f
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -80,7 +72,6 @@ metrics:
     voided_taxes_total, 0)),2)
   description: null
   d3format: $,.2f
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -91,7 +82,6 @@ metrics:
     0)),2)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -102,7 +92,6 @@ metrics:
     0)),2)
   description: null
   d3format: $,.2f
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -112,7 +101,6 @@ metrics:
   expression: roundBankers(SUM(net_earnings - (taxes_total - voided_taxes_total)),2)
   description: null
   d3format: $,.2f
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -122,7 +110,6 @@ metrics:
   expression: roundBankers(SUM(commission_included-voided_commission_included),2)
   description: null
   d3format: $,.2f
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -132,7 +119,6 @@ metrics:
   expression: roundBankers(SUM(vat_included-voided_vat_included),2)
   description: null
   d3format: $,.2f
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -142,7 +128,6 @@ metrics:
   expression: countIf(access_key IS NOT NULL)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -152,7 +137,6 @@ metrics:
   expression: roundBankers(SUM(price-voided_price) / COUNT(DISTINCT(id)),2)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -162,7 +146,6 @@ metrics:
   expression: roundBankers(SUM(net_earnings)/ COUNT(DISTINCT(order_id)),2)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -172,7 +155,6 @@ metrics:
   expression: countIf(ticket_status IN ('paid','ended','closed','partially_paid'))
   description: null
   d3format: ',d'
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -182,17 +164,15 @@ metrics:
   expression: COUNT(DISTINCT(id)) / COUNT(DISTINCT(order_id))
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
 - metric_name: Gross sales
   verbose_name: Gross sales
   metric_type: null
-  expression: roundBankers(SUM(price+taxes_total+fees_total),2)
+  expression: roundBankers(SUM(price+taxes_total+fees_total-voided_price-voided_taxes_total-voided_fees_total),4)
   description: null
   d3format: $,.2f
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -202,7 +182,6 @@ metrics:
   expression: roundBankers(SUM(net_earnings),2)
   description: null
   d3format: $,.2f
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -212,7 +191,6 @@ metrics:
   expression: roundBankers(SUM(price),2)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -222,7 +200,6 @@ metrics:
   expression: COUNT(*)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -232,7 +209,6 @@ metrics:
   expression: COUNT(DISTINCT(order_id))
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -253,8 +229,7 @@ columns:
     END'
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: Remaining check-ins
   verbose_name: null
   is_dttm: false
@@ -271,8 +246,7 @@ columns:
     END'
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: Paid or free
   verbose_name: null
   is_dttm: false
@@ -284,8 +258,7 @@ columns:
   expression: "CASE WHEN net_earnings = 0 THEN 'Free'\n  ELSE 'Paid'\nEND"
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: Day of week created
   verbose_name: null
   is_dttm: false
@@ -297,8 +270,7 @@ columns:
   expression: formatDateTime(purchase_time, '%u')
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: Hour of day created
   verbose_name: null
   is_dttm: false
@@ -310,8 +282,7 @@ columns:
   expression: formatDateTime(purchase_time, '%H')
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: Date of purchase
   verbose_name: null
   is_dttm: false
@@ -323,8 +294,7 @@ columns:
   expression: formatDateTime(purchase_time, '%Y-%m-%d')
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: Monday of week created
   verbose_name: null
   is_dttm: false
@@ -336,8 +306,7 @@ columns:
   expression: toDate(toMonday(purchase_time))
   description: null
   python_date_format: ''
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: access_key
   verbose_name: Access key
   is_dttm: false
@@ -349,8 +318,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: discount_code
   verbose_name: Discount code
   is_dttm: false
@@ -362,8 +330,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: ticket_type
   verbose_name: Ticket type
   is_dttm: false
@@ -375,8 +342,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: voided_taxes_total
   verbose_name: null
   is_dttm: null
@@ -388,8 +354,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: voided_vat_included
   verbose_name: null
   is_dttm: null
@@ -401,8 +366,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: voided_fees_total
   verbose_name: null
   is_dttm: null
@@ -414,8 +378,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: voided_commission_included
   verbose_name: null
   is_dttm: null
@@ -427,8 +390,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: taxes_total
   verbose_name: null
   is_dttm: null
@@ -440,8 +402,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: vat_included
   verbose_name: null
   is_dttm: null
@@ -453,8 +414,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: fees_total
   verbose_name: null
   is_dttm: null
@@ -466,8 +426,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: net_earnings
   verbose_name: null
   is_dttm: null
@@ -479,8 +438,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: commission_included
   verbose_name: null
   is_dttm: null
@@ -492,8 +450,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: voided_discount
   verbose_name: null
   is_dttm: null
@@ -505,8 +462,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: voided_price
   verbose_name: null
   is_dttm: null
@@ -518,8 +474,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: discount
   verbose_name: null
   is_dttm: null
@@ -531,8 +486,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: price
   verbose_name: null
   is_dttm: null
@@ -544,8 +498,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: redemption_balance
   verbose_name: null
   is_dttm: false
@@ -557,8 +510,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: timeslot_start_time
   verbose_name: null
   is_dttm: true
@@ -570,8 +522,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: timeslot_end_time
   verbose_name: null
   is_dttm: true
@@ -583,8 +534,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: purchase_time
   verbose_name: null
   is_dttm: true
@@ -596,8 +546,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: last_scanner_device_id
   verbose_name: null
   is_dttm: false
@@ -609,8 +558,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: channel_partner_id
   verbose_name: null
   is_dttm: false
@@ -622,8 +570,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: channel_partner_reseller
   verbose_name: null
   is_dttm: false
@@ -635,8 +582,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: payment_type_details
   verbose_name: null
   is_dttm: false
@@ -648,8 +594,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: purchase_device_id
   verbose_name: null
   is_dttm: false
@@ -661,8 +606,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: card_brand
   verbose_name: null
   is_dttm: false
@@ -674,8 +618,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: ticket_category
   verbose_name: null
   is_dttm: false
@@ -687,8 +630,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: payment_processor
   verbose_name: null
   is_dttm: false
@@ -700,8 +642,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: ticket_status
   verbose_name: null
   is_dttm: false
@@ -713,8 +654,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: order_status
   verbose_name: null
   is_dttm: false
@@ -726,8 +666,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: payment_type
   verbose_name: null
   is_dttm: false
@@ -739,8 +678,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: order_id
   verbose_name: null
   is_dttm: false
@@ -752,8 +690,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: event_id
   verbose_name: null
   is_dttm: false
@@ -765,8 +702,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: timeslot_id
   verbose_name: null
   is_dttm: false
@@ -778,8 +714,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: host_id
   verbose_name: null
   is_dttm: false
@@ -791,8 +726,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: referral
   verbose_name: null
   is_dttm: false
@@ -804,8 +738,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: currency
   verbose_name: null
   is_dttm: false
@@ -817,8 +750,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: id
   verbose_name: null
   is_dttm: false
@@ -830,7 +762,6 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 version: 1.0.0
-database_uuid: 2bcd6f44-64a1-46f9-ab11-f6572aded45f
+database_uuid: 9959a820-3653-435b-9b67-bb25bdf82933
