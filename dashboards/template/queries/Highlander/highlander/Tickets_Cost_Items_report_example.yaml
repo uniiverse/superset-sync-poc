@@ -1,0 +1,71 @@
+schema: highlander
+label: Tickets (Cost Items) report example
+description: null
+sql: "SELECT\r\n  cicb.id as \"Ticket ID\",\r\n  cicb.ticket_id as \"Order ID\",\r\
+  \n  cicb.created_at as \"Date of order\",\r\n  FROM_UNIXTIME(e.start_stamp) as \"\
+  Date attending\",\r\n  cicb.first_name as \"First name\",\r\n  cicb.last_name as\
+  \ \"Last name\",\r\n  cicb.email as \"Email\",\r\n  cicb.name as \"Ticket type(s)\"\
+  ,\r\n  option_name as \"Option type(s)\",\r\n  l.title as \"Listing name\",\r\n\
+  \  cicb.ticket_state as \"Payment status\",\r\n  cicb.state as \"Ticket status\"\
+  ,\r\n  multiIf(\r\n    cicb.provider = 'stripe', 'Universe payments', \r\n    cicb.provider\
+  \ = 'offline', 'Offline payment', \r\n    cicb.provider = 'stripe_connect', 'Stripe\
+  \ connect', cicb.provider\r\n  ) as \"Payment processor\",\r\n  cicb.provider_source_type\
+  \ as \"Payment Type\",\r\n  cicb.provider_source_client as \"Payment Type Details\"\
+  ,\r\n  cicb.last_four_digits as \"Last 4 digits\",\r\n  cicb.card_brand as \"Card\
+  \ brand\",\r\n  cicb.partially_refunded as \"Partially refunded\",\r\n  cicb.fully_refunded\
+  \ as \"Fully refunded\",\r\n  u.do_not_sell as \"Do not sell information\",\r\n\
+  \  cicb.listing_url as \"Listing URL\",\r\n  cicb.base_price as \"Ticket Sales\"\
+  ,\r\n  cicb.base_discount as \"Disounts\",\r\n  CAST(cicb.base_fees_total as Decimal(10,\
+  \ 2)) as \"Earnings from extra charges\",\r\n  CAST(cicb.base_taxes_total as Decimal(10,\
+  \ 2)) as \"Total taxes collected\",\r\n  CAST(cicb.base_commission as Decimal(10,\
+  \ 2)) as \"Universe service charge, passed to buyer\",\r\n  cicb.base_commission_included\
+  \ as \"Universe service charge, included in price\",\r\n  cicb.base_vat as \"Tax\
+  \ on Universe service charge, passed to buyer\",\r\n  cicb.base_vat_included as\
+  \ \"Tax on Universe service charge, included in price\",\r\n  cicb.base_host_vat\
+  \ as \"Tax on Universe service charge, passed to buyer, host_remitted\",\r\n  cicb.base_host_vat_included\
+  \ as \"Tax on Universe service charge, included in price, host_remitted\",\r\n \
+  \ cicb.base_voided_price as \"Ticket sales (refunded)\",\r\n  cicb.base_voided_discount\
+  \ as \"Discounts (refunded)\",\r\n  CAST(cicb.base_voided_fees_total as Decimal(10,\
+  \ 2)) as \"Earnings from extra charges (refunded)\",\r\n  CAST(cicb.base_voided_taxes_total\
+  \ as Decimal(10, 2)) as \"Total taxes collected (refunded)\",\r\n  CAST(cicb.base_voided_commission\
+  \ as Decimal(10, 2)) as \"Universe service charge, passed to buyer (refunded)\"\
+  ,\r\n  cicb.base_voided_commission_included as \"Universe service charge, included\
+  \ in price (refunded)\",\r\n  cicb.base_voided_vat as \"Tax on Universe service\
+  \ charge, passed to buyer (refunded)\",\r\n  cicb.base_voided_vat_included as \"\
+  Tax on Universe service charge, included in price (refunded)\",\r\n  cicb.base_voided_host_vat\
+  \ as \"Tax on Universe service charge, passed to buyer, host remitted (refunded)\"\
+  ,\r\n  cicb.base_voided_host_vat_included as \"Tax on Universe service charge, included\
+  \ in price, host remitted (refunded)\",\r\n  if(cb.status = 'lost', 0, CAST(net_earnings\
+  \ as Decimal(10, 2))) as \"Net earnings\",\r\n  cicb.base_currency as \"Settlement\
+  \ currency\",\r\n  ak.key as \"Access Key applied\",\r\n  cicb.discount_code as\
+  \ \"Discount Code\",\r\n  cicb.token as \"Applied QR code\",\r\n  cicb.upgraded_to_id\
+  \ as \"Upgraded to\",\r\n  cicb.refunded_at as \"Refunded At\"\r\nFROM (\r\n  WITH\r\
+  \n  host_fields.name AS hostFieldNames,\r\n  host_fields.value AS hostFieldValues,\r\
+  \n  taxes.name AS taxesName,\r\n  taxes.amount AS taxesAmount,\r\n  fees.name AS\
+  \ feesName,\r\n  fees.amount AS feesAmount,\r\n  CAST((hostFieldNames, hostFieldValues),\
+  \ 'Map(String, String)') as hostFieldsMap,\r\n  CAST((taxesName, taxesAmount), 'Map(String,\
+  \ String)') as taxesMap,\r\n  CAST((feesName, feesAmount), 'Map(String, String)')\
+  \ as feesMap\r\n  select\r\n    id,\r\n    listing_id,\r\n    event_id,\r\n    host_id,\r\
+  \n    ticket_id,\r\n    listing_url,\r\n    base_price,\r\n    base_discount,\r\n\
+  \    base_fees_total,\r\n    base_taxes_total,\r\n    base_commission,\r\n    base_commission_included,\r\
+  \n    base_vat,\r\n    base_vat_included,\r\n    base_host_vat,\r\n    base_host_vat_included,\r\
+  \n    base_voided_price,\r\n    base_voided_discount,\r\n    base_voided_fees_total,\r\
+  \n    base_voided_taxes_total,\r\n    base_voided_commission,\r\n    base_voided_commission_included,\r\
+  \n    base_voided_vat,\r\n    base_voided_vat_included,\r\n    base_voided_host_vat,\r\
+  \n    base_voided_host_vat_included,\r\n    net_earnings,\r\n    base_currency,\r\
+  \n    discount_code,\r\n    token,\r\n    refunded_at,\r\n    upgraded_to_id,\r\n\
+  \    created_at,\r\n    first_name,\r\n    last_name,\r\n    email, \r\n    name,\r\
+  \n    option_name,\r\n    ticket_state,\r\n    state,\r\n    provider,\r\n    provider_source_type,\r\
+  \n    provider_source_client,\r\n    last_four_digits,\r\n    card_brand,\r\n  \
+  \  partially_refunded,\r\n    fully_refunded,\r\n    rate_type,\r\n    hostFieldsMap['First\
+  \ Name'] AS \"First Name\",\r\n    hostFieldsMap['Last Name'] AS \"Last Name\",\r\
+  \n    hostFieldsMap['Email'] AS \"Email\"\r\n    FROM cost_item_cost_breakdowns_final\r\
+  \n) as cicb\r\nleft join listings_final l on cicb.listing_id = l.id\r\nleft join\
+  \ events_final e on cicb.event_id = e.id\r\nleft join users_final u on cicb.host_id\
+  \ = u.id\r\nleft join access_key_redemptions_with_access_key_final ak on cicb.id\
+  \ = ak.cost_item_id\r\nleft join chargebacks_with_ticket_id_final cb on cicb.ticket_id\
+  \ = cb.ticket_id\r\nwhere listing_id = '623a2af378369600266ecf57'\r\nand cicb.rate_type\
+  \ != 'AddOnRate';"
+uuid: a71ea43f-1672-4b08-85cf-cddefff4a49a
+version: 1.0.0
+database_uuid: e3d17d8c-32d1-412f-b206-86332bd4a2fa
