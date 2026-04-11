@@ -1,0 +1,59 @@
+slice_name: 'net sales breakdown pivot (V2 Testing) '
+description: null
+certified_by: null
+certification_details: null
+viz_type: pivot_table_v2
+params:
+  datasource: 32__table
+  viz_type: pivot_table_v2
+  slice_id: 145
+  granularity_sqla: purchase_time
+  time_grain_sqla: P1D
+  time_range: No filter
+  groupbyColumns: []
+  groupbyRows: []
+  metrics:
+  - Ticket sales
+  - Add-on sales
+  - Cash sales
+  - Additional fees
+  - Collected taxes
+  - Total discounts
+  - Service charge, included in price
+  - Tax on Universe service fee
+  metricsLayout: ROWS
+  adhoc_filters:
+  - expressionType: SQL
+    sqlExpression: (status IN ('open', 'won') OR status IS NULL)
+    clause: WHERE
+    subject: null
+    operator: null
+    comparator: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_796mcupak3_zdnszteqcvi
+  row_limit: 50000
+  order_desc: true
+  aggregateFunction: Sum
+  valueFormat: $,.2f
+  date_format: smart_date
+  rowOrder: key_a_to_z
+  colOrder: key_a_to_z
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards:
+  - 17
+query_context: '{"datasource":{"id":32,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"purchase_time","filters":[],"extras":{"time_grain_sqla":"P1D","having":"","where":"((status
+  IN (''open'', ''won'') OR status IS NULL))"},"applied_time_extras":{},"columns":[],"metrics":["Ticket
+  sales","Add-on sales","Cash sales","Additional fees","Collected taxes","Total discounts","Service
+  charge, included in price","Tax on Universe service fee"],"orderby":[["Ticket sales",false]],"annotation_layers":[],"row_limit":50000,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"32__table","viz_type":"pivot_table_v2","slice_id":145,"granularity_sqla":"purchase_time","time_grain_sqla":"P1D","time_range":"No
+  filter","groupbyColumns":[],"groupbyRows":[],"metrics":["Ticket sales","Add-on sales","Cash
+  sales","Additional fees","Collected taxes","Total discounts","Service charge, included
+  in price","Tax on Universe service fee"],"metricsLayout":"ROWS","adhoc_filters":[{"expressionType":"SQL","sqlExpression":"(status
+  IN (''open'', ''won'') OR status IS NULL)","clause":"WHERE","subject":null,"operator":null,"comparator":null,"isExtra":false,"isNew":false,"datasourceWarning":false,"filterOptionName":"filter_796mcupak3_zdnszteqcvi"}],"row_limit":50000,"order_desc":true,"aggregateFunction":"Sum","valueFormat":"$,.2f","date_format":"smart_date","rowOrder":"key_a_to_z","colOrder":"key_a_to_z","conditional_formatting":[],"extra_form_data":{},"dashboards":[17],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 8d64763a-b300-4b1d-9f91-59b0dac91939
+version: 1.0.0
+dataset_uuid: f8862615-3a2a-43f1-99b4-19ad102bec0a
