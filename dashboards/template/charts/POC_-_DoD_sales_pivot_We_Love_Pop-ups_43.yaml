@@ -1,0 +1,51 @@
+slice_name: __POC - DoD sales pivot (We Love Pop-ups)
+description: null
+certified_by: null
+certification_details: null
+viz_type: pivot_table_v2
+params:
+  datasource: 29__table
+  viz_type: pivot_table_v2
+  slice_id: 170
+  granularity_sqla: purchase_time
+  time_grain_sqla: P1D
+  time_range: No filter
+  groupbyColumns:
+  - Date of purchase
+  groupbyRows:
+  - Event Date
+  metrics:
+  - Net earnings
+  metricsLayout: COLUMNS
+  adhoc_filters:
+  - clause: WHERE
+    comparator: '0'
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_4twgyuwzlyg_9m6oqh4bx3b
+    isExtra: false
+    isNew: false
+    operator: '>'
+    operatorId: GREATER_THAN
+    sqlExpression: null
+    subject: net_earnings
+  row_limit: 10000
+  order_desc: true
+  aggregateFunction: Sum
+  rowTotals: true
+  colTotals: false
+  valueFormat: SMART_NUMBER
+  date_format: smart_date
+  rowOrder: key_a_to_z
+  colOrder: key_a_to_z
+  extra_form_data: {}
+  dashboards: []
+query_context: '{"datasource":{"id":29,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"purchase_time","filters":[{"col":"net_earnings","op":">","val":"0"}],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":["Date
+  of purchase","Event Date"],"metrics":["Net earnings"],"orderby":[["Net earnings",false]],"annotation_layers":[],"row_limit":10000,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"29__table","viz_type":"pivot_table_v2","slice_id":170,"granularity_sqla":"purchase_time","time_grain_sqla":"P1D","time_range":"No
+  filter","groupbyColumns":["Date of purchase"],"groupbyRows":["Event Date"],"metrics":["Net
+  earnings"],"metricsLayout":"COLUMNS","adhoc_filters":[{"clause":"WHERE","comparator":"0","datasourceWarning":false,"expressionType":"SIMPLE","filterOptionName":"filter_4twgyuwzlyg_9m6oqh4bx3b","isExtra":false,"isNew":false,"operator":">","operatorId":"GREATER_THAN","sqlExpression":null,"subject":"net_earnings"}],"row_limit":10000,"order_desc":true,"aggregateFunction":"Sum","rowTotals":true,"colTotals":false,"valueFormat":"SMART_NUMBER","date_format":"smart_date","rowOrder":"key_a_to_z","colOrder":"key_a_to_z","extra_form_data":{},"dashboards":[],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: ac886ab4-faf4-43fa-928e-2e257d9ca62c
+version: 1.0.0
+dataset_uuid: 4dffd900-a2d4-45ad-a8c1-4b68d34b9447
