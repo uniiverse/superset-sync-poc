@@ -1,0 +1,43 @@
+slice_name: Sales breakdown by ticket
+description: null
+certified_by: null
+certification_details: null
+viz_type: pivot_table
+params:
+  datasource: 29__table
+  viz_type: pivot_table
+  slice_id: 109
+  granularity_sqla: purchase_time
+  time_grain_sqla: P1D
+  time_range: No filter
+  metrics:
+  - Net earnings
+  - Quantity sold
+  adhoc_filters: []
+  groupby:
+  - Event Date
+  - 'Start time '
+  - event_name
+  - ticket_type
+  columns: []
+  row_limit: 50000
+  timeseries_limit_metric: Net earnings
+  order_desc: true
+  pandas_aggfunc: sum
+  pivot_margins: true
+  number_format: SMART_NUMBER
+  date_format: smart_date
+  extra_form_data: {}
+  dashboards: []
+query_context: '{"datasource":{"id":29,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"purchase_time","filters":[],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":["Event
+  Date","Start time ","event_name","ticket_type"],"metrics":["Net earnings","Quantity
+  sold"],"annotation_layers":[],"row_limit":50000,"series_limit":0,"series_limit_metric":"Net
+  earnings","order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"29__table","viz_type":"pivot_table","slice_id":109,"granularity_sqla":"purchase_time","time_grain_sqla":"P1D","time_range":"No
+  filter","metrics":["Net earnings","Quantity sold"],"adhoc_filters":[],"groupby":["Event
+  Date","Start time ","event_name","ticket_type"],"columns":[],"row_limit":50000,"timeseries_limit_metric":"Net
+  earnings","order_desc":true,"pandas_aggfunc":"sum","pivot_margins":true,"number_format":"SMART_NUMBER","date_format":"smart_date","extra_form_data":{},"dashboards":[],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 06f75c71-bda8-4d37-ab7d-07b387e6fc25
+version: 1.0.0
+dataset_uuid: 4dffd900-a2d4-45ad-a8c1-4b68d34b9447
