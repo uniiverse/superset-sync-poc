@@ -1,0 +1,95 @@
+slice_name: Access keys
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 30__table
+  viz_type: table
+  slice_id: 90
+  granularity_sqla: purchase_time
+  time_grain_sqla: P1D
+  time_range: No filter
+  query_mode: aggregate
+  groupby:
+  - access_key
+  metrics:
+  - Quantity sold
+  all_columns: []
+  percent_metrics: []
+  adhoc_filters:
+  - expressionType: SIMPLE
+    subject: access_key
+    operator: IS NOT NULL
+    operatorId: IS_NOT_NULL
+    comparator: null
+    clause: WHERE
+    sqlExpression: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_24mb09fq22r_hxi9gvx6tm5
+  - expressionType: SIMPLE
+    subject: access_key
+    operator: '!='
+    operatorId: NOT_EQUALS
+    comparator: ''
+    clause: WHERE
+    sqlExpression: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_zo8465rlbr_o5zp9wkz4br
+  order_by_cols: []
+  row_limit: 50000
+  server_page_length: 10
+  order_desc: true
+  table_timestamp_format: smart_date
+  page_length: 0
+  include_search: true
+  show_cell_bars: true
+  color_pn: true
+  column_config:
+    Quantity sold:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',.2f'
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards:
+  - 35
+  - 39
+  - 25
+  - 24
+  - 17
+  - 26
+  - 19
+  - 21
+  - 30
+  - 34
+  - 20
+  - 36
+  - 42
+  - 37
+  - 31
+  - 38
+  - 33
+  - 27
+  - 32
+  - 40
+  - 41
+  - 14
+  - 43
+  - 29
+  - 18
+  - 22
+query_context: '{"datasource":{"id":30,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"purchase_time","filters":[{"col":"access_key","op":"IS NOT
+  NULL"},{"col":"access_key","op":"!=","val":""}],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":["access_key"],"metrics":["Quantity
+  sold"],"orderby":[["Quantity sold",false]],"annotation_layers":[],"row_limit":50000,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[]}],"form_data":{"datasource":"30__table","viz_type":"table","slice_id":90,"granularity_sqla":"purchase_time","time_grain_sqla":"P1D","time_range":"No
+  filter","query_mode":"aggregate","groupby":["access_key"],"metrics":["Quantity sold"],"all_columns":[],"percent_metrics":[],"adhoc_filters":[{"expressionType":"SIMPLE","subject":"access_key","operator":"IS
+  NOT NULL","operatorId":"IS_NOT_NULL","comparator":null,"clause":"WHERE","sqlExpression":null,"isExtra":false,"isNew":false,"datasourceWarning":false,"filterOptionName":"filter_24mb09fq22r_hxi9gvx6tm5"},{"expressionType":"SIMPLE","subject":"access_key","operator":"!=","operatorId":"NOT_EQUALS","comparator":"","clause":"WHERE","sqlExpression":null,"isExtra":false,"isNew":false,"datasourceWarning":false,"filterOptionName":"filter_zo8465rlbr_o5zp9wkz4br"}],"order_by_cols":[],"row_limit":50000,"server_page_length":10,"order_desc":true,"table_timestamp_format":"smart_date","page_length":0,"include_search":true,"show_cell_bars":true,"color_pn":true,"column_config":{"Quantity
+  sold":{"d3NumberFormat":",d","d3SmallNumberFormat":",.2f"}},"conditional_formatting":[],"extra_form_data":{},"dashboards":[35,39,25,24,17,26,19,21,30,34,20,36,42,37,31,38,33,27,32,40,41,14,43,29,18,22],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 8bd4d7c7-f03f-49b9-937c-011f1aae71dc
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc
