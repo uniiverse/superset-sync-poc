@@ -1,0 +1,58 @@
+slice_name: Accumulated tickets by type
+description: null
+certified_by: null
+certification_details: null
+viz_type: echarts_timeseries_line
+params:
+  datasource: 30__table
+  viz_type: echarts_timeseries_line
+  slice_id: 169
+  granularity_sqla: purchase_time
+  time_grain_sqla: P1W
+  time_range: No filter
+  metrics:
+  - Quantity sold
+  groupby:
+  - ticket_type
+  adhoc_filters: []
+  order_desc: true
+  row_limit: 50000
+  truncate_metric: true
+  show_empty_columns: true
+  rolling_type: cumsum
+  comparison_type: values
+  annotation_layers: []
+  forecastPeriods: 10
+  forecastInterval: 0.8
+  x_axis_title_margin: 15
+  y_axis_title_margin: 15
+  y_axis_title_position: Left
+  color_scheme: supersetColors
+  seriesType: line
+  only_total: true
+  opacity: 0.2
+  markerEnabled: true
+  markerSize: 6
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  x_axis_time_format: smart_date
+  rich_tooltip: true
+  tooltipTimeFormat: smart_date
+  y_axis_format: ',d'
+  y_axis_bounds:
+  - null
+  - null
+  extra_form_data: {}
+  dashboards:
+  - 17
+query_context: '{"datasource":{"id":30,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"purchase_time","filters":[],"extras":{"time_grain_sqla":"P1W","having":"","where":""},"applied_time_extras":{},"columns":["ticket_type"],"metrics":["Quantity
+  sold"],"orderby":[["Quantity sold",false]],"annotation_layers":[],"row_limit":50000,"series_columns":["ticket_type"],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"is_timeseries":true,"time_offsets":[],"post_processing":[{"operation":"pivot","options":{"index":["__timestamp"],"columns":["ticket_type"],"aggregates":{"Quantity
+  sold":{"operator":"mean"}},"drop_missing_columns":false}},{"operation":"cum","options":{"operator":"sum","columns":{"Quantity
+  sold":"Quantity sold"}}},{"operation":"rename","options":{"columns":{"Quantity sold":null},"level":0,"inplace":true}},{"operation":"flatten"}]}],"form_data":{"datasource":"30__table","viz_type":"echarts_timeseries_line","slice_id":169,"granularity_sqla":"purchase_time","time_grain_sqla":"P1W","time_range":"No
+  filter","metrics":["Quantity sold"],"groupby":["ticket_type"],"adhoc_filters":[],"order_desc":true,"row_limit":50000,"truncate_metric":true,"show_empty_columns":true,"rolling_type":"cumsum","comparison_type":"values","annotation_layers":[],"forecastPeriods":10,"forecastInterval":0.8,"x_axis_title_margin":15,"y_axis_title_margin":15,"y_axis_title_position":"Left","color_scheme":"supersetColors","seriesType":"line","only_total":true,"opacity":0.2,"markerEnabled":true,"markerSize":6,"show_legend":true,"legendType":"scroll","legendOrientation":"top","x_axis_time_format":"smart_date","rich_tooltip":true,"tooltipTimeFormat":"smart_date","y_axis_format":",d","y_axis_bounds":[null,null],"extra_form_data":{},"dashboards":[17],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 878bf138-6377-403f-9535-725385afb1be
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc
