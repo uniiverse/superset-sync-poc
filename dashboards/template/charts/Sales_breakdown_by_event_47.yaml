@@ -1,0 +1,73 @@
+slice_name: Sales breakdown by event
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 29__table
+  viz_type: table
+  slice_id: 108
+  granularity_sqla: purchase_time
+  time_grain_sqla: P1D
+  time_range: No filter
+  query_mode: aggregate
+  groupby:
+  - event_name
+  - event_id
+  metrics:
+  - Net earnings
+  - Quantity sold
+  all_columns: []
+  percent_metrics: []
+  adhoc_filters:
+  - expressionType: SIMPLE
+    subject: order_status
+    operator: '!='
+    operatorId: NOT_EQUALS
+    comparator: expired
+    clause: WHERE
+    sqlExpression: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_ozo5ayscpl_2uik9ya55m5
+  order_by_cols: []
+  row_limit: 50000
+  server_page_length: 10
+  order_desc: true
+  show_totals: false
+  table_timestamp_format: smart_date
+  show_cell_bars: true
+  color_pn: true
+  column_config:
+    Net earnings:
+      d3NumberFormat: ',.2f'
+    Quantity sold:
+      d3NumberFormat: ',d'
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards:
+  - 25
+  - 24
+  - 17
+  - 26
+  - 29
+  - 19
+  - 21
+  - 30
+  - 34
+  - 20
+  - 38
+  - 14
+  - 18
+  - 22
+query_context: '{"datasource":{"id":29,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"purchase_time","filters":[{"col":"order_status","op":"!=","val":"expired"}],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":["event_name","event_id"],"metrics":["Net
+  earnings","Quantity sold"],"orderby":[["Net earnings",false]],"annotation_layers":[],"row_limit":50000,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[]}],"form_data":{"datasource":"29__table","viz_type":"table","slice_id":108,"granularity_sqla":"purchase_time","time_grain_sqla":"P1D","time_range":"No
+  filter","query_mode":"aggregate","groupby":["event_name","event_id"],"metrics":["Net
+  earnings","Quantity sold"],"all_columns":[],"percent_metrics":[],"adhoc_filters":[{"expressionType":"SIMPLE","subject":"order_status","operator":"!=","operatorId":"NOT_EQUALS","comparator":"expired","clause":"WHERE","sqlExpression":null,"isExtra":false,"isNew":false,"datasourceWarning":false,"filterOptionName":"filter_ozo5ayscpl_2uik9ya55m5"}],"order_by_cols":[],"row_limit":50000,"server_page_length":10,"order_desc":true,"show_totals":false,"table_timestamp_format":"smart_date","show_cell_bars":true,"color_pn":true,"column_config":{"Net
+  earnings":{"d3NumberFormat":",.2f"},"Quantity sold":{"d3NumberFormat":",d"}},"conditional_formatting":[],"extra_form_data":{},"dashboards":[25,24,17,26,29,19,21,30,34,20,38,14,18,22],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: df4a2889-7583-44a7-beab-660daeba370b
+version: 1.0.0
+dataset_uuid: 4dffd900-a2d4-45ad-a8c1-4b68d34b9447
