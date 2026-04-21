@@ -1,0 +1,193 @@
+table_name: Event Dash - Ticket Sales by Timeslot (Clem)
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: highlander
+sql: "SELECT\n    e.start_date                                                   \
+  \                         AS event_date,\n    formatDateTime(toDateTime(e.start_stamp),\
+  \ '%I:%i %p')                                  AS timeslot,\n    c.name        \
+  \                                                                          AS ticket_type,\n\
+  \    r.capacity                                                                \
+  \              AS ticket_capacity,\n    round(\n        SUM(c.base_price - c.base_voided_price)\
+  \ / NULLIF(countIf(c.state IN ('paid', 'ended', 'closed')), 0),\n        2\n   \
+  \ )                                                                            \
+  \           AS avg_price_per_ticket,\n    countIf(c.state IN ('paid', 'ended', 'closed'))\
+  \                                        AS quantity_sold,\n    r.capacity - countIf(c.state\
+  \ IN ('paid', 'ended', 'closed'))                           AS quantity_remaining,\n\
+  \    round(SUM(c.base_price - c.base_voided_price), 2)                         \
+  \             AS ticket_revenue,\n    round(SUM(c.base_commission_included - c.base_voided_commission_included),\
+  \ 2)           AS service_charge,\n    round(SUM(c.base_fees_total - c.base_voided_fees_total),\
+  \ 2)                            AS additional_fees,\n    round(SUM(c.base_taxes_total\
+  \ - c.base_voided_taxes_total), 2)                          AS collected_taxes,\n\
+  \    round(SUM(c.net_earnings), 2)                                             \
+  \             AS net_earnings\nFROM cost_item_cost_breakdowns_by_host_final c\n\
+  LEFT JOIN listings_final l      ON c.listing_id = l.id\nLEFT JOIN events_final e\
+  \        ON c.event_id   = e.id\nLEFT JOIN rates_by_host_final r ON r.id       \
+  \  = c.rate_id\nWHERE\n    c.listing_id = '6850270235e0d90042a0bac6'\n    AND c.rate_type\
+  \ != 'AddOnRate'\n    AND c.state IN ('paid', 'ended', 'closed')\n    AND (c.deleted\
+  \ IS NULL OR c.deleted = 0)\nGROUP BY\n    e.start_date,\n    e.start_stamp,\n \
+  \   c.name,\n    r.capacity\nWITH TOTALS\nORDER BY\n    e.start_stamp,\n    c.name"
+params: null
+template_params: null
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: 21fd613f-7b93-4b36-a060-670bd006463c
+metrics:
+- metric_name: count
+  verbose_name: null
+  metric_type: null
+  expression: count(*)
+  description: null
+  d3format: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: avg_price_per_ticket
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(FLOAT64)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: additional_fees
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(FLOAT64)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: collected_taxes
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(FLOAT64)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: service_charge
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(FLOAT64)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: net_earnings
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(FLOAT64)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: ticket_revenue
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(FLOAT64)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: ticket_capacity
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(INT64)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: quantity_remaining
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(INT64)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: event_date
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: ticket_type
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: timeslot
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: quantity_sold
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UINT64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 9959a820-3653-435b-9b67-bb25bdf82933
