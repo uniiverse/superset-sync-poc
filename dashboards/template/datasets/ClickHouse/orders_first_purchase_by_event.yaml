@@ -1,10 +1,9 @@
 table_name: orders_first_purchase_by_event
-main_dttm_col: first_purchase_time
+main_dttm_col: null
 description: null
 default_endpoint: null
 offset: 0
 cache_timeout: null
-catalog: null
 schema: highlander
 sql: "SELECT\n  order_id,\n  event_id,\n  host_id,\n  currency,\n  timeslot_start_time,\n\
   \  timeslot_end_time,\n  ticket_category,\n  min(toDateTime(purchase_time)) AS purchase_time\n\
@@ -13,20 +12,17 @@ sql: "SELECT\n  order_id,\n  event_id,\n  host_id,\n  currency,\n  timeslot_star
   \ currency, timeslot_start_time, timeslot_end_time, ticket_category"
 params: null
 template_params: null
-filter_select_enabled: true
+filter_select_enabled: false
 fetch_values_predicate: null
 extra: null
-normalize_columns: false
-always_filter_main_dttm: false
-uuid: 3c7fc78e-74d3-4402-b8ef-741a74bdb4f4
+uuid: f60073c5-0eba-490b-853d-a28f306409b1
 metrics:
 - metric_name: count
-  verbose_name: COUNT(*)
-  metric_type: count
-  expression: COUNT(*)
+  verbose_name: null
+  metric_type: null
+  expression: count(*)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -35,7 +31,19 @@ columns:
   verbose_name: null
   is_dttm: true
   is_active: true
-  type: Nullable(DateTime)
+  type: NULLABLE(DATETIME)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: timeslot_end_time
+  verbose_name: null
+  is_dttm: true
+  is_active: true
+  type: NULLABLE(DATETIME)
   advanced_data_type: null
   groupby: true
   filterable: true
@@ -47,7 +55,7 @@ columns:
   verbose_name: null
   is_dttm: true
   is_active: true
-  type: Nullable(DateTime)
+  type: NULLABLE(DATETIME)
   advanced_data_type: null
   groupby: true
   filterable: true
@@ -59,7 +67,7 @@ columns:
   verbose_name: null
   is_dttm: false
   is_active: true
-  type: Nullable(String)
+  type: NULLABLE(STRING)
   advanced_data_type: null
   groupby: true
   filterable: true
@@ -71,7 +79,7 @@ columns:
   verbose_name: null
   is_dttm: false
   is_active: true
-  type: Nullable(String)
+  type: NULLABLE(STRING)
   advanced_data_type: null
   groupby: true
   filterable: true
@@ -83,7 +91,7 @@ columns:
   verbose_name: null
   is_dttm: false
   is_active: true
-  type: Nullable(String)
+  type: NULLABLE(STRING)
   advanced_data_type: null
   groupby: true
   filterable: true
@@ -95,7 +103,7 @@ columns:
   verbose_name: null
   is_dttm: false
   is_active: true
-  type: Nullable(String)
+  type: NULLABLE(STRING)
   advanced_data_type: null
   groupby: true
   filterable: true
@@ -107,7 +115,7 @@ columns:
   verbose_name: null
   is_dttm: false
   is_active: true
-  type: Nullable(String)
+  type: NULLABLE(STRING)
   advanced_data_type: null
   groupby: true
   filterable: true
@@ -116,4 +124,4 @@ columns:
   python_date_format: null
   extra: {}
 version: 1.0.0
-database_uuid: 2bcd6f44-64a1-46f9-ab11-f6572aded45f
+database_uuid: 9959a820-3653-435b-9b67-bb25bdf82933
