@@ -1,0 +1,56 @@
+slice_name: Add-ons Breakdown
+description: null
+certified_by: null
+certification_details: null
+viz_type: pivot_table_v2
+params:
+  datasource: 34__table
+  viz_type: pivot_table_v2
+  time_grain_sqla: P1D
+  time_range: No filter
+  groupbyColumns: []
+  groupbyRows:
+  - Event date
+  - Timeslot
+  - Add-on name
+  - Add-on option
+  - Face value
+  - Quantity sold
+  metrics:
+  - expressionType: SIMPLE
+    column:
+      column_name: Revenue
+      groupby: true
+      is_dttm: false
+      name: Revenue
+      type: NULLABLE(FLOAT64)
+      type_generic: 0
+    aggregate: SUM
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: true
+    label: Net earnings
+    optionName: metric_wqsh2nqv8a_y3cd5le1jqa
+  metricsLayout: COLUMNS
+  adhoc_filters: []
+  row_limit: 1000
+  order_desc: true
+  aggregateFunction: Sum
+  valueFormat: SMART_NUMBER
+  date_format: smart_date
+  rowOrder: key_a_to_z
+  colOrder: key_a_to_z
+  extra_form_data: {}
+  dashboards: []
+query_context: '{"datasource":{"id":34,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","filters":[],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":["Event
+  date","Timeslot","Add-on name","Add-on option","Face value","Quantity sold"],"metrics":[{"expressionType":"SIMPLE","column":{"column_name":"Revenue","groupby":true,"is_dttm":false,"name":"Revenue","type":"NULLABLE(FLOAT64)","type_generic":0},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":true,"label":"Net
+  earnings","optionName":"metric_wqsh2nqv8a_y3cd5le1jqa"}],"orderby":[[{"expressionType":"SIMPLE","column":{"column_name":"Revenue","groupby":true,"is_dttm":false,"name":"Revenue","type":"NULLABLE(FLOAT64)","type_generic":0},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":true,"label":"Net
+  earnings","optionName":"metric_wqsh2nqv8a_y3cd5le1jqa"},false]],"annotation_layers":[],"row_limit":1000,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"34__table","viz_type":"pivot_table_v2","time_grain_sqla":"P1D","time_range":"No
+  filter","groupbyColumns":[],"groupbyRows":["Event date","Timeslot","Add-on name","Add-on
+  option","Face value","Quantity sold"],"metrics":[{"expressionType":"SIMPLE","column":{"column_name":"Revenue","groupby":true,"is_dttm":false,"name":"Revenue","type":"NULLABLE(FLOAT64)","type_generic":0},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":true,"label":"Net
+  earnings","optionName":"metric_wqsh2nqv8a_y3cd5le1jqa"}],"metricsLayout":"COLUMNS","adhoc_filters":[],"row_limit":1000,"order_desc":true,"aggregateFunction":"Sum","valueFormat":"SMART_NUMBER","date_format":"smart_date","rowOrder":"key_a_to_z","colOrder":"key_a_to_z","extra_form_data":{},"dashboards":[],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: de64fe06-81a4-40f8-adfc-1acf0ac531d4
+version: 1.0.0
+dataset_uuid: 933a0128-d8d9-47cb-b56d-a9ea2a59633b
