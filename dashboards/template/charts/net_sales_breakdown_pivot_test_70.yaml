@@ -1,0 +1,124 @@
+slice_name: net sales breakdown pivot test
+description: null
+certified_by: null
+certification_details: null
+viz_type: pivot_table_v2
+params:
+  datasource: 6__table
+  viz_type: pivot_table_v2
+  slice_id: 70
+  granularity_sqla: purchase_time
+  time_grain_sqla: P1D
+  time_range: No filter
+  groupbyColumns: []
+  groupbyRows: []
+  metrics:
+  - Ticket sales
+  - Add-on sales
+  - Offline sales
+  - Additional fees
+  - Collected taxes
+  - Total discounts
+  - Service charge, included in price
+  - Tax on Universe service fee
+  - expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: net_earnings
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 287
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: NULLABLE(FLOAT32)
+      type_generic: null
+      verbose_name: null
+      warning_markdown: null
+    aggregate: SUM
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: true
+    label: Net sales
+    optionName: metric_a7cxy4rgcho_ysybmyxe7m
+  metricsLayout: ROWS
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    datasourceWarning: false
+    expressionType: SQL
+    filterOptionName: filter_8ulisnfusxk_7dp20dhc7x4
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: (status IN ('open', 'won') OR status IS NULL)
+    subject: null
+  - clause: WHERE
+    comparator: expired
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_mhp16m8dzd_c1gb3oumr5e
+    isExtra: false
+    isNew: false
+    operator: '!='
+    operatorId: NOT_EQUALS
+    sqlExpression: null
+    subject: order_status
+  row_limit: 50000
+  order_desc: true
+  aggregateFunction: Sum
+  colTotals: false
+  valueFormat: ',.2f'
+  date_format: smart_date
+  rowOrder: key_a_to_z
+  colOrder: key_a_to_z
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards:
+  - 53
+  - 50
+  - 21
+  - 7
+  - 11
+  - 15
+  - 35
+  - 14
+  - 20
+  - 36
+  - 17
+  - 12
+  - 18
+  - 10
+  - 6
+  - 26
+  - 30
+  - 4
+  - 24
+  - 32
+  - 27
+  - 3
+  - 29
+  - 9
+  - 40
+  - 41
+  - 33
+  - 23
+query_context: '{"datasource":{"id":6,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"purchase_time","filters":[{"col":"order_status","op":"!=","val":"expired"}],"extras":{"time_grain_sqla":"P1D","having":"","where":"((status
+  IN (''open'', ''won'') OR status IS NULL))"},"applied_time_extras":{},"columns":[],"metrics":["Ticket
+  sales","Add-on sales","Offline sales","Additional fees","Collected taxes","Total
+  discounts","Service charge, included in price","Tax on Universe service fee",{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"net_earnings","description":null,"expression":null,"filterable":true,"groupby":true,"id":287,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"NULLABLE(FLOAT32)","type_generic":null,"verbose_name":null,"warning_markdown":null},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":true,"label":"Net
+  sales","optionName":"metric_a7cxy4rgcho_ysybmyxe7m"}],"orderby":[["Ticket sales",false]],"annotation_layers":[],"row_limit":50000,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"6__table","viz_type":"pivot_table_v2","slice_id":70,"granularity_sqla":"purchase_time","time_grain_sqla":"P1D","time_range":"No
+  filter","groupbyColumns":[],"groupbyRows":[],"metrics":["Ticket sales","Add-on sales","Offline
+  sales","Additional fees","Collected taxes","Total discounts","Service charge, included
+  in price","Tax on Universe service fee",{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"net_earnings","description":null,"expression":null,"filterable":true,"groupby":true,"id":287,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"NULLABLE(FLOAT32)","type_generic":null,"verbose_name":null,"warning_markdown":null},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":true,"label":"Net
+  sales","optionName":"metric_a7cxy4rgcho_ysybmyxe7m"}],"metricsLayout":"ROWS","adhoc_filters":[{"clause":"WHERE","comparator":null,"datasourceWarning":false,"expressionType":"SQL","filterOptionName":"filter_8ulisnfusxk_7dp20dhc7x4","isExtra":false,"isNew":false,"operator":null,"sqlExpression":"(status
+  IN (''open'', ''won'') OR status IS NULL)","subject":null},{"clause":"WHERE","comparator":"expired","datasourceWarning":false,"expressionType":"SIMPLE","filterOptionName":"filter_mhp16m8dzd_c1gb3oumr5e","isExtra":false,"isNew":false,"operator":"!=","operatorId":"NOT_EQUALS","sqlExpression":null,"subject":"order_status"}],"row_limit":50000,"order_desc":true,"aggregateFunction":"Sum","colTotals":false,"valueFormat":",.2f","date_format":"smart_date","rowOrder":"key_a_to_z","colOrder":"key_a_to_z","conditional_formatting":[],"extra_form_data":{},"dashboards":[53,50,21,7,11,15,35,14,20,36,17,12,18,10,6,26,30,4,24,32,27,3,29,9,40,41,33,23],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 5a116d08-1153-4a71-89cc-f2b97128dda1
+version: 1.0.0
+dataset_uuid: f8862615-3a2a-43f1-99b4-19ad102bec0a
