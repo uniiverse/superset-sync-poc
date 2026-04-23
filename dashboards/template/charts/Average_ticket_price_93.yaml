@@ -1,0 +1,38 @@
+slice_name: Average ticket price
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 23__table
+  viz_type: big_number_total
+  time_range: No filter
+  metric:
+    expressionType: SIMPLE
+    column:
+      column_name: avg_ticket_price
+      groupby: true
+      is_dttm: false
+      name: avg_ticket_price
+      type: NULLABLE(FLOAT64)
+      type_generic: 0
+    aggregate: AVG
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: AVG(avg_ticket_price)
+    optionName: metric_jt0za15nqas_ekch58fa3i
+  adhoc_filters: []
+  header_font_size: 0.4
+  subheader_font_size: 0.15
+  y_axis_format: SMART_NUMBER
+  time_format: smart_date
+  extra_form_data: {}
+  dashboards: []
+query_context: '{"datasource":{"id":23,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","filters":[],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":[{"expressionType":"SIMPLE","column":{"column_name":"avg_ticket_price","groupby":true,"is_dttm":false,"name":"avg_ticket_price","type":"NULLABLE(FLOAT64)","type_generic":0},"aggregate":"AVG","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"AVG(avg_ticket_price)","optionName":"metric_jt0za15nqas_ekch58fa3i"}],"annotation_layers":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"23__table","viz_type":"big_number_total","time_range":"No
+  filter","metric":{"expressionType":"SIMPLE","column":{"column_name":"avg_ticket_price","groupby":true,"is_dttm":false,"name":"avg_ticket_price","type":"NULLABLE(FLOAT64)","type_generic":0},"aggregate":"AVG","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"AVG(avg_ticket_price)","optionName":"metric_jt0za15nqas_ekch58fa3i"},"adhoc_filters":[],"header_font_size":0.4,"subheader_font_size":0.15,"y_axis_format":"SMART_NUMBER","time_format":"smart_date","extra_form_data":{},"dashboards":[],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 104640db-2458-40cf-9e0a-b0a2e1b503dc
+version: 1.0.0
+dataset_uuid: 5b561da3-60a1-49e5-8a1f-4b59dad71591
