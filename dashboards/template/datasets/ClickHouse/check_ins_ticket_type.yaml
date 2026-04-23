@@ -1,0 +1,108 @@
+table_name: check_ins_ticket_type
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: highlander
+sql: "SELECT formatDateTime(timeslot_start_time, '%Y-%m-%d') AS \"Event date\",\n\
+  \       formatDateTime(timeslot_start_time, '%r') AS \"Start time \",\n       event_name\
+  \ AS event_name,\n       ticket_type AS \"Ticket type\",\n       SUM(redemption_balance\
+  \ > 0) AS \"Checked-in\",\n       sum(CASE\n               WHEN redemption_balance\
+  \ IS NULL\n                    OR redemption_balance = 0 THEN 1\n              \
+  \ ELSE 0\n           END) AS \"Remaining check-ins\"\nFROM highlander.fer_tickets_by_host_joined_events_final\n\
+  WHERE ticket_status IN ('paid',\n                        'ended',\n            \
+  \            'closed')\n  AND (host_id='660efdd2dddcc1021aa206f8'\n       AND currency='USD')\n\
+  GROUP BY formatDateTime(timeslot_start_time, '%Y-%m-%d'),\n         formatDateTime(timeslot_start_time,\
+  \ '%r'),\n         event_name,\n         ticket_type\nORDER BY \"Checked-in\" DESC\n\
+  LIMIT 50000"
+params: null
+template_params: null
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: 0e6a1b31-935a-4004-b318-610164b7589e
+metrics:
+- metric_name: count
+  verbose_name: null
+  metric_type: null
+  expression: count(*)
+  description: null
+  d3format: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: 'Start time '
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Event date
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Ticket type
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Remaining check-ins
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UINT64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Checked-in
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(UINT64)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: event_name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 9959a820-3653-435b-9b67-bb25bdf82933

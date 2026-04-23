@@ -1,0 +1,146 @@
+table_name: add_ons_breakdown_v2
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: highlander
+sql: "SELECT \"Event date\",\n       \"Timeslot\",\n       \"Add-on name\",\n    \
+  \   \"Add-on option\",\n       \"Face value\",\n       \"Quantity sold\",\n    \
+  \   round(\"Quantity sold\" * \"Face value\", 2) AS \"Revenue\",\n       sort_key,\n\
+  \       sort_date\nFROM\n  (SELECT '2025-06-17' AS \"Event date\", '07:00 PM' AS\
+  \ \"Timeslot\", 'T-Shirt' AS \"Add-on name\", 'Small'  AS \"Add-on option\", 20.0\
+  \ AS \"Face value\", 8  AS \"Quantity sold\", 0 AS sort_key, 1 AS sort_date\n  \
+  \ UNION ALL\n   SELECT '2025-06-17', '07:00 PM', 'T-Shirt', 'Medium', 20.0, 12,\
+  \ 0, 2\n   UNION ALL\n   SELECT '2025-06-17', '07:00 PM', 'T-Shirt', 'Large',  20.0,\
+  \ 6,  0, 3\n   UNION ALL\n   SELECT '2025-06-17', '07:00 PM', 'Parking pass',  '',\
+  \ 15.0, 9,  0, 4\n   UNION ALL\n   SELECT '2025-06-17', '07:00 PM', 'Merch package',\
+  \ '', 35.0, 5,  0, 5\n   UNION ALL\n   SELECT 'Total', '', '', '', NULL, 40, 1,\
+  \ 9999999999) AS virtual_table\n\nORDER BY sort_key, sort_date, \"Add-on name\"\
+  , \"Add-on option\"\nLIMIT 1000"
+params: null
+template_params: null
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: 933a0128-d8d9-47cb-b56d-a9ea2a59633b
+metrics:
+- metric_name: count
+  verbose_name: null
+  metric_type: null
+  expression: count(*)
+  description: null
+  d3format: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: Face value
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(FLOAT64)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Add-on name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Add-on option
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Quantity sold
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UINT8
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Event date
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Revenue
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(FLOAT64)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: sort_date
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UINT64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: sort_key
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UINT8
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Timeslot
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 9959a820-3653-435b-9b67-bb25bdf82933
