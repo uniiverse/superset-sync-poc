@@ -1,0 +1,74 @@
+slice_name: 'Sales breakdown by ticket (pv2) '
+description: null
+certified_by: null
+certification_details: null
+viz_type: pivot_table_v2
+params:
+  datasource: 8__table
+  viz_type: pivot_table_v2
+  slice_id: 50
+  granularity_sqla: purchase_time
+  time_grain_sqla: P1D
+  time_range: No filter
+  groupbyColumns: []
+  groupbyRows:
+  - Event Date
+  - expressionType: SQL
+    label: 'Start time '
+    sqlExpression: timeslot_start_time
+  - event_name
+  - ticket_type
+  metrics:
+  - Net earnings
+  - Quantity sold
+  metricsLayout: COLUMNS
+  adhoc_filters: []
+  row_limit: 50000
+  order_desc: false
+  aggregateFunction: Sum
+  valueFormat: SMART_NUMBER
+  date_format: '%I:%M %p'
+  rowOrder: key_a_to_z
+  colOrder: key_a_to_z
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards:
+  - 50
+  - 21
+  - 7
+  - 11
+  - 15
+  - 35
+  - 14
+  - 20
+  - 36
+  - 17
+  - 12
+  - 18
+  - 10
+  - 6
+  - 26
+  - 30
+  - 4
+  - 24
+  - 32
+  - 27
+  - 3
+  - 29
+  - 9
+  - 40
+  - 41
+  - 33
+  - 23
+query_context: '{"datasource":{"id":8,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"purchase_time","filters":[],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":["Event
+  Date",{"expressionType":"SQL","label":"Start time ","sqlExpression":"timeslot_start_time"},"event_name","ticket_type"],"metrics":["Net
+  earnings","Quantity sold"],"orderby":[["Net earnings",true]],"annotation_layers":[],"row_limit":50000,"series_limit":0,"order_desc":false,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"8__table","viz_type":"pivot_table_v2","slice_id":50,"granularity_sqla":"purchase_time","time_grain_sqla":"P1D","time_range":"No
+  filter","groupbyColumns":[],"groupbyRows":["Event Date",{"expressionType":"SQL","label":"Start
+  time ","sqlExpression":"timeslot_start_time"},"event_name","ticket_type"],"metrics":["Net
+  earnings","Quantity sold"],"metricsLayout":"COLUMNS","adhoc_filters":[],"row_limit":50000,"order_desc":false,"aggregateFunction":"Sum","valueFormat":"SMART_NUMBER","date_format":"%I:%M
+  %p","rowOrder":"key_a_to_z","colOrder":"key_a_to_z","conditional_formatting":[],"extra_form_data":{},"dashboards":[50,21,7,11,15,35,14,20,36,17,12,18,10,6,26,30,4,24,32,27,3,29,9,40,41,33,23],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 20affb99-3d95-4e36-aecb-2a7ccccd8429
+version: 1.0.0
+dataset_uuid: 4dffd900-a2d4-45ad-a8c1-4b68d34b9447
