@@ -1,0 +1,157 @@
+table_name: add_on_breakdown_clem
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: highlander
+sql: "SELECT \"Event date\",\n       \"Timeslot\",\n       \"Add-on name\",\n    \
+  \   \"Add-on option\",\n       \"Face value\",\n       \"Quantity sold\",\n    \
+  \   \"Revenue\",\n       sort_key,\n       sort_date\nFROM\n  (SELECT e.start_date\
+  \ AS \"Event date\",\n          formatDateTime(toDateTime(e.start_stamp), '%I:%i\
+  \ %p') AS \"Timeslot\",\n          c.name AS \"Add-on name\",\n          c.option_name\
+  \ AS \"Add-on option\",\n          round(SUM(c.base_price - c.base_voided_price)\
+  \ / NULLIF(countIf(c.state IN ('paid', 'ended', 'closed')), 0), 2) AS \"Face value\"\
+  ,\n          countIf(c.state IN ('paid', 'ended', 'closed')) AS \"Quantity sold\"\
+  ,\n          round(SUM(c.base_price - c.base_voided_price), 2) AS \"Revenue\",\n\
+  \          0 AS sort_key,\n          min(e.start_stamp) AS sort_date\n   FROM cost_item_cost_breakdowns_by_host_final\
+  \ c\n   LEFT JOIN listings_final l ON c.listing_id = l.id\n   LEFT JOIN events_final\
+  \ e ON c.event_id = e.id\n   WHERE c.listing_id = '67ae35891a7a0200238bbb7a'\n \
+  \    AND c.rate_type = 'AddOnRate'\n     AND (c.deleted IS NULL OR c.deleted = 0)\n\
+  \   GROUP BY e.start_date,\n            e.start_stamp,\n            c.name,\n  \
+  \          c.option_name\n\n   UNION ALL\n\n   SELECT 'Total' AS \"Event date\"\
+  ,\n          '' AS \"Timeslot\",\n          '' AS \"Add-on name\",\n          ''\
+  \ AS \"Add-on option\",\n          round(SUM(c.base_price - c.base_voided_price)\
+  \ / NULLIF(countIf(c.state IN ('paid', 'ended', 'closed')), 0), 2) AS \"Face value\"\
+  ,\n          countIf(c.state IN ('paid', 'ended', 'closed')) AS \"Quantity sold\"\
+  ,\n          round(SUM(c.base_price - c.base_voided_price), 2) AS \"Add-on revenue\"\
+  ,\n          1 AS sort_key,\n          9999999999 AS sort_date\n   FROM cost_item_cost_breakdowns_by_host_final\
+  \ c\n   WHERE c.listing_id = '67ae35891a7a0200238bbb7a'\n     AND c.rate_type =\
+  \ 'AddOnRate'\n     AND (c.deleted IS NULL OR c.deleted = 0)\n\n   ORDER BY sort_key,\
+  \ sort_date, \"Add-on name\", \"Add-on option\") AS virtual_table\nLIMIT 1000"
+params: null
+template_params: null
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: 3fc2de7e-434e-448f-b154-7694477945c6
+metrics:
+- metric_name: count
+  verbose_name: null
+  metric_type: null
+  expression: count(*)
+  description: null
+  d3format: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: Add-on name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Add-on option
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Face value
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(FLOAT64)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Event date
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Quantity sold
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UINT64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Revenue
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(FLOAT64)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: sort_date
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(INT64)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Timeslot
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: sort_key
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UINT8
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 9959a820-3653-435b-9b67-bb25bdf82933

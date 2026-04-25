@@ -1,0 +1,87 @@
+dashboard_title: jordan
+description: null
+css: ''
+slug: null
+uuid: d5166641-bd67-4016-9c75-3574c07defee
+position:
+  CHART-0yyjHB1Nfr4:
+    children: []
+    id: CHART-0yyjHB1Nfr4
+    meta:
+      chartId: 29
+      height: 50
+      sliceName: Discount codes
+      uuid: 5453bc1d-1561-498c-baa6-5161dc442649
+      width: 7
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-SBo2ybsXxhf
+    type: CHART
+  CHART-xvtbHe0IVWn:
+    children: []
+    id: CHART-xvtbHe0IVWn
+    meta:
+      chartId: 45
+      height: 50
+      sliceName: Referrals
+      uuid: 4bdf7915-8fb3-490f-888a-27e6dca9c385
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-8rw7GdAltFQ
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-8rw7GdAltFQ
+    - ROW-SBo2ybsXxhf
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: jordan
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-8rw7GdAltFQ:
+    children:
+    - CHART-xvtbHe0IVWn
+    id: ROW-8rw7GdAltFQ
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-SBo2ybsXxhf:
+    children:
+    - CHART-0yyjHB1Nfr4
+    id: ROW-SBo2ybsXxhf
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  show_native_filters: true
+  color_scheme: ''
+  refresh_frequency: 0
+  shared_label_colors:
+    LOLAIKA: '#1FA8C9'
+  color_scheme_domain: []
+  expanded_slices: {}
+  label_colors: {}
+  timed_refresh_immune_slices: []
+  cross_filters_enabled: false
+  default_filters: '{}'
+  chart_configuration: {}
+version: 1.0.0
