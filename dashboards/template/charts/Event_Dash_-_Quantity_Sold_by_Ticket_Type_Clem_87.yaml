@@ -1,0 +1,76 @@
+slice_name: Event Dash - Quantity Sold by Ticket Type (Clem)
+description: null
+certified_by: null
+certification_details: null
+viz_type: echarts_timeseries_line
+params:
+  datasource: 17__table
+  viz_type: echarts_timeseries_line
+  slice_id: 87
+  granularity_sqla: purchase_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  metrics:
+  - expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: quantity_sold
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 481
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: UINT64
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    aggregate: SUM
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: SUM(quantity_sold)
+    optionName: metric_ipsd3k1dp9a_cs8702dhaco
+  groupby:
+  - ticket_type
+  adhoc_filters: []
+  order_desc: true
+  row_limit: 1000
+  truncate_metric: true
+  show_empty_columns: true
+  comparison_type: values
+  annotation_layers: []
+  forecastPeriods: 10
+  forecastInterval: 0.8
+  x_axis_title_margin: 15
+  y_axis_title_margin: 15
+  y_axis_title_position: Left
+  color_scheme: supersetColors
+  seriesType: line
+  only_total: true
+  opacity: 0.2
+  markerSize: 6
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  x_axis_time_format: smart_date
+  rich_tooltip: true
+  tooltipTimeFormat: smart_date
+  y_axis_format: SMART_NUMBER
+  y_axis_bounds:
+  - null
+  - null
+  extra_form_data: {}
+  dashboards:
+  - 53
+query_context: '{"datasource":{"id":17,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"purchase_date","filters":[],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":["ticket_type"],"metrics":[{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"quantity_sold","description":null,"expression":null,"filterable":true,"groupby":true,"id":481,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"UINT64","type_generic":0,"verbose_name":null,"warning_markdown":null},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"SUM(quantity_sold)","optionName":"metric_ipsd3k1dp9a_cs8702dhaco"}],"orderby":[[{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"quantity_sold","description":null,"expression":null,"filterable":true,"groupby":true,"id":481,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"UINT64","type_generic":0,"verbose_name":null,"warning_markdown":null},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"SUM(quantity_sold)","optionName":"metric_ipsd3k1dp9a_cs8702dhaco"},false]],"annotation_layers":[],"row_limit":1000,"series_columns":["ticket_type"],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"is_timeseries":true,"time_offsets":[],"post_processing":[{"operation":"pivot","options":{"index":["__timestamp"],"columns":["ticket_type"],"aggregates":{"SUM(quantity_sold)":{"operator":"mean"}},"drop_missing_columns":false}},{"operation":"rename","options":{"columns":{"SUM(quantity_sold)":null},"level":0,"inplace":true}},{"operation":"flatten"}]}],"form_data":{"datasource":"17__table","viz_type":"echarts_timeseries_line","slice_id":87,"granularity_sqla":"purchase_date","time_grain_sqla":"P1D","time_range":"No
+  filter","metrics":[{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"quantity_sold","description":null,"expression":null,"filterable":true,"groupby":true,"id":481,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"UINT64","type_generic":0,"verbose_name":null,"warning_markdown":null},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"SUM(quantity_sold)","optionName":"metric_ipsd3k1dp9a_cs8702dhaco"}],"groupby":["ticket_type"],"adhoc_filters":[],"order_desc":true,"row_limit":1000,"truncate_metric":true,"show_empty_columns":true,"comparison_type":"values","annotation_layers":[],"forecastPeriods":10,"forecastInterval":0.8,"x_axis_title_margin":15,"y_axis_title_margin":15,"y_axis_title_position":"Left","color_scheme":"supersetColors","seriesType":"line","only_total":true,"opacity":0.2,"markerSize":6,"show_legend":true,"legendType":"scroll","legendOrientation":"top","x_axis_time_format":"smart_date","rich_tooltip":true,"tooltipTimeFormat":"smart_date","y_axis_format":"SMART_NUMBER","y_axis_bounds":[null,null],"extra_form_data":{},"dashboards":[53],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: b8433c3c-7e7f-4f18-8a2a-5809b19bc1a1
+version: 1.0.0
+dataset_uuid: e78e3009-99d9-4a03-afe6-e525544f5638
