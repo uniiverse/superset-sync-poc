@@ -1,0 +1,97 @@
+slice_name: Check-ins by teammate (ticket types)
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 29__table
+  viz_type: table
+  slice_id: 153
+  granularity_sqla: purchase_time
+  time_grain_sqla: P1D
+  time_range: No filter
+  query_mode: aggregate
+  groupby:
+  - expressionType: SQL
+    label: Device
+    sqlExpression: last_scanner_device_id
+  metrics:
+  - expressionType: SQL
+    sqlExpression: SUM(redemption_balance > 0)
+    column: null
+    aggregate: null
+    datasourceWarning: false
+    hasCustomLabel: true
+    label: Total
+    optionName: metric_bh92pyuv9v_j0wag2fbqp
+  all_columns: []
+  percent_metrics: []
+  adhoc_filters:
+  - expressionType: SIMPLE
+    subject: ticket_status
+    operator: IN
+    operatorId: IN
+    comparator:
+    - paid
+    - ended
+    - closed
+    clause: WHERE
+    sqlExpression: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_r5b43me927_ohvbmjeklr8
+  order_by_cols: []
+  row_limit: 50000
+  server_page_length: 10
+  order_desc: true
+  show_totals: true
+  table_timestamp_format: smart_date
+  show_cell_bars: true
+  color_pn: true
+  column_config:
+    Total:
+      d3NumberFormat: ',d'
+    purchase_device_id:
+      truncateLongCells: false
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards:
+  - 35
+  - 39
+  - 24
+  - 25
+  - 27
+  - 17
+  - 29
+  - 19
+  - 26
+  - 21
+  - 30
+  - 34
+  - 20
+  - 36
+  - 42
+  - 37
+  - 31
+  - 38
+  - 33
+  - 40
+  - 32
+  - 41
+  - 43
+  - 14
+  - 18
+  - 22
+query_context: '{"datasource":{"id":29,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"purchase_time","filters":[{"col":"ticket_status","op":"IN","val":["paid","ended","closed"]}],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":[{"expressionType":"SQL","label":"Device","sqlExpression":"last_scanner_device_id"}],"metrics":[{"expressionType":"SQL","sqlExpression":"SUM(redemption_balance
+  > 0)","column":null,"aggregate":null,"datasourceWarning":false,"hasCustomLabel":true,"label":"Total","optionName":"metric_bh92pyuv9v_j0wag2fbqp"}],"orderby":[[{"expressionType":"SQL","sqlExpression":"SUM(redemption_balance
+  > 0)","column":null,"aggregate":null,"datasourceWarning":false,"hasCustomLabel":true,"label":"Total","optionName":"metric_bh92pyuv9v_j0wag2fbqp"},false]],"annotation_layers":[],"row_limit":50000,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[]},{"time_range":"No
+  filter","granularity":"purchase_time","filters":[{"col":"ticket_status","op":"IN","val":["paid","ended","closed"]}],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":[{"expressionType":"SQL","sqlExpression":"SUM(redemption_balance
+  > 0)","column":null,"aggregate":null,"datasourceWarning":false,"hasCustomLabel":true,"label":"Total","optionName":"metric_bh92pyuv9v_j0wag2fbqp"}],"annotation_layers":[],"row_limit":0,"row_offset":0,"series_limit":0,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[]}],"form_data":{"datasource":"29__table","viz_type":"table","slice_id":153,"granularity_sqla":"purchase_time","time_grain_sqla":"P1D","time_range":"No
+  filter","query_mode":"aggregate","groupby":[{"expressionType":"SQL","label":"Device","sqlExpression":"last_scanner_device_id"}],"metrics":[{"expressionType":"SQL","sqlExpression":"SUM(redemption_balance
+  > 0)","column":null,"aggregate":null,"datasourceWarning":false,"hasCustomLabel":true,"label":"Total","optionName":"metric_bh92pyuv9v_j0wag2fbqp"}],"all_columns":[],"percent_metrics":[],"adhoc_filters":[{"expressionType":"SIMPLE","subject":"ticket_status","operator":"IN","operatorId":"IN","comparator":["paid","ended","closed"],"clause":"WHERE","sqlExpression":null,"isExtra":false,"isNew":false,"datasourceWarning":false,"filterOptionName":"filter_r5b43me927_ohvbmjeklr8"}],"order_by_cols":[],"row_limit":50000,"server_page_length":10,"order_desc":true,"show_totals":true,"table_timestamp_format":"smart_date","show_cell_bars":true,"color_pn":true,"column_config":{"Total":{"d3NumberFormat":",d"},"purchase_device_id":{"truncateLongCells":false}},"conditional_formatting":[],"extra_form_data":{},"dashboards":[35,39,24,25,27,17,29,19,26,21,30,34,20,36,42,37,31,38,33,40,32,41,43,14,18,22],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 0906167f-2c17-4903-b3b2-0d8c6241d582
+version: 1.0.0
+dataset_uuid: 4dffd900-a2d4-45ad-a8c1-4b68d34b9447

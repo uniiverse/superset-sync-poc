@@ -1,0 +1,79 @@
+slice_name: __POC - Accumulated Tickets WoW
+description: null
+certified_by: null
+certification_details: null
+viz_type: mixed_timeseries
+params:
+  datasource: 30__table
+  viz_type: mixed_timeseries
+  slice_id: 168
+  granularity_sqla: purchase_time
+  time_grain_sqla: P1W
+  time_range: No filter
+  metrics:
+  - Quantity sold
+  groupby: []
+  adhoc_filters: []
+  order_desc: true
+  row_limit: 10000
+  truncate_metric: true
+  comparison_type: values
+  metrics_b:
+  - Quantity sold
+  groupby_b: []
+  adhoc_filters_b: []
+  order_desc_b: true
+  row_limit_b: 10000
+  truncate_metric_b: false
+  rolling_type_b: cumsum
+  comparison_type_b: values
+  annotation_layers: []
+  x_axis_title_margin: 15
+  y_axis_title: TICKETS
+  y_axis_title_margin: 50
+  y_axis_title_position: Left
+  color_scheme: supersetColors
+  seriesType: bar
+  stack: true
+  area: false
+  show_value: true
+  opacity: 0.2
+  markerSize: 6
+  seriesTypeB: line
+  show_valueB: true
+  opacityB: 0.2
+  markerEnabledB: true
+  markerSizeB: 6
+  yAxisIndexB: 1
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  x_axis_time_format: smart_date
+  rich_tooltip: true
+  tooltipTimeFormat: smart_date
+  minorSplitLine: false
+  truncateYAxis: false
+  y_axis_bounds:
+  - null
+  - null
+  y_axis_format: SMART_NUMBER
+  logAxis: false
+  y_axis_format_secondary: .3s
+  yAxisTitleSecondary: Accumulated Tickets
+  logAxisSecondary: false
+  extra_form_data: {}
+  dashboards: []
+query_context: '{"datasource":{"id":30,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"purchase_time","filters":[],"extras":{"time_grain_sqla":"P1W","having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":["Quantity
+  sold"],"annotation_layers":[],"row_limit":10000,"series_columns":[],"series_limit":0,"url_params":{},"custom_params":{},"custom_form_data":{},"is_timeseries":true,"time_offsets":[],"post_processing":[{"operation":"pivot","options":{"index":["__timestamp"],"columns":[],"aggregates":{"Quantity
+  sold":{"operator":"mean"}},"drop_missing_columns":true}},{"operation":"flatten"}],"orderby":[["Quantity
+  sold",false]]},{"time_range":"No filter","granularity":"purchase_time","filters":[],"extras":{"time_grain_sqla":"P1W","having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":["Quantity
+  sold"],"annotation_layers":[],"row_limit":10000,"series_columns":[],"series_limit":0,"url_params":{},"custom_params":{},"custom_form_data":{},"is_timeseries":true,"time_offsets":[],"post_processing":[{"operation":"pivot","options":{"index":["__timestamp"],"columns":[],"aggregates":{"Quantity
+  sold":{"operator":"mean"}},"drop_missing_columns":true}},{"operation":"cum","options":{"operator":"sum","columns":{"Quantity
+  sold":"Quantity sold"}}},{"operation":"flatten"}],"orderby":[["Quantity sold",false]]}],"form_data":{"datasource":"30__table","viz_type":"mixed_timeseries","slice_id":168,"granularity_sqla":"purchase_time","time_grain_sqla":"P1W","time_range":"No
+  filter","metrics":["Quantity sold"],"groupby":[],"adhoc_filters":[],"order_desc":true,"row_limit":10000,"truncate_metric":true,"comparison_type":"values","annotation_layers":[],"x_axis_title_margin":15,"y_axis_title":"TICKETS","y_axis_title_margin":50,"y_axis_title_position":"Left","color_scheme":"supersetColors","seriesType":"bar","stack":true,"area":false,"show_value":true,"opacity":0.2,"markerSize":6,"seriesTypeB":"line","show_valueB":true,"opacityB":0.2,"markerEnabledB":true,"markerSizeB":6,"yAxisIndexB":1,"show_legend":true,"legendType":"scroll","legendOrientation":"top","x_axis_time_format":"smart_date","rich_tooltip":true,"tooltipTimeFormat":"smart_date","minorSplitLine":false,"truncateYAxis":false,"y_axis_bounds":[null,null],"y_axis_format":"SMART_NUMBER","logAxis":false,"y_axis_format_secondary":".3s","yAxisTitleSecondary":"Accumulated
+  Tickets","logAxisSecondary":false,"extra_form_data":{},"dashboards":[],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 09e51758-d172-40dd-8038-a067adcf49f9
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc
