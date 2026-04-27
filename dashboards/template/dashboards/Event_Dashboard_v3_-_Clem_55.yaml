@@ -1,0 +1,1300 @@
+dashboard_title: Event Dashboard v3 - Clem
+description: null
+css: "@font-face {\n    font-family: \"Graphik\";\n    src: \n    url(\"https://www.universe.com/fonts/Graphik/Graphik-Regular-Web.eot\"\
+  ) format(\"eot\"),\n    url(\"https://www.universe.com/fonts/Graphik/Graphik-Regular-Web.woff2\"\
+  ) format(\"woff2\"),\n    url(\"https://www.universe.com/fonts/Graphik/Graphik-Regular-Web.woff\"\
+  ) format(\"woff\");\n}\n\n.dashboard-content {\n  background-color: white;\n  margin-top:\
+  \ -34px;\n}\n\n.grid-container {\n  margin-left: 5px !important;\n  margin-right:\
+  \ 5px !important;\n}\n\n.anchor-link-container {\n  display: none;\n  pointer-events:\
+  \ none;\n}\n\n/*-------Counts/sales header-------*/\n.dashboard-component-header\
+  \ {\n  font-family: 'Graphik', sans-serif !important;\n  font-weight: 500 !important;\n\
+  \  font-size: 32px !important;\n  margin-left: -16px !important;\n  line-height:\
+  \ 38px !important;\n}\n\n.dashboard-component-divider {\n  padding-left: 0px !important;\n\
+  \  padding-right: 0px !important;\n  padding-top: 0px !important;\n  padding-bottom:\
+  \ 0px !important;\n}\n\n/*------Tabs--------*/\n.ant-tabs-nav-wrap {\n  border-bottom:\
+  \ 1px solid #E2E5E7;\n}\n\n.ant-tabs-nav-list {\n  margin-left: -16px;\n}\n\n.ant-tabs-tab\
+  \ {\n  color: #1C232B;\n}\n\n.ant-tabs-tab-btn {\n   font-weight: 400 !important;\n\
+  \   line-height: 20px !important;\n   font-family: 'Graphik', sans-serif !important;\n\
+  \   font-size: 14px !important;\n}\n\n.ant-tabs-tab:hover {\n  color: #3A66E5 !important\n\
+  }\n\n.ant-tabs-tab-btn:hover {\n   color: #3A66E5 !important;\n}\n\n.ant-tabs-tab-btn.active\
+  \ {\n  color: #3A66E5 !important;\n}\n\n.ant-tabs-tab-active {\n  color: #3A66E5\
+  \ !important;\n}\n\n.ant-tabs-ink-bar-animated {\n  background-color: #3A66E5 !important;\n\
+  }\n\n/*----Charts-------*/\n\n.chart-slice {\n  border: 1px solid #E2E5E7;\n  padding:\
+  \ 16px; \n  border-radius: 6px;\n  margin-left: 0px;\n  overflow: auto !important;\n\
+  }\n\n.dot {\n  background-color: #1C232B !important;\n}\n\n.dashboard-chart-id-137\
+  \ {\n  padding: 0px !important;\n}\n\n.dashboard-chart-id-137 tr:first-child th\
+  \ {\n  color: #6F7881 !important;\n  text-transform: capitalize;\n}\n\n.dashboard-chart-id-102\
+  \ {\n  padding: 0px !important;\n}\n\n.resizable-container .dashboard-chart-id-103\
+  \ {\n  padding: 0px !important;\n}\n\n/*--------Charts under Counts----------*/\n\
+  /*Tickets*/\n.dashboard-chart-id-117 {\n  padding: 0px !important;\n}\n\n/*Orders*/\n\
+  .dashboard-chart-id-106 {\n  padding: 0px !important;\n}\n\n/*Add-ons*/\n.dashboard-chart-id-89\
+  \ {\n  padding: 0px !important;\n}\n\n/*Paid vs free chart*/\n.dashboard-chart-id-107\
+  \ {\n  padding: 0px !important;\n}\n\n\n/*--------Ticket net sales by event--------*/\n\
+  .dashboard-chart-id-115 {\n  padding: 0px !important;\n}\n\n/*------Event breakdown--------*/\n\
+  .dashboard-chart-id-108 {\n  padding-left: 0px !important;\n  padding-right: 0px\
+  \ !important;\n  padding-bottom: 0px !important;\n  height: auto !important;\n}\n\
+  \n.dashboard-chart-id-131 {\n  padding-left: 0px !important;\n  padding-right: 0px\
+  \ !important;\n  padding-bottom: 0px !important;\n  height: auto !important;\n}\n\
+  \n.dashboard-chart-id-132 {\n  padding-left: 0px !important;\n  padding-right: 0px\
+  \ !important;\n  padding-bottom: 0px !important;\n}\n\n/*.dashboard-chart-id-131\
+  \ */\n\ntr:first-child th.pvtAxisLabel {\n  color: transparent;\n}\n\n.pivot_table_v_2\
+  \ thead th {\n  font-size: 14px !important;\n  font-weight: bold !important;\n}\n\
+  \n/*----------------Sales trends------------*/\n.dashboard-chart-id-96 {\n  padding:\
+  \ 0px !important;\n}\n\n.dashboard-chart-id-121 {\n  padding: 0px !important;\n\
+  }\n\n.dashboard-chart-id-111 {\n  padding: 0px !important;\n  /*height: auto !important;*/\n\
+  }\n\n.dashboard-chart-id-92 {\n  padding: 0px !important;\n}\n\n.dashboard-chart-id-93\
+  \ {\n  padding: 0px !important;\n}\n\n.dashboard-chart-id-95 {\n  padding: 0px !important;\n\
+  }\n\n.dashboard-chart-id-98 {\n  padding: 0px !important;\n}\n\n.dashboard-chart-id-97\
+  \ {\n  padding: 0px !important;\n}\n\n.dashboard-chart-id-124 {\n  padding: 0px\
+  \ !important;\n}\n\n.dashboard-chart-id-130 {\n  padding: 0px !important;\n}\n\n\
+  /*----------Charts on sources tab-------------*/\n.dashboard-chart-id-99 {\n  padding:\
+  \ 0px !important;\n}\n\n.dashboard-chart-id-105 {\n  padding: 0px !important;\n\
+  }\n\n.dashboard-chart-id-104 {\n  padding: 0px !important;\n}\n\n.dashboard-chart-id-94\
+  \ {\n  padding: 0px !important;\n}\n\n.dashboard-chart-id-126 {\n  padding: 0px\
+  \ !important;\n}\n\n.dashboard-chart-id-127 {\n  padding: 0px !important;\n}\n\n\
+  .dashboard-chart-id-90 {\n  padding: 0px !important;\n}\n\n.dashboard-chart-id-144\
+  \ {\n  padding : 0px !important;\n}\n\n/*----Promotions- To adjust serach box from\
+  \ cutting off---*/\n.dt-global-filter {\n  width: 100% !important;\n  min-width:\
+  \ 100% !important;\n  max-width: 100% !important;\n  padding-right: 10px !important;\n\
+  \  text-align: end !important;\n}\n\n.dashboard-chart-id-100 {\n  padding: 0px !important;\n\
+  \  height: auto !important;\n}\n\n.text-container {\n  height: auto !important;\n\
+  }\n\n.header-title {\n  font-weight: 700 !important;\n  color: #000000 !important;\n\
+  \  font-family: 'Graphik', sans-serif !important;\n  line-height: 24px !important;\n\
+  \  font-size: 16px !important;\n  margin-bottom: 24px;\n}\n\n.header-line {\n  font-size:\
+  \ 32px !important;\n  color: #1C232B !important;\n  font-weight: 500 !important;\n\
+  \  line-height: 38px !important;\n  font-family: 'Circular Pro', sans-serif !important;\n\
+  }\n\n.subheader-line {\n  font-size: 14px !important;\n  color: #6F7881 !important;\n\
+  \  line-height: 20px !important;\n  font-family: 'Graphik', sans-serif !important;\n\
+  \  font-weight: 400;\n  margin-top: -20px !important;\n}\n\ncanvas {\n  margin-top:\
+  \ 50px !important;\n}\n\n.dashboard-chart-id-144 canvas {\n  margin-top: 0px !important;\n\
+  }\n\n/*Net sales breakdown*/\n.dashboard-chart-id-137 canvas {\n  margin-top: 0px\
+  \ !important;\n  overflow: auto !important;\n}\n\n/*Paid vs free*/\n.dashboard-chart-id-107\
+  \ canvas {\n  margin-top: 0px !important;\n}\n\n/*Ticket net sales by event*/\n\
+  .dashboard-chart-id-115 canvas {\n  margin-top: 0px !important;\n}\n\n.dashboard-chart-id-99\
+  \ canvas {\n  margin-top: 0px !important;\n}\n\n.dashboard-chart-id-105 canvas {\n\
+  \  margin-top: 0px !important;\n}\n\n.dashboard-chart-id-104 canvas {\n margin-top:\
+  \ 0px !important;\n}\n\n.dashboard-chart-id-94 canvas {\n  margin-top: 0px !important;\n\
+  }\n\n.dashboard-chart-id-126 canvas {\n  margin-top: 0px !important;\n}\n\n.dashboard-chart-id-127\
+  \ canvas {\n  margin-top: 0px !important;\n}\n\n/*Trends*/\n.dashboard-chart-id-121\
+  \ canvas {\n  margin-top: 0px !important;\n}\n\n.dashboard-chart-id-98 canvas {\n\
+  \  margin-top: 0px !important;\n}\n\n.dashboard-chart-id-97 canvas {\n  margin-top:\
+  \ 0px !important;\n}\n\n.dashboard-chart-id-124 canvas {\n  margin-top: 0px !important;\n\
+  }\n\n.dashboard-chart-id-150 {\n  padding: 0px !important;\n}\n\n.dashboard-chart-id-150\
+  \ canvas {\n  margin: 0px !important;\n}\n\n.dashboard-chart-id-141 canvas {\n \
+  \ margin: 0px !important;\n}\n\n.dashboard-chart-id-141 {\n  padding: 0px !important;\n\
+  }\n\n.dashboard-chart-id-151 {\n  padding: 0px !important;\n}\n\n.dashboard-chart-id-152\
+  \ {\n  padding: 0px !important;\n}\n\n.dashboard-chart-id-153 {\n  padding: 0px\
+  \ !important;\n}\n\n.dashboard-chart-id-154 {\n  padding: 0px !important;\n}\n\n\
+  .dashboard-chart-id-158 {\n  padding: 0px !important;\n}\n\n.dashboard-chart-id-160\
+  \ {\n  padding: 0px !important;\n}\n\n.dashboard-chart-id-161 {\n  padding: 0px\
+  \ !important;\n}\n\n.dashboard-chart-id-162 {\n  padding: 0px !important;\n}\n\n\
+  .dashboard-chart-id-142 {\n  padding: 0px !important;\n}\n\n.dashboard-chart-id-143\
+  \ {\n  padding: 0px !important;\n}\n\n.dashboard-chart-id-148 {\n  padding: 0px\
+  \ !important;\n}\n\n.dashboard-chart-id-146 {\n  padding: 0px !important;\n  margin-top:\
+  \ 10px !important;\n}\n\n.dashboard-chart-id-147 {\n  padding: 0px !important;\n\
+  \  margin-top: 10px !important;\n}"
+slug: null
+uuid: 90ffa2ac-a119-4fac-afe8-2aee771ba635
+position:
+  CHART--UB7fpsi21R:
+    children: []
+    id: CHART--UB7fpsi21R
+    meta:
+      chartId: 33
+      height: 49
+      sliceName: Online tickets
+      sliceNameOverride: Online sources
+      uuid: bb9acf27-16c0-4f44-a45b-4687aaf76e41
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    - ROW-zmiwKrJ2Q
+    type: CHART
+  CHART-0Qz6b4mdqBa:
+    children: []
+    id: CHART-0Qz6b4mdqBa
+    meta:
+      chartId: 29
+      height: 50
+      sliceName: Discount codes
+      uuid: 5453bc1d-1561-498c-baa6-5161dc442649
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - ROW-TAZTnnCVSV
+    type: CHART
+  CHART-27PQofg3Jo:
+    children: []
+    id: CHART-27PQofg3Jo
+    meta:
+      chartId: 21
+      height: 50
+      sliceName: Check-ins by teammate (ticket types)
+      sliceNameOverride: Teammate
+      uuid: 0906167f-2c17-4903-b3b2-0d8c6241d582
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - ROW-FldETQM4xH
+    type: CHART
+  CHART-2XRRkr4jNNJ:
+    children: []
+    id: CHART-2XRRkr4jNNJ
+    meta:
+      chartId: 99
+      height: 18
+      sliceName: Waitlist
+      uuid: 0112e05d-7a73-4ff7-a983-07531019c109
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-bKeMn_Bpzr3
+    type: CHART
+  CHART-4KsjEf2IQW_:
+    children: []
+    id: CHART-4KsjEf2IQW_
+    meta:
+      chartId: 96
+      height: 46
+      sliceName: Timeslot Breakdown
+      sliceNameOverride: Sales breakdown by timeslot
+      uuid: 2c726096-4a1b-4f41-8883-f70479db73d3
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-AixYN3Q1oX
+    - COLUMN-cUl_a4HMswV
+    - TABS-H9MnXuWGJWp
+    - TAB-nrbq9OcisJ
+    - ROW-nxrb509EeG
+    type: CHART
+  CHART-4Sgr5AEZD8:
+    children: []
+    id: CHART-4Sgr5AEZD8
+    meta:
+      chartId: 37
+      height: 50
+      sliceName: Onsite sales by teammate
+      sliceNameOverride: Teammate
+      uuid: 66818934-0224-44e6-bc2a-000b83e0616c
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - ROW-VRDbojkANi
+    type: CHART
+  CHART-DYENjwrqpIv:
+    children: []
+    id: CHART-DYENjwrqpIv
+    meta:
+      chartId: 101
+      height: 22
+      sliceName: Checked-in count
+      uuid: 53255177-0227-4ffe-8ad8-e061a77f0a08
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - ROW-FldETQM4xH
+    - COLUMN-e99iYAhNnla
+    type: CHART
+  CHART-JuuQVXvUVxL:
+    children: []
+    id: CHART-JuuQVXvUVxL
+    meta:
+      chartId: 111
+      height: 18
+      sliceName: PrePrint Count
+      sliceNameOverride: PrePrint
+      uuid: 026c987a-d015-4432-8626-04fd3c8d8df5
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-bKeMn_Bpzr3
+    type: CHART
+  CHART-KbCChP3cAb:
+    children: []
+    id: CHART-KbCChP3cAb
+    meta:
+      chartId: 53
+      height: 45
+      sliceName: Sales by channel partner
+      sliceNameOverride: Channel partner
+      uuid: c019b342-f975-439d-b474-e45c1c6ddc78
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    - ROW-Oh9SpZsEx
+    type: CHART
+  CHART-M8zh67jYr5:
+    children: []
+    id: CHART-M8zh67jYr5
+    meta:
+      chartId: 34
+      height: 49
+      sliceName: Online vs boxoffice
+      sliceNameOverride: Online vs boxoffice
+      uuid: 852050ae-8423-4da6-add5-32c12aa63110
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    - ROW-zmiwKrJ2Q
+    type: CHART
+  CHART-NOAmjVj4POf:
+    children: []
+    id: CHART-NOAmjVj4POf
+    meta:
+      chartId: 120
+      height: 22
+      sliceName: Paid Count
+      sliceNameOverride: Paid
+      uuid: 621de5ef-64d4-4fcc-b38c-e8e58447d2d6
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-bKeMn_Bpzr3
+    type: CHART
+  CHART-PFjlzDrhXmn:
+    children: []
+    id: CHART-PFjlzDrhXmn
+    meta:
+      chartId: 104
+      height: 60
+      sliceName: Ticket Sales by Timeframe
+      uuid: 7f26ab65-cf7c-4363-8821-0dd17ee5259d
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - ROW-Ek7sprJIFeI
+    type: CHART
+  CHART-RrU1WjT1sR5:
+    children: []
+    id: CHART-RrU1WjT1sR5
+    meta:
+      chartId: 98
+      height: 55
+      sliceName: Ticket Type Breakdown
+      sliceNameOverride: Ticket type breakdown
+      uuid: 3d4bb496-e35f-41f9-bfab-eae804236bda
+      width: 8
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-zTmqiTbFUXS
+    type: CHART
+  CHART-Tw-5DoiqZu:
+    children: []
+    id: CHART-Tw-5DoiqZu
+    meta:
+      chartId: 39
+      height: 50
+      sliceName: Onsite sales by ticket type
+      sliceNameOverride: Type
+      uuid: b9c821cc-a7a2-4062-9ded-321c79a03246
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - ROW-VRDbojkANi
+    type: CHART
+  CHART-XjaBcEADEuo:
+    children: []
+    id: CHART-XjaBcEADEuo
+    meta:
+      chartId: 105
+      height: 50
+      sliceName: Add-ons Breakdown
+      sliceNameOverride: Add-ons breakdown
+      uuid: de64fe06-81a4-40f8-adfc-1acf0ac531d4
+      width: 8
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-n6rjuhV4sF
+    type: CHART
+  CHART-ZMTcNNFg0UZ:
+    children: []
+    id: CHART-ZMTcNNFg0UZ
+    meta:
+      chartId: 89
+      height: 16
+      sliceName: Attendees
+      sliceNameOverride: Total tickets
+      uuid: 06a273d5-86c0-4f41-bbf9-43ca72a96608
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-bKeMn_Bpzr3
+    type: CHART
+  CHART-b3PyGkaiojN:
+    children: []
+    id: CHART-b3PyGkaiojN
+    meta:
+      chartId: 121
+      height: 46
+      sliceName: Day Breakdown
+      sliceNameOverride: Sales breakdown by day
+      uuid: 948c7e2f-9ce5-41f3-a1f5-64d90c9c5f79
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-AixYN3Q1oX
+    - COLUMN-cUl_a4HMswV
+    - TABS-H9MnXuWGJWp
+    - TAB-XbF-KBMWD3
+    - ROW-ffHiPHWqj7
+    type: CHART
+  CHART-dMXvFgTE-Bt:
+    children: []
+    id: CHART-dMXvFgTE-Bt
+    meta:
+      chartId: 103
+      height: 50
+      sliceName: Check-ins by Ticket Type
+      uuid: d78d4ac0-4819-461a-9e2a-eaee0566e408
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - ROW-FldETQM4xH
+    type: CHART
+  CHART-dYE7ZDcs4T:
+    children: []
+    id: CHART-dYE7ZDcs4T
+    meta:
+      chartId: 55
+      height: 45
+      sliceName: Sales by partner reseller
+      sliceNameOverride: Partner reseller
+      uuid: 1eba56c0-4b2c-416c-96b2-9e46a4f9a1b0
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    - ROW-Oh9SpZsEx
+    type: CHART
+  CHART-eJW0faTr2B:
+    children: []
+    id: CHART-eJW0faTr2B
+    meta:
+      chartId: 16
+      height: 49
+      sliceName: Card brand
+      sliceNameOverride: Card brand
+      uuid: 6cd1f365-8b30-4df8-be50-c943c43c3916
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    - ROW-zmiwKrJ2Q
+    type: CHART
+  CHART-explore-122-1:
+    children: []
+    id: CHART-explore-122-1
+    meta:
+      chartId: 122
+      height: 48
+      sliceName: Event Dash - Gross sales
+      sliceNameOverride: Gross sales
+      uuid: 8a694886-1b7e-45fb-978e-a5dd151156a6
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-ylu11WQhQJq
+    - COLUMN-4HClfjsNSVN
+    type: CHART
+  CHART-fT0LBLFcwnU:
+    children: []
+    id: CHART-fT0LBLFcwnU
+    meta:
+      chartId: 100
+      height: 18
+      sliceName: Remind me
+      uuid: a56b03c4-1c36-4bbb-9525-a7c513468c40
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-bKeMn_Bpzr3
+    type: CHART
+  CHART-gzg2NLowYEe:
+    children: []
+    id: CHART-gzg2NLowYEe
+    meta:
+      chartId: 102
+      height: 22
+      sliceName: Remaining check-ins
+      uuid: 14b4eddb-d65b-4f88-a5ff-701c07288e47
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - ROW-FldETQM4xH
+    - COLUMN-e99iYAhNnla
+    type: CHART
+  CHART-kmVJbcWuJpV:
+    children: []
+    id: CHART-kmVJbcWuJpV
+    meta:
+      chartId: 95
+      height: 17
+      sliceName: Average tickets per order
+      uuid: e64355a0-4987-435a-b3c2-bf052cf92160
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - ROW-Ek7sprJIFeI
+    - COLUMN-iHUl58a1qB9
+    type: CHART
+  CHART-kqIc4PfWaBk:
+    children: []
+    id: CHART-kqIc4PfWaBk
+    meta:
+      chartId: 123
+      height: 48
+      sliceName: Event dash - Net sales
+      sliceNameOverride: Net sales
+      uuid: 7e789d62-928e-4a29-b1c4-2f1442a3e037
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-ylu11WQhQJq
+    type: CHART
+  CHART-lPYDZXMux1g:
+    children: []
+    id: CHART-lPYDZXMux1g
+    meta:
+      chartId: 115
+      height: 18
+      sliceName: Comp Count
+      sliceNameOverride: Comp
+      uuid: 86354420-be10-423a-a77a-d9fb935d57b3
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-bKeMn_Bpzr3
+    type: CHART
+  CHART-lnVh2-Raj4:
+    children: []
+    id: CHART-lnVh2-Raj4
+    meta:
+      chartId: 70
+      height: 48
+      sliceName: net sales breakdown pivot test
+      sliceNameOverride: Net sales breakdown
+      uuid: 5a116d08-1153-4a71-89cc-f2b97128dda1
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-ylu11WQhQJq
+    type: CHART
+  CHART-m9842nVCm5:
+    children: []
+    id: CHART-m9842nVCm5
+    meta:
+      chartId: 9
+      height: 49
+      sliceName: Boxoffice
+      sliceNameOverride: Boxoffice sources
+      uuid: d748d78c-cf30-4dcc-a690-8b2997b7f2bc
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    - ROW-zmiwKrJ2Q
+    type: CHART
+  CHART-mpIci96ThbK:
+    children: []
+    id: CHART-mpIci96ThbK
+    meta:
+      chartId: 93
+      height: 17
+      sliceName: Average ticket price
+      uuid: 104640db-2458-40cf-9e0a-b0a2e1b503dc
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - ROW-Ek7sprJIFeI
+    - COLUMN-iHUl58a1qB9
+    type: CHART
+  CHART-n_4KKam7F3:
+    children: []
+    id: CHART-n_4KKam7F3
+    meta:
+      chartId: 45
+      height: 45
+      sliceName: Referrals
+      sliceNameOverride: Referrals
+      uuid: 4bdf7915-8fb3-490f-888a-27e6dca9c385
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    - ROW-Oh9SpZsEx
+    type: CHART
+  CHART-r14bBmyGt5p:
+    children: []
+    id: CHART-r14bBmyGt5p
+    meta:
+      chartId: 94
+      height: 17
+      sliceName: Average order value
+      uuid: 6150ca51-256f-4815-b610-7fa19049e295
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - ROW-Ek7sprJIFeI
+    - COLUMN-iHUl58a1qB9
+    type: CHART
+  CHART-r1c_vBFZQMg:
+    children: []
+    id: CHART-r1c_vBFZQMg
+    meta:
+      chartId: 1
+      height: 50
+      sliceName: Access keys
+      uuid: 8bd4d7c7-f03f-49b9-937c-011f1aae71dc
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - ROW-TAZTnnCVSV
+    type: CHART
+  COLUMN-4HClfjsNSVN:
+    children:
+    - CHART-explore-122-1
+    id: COLUMN-4HClfjsNSVN
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-ylu11WQhQJq
+    type: COLUMN
+  COLUMN-cUl_a4HMswV:
+    children:
+    - TABS-H9MnXuWGJWp
+    id: COLUMN-cUl_a4HMswV
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 8
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-AixYN3Q1oX
+    type: COLUMN
+  COLUMN-e99iYAhNnla:
+    children:
+    - CHART-DYENjwrqpIv
+    - CHART-gzg2NLowYEe
+    id: COLUMN-e99iYAhNnla
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - ROW-FldETQM4xH
+    type: COLUMN
+  COLUMN-iHUl58a1qB9:
+    children:
+    - CHART-kmVJbcWuJpV
+    - CHART-r14bBmyGt5p
+    - CHART-mpIci96ThbK
+    id: COLUMN-iHUl58a1qB9
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    - ROW-Ek7sprJIFeI
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  DIVIDER-1ZGRLIrcx7h:
+    children: []
+    id: DIVIDER-1ZGRLIrcx7h
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: DIVIDER
+  DIVIDER-9K481nVfwy1:
+    children: []
+    id: DIVIDER-9K481nVfwy1
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: DIVIDER
+  DIVIDER-QB8YOIGXtH:
+    children: []
+    id: DIVIDER-QB8YOIGXtH
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: DIVIDER
+  DIVIDER-Xtd_qYmDUhz:
+    children: []
+    id: DIVIDER-Xtd_qYmDUhz
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: DIVIDER
+  DIVIDER-kxL4XXQNzG:
+    children: []
+    id: DIVIDER-kxL4XXQNzG
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: DIVIDER
+  GRID_ID:
+    children:
+    - DIVIDER-1ZGRLIrcx7h
+    - TABS-Rt9jZ4P1G1
+    - DIVIDER-9K481nVfwy1
+    - DIVIDER-Xtd_qYmDUhz
+    - DIVIDER-QB8YOIGXtH
+    - DIVIDER-kxL4XXQNzG
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER-Gd_qzMkH4V:
+    children: []
+    id: HEADER-Gd_qzMkH4V
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      headerSize: MEDIUM_HEADER
+      text: Net sales sources
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    type: HEADER
+  HEADER-i9mc1XUF-S:
+    children: []
+    id: HEADER-i9mc1XUF-S
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      headerSize: SMALL_HEADER
+      text: Ticket sales trends
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    type: HEADER
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Event Dashboard v3 - Clem
+    type: HEADER
+  MARKDOWN-63leuxI_VOI:
+    children: []
+    id: MARKDOWN-63leuxI_VOI
+    meta:
+      code: '## Add-ons'
+      height: 11
+      width: 7
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-KhCXWoT-AU
+    type: MARKDOWN
+  MARKDOWN-UNSQWhz1jWK:
+    children: []
+    id: MARKDOWN-UNSQWhz1jWK
+    meta:
+      code: '## Tickets'
+      height: 11
+      width: 7
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-OWXDDRIWtdB
+    type: MARKDOWN
+  MARKDOWN-d0AZjWsq8-i:
+    children: []
+    id: MARKDOWN-d0AZjWsq8-i
+    meta:
+      code: '## Check-ins'
+      height: 11
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - ROW-vrz9ybyY3sn
+    type: MARKDOWN
+  MARKDOWN-jX7xnsw5V1D:
+    children: []
+    id: MARKDOWN-jX7xnsw5V1D
+    meta:
+      code: '## On-site sales'
+      height: 11
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    - ROW-lze6KutQqCh
+    type: MARKDOWN
+  MARKDOWN-yLl_1SUHLNR:
+    children: []
+    id: MARKDOWN-yLl_1SUHLNR
+    meta:
+      code: '## Sales volume'
+      height: 11
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-4CTqMJ4Le4O
+    type: MARKDOWN
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-4CTqMJ4Le4O:
+    children:
+    - MARKDOWN-yLl_1SUHLNR
+    id: ROW-4CTqMJ4Le4O
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: ROW
+  ROW-AixYN3Q1oX:
+    children:
+    - COLUMN-cUl_a4HMswV
+    id: ROW-AixYN3Q1oX
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: ROW
+  ROW-Ek7sprJIFeI:
+    children:
+    - CHART-PFjlzDrhXmn
+    - COLUMN-iHUl58a1qB9
+    id: ROW-Ek7sprJIFeI
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    type: ROW
+  ROW-FldETQM4xH:
+    children:
+    - COLUMN-e99iYAhNnla
+    - CHART-dMXvFgTE-Bt
+    - CHART-27PQofg3Jo
+    id: ROW-FldETQM4xH
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    type: ROW
+  ROW-KhCXWoT-AU:
+    children:
+    - MARKDOWN-63leuxI_VOI
+    id: ROW-KhCXWoT-AU
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: ROW
+  ROW-OWXDDRIWtdB:
+    children:
+    - MARKDOWN-UNSQWhz1jWK
+    id: ROW-OWXDDRIWtdB
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: ROW
+  ROW-Oh9SpZsEx:
+    children:
+    - CHART-n_4KKam7F3
+    - CHART-KbCChP3cAb
+    - CHART-dYE7ZDcs4T
+    id: ROW-Oh9SpZsEx
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    type: ROW
+  ROW-TAZTnnCVSV:
+    children:
+    - CHART-0Qz6b4mdqBa
+    - CHART-r1c_vBFZQMg
+    id: ROW-TAZTnnCVSV
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    type: ROW
+  ROW-VRDbojkANi:
+    children:
+    - CHART-Tw-5DoiqZu
+    - CHART-4Sgr5AEZD8
+    id: ROW-VRDbojkANi
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    type: ROW
+  ROW-bKeMn_Bpzr3:
+    children:
+    - CHART-ZMTcNNFg0UZ
+    - CHART-NOAmjVj4POf
+    - CHART-lPYDZXMux1g
+    - CHART-JuuQVXvUVxL
+    - CHART-2XRRkr4jNNJ
+    - CHART-fT0LBLFcwnU
+    id: ROW-bKeMn_Bpzr3
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: ROW
+  ROW-ffHiPHWqj7:
+    children:
+    - CHART-b3PyGkaiojN
+    id: ROW-ffHiPHWqj7
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-AixYN3Q1oX
+    - COLUMN-cUl_a4HMswV
+    - TABS-H9MnXuWGJWp
+    - TAB-XbF-KBMWD3
+    type: ROW
+  ROW-lze6KutQqCh:
+    children:
+    - MARKDOWN-jX7xnsw5V1D
+    id: ROW-lze6KutQqCh
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    type: ROW
+  ROW-n6rjuhV4sF:
+    children:
+    - CHART-XjaBcEADEuo
+    id: ROW-n6rjuhV4sF
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: ROW
+  ROW-nxrb509EeG:
+    children:
+    - CHART-4KsjEf2IQW_
+    id: ROW-nxrb509EeG
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-AixYN3Q1oX
+    - COLUMN-cUl_a4HMswV
+    - TABS-H9MnXuWGJWp
+    - TAB-nrbq9OcisJ
+    type: ROW
+  ROW-vrz9ybyY3sn:
+    children:
+    - MARKDOWN-d0AZjWsq8-i
+    id: ROW-vrz9ybyY3sn
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    type: ROW
+  ROW-ylu11WQhQJq:
+    children:
+    - COLUMN-4HClfjsNSVN
+    - CHART-kqIc4PfWaBk
+    - CHART-lnVh2-Raj4
+    id: ROW-ylu11WQhQJq
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: ROW
+  ROW-zTmqiTbFUXS:
+    children:
+    - CHART-RrU1WjT1sR5
+    id: ROW-zTmqiTbFUXS
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: ROW
+  ROW-zmiwKrJ2Q:
+    children:
+    - CHART-eJW0faTr2B
+    - CHART-M8zh67jYr5
+    - CHART--UB7fpsi21R
+    - CHART-m9842nVCm5
+    id: ROW-zmiwKrJ2Q
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-oGiGHiGx5
+    type: ROW
+  TAB--ReVxOixrQ:
+    children:
+    - TABS-gv8wN3hDohO
+    - ROW-bKeMn_Bpzr3
+    - ROW-ylu11WQhQJq
+    - ROW-OWXDDRIWtdB
+    - ROW-zTmqiTbFUXS
+    - ROW-KhCXWoT-AU
+    - ROW-n6rjuhV4sF
+    - ROW-4CTqMJ4Le4O
+    - ROW-AixYN3Q1oX
+    - TABS-0l0j7ToSo5O
+    - TABS-g8e_-q61ZY
+    id: TAB--ReVxOixrQ
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Overview
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    type: TAB
+  TAB-5UfH_kEi0:
+    children:
+    - ROW-vrz9ybyY3sn
+    - ROW-FldETQM4xH
+    - ROW-lze6KutQqCh
+    - ROW-VRDbojkANi
+    - TABS-uk-JX9g9RD
+    id: TAB-5UfH_kEi0
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Boxoffice
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    type: TAB
+  TAB-7ggp_GDR6:
+    children:
+    - HEADER-i9mc1XUF-S
+    - ROW-Ek7sprJIFeI
+    - ROW-TAZTnnCVSV
+    - TABS-Pm2hu7FR5B
+    id: TAB-7ggp_GDR6
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Trends
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    type: TAB
+  TAB-XbF-KBMWD3:
+    children:
+    - ROW-ffHiPHWqj7
+    id: TAB-XbF-KBMWD3
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Day
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-AixYN3Q1oX
+    - COLUMN-cUl_a4HMswV
+    - TABS-H9MnXuWGJWp
+    type: TAB
+  TAB-nrbq9OcisJ:
+    children:
+    - ROW-nxrb509EeG
+    id: TAB-nrbq9OcisJ
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Timeslot
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-AixYN3Q1oX
+    - COLUMN-cUl_a4HMswV
+    - TABS-H9MnXuWGJWp
+    type: TAB
+  TAB-oGiGHiGx5:
+    children:
+    - HEADER-Gd_qzMkH4V
+    - ROW-zmiwKrJ2Q
+    - ROW-Oh9SpZsEx
+    id: TAB-oGiGHiGx5
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Sources
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    type: TAB
+  TABS-0l0j7ToSo5O:
+    children: []
+    id: TABS-0l0j7ToSo5O
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: TABS
+  TABS-H9MnXuWGJWp:
+    children:
+    - TAB-XbF-KBMWD3
+    - TAB-nrbq9OcisJ
+    id: TABS-H9MnXuWGJWp
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    - ROW-AixYN3Q1oX
+    - COLUMN-cUl_a4HMswV
+    type: TABS
+  TABS-Pm2hu7FR5B:
+    children: []
+    id: TABS-Pm2hu7FR5B
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-7ggp_GDR6
+    type: TABS
+  TABS-Rt9jZ4P1G1:
+    children:
+    - TAB--ReVxOixrQ
+    - TAB-5UfH_kEi0
+    - TAB-7ggp_GDR6
+    - TAB-oGiGHiGx5
+    id: TABS-Rt9jZ4P1G1
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: TABS
+  TABS-g8e_-q61ZY:
+    children: []
+    id: TABS-g8e_-q61ZY
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: TABS
+  TABS-gv8wN3hDohO:
+    children: []
+    id: TABS-gv8wN3hDohO
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB--ReVxOixrQ
+    type: TABS
+  TABS-uk-JX9g9RD:
+    children: []
+    id: TABS-uk-JX9g9RD
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-Rt9jZ4P1G1
+    - TAB-5UfH_kEi0
+    type: TABS
+metadata:
+  timed_refresh_immune_slices: []
+  expanded_slices: {}
+  refresh_frequency: 300
+  color_scheme: ''
+  label_colors: {}
+  show_native_filters: true
+  default_filters: '{}'
+  chart_configuration: {}
+  stagger_refresh: true
+  native_filter_configuration: []
+  cross_filters_enabled: false
+  shared_label_colors: {}
+  color_scheme_domain: []
+version: 1.0.0
