@@ -1,0 +1,39 @@
+slice_name: Check in percent (onsite)
+description: null
+certified_by: null
+certification_details: null
+viz_type: bullet
+params:
+  datasource: 30__table
+  viz_type: bullet
+  granularity_sqla: purchase_time
+  time_range: No filter
+  metric:
+    expressionType: SQL
+    sqlExpression: countIf(ticket_status IN ('paid', 'ended', 'closed') AND redemption_balance
+      > 0) / countIf(ticket_status IN ('paid', 'ended', 'closed')) * 100
+    column: null
+    aggregate: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: countIf(ticket_status IN ('paid', 'ended...
+    optionName: metric_g0rdldk0i0a_sfjo9o7br5
+  adhoc_filters: []
+  ranges: '100'
+  range_labels: ''
+  extra_form_data: {}
+  dashboards:
+  - 44
+query_context: '{"datasource":{"id":30,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"purchase_time","filters":[],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":[{"expressionType":"SQL","sqlExpression":"countIf(ticket_status
+  IN (''paid'', ''ended'', ''closed'') AND redemption_balance > 0) / countIf(ticket_status
+  IN (''paid'', ''ended'', ''closed'')) * 100","column":null,"aggregate":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"countIf(ticket_status
+  IN (''paid'', ''ended...","optionName":"metric_g0rdldk0i0a_sfjo9o7br5"}],"annotation_layers":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"30__table","viz_type":"bullet","granularity_sqla":"purchase_time","time_range":"No
+  filter","metric":{"expressionType":"SQL","sqlExpression":"countIf(ticket_status
+  IN (''paid'', ''ended'', ''closed'') AND redemption_balance > 0) / countIf(ticket_status
+  IN (''paid'', ''ended'', ''closed'')) * 100","column":null,"aggregate":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"countIf(ticket_status
+  IN (''paid'', ''ended...","optionName":"metric_g0rdldk0i0a_sfjo9o7br5"},"adhoc_filters":[],"ranges":"100","range_labels":"","extra_form_data":{},"dashboards":[44],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 3f61f8ef-40eb-44eb-9134-deedfb292fe5
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc

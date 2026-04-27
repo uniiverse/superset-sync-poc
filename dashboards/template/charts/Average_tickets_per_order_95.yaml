@@ -1,0 +1,38 @@
+slice_name: Average tickets per order
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 25__table
+  viz_type: big_number_total
+  time_range: No filter
+  metric:
+    expressionType: SIMPLE
+    column:
+      column_name: avg_tickets_per_order
+      groupby: true
+      is_dttm: false
+      name: avg_tickets_per_order
+      type: NULLABLE(FLOAT64)
+      type_generic: 0
+    aggregate: AVG
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: AVG(avg_tickets_per_order)
+    optionName: metric_v65ug6v7brj_73bgjx7lj3o
+  adhoc_filters: []
+  header_font_size: 0.4
+  subheader_font_size: 0.15
+  y_axis_format: SMART_NUMBER
+  time_format: smart_date
+  extra_form_data: {}
+  dashboards: []
+query_context: '{"datasource":{"id":25,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","filters":[],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":[{"expressionType":"SIMPLE","column":{"column_name":"avg_tickets_per_order","groupby":true,"is_dttm":false,"name":"avg_tickets_per_order","type":"NULLABLE(FLOAT64)","type_generic":0},"aggregate":"AVG","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"AVG(avg_tickets_per_order)","optionName":"metric_v65ug6v7brj_73bgjx7lj3o"}],"annotation_layers":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"25__table","viz_type":"big_number_total","time_range":"No
+  filter","metric":{"expressionType":"SIMPLE","column":{"column_name":"avg_tickets_per_order","groupby":true,"is_dttm":false,"name":"avg_tickets_per_order","type":"NULLABLE(FLOAT64)","type_generic":0},"aggregate":"AVG","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"AVG(avg_tickets_per_order)","optionName":"metric_v65ug6v7brj_73bgjx7lj3o"},"adhoc_filters":[],"header_font_size":0.4,"subheader_font_size":0.15,"y_axis_format":"SMART_NUMBER","time_format":"smart_date","extra_form_data":{},"dashboards":[],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: e64355a0-4987-435a-b3c2-bf052cf92160
+version: 1.0.0
+dataset_uuid: 4b07111b-926a-4eb5-9f8c-0b65047a7164
