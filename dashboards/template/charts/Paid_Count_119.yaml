@@ -1,0 +1,41 @@
+slice_name: Paid Count
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 38__table
+  viz_type: big_number_total
+  time_range: No filter
+  metric:
+    expressionType: SIMPLE
+    column:
+      column_name: Paid Count
+      groupby: true
+      is_dttm: false
+      name: Paid Count
+      type: UINT64
+      type_generic: 0
+    aggregate: SUM
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: SUM(Paid Count)
+    optionName: metric_y4zvzkguf58_bshttz3834
+  adhoc_filters: []
+  header_font_size: 0.2
+  subheader_font_size: 0.125
+  y_axis_format: SMART_NUMBER
+  time_format: smart_date
+  extra_form_data: {}
+  dashboards: []
+query_context: '{"datasource":{"id":38,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","filters":[],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":[{"expressionType":"SIMPLE","column":{"column_name":"Paid
+  Count","groupby":true,"is_dttm":false,"name":"Paid Count","type":"UINT64","type_generic":0},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"SUM(Paid
+  Count)","optionName":"metric_y4zvzkguf58_bshttz3834"}],"annotation_layers":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"38__table","viz_type":"big_number_total","time_range":"No
+  filter","metric":{"expressionType":"SIMPLE","column":{"column_name":"Paid Count","groupby":true,"is_dttm":false,"name":"Paid
+  Count","type":"UINT64","type_generic":0},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"SUM(Paid
+  Count)","optionName":"metric_y4zvzkguf58_bshttz3834"},"adhoc_filters":[],"header_font_size":0.2,"subheader_font_size":0.125,"y_axis_format":"SMART_NUMBER","time_format":"smart_date","extra_form_data":{},"dashboards":[],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 70882651-06c5-425b-9d6c-4602ab52d26f
+version: 1.0.0

@@ -1,0 +1,68 @@
+slice_name: Add-ons
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number
+params:
+  datasource: 5__table
+  viz_type: big_number
+  slice_id: 4
+  granularity_sqla: purchase_time
+  time_grain_sqla: P1W
+  time_range: No filter
+  metric: Add-on quantity sold
+  adhoc_filters: []
+  compare_lag: 1
+  compare_suffix: Previous week
+  show_trend_line: true
+  start_y_axis_at_zero: true
+  color_picker:
+    a: 1
+    b: 135
+    g: 122
+    r: 0
+  header_font_size: 0.4
+  subheader_font_size: 0.15
+  y_axis_format: ',d'
+  time_format: smart_date
+  rolling_type: cumsum
+  extra_form_data: {}
+  dashboards:
+  - 50
+  - 21
+  - 7
+  - 11
+  - 15
+  - 35
+  - 14
+  - 20
+  - 36
+  - 17
+  - 12
+  - 18
+  - 10
+  - 6
+  - 26
+  - 30
+  - 4
+  - 24
+  - 32
+  - 27
+  - 3
+  - 29
+  - 9
+  - 40
+  - 41
+  - 33
+  - 23
+query_context: '{"datasource":{"id":5,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"purchase_time","filters":[],"extras":{"time_grain_sqla":"P1W","having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":["Add-on
+  quantity sold"],"annotation_layers":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"is_timeseries":true,"post_processing":[{"operation":"pivot","options":{"index":["__timestamp"],"columns":[],"aggregates":{"Add-on
+  quantity sold":{"operator":"mean"}},"drop_missing_columns":true}},{"operation":"cum","options":{"operator":"sum","columns":{"Add-on
+  quantity sold":"Add-on quantity sold"}}},{"operation":"flatten"}]}],"form_data":{"datasource":"5__table","viz_type":"big_number","slice_id":4,"granularity_sqla":"purchase_time","time_grain_sqla":"P1W","time_range":"No
+  filter","metric":"Add-on quantity sold","adhoc_filters":[],"compare_lag":1,"compare_suffix":"Previous
+  week","show_trend_line":true,"start_y_axis_at_zero":true,"color_picker":{"a":1,"b":135,"g":122,"r":0},"header_font_size":0.4,"subheader_font_size":0.15,"y_axis_format":",d","time_format":"smart_date","rolling_type":"cumsum","extra_form_data":{},"dashboards":[50,21,7,11,15,35,14,20,36,17,12,18,10,6,26,30,4,24,32,27,3,29,9,40,41,33,23],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: ee9db37d-92b4-4d40-8b59-a9b9947d95f7
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc
