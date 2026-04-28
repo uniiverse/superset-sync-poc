@@ -1,0 +1,64 @@
+slice_name: Event Dash - Free Tickets
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 5__table
+  viz_type: big_number_total
+  slice_id: 109
+  granularity_sqla: purchase_time
+  time_range: No filter
+  metric:
+    aggregate: null
+    column: null
+    datasourceWarning: false
+    expressionType: SQL
+    hasCustomLabel: false
+    label: countIf(ticket_status IN ('paid', 'ended...
+    optionName: metric_wltgjgy55pm_cv2k2bpo99r
+    sqlExpression: 'countIf(ticket_status IN (''paid'', ''ended'', ''closed''))
+
+      '
+  adhoc_filters:
+  - clause: WHERE
+    comparator: FreeRate
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_w4tup32ic0a_p25elt20ibp
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: ticket_category
+  - clause: WHERE
+    comparator: 6850270235e0d90042a0bac6
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_k4zpb70hk_967kdhizbgt
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: event_id
+  subheader: ''
+  header_font_size: 0.4
+  subheader_font_size: 0.125
+  y_axis_format: SMART_NUMBER
+  time_format: smart_date
+  force_timestamp_formatting: false
+  extra_form_data: {}
+  dashboards: []
+query_context: '{"datasource":{"id":5,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"purchase_time","filters":[{"col":"ticket_category","op":"==","val":"FreeRate"},{"col":"event_id","op":"==","val":"6850270235e0d90042a0bac6"}],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":[{"aggregate":null,"column":null,"datasourceWarning":false,"expressionType":"SQL","hasCustomLabel":false,"label":"countIf(ticket_status
+  IN (''paid'', ''ended...","optionName":"metric_wltgjgy55pm_cv2k2bpo99r","sqlExpression":"countIf(ticket_status
+  IN (''paid'', ''ended'', ''closed''))\n"}],"annotation_layers":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"5__table","viz_type":"big_number_total","slice_id":109,"granularity_sqla":"purchase_time","time_range":"No
+  filter","metric":{"aggregate":null,"column":null,"datasourceWarning":false,"expressionType":"SQL","hasCustomLabel":false,"label":"countIf(ticket_status
+  IN (''paid'', ''ended...","optionName":"metric_wltgjgy55pm_cv2k2bpo99r","sqlExpression":"countIf(ticket_status
+  IN (''paid'', ''ended'', ''closed''))\n"},"adhoc_filters":[{"clause":"WHERE","comparator":"FreeRate","datasourceWarning":false,"expressionType":"SIMPLE","filterOptionName":"filter_w4tup32ic0a_p25elt20ibp","isExtra":false,"isNew":false,"operator":"==","operatorId":"EQUALS","sqlExpression":null,"subject":"ticket_category"},{"clause":"WHERE","comparator":"6850270235e0d90042a0bac6","datasourceWarning":false,"expressionType":"SIMPLE","filterOptionName":"filter_k4zpb70hk_967kdhizbgt","isExtra":false,"isNew":false,"operator":"==","operatorId":"EQUALS","sqlExpression":null,"subject":"event_id"}],"subheader":"","header_font_size":0.4,"subheader_font_size":0.125,"y_axis_format":"SMART_NUMBER","time_format":"smart_date","force_timestamp_formatting":false,"extra_form_data":{},"dashboards":[],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 3ac2d95a-7a16-41c0-b9c8-9cf9ddf32e11
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc
