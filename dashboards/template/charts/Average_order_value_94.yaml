@@ -1,0 +1,38 @@
+slice_name: Average order value
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 24__table
+  viz_type: big_number_total
+  time_range: No filter
+  metric:
+    expressionType: SIMPLE
+    column:
+      column_name: avg_order_price
+      groupby: true
+      is_dttm: false
+      name: avg_order_price
+      type: NULLABLE(FLOAT64)
+      type_generic: 0
+    aggregate: AVG
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: AVG(avg_order_price)
+    optionName: metric_au87oavr6ro_z1hg1ji264
+  adhoc_filters: []
+  header_font_size: 0.4
+  subheader_font_size: 0.15
+  y_axis_format: SMART_NUMBER
+  time_format: smart_date
+  extra_form_data: {}
+  dashboards: []
+query_context: '{"datasource":{"id":24,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","filters":[],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":[{"expressionType":"SIMPLE","column":{"column_name":"avg_order_price","groupby":true,"is_dttm":false,"name":"avg_order_price","type":"NULLABLE(FLOAT64)","type_generic":0},"aggregate":"AVG","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"AVG(avg_order_price)","optionName":"metric_au87oavr6ro_z1hg1ji264"}],"annotation_layers":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"24__table","viz_type":"big_number_total","time_range":"No
+  filter","metric":{"expressionType":"SIMPLE","column":{"column_name":"avg_order_price","groupby":true,"is_dttm":false,"name":"avg_order_price","type":"NULLABLE(FLOAT64)","type_generic":0},"aggregate":"AVG","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"AVG(avg_order_price)","optionName":"metric_au87oavr6ro_z1hg1ji264"},"adhoc_filters":[],"header_font_size":0.4,"subheader_font_size":0.15,"y_axis_format":"SMART_NUMBER","time_format":"smart_date","extra_form_data":{},"dashboards":[],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 6150ca51-256f-4815-b610-7fa19049e295
+version: 1.0.0
+dataset_uuid: a695246f-02f6-49b5-986d-05c8c21ca6ed
