@@ -1,0 +1,43 @@
+slice_name: Waitlist
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 29__table
+  viz_type: big_number_total
+  slice_id: 99
+  time_range: No filter
+  metric:
+    aggregate: SUM
+    column:
+      column_name: placeholder_value
+      groupby: true
+      is_dttm: false
+      name: placeholder_value
+      type: UINT8
+      type_generic: 0
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    label: SUM(placeholder_value)
+    optionName: metric_6cxibqyk7z_0ci38iojuoj6
+    sqlExpression: null
+  adhoc_filters: []
+  subheader: requests
+  header_font_size: 0.6
+  subheader_font_size: 0.125
+  y_axis_format: SMART_NUMBER
+  time_format: smart_date
+  extra_form_data: {}
+  dashboards:
+  - 55
+  - 56
+  - 53
+query_context: '{"datasource":{"id":29,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","filters":[],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":[{"aggregate":"SUM","column":{"column_name":"placeholder_value","groupby":true,"is_dttm":false,"name":"placeholder_value","type":"UINT8","type_generic":0},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":false,"label":"SUM(placeholder_value)","optionName":"metric_6cxibqyk7z_0ci38iojuoj6","sqlExpression":null}],"annotation_layers":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"29__table","viz_type":"big_number_total","slice_id":99,"time_range":"No
+  filter","metric":{"aggregate":"SUM","column":{"column_name":"placeholder_value","groupby":true,"is_dttm":false,"name":"placeholder_value","type":"UINT8","type_generic":0},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":false,"label":"SUM(placeholder_value)","optionName":"metric_6cxibqyk7z_0ci38iojuoj6","sqlExpression":null},"adhoc_filters":[],"subheader":"requests","header_font_size":0.6,"subheader_font_size":0.125,"y_axis_format":"SMART_NUMBER","time_format":"smart_date","extra_form_data":{},"dashboards":[55,56,53],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 0112e05d-7a73-4ff7-a983-07531019c109
+version: 1.0.0
+dataset_uuid: ea7ba8ca-6fab-4f94-ac1a-3b511d2bb452
