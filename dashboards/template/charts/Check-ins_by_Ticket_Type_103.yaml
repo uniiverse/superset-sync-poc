@@ -1,0 +1,56 @@
+slice_name: Check-ins by Ticket Type
+description: null
+certified_by: null
+certification_details: null
+viz_type: pivot_table_v2
+params:
+  datasource: 33__table
+  viz_type: pivot_table_v2
+  time_grain_sqla: P1D
+  time_range: No filter
+  groupbyColumns: []
+  groupbyRows:
+  - Event date
+  - 'Start time '
+  - Ticket type
+  - Checked-in
+  metrics:
+  - expressionType: SIMPLE
+    column:
+      column_name: Remaining check-ins
+      groupby: true
+      is_dttm: false
+      name: Remaining check-ins
+      type: UINT64
+      type_generic: 0
+    aggregate: SUM
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: true
+    label: Remaining check-ins
+    optionName: metric_4owhx3s9kxy_fdsccdjw1j
+  metricsLayout: COLUMNS
+  adhoc_filters: []
+  row_limit: 1000
+  order_desc: true
+  aggregateFunction: Sum
+  valueFormat: SMART_NUMBER
+  date_format: smart_date
+  rowOrder: key_a_to_z
+  colOrder: key_a_to_z
+  extra_form_data: {}
+  dashboards: []
+query_context: '{"datasource":{"id":33,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","filters":[],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":["Event
+  date","Start time ","Ticket type","Checked-in"],"metrics":[{"expressionType":"SIMPLE","column":{"column_name":"Remaining
+  check-ins","groupby":true,"is_dttm":false,"name":"Remaining check-ins","type":"UINT64","type_generic":0},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":true,"label":"Remaining
+  check-ins","optionName":"metric_4owhx3s9kxy_fdsccdjw1j"}],"orderby":[[{"expressionType":"SIMPLE","column":{"column_name":"Remaining
+  check-ins","groupby":true,"is_dttm":false,"name":"Remaining check-ins","type":"UINT64","type_generic":0},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":true,"label":"Remaining
+  check-ins","optionName":"metric_4owhx3s9kxy_fdsccdjw1j"},false]],"annotation_layers":[],"row_limit":1000,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"33__table","viz_type":"pivot_table_v2","time_grain_sqla":"P1D","time_range":"No
+  filter","groupbyColumns":[],"groupbyRows":["Event date","Start time ","Ticket type","Checked-in"],"metrics":[{"expressionType":"SIMPLE","column":{"column_name":"Remaining
+  check-ins","groupby":true,"is_dttm":false,"name":"Remaining check-ins","type":"UINT64","type_generic":0},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":true,"label":"Remaining
+  check-ins","optionName":"metric_4owhx3s9kxy_fdsccdjw1j"}],"metricsLayout":"COLUMNS","adhoc_filters":[],"row_limit":1000,"order_desc":true,"aggregateFunction":"Sum","valueFormat":"SMART_NUMBER","date_format":"smart_date","rowOrder":"key_a_to_z","colOrder":"key_a_to_z","extra_form_data":{},"dashboards":[],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: d78d4ac0-4819-461a-9e2a-eaee0566e408
+version: 1.0.0
+dataset_uuid: 0e6a1b31-935a-4004-b318-610164b7589e
