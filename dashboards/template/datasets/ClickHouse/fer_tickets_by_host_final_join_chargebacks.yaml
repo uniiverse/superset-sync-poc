@@ -4,7 +4,6 @@ description: null
 default_endpoint: null
 offset: 0
 cache_timeout: null
-catalog: null
 schema: highlander
 sql: "SELECT *\n  FROM fer_tickets_by_host_final\n  LEFT JOIN chargebacks_with_ticket_id_final\n\
   \  ON order_id = ticket_id"
@@ -13,8 +12,6 @@ template_params: null
 filter_select_enabled: false
 fetch_values_predicate: null
 extra: null
-normalize_columns: true
-always_filter_main_dttm: false
 uuid: f8862615-3a2a-43f1-99b4-19ad102bec0a
 metrics:
 - metric_name: Ticket sales
@@ -27,7 +24,6 @@ metrics:
     \n        price - voided_price,\r\n        0\r\n    )),2)"
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -41,7 +37,6 @@ metrics:
     \n        price - voided_price,\r\n        0\r\n    )),2)"
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -52,7 +47,6 @@ metrics:
     \            price - voided_price,\n            0\n        )\n    ), 2\n)"
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -64,7 +58,6 @@ metrics:
     AND payment_type <> ''offline'', price - voided_price, 0)),2)'
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -74,7 +67,6 @@ metrics:
   expression: roundBankers(SUM(commission_included-voided_commission_included),2)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -84,7 +76,6 @@ metrics:
   expression: roundBankers(SUM(vat_included-voided_vat_included),2)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -94,7 +85,6 @@ metrics:
   expression: roundBankers(SUM(fees_total - voided_fees_total), 2)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -104,7 +94,6 @@ metrics:
   expression: roundBankers(SUM(discount - voided_discount), 2)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -114,7 +103,6 @@ metrics:
   expression: roundBankers(SUM(taxes_total - voided_taxes_total),2)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -124,7 +112,6 @@ metrics:
   expression: count(*)
   description: null
   d3format: null
-  currency: null
   extra:
     warning_markdown: ''
   warning_text: null
@@ -689,4 +676,4 @@ columns:
   extra:
     warning_markdown: null
 version: 1.0.0
-database_uuid: 2bcd6f44-64a1-46f9-ab11-f6572aded45f
+database_uuid: 9959a820-3653-435b-9b67-bb25bdf82933
