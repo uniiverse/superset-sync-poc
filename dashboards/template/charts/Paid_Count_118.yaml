@@ -1,0 +1,45 @@
+slice_name: Paid Count
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 37__table
+  viz_type: big_number_total
+  slice_id: 118
+  time_range: No filter
+  metric:
+    aggregate: SUM
+    column:
+      column_name: Paid Count
+      groupby: true
+      is_dttm: false
+      name: Paid Count
+      type: UINT8
+      type_generic: 0
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    label: SUM(Paid Count)
+    optionName: metric_facth42aekq_bldo0bt3dtl
+    sqlExpression: null
+  adhoc_filters: []
+  subheader: ''
+  header_font_size: 0.2
+  subheader_font_size: 0.125
+  y_axis_format: SMART_NUMBER
+  time_format: smart_date
+  extra_form_data: {}
+  dashboards:
+  - 53
+query_context: '{"datasource":{"id":37,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","filters":[],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":[{"aggregate":"SUM","column":{"column_name":"Paid
+  Count","groupby":true,"is_dttm":false,"name":"Paid Count","type":"UINT8","type_generic":0},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":false,"label":"SUM(Paid
+  Count)","optionName":"metric_facth42aekq_bldo0bt3dtl","sqlExpression":null}],"annotation_layers":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"37__table","viz_type":"big_number_total","slice_id":118,"time_range":"No
+  filter","metric":{"aggregate":"SUM","column":{"column_name":"Paid Count","groupby":true,"is_dttm":false,"name":"Paid
+  Count","type":"UINT8","type_generic":0},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":false,"label":"SUM(Paid
+  Count)","optionName":"metric_facth42aekq_bldo0bt3dtl","sqlExpression":null},"adhoc_filters":[],"subheader":"","header_font_size":0.2,"subheader_font_size":0.125,"y_axis_format":"SMART_NUMBER","time_format":"smart_date","extra_form_data":{},"dashboards":[53],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: ce6b380d-2633-4da4-881e-63cf27d8bb3f
+version: 1.0.0
+dataset_uuid: 331225c3-2dde-4cdc-ac74-5df11a5adc2f
