@@ -1,0 +1,67 @@
+slice_name: Event dash - Net sales
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number
+params:
+  datasource: 5__table
+  viz_type: big_number
+  slice_id: 123
+  granularity_sqla: purchase_time
+  time_grain_sqla: P1D
+  time_range: No filter
+  metric: Net earnings
+  adhoc_filters:
+  - expressionType: SIMPLE
+    subject: order_status
+    operator: '!='
+    operatorId: NOT_EQUALS
+    comparator: expired
+    clause: WHERE
+    sqlExpression: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_lufquvwgdcd_dlzrdbvlin9
+  - expressionType: SIMPLE
+    subject: event_id
+    operator: ==
+    operatorId: EQUALS
+    comparator: 67d20ef580e2eb002fe96554
+    clause: WHERE
+    sqlExpression: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_eoxc42vp3ft_jw4bocxwx7
+  compare_lag: 1
+  compare_suffix: Previous week
+  show_timestamp: false
+  show_trend_line: true
+  start_y_axis_at_zero: true
+  color_picker:
+    a: 1
+    b: 255
+    g: 101
+    r: 23
+  header_font_size: 0.4
+  subheader_font_size: 0.125
+  y_axis_format: ',.2f'
+  time_format: smart_date
+  rolling_type: cumsum
+  extra_form_data: {}
+  dashboards:
+  - 56
+  - 57
+  - 55
+query_context: '{"datasource":{"id":5,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"purchase_time","filters":[{"col":"order_status","op":"!=","val":"expired"},{"col":"event_id","op":"==","val":"67d20ef580e2eb002fe96554"}],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":["Net
+  earnings"],"annotation_layers":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"is_timeseries":true,"post_processing":[{"operation":"pivot","options":{"index":["__timestamp"],"columns":[],"aggregates":{"Net
+  earnings":{"operator":"mean"}},"drop_missing_columns":true}},{"operation":"cum","options":{"operator":"sum","columns":{"Net
+  earnings":"Net earnings"}}},{"operation":"flatten"}]}],"form_data":{"datasource":"5__table","viz_type":"big_number","slice_id":123,"granularity_sqla":"purchase_time","time_grain_sqla":"P1D","time_range":"No
+  filter","metric":"Net earnings","adhoc_filters":[{"expressionType":"SIMPLE","subject":"order_status","operator":"!=","operatorId":"NOT_EQUALS","comparator":"expired","clause":"WHERE","sqlExpression":null,"isExtra":false,"isNew":false,"datasourceWarning":false,"filterOptionName":"filter_lufquvwgdcd_dlzrdbvlin9"},{"expressionType":"SIMPLE","subject":"event_id","operator":"==","operatorId":"EQUALS","comparator":"67d20ef580e2eb002fe96554","clause":"WHERE","sqlExpression":null,"isExtra":false,"isNew":false,"datasourceWarning":false,"filterOptionName":"filter_eoxc42vp3ft_jw4bocxwx7"}],"compare_lag":1,"compare_suffix":"Previous
+  week","show_timestamp":false,"show_trend_line":true,"start_y_axis_at_zero":true,"color_picker":{"a":1,"b":255,"g":101,"r":23},"header_font_size":0.4,"subheader_font_size":0.125,"y_axis_format":",.2f","time_format":"smart_date","rolling_type":"cumsum","extra_form_data":{},"dashboards":[56,57,55],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 7e789d62-928e-4a29-b1c4-2f1442a3e037
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc
