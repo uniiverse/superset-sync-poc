@@ -1,0 +1,114 @@
+table_name: sales_volume_by_day_clem
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: highlander
+sql: "SELECT d.\"Event date\",\n       d.\"Quantity sold\",\n       if(d.sort_key\
+  \ = 1, NULL, c.total_cap - d.\"Quantity sold\") AS \"Quantity remaining\",\n   \
+  \    if(d.sort_key = 1, NULL, round(d.\"Quantity sold\" * 100.0 / NULLIF(c.total_cap,\
+  \ 0), 1)) AS \"% sold\",\n       d.\"Net earnings\",\n       d.sort_key\nFROM (\n\
+  \  SELECT e.start_date AS \"Event date\",\n         countIf(c.state IN ('paid',\
+  \ 'ended', 'closed')) AS \"Quantity sold\",\n         round(SUM(c.net_earnings),\
+  \ 2) AS \"Net earnings\",\n         0 AS sort_key\n  FROM cost_item_cost_breakdowns_by_host_final\
+  \ c\n  LEFT JOIN events_final e ON c.event_id = e.id\n  WHERE c.listing_id = '6850270235e0d90042a0bac6'\n\
+  \    AND c.state IN ('paid', 'ended', 'closed')\n    AND c.rate_type != 'AddOnRate'\n\
+  \    AND (c.deleted IS NULL OR c.deleted = 0)\n  GROUP BY e.start_date\n  UNION\
+  \ ALL\n  SELECT 'Total',\n         countIf(c.state IN ('paid', 'ended', 'closed')),\n\
+  \         round(SUM(c.net_earnings), 2),\n         1\n  FROM cost_item_cost_breakdowns_by_host_final\
+  \ c\n  WHERE c.listing_id = '6850270235e0d90042a0bac6'\n    AND c.state IN ('paid',\
+  \ 'ended', 'closed')\n    AND c.rate_type != 'AddOnRate'\n    AND (c.deleted IS\
+  \ NULL OR c.deleted = 0)\n) AS d\nCROSS JOIN (\n  SELECT SUM(capacity) AS total_cap\n\
+  \  FROM rates_by_host_final\n  WHERE listing_id = '6850270235e0d90042a0bac6'\n \
+  \   AND capacity IS NOT NULL\n) AS c\nORDER BY sort_key, \"Event date\"\nLIMIT 1000"
+params: null
+template_params: null
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: 74c92869-30c1-44f9-bbfd-cac92e062b56
+metrics:
+- metric_name: count
+  verbose_name: null
+  metric_type: null
+  expression: count(*)
+  description: null
+  d3format: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: '% sold'
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(FLOAT64)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Net earnings
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(FLOAT64)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Quantity remaining
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(INT64)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Event date
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Quantity sold
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UINT64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: sort_key
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UINT8
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 9959a820-3653-435b-9b67-bb25bdf82933

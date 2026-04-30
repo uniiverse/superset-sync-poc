@@ -1,0 +1,81 @@
+table_name: ticket_sales_by_ticket_type_clem
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: null
+sql: "SELECT\n    toDate(c.created_at)                                        AS purchase_date,\n\
+  \    c.name                                                      AS ticket_type,\n\
+  \    countIf(c.state IN ('paid', 'ended', 'closed'))             AS quantity_sold,\n\
+  \    round(SUM(c.base_price - c.base_voided_price), 2)           AS ticket_revenue\n\
+  FROM cost_item_cost_breakdowns_by_host_final c\nWHERE\n    c.listing_id = '6850270235e0d90042a0bac6'\n\
+  \    AND c.rate_type != 'AddOnRate'\n    AND c.state IN ('paid', 'ended', 'closed')\n\
+  \    AND (c.deleted IS NULL OR c.deleted = 0)\nGROUP BY\n    purchase_date,\n  \
+  \  c.name\nORDER BY\n    purchase_date,\n    c.name"
+params: null
+template_params: null
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: e78e3009-99d9-4a03-afe6-e525544f5638
+metrics:
+- metric_name: count
+  verbose_name: null
+  metric_type: null
+  expression: count(*)
+  description: null
+  d3format: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: ticket_revenue
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(FLOAT64)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: purchase_date
+  verbose_name: null
+  is_dttm: true
+  is_active: true
+  type: NULLABLE(DATE)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: ticket_type
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(STRING)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: quantity_sold
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UINT64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 9959a820-3653-435b-9b67-bb25bdf82933
