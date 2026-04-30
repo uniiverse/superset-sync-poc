@@ -1,0 +1,63 @@
+slice_name: Event Dash - Revenue by Ticket Type (Clem)
+description: null
+certified_by: null
+certification_details: null
+viz_type: echarts_timeseries_line
+params:
+  datasource: 18__table
+  viz_type: echarts_timeseries_line
+  granularity_sqla: purchase_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  metrics:
+  - expressionType: SIMPLE
+    column:
+      column_name: ticket_revenue
+      groupby: true
+      is_dttm: false
+      name: ticket_revenue
+      type: NULLABLE(FLOAT64)
+      type_generic: 0
+    aggregate: SUM
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: SUM(ticket_revenue)
+    optionName: metric_isv9lwf608_mkqb6k00x7
+  groupby:
+  - ticket_type
+  adhoc_filters: []
+  order_desc: true
+  row_limit: 1000
+  truncate_metric: true
+  show_empty_columns: true
+  comparison_type: values
+  annotation_layers: []
+  forecastPeriods: 10
+  forecastInterval: 0.8
+  x_axis_title_margin: 15
+  y_axis_title_margin: 15
+  y_axis_title_position: Left
+  color_scheme: supersetColors
+  seriesType: line
+  only_total: true
+  opacity: 0.2
+  markerSize: 6
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  x_axis_time_format: smart_date
+  rich_tooltip: true
+  tooltipTimeFormat: smart_date
+  y_axis_format: SMART_NUMBER
+  y_axis_bounds:
+  - null
+  - null
+  extra_form_data: {}
+  dashboards: []
+query_context: '{"datasource":{"id":18,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"purchase_date","filters":[],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":["ticket_type"],"metrics":[{"expressionType":"SIMPLE","column":{"column_name":"ticket_revenue","groupby":true,"is_dttm":false,"name":"ticket_revenue","type":"NULLABLE(FLOAT64)","type_generic":0},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"SUM(ticket_revenue)","optionName":"metric_isv9lwf608_mkqb6k00x7"}],"orderby":[[{"expressionType":"SIMPLE","column":{"column_name":"ticket_revenue","groupby":true,"is_dttm":false,"name":"ticket_revenue","type":"NULLABLE(FLOAT64)","type_generic":0},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"SUM(ticket_revenue)","optionName":"metric_isv9lwf608_mkqb6k00x7"},false]],"annotation_layers":[],"row_limit":1000,"series_columns":["ticket_type"],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"is_timeseries":true,"time_offsets":[],"post_processing":[{"operation":"pivot","options":{"index":["__timestamp"],"columns":["ticket_type"],"aggregates":{"SUM(ticket_revenue)":{"operator":"mean"}},"drop_missing_columns":false}},{"operation":"rename","options":{"columns":{"SUM(ticket_revenue)":null},"level":0,"inplace":true}},{"operation":"flatten"}]}],"form_data":{"datasource":"18__table","viz_type":"echarts_timeseries_line","granularity_sqla":"purchase_date","time_grain_sqla":"P1D","time_range":"No
+  filter","metrics":[{"expressionType":"SIMPLE","column":{"column_name":"ticket_revenue","groupby":true,"is_dttm":false,"name":"ticket_revenue","type":"NULLABLE(FLOAT64)","type_generic":0},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"SUM(ticket_revenue)","optionName":"metric_isv9lwf608_mkqb6k00x7"}],"groupby":["ticket_type"],"adhoc_filters":[],"order_desc":true,"row_limit":1000,"truncate_metric":true,"show_empty_columns":true,"comparison_type":"values","annotation_layers":[],"forecastPeriods":10,"forecastInterval":0.8,"x_axis_title_margin":15,"y_axis_title_margin":15,"y_axis_title_position":"Left","color_scheme":"supersetColors","seriesType":"line","only_total":true,"opacity":0.2,"markerSize":6,"show_legend":true,"legendType":"scroll","legendOrientation":"top","x_axis_time_format":"smart_date","rich_tooltip":true,"tooltipTimeFormat":"smart_date","y_axis_format":"SMART_NUMBER","y_axis_bounds":[null,null],"extra_form_data":{},"dashboards":[],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 2b430eb1-7d99-4c21-a35f-d33887970546
+version: 1.0.0

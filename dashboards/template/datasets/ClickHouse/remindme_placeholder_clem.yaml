@@ -1,0 +1,39 @@
+table_name: remindme_placeholder_clem
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: highlander
+sql: SELECT 14 AS placeholder_value
+params: null
+template_params: null
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: f55a5a98-c21d-4fca-bc44-29a8d07f9258
+metrics:
+- metric_name: count
+  verbose_name: null
+  metric_type: null
+  expression: count(*)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+columns:
+- column_name: placeholder_value
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UINT8
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+version: 1.0.0
+database_uuid: 9959a820-3653-435b-9b67-bb25bdf82933

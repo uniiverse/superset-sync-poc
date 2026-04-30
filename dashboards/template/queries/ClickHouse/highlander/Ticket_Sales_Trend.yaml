@@ -1,0 +1,14 @@
+schema: highlander
+label: Ticket Sales Trend
+description: ''
+sql: "SELECT\n    toDate(c.created_at)                                        AS purchase_date,\n\
+  \    c.name                                                      AS ticket_type,\n\
+  \    countIf(c.state IN ('paid', 'ended', 'closed'))             AS quantity_sold,\n\
+  \    round(SUM(c.base_price - c.base_voided_price), 2)           AS ticket_revenue\n\
+  FROM cost_item_cost_breakdowns_by_host_final c\nWHERE\n    c.listing_id = '6850270235e0d90042a0bac6'\n\
+  \    AND c.rate_type != 'AddOnRate'\n    AND c.state IN ('paid', 'ended', 'closed')\n\
+  \    AND (c.deleted IS NULL OR c.deleted = 0)\nGROUP BY\n    purchase_date,\n  \
+  \  c.name\nORDER BY\n    purchase_date,\n    c.name\n"
+uuid: 5e70851c-902c-4eb7-8253-33bfbd304d10
+version: 1.0.0
+database_uuid: 9959a820-3653-435b-9b67-bb25bdf82933
