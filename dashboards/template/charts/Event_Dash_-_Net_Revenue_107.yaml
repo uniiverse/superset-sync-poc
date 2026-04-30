@@ -1,0 +1,73 @@
+slice_name: Event Dash - Net Revenue
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number
+params:
+  datasource: 5__table
+  viz_type: big_number
+  slice_id: 106
+  granularity_sqla: purchase_time
+  time_grain_sqla: P1D
+  time_range: previous calendar year
+  metric: Net earnings
+  adhoc_filters:
+  - clause: WHERE
+    comparator: expired
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_dqzzd28g1vp_ve75n3onn8
+    isExtra: false
+    isNew: false
+    operator: '!='
+    operatorId: NOT_EQUALS
+    sqlExpression: null
+    subject: order_status
+  - clause: WHERE
+    comparator: upgraded
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_qclm0h5oyql_amwpl1stmtj
+    isExtra: false
+    isNew: false
+    operator: '!='
+    operatorId: NOT_EQUALS
+    sqlExpression: null
+    subject: ticket_status
+  - clause: WHERE
+    comparator: 67d20ef580e2eb002fe96554
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_8bp9ubmukie_dzwwstl9uan
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: event_id
+  show_timestamp: true
+  show_trend_line: true
+  start_y_axis_at_zero: true
+  time_range_fixed: false
+  color_picker:
+    a: 1
+    b: 255
+    g: 101
+    r: 23
+  header_font_size: 0.3
+  subheader_font_size: 0.125
+  y_axis_format: SMART_NUMBER
+  time_format: smart_date
+  force_timestamp_formatting: false
+  rolling_type: None
+  extra_form_data: {}
+  dashboards: []
+query_context: '{"datasource":{"id":5,"type":"table"},"force":false,"queries":[{"time_range":"previous
+  calendar year","granularity":"purchase_time","filters":[{"col":"order_status","op":"!=","val":"expired"},{"col":"ticket_status","op":"!=","val":"upgraded"},{"col":"event_id","op":"==","val":"67d20ef580e2eb002fe96554"}],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":["Net
+  earnings"],"annotation_layers":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"is_timeseries":true,"post_processing":[{"operation":"pivot","options":{"index":["__timestamp"],"columns":[],"aggregates":{"Net
+  earnings":{"operator":"mean"}},"drop_missing_columns":true}},{"operation":"flatten"}]}],"form_data":{"datasource":"5__table","viz_type":"big_number","slice_id":106,"granularity_sqla":"purchase_time","time_grain_sqla":"P1D","time_range":"previous
+  calendar year","metric":"Net earnings","adhoc_filters":[{"clause":"WHERE","comparator":"expired","datasourceWarning":false,"expressionType":"SIMPLE","filterOptionName":"filter_dqzzd28g1vp_ve75n3onn8","isExtra":false,"isNew":false,"operator":"!=","operatorId":"NOT_EQUALS","sqlExpression":null,"subject":"order_status"},{"clause":"WHERE","comparator":"upgraded","datasourceWarning":false,"expressionType":"SIMPLE","filterOptionName":"filter_qclm0h5oyql_amwpl1stmtj","isExtra":false,"isNew":false,"operator":"!=","operatorId":"NOT_EQUALS","sqlExpression":null,"subject":"ticket_status"},{"clause":"WHERE","comparator":"67d20ef580e2eb002fe96554","datasourceWarning":false,"expressionType":"SIMPLE","filterOptionName":"filter_8bp9ubmukie_dzwwstl9uan","isExtra":false,"isNew":false,"operator":"==","operatorId":"EQUALS","sqlExpression":null,"subject":"event_id"}],"show_timestamp":true,"show_trend_line":true,"start_y_axis_at_zero":true,"time_range_fixed":false,"color_picker":{"a":1,"b":255,"g":101,"r":23},"header_font_size":0.3,"subheader_font_size":0.125,"y_axis_format":"SMART_NUMBER","time_format":"smart_date","force_timestamp_formatting":false,"rolling_type":"None","extra_form_data":{},"dashboards":[],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: a6218532-1983-4643-9acf-72c3bba4ead4
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc

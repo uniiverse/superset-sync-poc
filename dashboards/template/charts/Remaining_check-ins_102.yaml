@@ -1,0 +1,38 @@
+slice_name: Remaining check-ins
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 32__table
+  viz_type: big_number_total
+  time_range: No filter
+  metric:
+    expressionType: SIMPLE
+    column:
+      column_name: remaining_checkins
+      groupby: true
+      is_dttm: false
+      name: remaining_checkins
+      type: UINT64
+      type_generic: 0
+    aggregate: SUM
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: SUM(remaining_checkins)
+    optionName: metric_0vdni3rrivwd_xb6gk0gwwuo
+  adhoc_filters: []
+  header_font_size: 0.4
+  subheader_font_size: 0.15
+  y_axis_format: SMART_NUMBER
+  time_format: smart_date
+  extra_form_data: {}
+  dashboards: []
+query_context: '{"datasource":{"id":32,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","filters":[],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":[{"expressionType":"SIMPLE","column":{"column_name":"remaining_checkins","groupby":true,"is_dttm":false,"name":"remaining_checkins","type":"UINT64","type_generic":0},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"SUM(remaining_checkins)","optionName":"metric_0vdni3rrivwd_xb6gk0gwwuo"}],"annotation_layers":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"32__table","viz_type":"big_number_total","time_range":"No
+  filter","metric":{"expressionType":"SIMPLE","column":{"column_name":"remaining_checkins","groupby":true,"is_dttm":false,"name":"remaining_checkins","type":"UINT64","type_generic":0},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"SUM(remaining_checkins)","optionName":"metric_0vdni3rrivwd_xb6gk0gwwuo"},"adhoc_filters":[],"header_font_size":0.4,"subheader_font_size":0.15,"y_axis_format":"SMART_NUMBER","time_format":"smart_date","extra_form_data":{},"dashboards":[],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 14b4eddb-d65b-4f88-a5ff-701c07288e47
+version: 1.0.0
+dataset_uuid: 780684bd-a3d5-43d1-983c-9c3f48a23bef

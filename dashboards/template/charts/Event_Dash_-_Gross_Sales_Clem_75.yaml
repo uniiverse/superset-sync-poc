@@ -1,0 +1,49 @@
+slice_name: Event Dash - Gross Sales (Clem)
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 5__table
+  viz_type: big_number_total
+  slice_id: 75
+  granularity_sqla: purchase_time
+  time_range: No filter
+  metric: Gross sales
+  adhoc_filters:
+  - clause: WHERE
+    comparator: expired
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_0xclmagfs7z_6bh4b9fo3s6
+    isExtra: false
+    isNew: false
+    operator: '!='
+    operatorId: NOT_EQUALS
+    sqlExpression: null
+    subject: order_status
+  - clause: WHERE
+    comparator: upgraded
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_1g0u067gxr2_c6nn642q1tj
+    isExtra: false
+    isNew: false
+    operator: '!='
+    operatorId: NOT_EQUALS
+    sqlExpression: null
+    subject: ticket_status
+  header_font_size: 0.4
+  subheader_font_size: 0.15
+  y_axis_format: ',.2f'
+  time_format: smart_date
+  extra_form_data: {}
+  dashboards: []
+query_context: '{"datasource":{"id":5,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"purchase_time","filters":[{"col":"order_status","op":"!=","val":"expired"},{"col":"ticket_status","op":"!=","val":"upgraded"}],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":["Gross
+  sales"],"annotation_layers":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"5__table","viz_type":"big_number_total","slice_id":75,"granularity_sqla":"purchase_time","time_range":"No
+  filter","metric":"Gross sales","adhoc_filters":[{"clause":"WHERE","comparator":"expired","datasourceWarning":false,"expressionType":"SIMPLE","filterOptionName":"filter_0xclmagfs7z_6bh4b9fo3s6","isExtra":false,"isNew":false,"operator":"!=","operatorId":"NOT_EQUALS","sqlExpression":null,"subject":"order_status"},{"clause":"WHERE","comparator":"upgraded","datasourceWarning":false,"expressionType":"SIMPLE","filterOptionName":"filter_1g0u067gxr2_c6nn642q1tj","isExtra":false,"isNew":false,"operator":"!=","operatorId":"NOT_EQUALS","sqlExpression":null,"subject":"ticket_status"}],"header_font_size":0.4,"subheader_font_size":0.15,"y_axis_format":",.2f","time_format":"smart_date","extra_form_data":{},"dashboards":[],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 4f214901-e942-4ed6-9cd1-c51173da58ce
+version: 1.0.0
+dataset_uuid: 71056aab-904c-4cb1-85d3-12837cad45bc

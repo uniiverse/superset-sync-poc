@@ -1,0 +1,42 @@
+table_name: avg_tickets_per_order_clem
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: null
+sql: "SELECT\n    round(\n        COUNT(DISTINCT id) / NULLIF(COUNT(DISTINCT order_id),\
+  \ 0),\n        2\n    ) AS avg_tickets_per_order\nFROM fer_tickets_by_host_final\n\
+  WHERE\n    event_id = '6850270235e0d90042a0bac6'\n    AND order_status IN ('paid',\
+  \ 'ended', 'closed')\n    AND ticket_category != 'AddOnRate'"
+params: null
+template_params: null
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: 4b07111b-926a-4eb5-9f8c-0b65047a7164
+metrics:
+- metric_name: count
+  verbose_name: null
+  metric_type: null
+  expression: count(*)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+columns:
+- column_name: avg_tickets_per_order
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NULLABLE(FLOAT64)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+version: 1.0.0
+database_uuid: 9959a820-3653-435b-9b67-bb25bdf82933

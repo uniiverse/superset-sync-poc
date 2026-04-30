@@ -1,0 +1,41 @@
+table_name: remaining_check_ins_clem
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: highlander
+sql: "SELECT\n    SUM(CASE\n        WHEN redemption_balance IS NULL OR redemption_balance\
+  \ = 0 THEN 1\n        ELSE 0\n    END) AS remaining_checkins\nFROM fer_tickets_by_host_final\n\
+  WHERE\n    ticket_status IN ('paid', 'ended', 'closed')\n    AND event_id = '6850270235e0d90042a0bac6'"
+params: null
+template_params: null
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: 780684bd-a3d5-43d1-983c-9c3f48a23bef
+metrics:
+- metric_name: count
+  verbose_name: null
+  metric_type: null
+  expression: count(*)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+columns:
+- column_name: remaining_checkins
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UINT64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+version: 1.0.0
+database_uuid: 9959a820-3653-435b-9b67-bb25bdf82933
